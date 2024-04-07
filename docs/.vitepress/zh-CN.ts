@@ -6,7 +6,7 @@ const pkg = require('vitepress/package.json')
 
 export const zhCN = defineConfig({
     lang: 'zh-CN',
-    description: 'LLOneBot',
+    description: 'NapCat',
 
     themeConfig: {
         nav: nav(),
@@ -17,7 +17,7 @@ export const zhCN = defineConfig({
         },
 
         editLink: {
-            pattern: 'https://github.com/LLOneBot/LLOneBotDoc/tree/main/docs/:path',
+            pattern: 'https://github.com/NapNeko/NapCatDocs/tree/main/docs/:path',
             text: '在 GitHub 上编辑此页面'
         },
 
@@ -64,11 +64,6 @@ function sidebarGuide() {
                 { text: '常见问题', link: 'guide/faq', activeMatch: '/zh-CN/guide/' },
                 { text: '从零安装nonebot2', link: 'guide/nonebot2', activeMatch: '/zh-CN/guide/' }
             ]
-        }, {
-            text: '进阶配置',
-            collapsed: false,
-            items: [{ text: '配置 FFmpeg', link: 'guide/ffmpeg', activeMatch: '/en-US/guide/' }]
-
         }
     ];
 }

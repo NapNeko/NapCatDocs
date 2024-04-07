@@ -36,7 +36,6 @@ function sidebarGuide() {
             items: [
                 { text: 'Quick Start', link: 'guide/getting-started', activeMatch: '/en-US/guide/' },
                 { text: 'Config', link: 'guide/configuration', activeMatch: '/en-US/guide/' },
-                
                 { text: 'Q&A', link: 'guide/faq', activeMatch: '/en-US/guide/' }
             ]
         },{
