@@ -6,7 +6,7 @@ const pkg = require('vitepress/package.json')
 
 export const enUS = defineConfig({
     lang: 'en-US',
-    description: 'LLOneBot',
+    description: 'NapCat',
     themeConfig: {
         nav: nav(),
 
