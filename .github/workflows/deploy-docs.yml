@@ -32,6 +32,6 @@ jobs:
 
       - name: deploy
         env:
-          LLOneBot_GH_TOKEN: ${{ secrets.NapCat_GH_TOKEN }}
+          NapCat_GH_TOKEN: ${{ secrets.NapCat_GH_TOKEN }}
         run: |
              bash ./script/deploy.sh
