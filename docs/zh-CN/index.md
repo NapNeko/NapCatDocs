@@ -19,6 +19,6 @@ features:
   - title: 内存轻量
     details: 天生无头,不依赖框架加载不依赖Electron，10~50Mb内存使用。
   - title: 适配快速
-    details: 基于Core/Adapter实现，支持多种Bot协议
+    details: 基于Core/Adapter实现，支持多种Bot协议，快速迁移。
 ---
 
