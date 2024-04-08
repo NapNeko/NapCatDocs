@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export const shared = defineConfig({
-  title: 'LLOneBot',
+  title: 'NapCat',
   cleanUrls: true,
   metaChunk: true,
   lastUpdated: true
