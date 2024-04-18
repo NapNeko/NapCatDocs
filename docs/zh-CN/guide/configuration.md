@@ -99,9 +99,3 @@ http 事件上报，不支持快捷回复等快捷操作
 那么在 LLOneBot 配置的反向WS地址为 `ws://localhost:8080/onebot/v11/ws`
 
 ::: 
-
-
-## FFEMPG配置
-::: tip
-前往侧栏语音配置查看
-::: 
