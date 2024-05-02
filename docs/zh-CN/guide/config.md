@@ -2,7 +2,7 @@
 
 **重启登录后配置才能生效哦**
 
-::: 配置OneBot设置
+::: details 配置OneBot设置
 启动登录NapCat后 打开NapCat的`config`目录，找到名为 `onebot11_<你的QQ号>.json`的文件，如`onebot11_1234567.json`
 
 下面是json 配置内容参数解释：
@@ -54,7 +54,7 @@
 前提是你已经成功登录过QQ，可以加参数` -q <你的QQ>` 进行登录，如`napcat.sh -q 1234567` 或者 `napcat.bat -q 1234567`
 :::
 
-::: 配置NapCat其它设置（如果不懂干嘛，不用看啦）
+::: details 配置NapCat其它设置（如果不懂干嘛，不用看啦）
 
 启动登录NapCat后 打开NapCat的`config`目录，找到名为 `napcat_<你的QQ号>.json`的文件，如`napcat_1234567.json`
 
