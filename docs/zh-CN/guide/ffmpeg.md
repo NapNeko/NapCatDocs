@@ -6,7 +6,7 @@
 
 ## 为什么要使用 FFmpeg？
 
-本项目使用 FFmpeg 是为了编解码语音和视频，以使 LLOneBot 以 QQ 支持的格式处理语音和视频文件。
+本项目使用 FFmpeg 是为了编解码语音和视频，以使 NapCat 以 QQ 支持的格式处理语音和视频文件。
 
 如果你的 Bot 没有处理语音和视频的需求，可以选择不安装 FFmpeg。
 
@@ -35,11 +35,11 @@
 5. 如果没有任何错误出现，说明 FFmpeg 已经配置成功了。恭喜你！
 
 ::: tip 如果有其他程序也需要使用 FFmpeg
-如果其他程序支持手动选择 FFmpeg 位置，只需选择为 LLOneBot 所使用的 FFmpeg 即可。
+如果其他程序支持手动选择 FFmpeg 位置，只需配置为 NapCat 所使用的 FFmpeg 即可。
 
 如果其他程序不支持手动选择 FFmpeg 位置，只需将 FFmpeg 的 `bin` 目录注册到系统的 `PATH` 变量中（可参考 [此教程](https://zhuanlan.zhihu.com/p/595750538#:~:text=Step%203%3A%20%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%20Path%20%E7%9A%84%E6%B7%BB%E5%8A%A0)）即可。
 
-如果你将 FFmpeg 安装到了系统变量中，那么无论有没有在 LLOneBot 中配置 FFmpeg 路径也可以正常使用 FFmpeg。
+如果你将 FFmpeg 安装到了系统变量中，那么无论有没有在 NapCat 中配置 FFmpeg 路径也可以正常使用 FFmpeg。
 :::
 
 ### Linux 系统

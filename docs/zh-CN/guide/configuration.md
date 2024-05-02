@@ -30,9 +30,6 @@ protocol 选择 ws-reverse
 
 koishi onebot 的 ws 反向地址为 `ws://127.0.0.1:5140/onebot`
 
-
-![](../../asset/img/configuration/llonebot-koishi-rws-setting.png)
-
 点击保存即可
 
 :::
@@ -45,18 +42,17 @@ koishi onebot 的 ws 反向地址为 `ws://127.0.0.1:5140/onebot`
 
 默认情况 NoneBot 是启用了反向 ws 的，可能是默认配置问题，需要配置 token 才能正常连接
 
-修改 NoneBot 配置文件 `.env`，添加 `ONEBOT_ACCESS_TOKEN=你的token`，token 需要和 LLOneBot 配置的 token 一致
+修改 NoneBot 配置文件 `.env`，添加 `ONEBOT_ACCESS_TOKEN=你的token`，token 需要和 NapCat 配置的 token 一致
 
 然后启用 NoneBot，可以看到 NoneBot 输出的端口号，如 `8080`
 
 ### 2.配置 LLOneBot
 
-![](../../asset/img/configuration/llonebot-nonebot-rws-setting.png)
 
-在 LLOneBot 配置页面添加反向 ws 地址，地址为 `ws://127.0.0.1:8080/onebot/v11/ws`, 这里的 `8080` 是 NoneBot 输出的端口号，`/onebot/v11/ws` 是 NoneBot onebot 适配器默认的路径
+在 NapCat 配置添加反向 ws 地址，地址为 `ws://127.0.0.1:8080/onebot/v11/ws`, 这里的 `8080` 是 NoneBot 输出的端口号，`/onebot/v11/ws` 是 NoneBot onebot 适配器默认的路径
 
 ::: tip
-记得 LLOneBot 配置的 token 需要和 NoneBot 配置的 一致
+记得 NapCat 配置的 token 需要和 NoneBot 配置的 一致
 
 :::
 
@@ -65,15 +61,11 @@ koishi onebot 的 ws 反向地址为 `ws://127.0.0.1:5140/onebot`
 ::: details HTTP服务端口，用于接收应用端的 HTTP API 调用
 
 如配置的3000端口，那么API地址为 `http://localhost:3000`
-
-一个简单的发送消息API调用示例
-
-![](https://github.com/LLOneBot/LLOneBot/raw/main/doc/image/example.jpg)
 :::
 
 ::: details HTTP上报地址
 
-当 LLOneBot 收到消息等事件时，会以 `POST` 请求的方式将事件上报到此地址
+当 NapCat 收到消息等事件时，会以 `POST` 请求的方式将事件上报到此地址
 
 ::: tip
 上报地址必须是 `http://` 开头
@@ -96,6 +88,6 @@ http 事件上报，不支持快捷回复等快捷操作
 
 如在 NoneBot2 配置了 onebot 的端口为 8080，路径为 `/onebot/v11/ws`
 
-那么在 LLOneBot 配置的反向WS地址为 `ws://localhost:8080/onebot/v11/ws`
+那么配置的反向WS地址为 `ws://localhost:8080/onebot/v11/ws`
 
 ::: 
