@@ -39,6 +39,6 @@ NapCat 是基于NT QQ 客户端本体实现的QQ Bot框架,稳定安全，快速
 
 [如何配置NapCat的基础设置](/zh-CN/guide/config.md)
 
-[如何配置NapCat的语音发送](/zh-CN/guide/ffmpeg.md)
+[如何配置NapCat的语音发送](/zh-CN/guide/faq.md) 参考 `语音、视频发送失败` 发生失败条目
 
 [遇到NapCat崩溃问题如何解决](/zh-CN/guide/faq.md)
