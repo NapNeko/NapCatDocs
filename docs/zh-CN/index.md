@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "NapCat"
-  text: "基于 NTQQ 实现的 QQ BOT, 本文档还在施工中..."
+  text: "基于 NTQQ 实现的 QQ BOT"
   tagline: "~"
   actions:
     - theme: brand
