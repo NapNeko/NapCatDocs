@@ -62,6 +62,7 @@ function sidebarGuide() {
                 { text: '快速开始', link: 'guide/getting-started', activeMatch: '/zh-CN/guide/' },
                 { text: '对接配置', link: 'guide/configuration', activeMatch: '/zh-CN/guide/' },
                 { text: '常见问题', link: 'guide/faq', activeMatch: '/zh-CN/guide/' },
+                { text: '版本日志', link: 'guide/version', activeMatch: '/zh-CN/guide/' },
                 { text: '从零安装nonebot2', link: 'guide/nonebot2', activeMatch: '/zh-CN/guide/' }
             ]
         }

@@ -88,17 +88,9 @@ json 配置内容参数解释：
 
 ### Linux安装
 
-#### 安装 Linux QQ(22741)，已经安装了的可以跳过
+#### 安装 Linux 
 
-目前还在研究怎么精简安装，暂时只能安装官方QQ整体依赖
-
-下载QQ
- 
-[deb x86版本](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.7_240403_amd64_01.deb)
-[deb arm版本](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.7_240403_arm64_01.deb)
-
-[rpm x86版本](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.7_240403_x86_64_01.rpm)
-[rpm arm版本](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.7_240403_aarch64_01.rpm)
+到QQ官网下载或者使用包管理器下载安装，注意 NapCat 开发是基于 QQ 当时最新版本开发的，请使用时最好选择对应版本QQ，否则容易产生问题，请参考 侧栏 **版本日志** 所描述的版本。
 
 安装QQ
 ```bash
@@ -112,9 +104,10 @@ sudo apt install libgbm1 libasound2
 
 ### Windows 安装
 
-#### 安装Windows QQ(22741)，已经安装了的可以跳过
+#### 安装Windows QQ
 
-[Windows版本QQ下载](https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.9_240403_x64_01.exe)
+到QQ官网下载，注意 NapCat 开发是基于 QQ 当时最新版本开发的，请使用时最好选择对应版本QQ，否则容易产生问题，请参考 侧栏 **版本日志** 所描述的版本。
+
 
 ## 常见问题
 
@@ -164,6 +157,4 @@ $env:FFMPEG_PATH="d:\ffmpeg\bin\ffmpeg.exe"
 
 由于新版本使用了 Native Hook，如果你的 NapCatQQ 崩溃了，尝试删除 `MoeHoo.node`
 
-### 其他问题
 
-NapCat 是基于 QQ 22741 版本开发的，其他版本不敢保证是否会出现一些奇怪的问题，有问题可以尝试安装此版本的 QQ
