@@ -135,6 +135,9 @@ NapCat 会自动保存二维码到目录，可以手动打开图片扫描
 $env:FFMPEG_PATH="d:\ffmpeg\bin\ffmpeg.exe"
 ```
 
+### Windows系统出现QQ本体界面?
+尝试管理员启动NapCat即可，如果失败请反馈NapCat开发群
+
 ### 修改日志等级
 
 
