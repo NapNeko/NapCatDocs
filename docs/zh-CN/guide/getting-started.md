@@ -17,6 +17,13 @@ NapCatQQ v1.2.0(beta) -- [Windows QQ 9.9.9-23361](https://dldir1.qq.com/qqfile/q
 
 NapCatQQ v1.1.0 -- [Windows QQ 9.9.9-22741](https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.9_240403_x64_01.exe) | [Linux QQ 2.3.7-22741](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.7_240403_amd64_01.deb)
 
+Linux 无需桌面安装 NTQQ:
+
+```shell
+sudo apt install libgbm1 libasound2
+sudo apt install ./qq.deb
+```
+
 更多版本请查看[版本更新记录](./version.md)
 
 ## 配置
