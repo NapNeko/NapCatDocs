@@ -12,8 +12,8 @@ git config --global init.defaultBranch main
 git remote add origin ${GITHUB_URL}
 git branch -M main
 
-git config --global user.name "Mlikiowa"
-git config --global user.email "nanaeonn@outlook.com"
+git config --global user.name "Page Build"
+git config --global user.email "test@wumiao.wang"
 git add *
 git commit -m "docs: auto update"
 git push -f
