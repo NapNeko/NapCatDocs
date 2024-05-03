@@ -138,3 +138,19 @@ return
 ```
 emoji_id 参考 <https://bot.q.qq.com/wiki/develop/api-v2/openapi/emoji/model.html#EmojiType>
 :::
+
+::: details 设置私聊消息已读 /mark_private_msg_as_read
+```json5
+{
+  "user_id": 123456
+}
+```
+:::
+
+::: details 设置群聊消息已读 /mark_group_msg_as_read
+```json5
+{
+  "group_id": 123456
+}
+```
+:::
