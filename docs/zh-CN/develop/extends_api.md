@@ -107,3 +107,34 @@ return
 
 ::: tip 此 api 不适用于下载群文件或者私聊文件
 :::
+
+::: details 转发单条消息到好友 /forward_friend_single_msg
+
+```json5
+{
+  "user_id": 123456,
+  "message_id": 123456
+}
+```
+:::
+
+
+::: details 转发单条消息到群 /forward_group_single_msg
+
+```json5
+{
+  "group_id": 123456,
+  "message_id": 123456
+}
+```
+:::
+
+::: details 发送表情回应 /set_msg_emoji_like
+```json5
+{
+    "message_id": "-2147480026",
+    "emoji_id": "32"
+}
+```
+emoji_id 参考 <https://bot.q.qq.com/wiki/develop/api-v2/openapi/emoji/model.html#EmojiType>
+:::
