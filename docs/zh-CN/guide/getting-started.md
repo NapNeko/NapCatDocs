@@ -13,9 +13,9 @@ NapCatQQ 是基于 PC NTQQ 客户端本体实现的 QQ Bot 框架，稳定安全
 
 ## 安装 QQ
 
-NapCatQQ v1.2.0(beta) -- [Windows QQ 9.9.9-23361](https://dldir1.qq.com/qqfile/qq/QQNT/5e09ff15/QQ9.9.9.23361_x64.exe) | [Linux QQ 2.3.7-23361](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.7_240428_amd64_01.deb)
+NapCatQQ v1.2.0(beta) 版本对应的QQ： [Windows QQ 9.9.9-23361](https://dldir1.qq.com/qqfile/qq/QQNT/5e09ff15/QQ9.9.9.23361_x64.exe) | [Linux QQ 2.3.7-23361](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.7_240428_amd64_01.deb)
 
-NapCatQQ v1.1.0 -- [Windows QQ 9.9.9-22741](https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.9_240403_x64_01.exe) | [Linux QQ 2.3.7-22741](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.7_240403_amd64_01.deb)
+NapCatQQ v1.1.0 版本对应的QQ [Windows QQ 9.9.9-22741](https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.9_240403_x64_01.exe) | [Linux QQ 2.3.7-22741](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.7_240403_amd64_01.deb)
 
 Linux 无需桌面安装 NTQQ:
 
@@ -25,6 +25,10 @@ sudo apt install ./qq.deb
 ```
 
 更多版本请查看[版本更新记录](./version.md)
+
+## 下载NapCatQQ
+
+下载地址: <https://github.com/NapNeko/NapCatQQ/releases>
 
 ## 配置
 
