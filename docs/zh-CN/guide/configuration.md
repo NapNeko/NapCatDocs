@@ -18,7 +18,7 @@
 
 填写 selfId 为你的机器人的 QQ 号
 
-token 可以为空，需和 LLOneBot 配置的 token 一致
+token 可以为空，需和 NapCat 配置的 token 一致
 
 protocol 选择 ws-reverse
 
@@ -34,7 +34,7 @@ koishi onebot 的 ws 反向地址为 `ws://127.0.0.1:5140/onebot`
 
 :::
 
-::: details 配置 NoneBot + LLOneBot
+::: details 配置 NoneBot + NapCat
 
 ### 1.配置 NoneBot
 
