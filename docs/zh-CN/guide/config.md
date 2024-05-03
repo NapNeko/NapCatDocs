@@ -2,10 +2,14 @@
 
 **重启登录后配置才能生效哦**
 
-::: details 配置OneBot设置
-启动登录NapCat后 打开NapCat的`config`目录，找到名为 `onebot11_<你的QQ号>.json`的文件，如`onebot11_1234567.json`
+::: details 配置 OneBot11 设置
+打开 NapCat 的`config`目录，找到名为 `onebot11_<你的QQ号>.json`的文件，如`onebot11_1234567.json`
+
+如果没有此文件可以复制`onebot11.json`重命名为`onebot11_<你的QQ号>.json`
 
 下面是json 配置内容参数解释：
+
+**注意：请勿将注释内容写入配置文件，否则会导致配置文件解析失败**
 
 ```json5
 {
@@ -48,6 +52,7 @@
 }
 
 ```
+```
 :::
 
 ::: details 配置NapCat快速登录 (初次登录后，之后不用反复扫码)
@@ -59,6 +64,9 @@
 启动登录NapCat后 打开NapCat的`config`目录，找到名为 `napcat_<你的QQ号>.json`的文件，如`napcat_1234567.json`
 
 json 配置内容参数解释：
+
+**注意：请勿将注释内容写入配置文件，否则会导致配置文件解析失败**
+
 ```json5
 {
   // 是否开启文件日志

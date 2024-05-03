@@ -1,12 +1,11 @@
 # 版本更新记录
 
 ## V1.2.0
-::: details 基础信息
-基于版本: **Windows 9.9.9-23361 / Linux 2.3.7-23361**开发
 
-支持架构: AMD64 (完整支持) / ARM64 (缺失图片Rkey功能)
-:::
-::: details 更新日志
+基于版本: [Windows QQ 9.9.9-23361](https://dldir1.qq.com/qqfile/qq/QQNT/5e09ff15/QQ9.9.9.23361_x64.exe) | [Linux QQ 2.3.7-23361](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.7_240428_amd64_01.deb) 开发
+
+支持架构: x64 (完整支持) / arm64 (缺失图片rkey功能)
+
 1. 修复图片URL,支持 Win/Linux X64 获取Rkey - 新增 Module: Moehoo
 2. 重构了商城表情URL拼接 - 重构 API/Event
 3. 重构了Core服务调用部分 - 重构 SYS: Core
@@ -25,12 +24,11 @@
 16. 支持表情回应api和上报 - 新增 Event/API
 17. 支持获取Cookies 实现更加稳定 且支持Skey缓存3600S Pskey每次刷新 - 新增 API: /get_cookies
 18. 支持 服务端踢下线 / 其它设备上线 / 重复登录 日志 - 新增 Sys: Log
-:::
 
 ## V1.1.0
-::: details 基础信息
-基于版本: **Windows 9.9.9-22741 / Linux 2.3.7-22741**开发
-:::
+基于版本: [Windows QQ 9.9.9-22741](https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.9_240403_x64_01.exe) | [Linux QQ 2.3.7-22741](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.7_240403_amd64_01.deb)开发
+
 ::: details 更新日志
 1. 正向 ws token 不生效
 2. 检查更新失败导致程序崩溃
+:::

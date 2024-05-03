@@ -1,12 +1,9 @@
 # FAQ
 ## 常见问题
 
+
 ::: details 调用接口报404
 目前没有支持全部的onebot规范接口，请检查是否调用了不支持的接口
-::: 
-
-::: details QQ变得很卡
-这是你的群特别多导致的，因为启动后会批量获取群成员列表，获取完之后就正常了
 ::: 
 
 ::: details 如何使用CQ码
@@ -63,6 +60,6 @@ $env:FFMPEG_PATH="d:\ffmpeg\bin\ffmpeg.exe"
 
 ::: details 如果出现崩溃
 
-由于新版本使用了 Native Hook，如果你的 NapCatQQ 崩溃了，尝试删除 `MoeHoo.node`
+由于新版本使用了 Native Hook，如果你的 NapCatQQ 崩溃了，尝试删除 `MoeHoo-xxxx.node`
 
 :::
