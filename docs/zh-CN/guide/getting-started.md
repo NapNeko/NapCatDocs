@@ -26,7 +26,9 @@ NapCatQQ v1.1.0 -- [Windows QQ 9.9.9-22741](https://dldir1.qq.com/qqfile/qq/QQNT
 ## 启动
 
 ::: details Windows
-安装好对应版本 QQ 后 我们大多数情况只需要解压 NapCat 放到你想的的任何地方，双击 `napcat.bat` 就可以运行啦
+安装好对应版本 QQ 后 我们大多数情况只需要解压 NapCat 放到你想的的任何地方，但是路径不能包含空格
+
+双击 `napcat.bat` 就可以运行啦
 
 等等! 如果你出现乱码可以尝试双击 `napcat-utf8.bat`启动
 
