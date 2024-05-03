@@ -154,3 +154,7 @@ emoji_id 参考 <https://bot.q.qq.com/wiki/develop/api-v2/openapi/emoji/model.ht
 }
 ```
 :::
+
+::: details 获取官方bot QQ号范围 /get_robot_uin_range
+无需参数
+:::

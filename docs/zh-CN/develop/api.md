@@ -54,7 +54,7 @@
 | 获取图片详情 |   get_image | ✔ |
 | 获取语音文件 |   get_record | ✔ |
 | 获取文件详情 |   get_file | ✔ |
-| 获取 Cookies |  get_cookies | ❌ |
+| 获取 Cookies |  get_cookies | ✔ |
 | 获取 CSRF Token |  get_csrf_token | ❌ |
 | 获取 QQ 相关接口凭证 |  get_credentials | ❌ |
 | 重启 OneBot 实现 | set_restart | ❌ |
@@ -70,4 +70,5 @@
 |   get_forward_msg | ✔ |
 |   upload_group_file | ✔ |
 |   download_file | ✔ |
+| _get_group_notice | ✔ |
 :::
