@@ -19,6 +19,9 @@ NapCatQQ v1.1.0 -- [Windows QQ 9.9.9-22741](https://dldir1.qq.com/qqfile/qq/QQNT
 
 更多版本请查看[版本更新记录](./version.md)
 
+## 配置
+
+为了避免二次启动，可以事先配置好 NapCat 的基础设置，见 [如何配置NapCat](./config.md)
 
 ## 启动
 
@@ -50,7 +53,7 @@ NapCatQQ v1.1.0 -- [Windows QQ 9.9.9-22741](https://dldir1.qq.com/qqfile/qq/QQNT
 :::
 
 ### 启动之后
-恭喜你，如果看到这里，你可能已经启动或者尝试启动了 NapCat，你是否遇到崩溃与配置问题
+恭喜你，如果看到这里，你可能已经启动或者尝试启动了 NapCat
 
 [如何配置NapCat的基础设置](/zh-CN/guide/config.md)
 
