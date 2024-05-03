@@ -1,14 +1,14 @@
-## NapCatQQ
+# NapCatQQ
 NapCatQQ 是基于 PC NTQQ 客户端本体实现的 QQ Bot 框架，稳定安全，快速部署。
 
 ## 启动前需要了解的三两事
 **（!你给我好好读三遍）**
 
-1. NapCat 是基于NT QQ 客户端本体实现的QQ Bot框架，所以说需要提前安装好和**NapCatQQ 对应的 QQ 版本**才能运行NapCat哦
+1. NapCat 是基于NT QQ 客户端本体实现的QQ Bot框架，所以说需要提前安装好和 **NapCatQQ 对应的 QQ 版本**才能运行 NapCat 哦
 
 2. NapCat 在线时，你不能使用 PC QQ 客户端实现人鸡合一，但是可以选择同步登录移动客户端，如果想要在 PC 上人机合一请使用[LLOneBot](https://github.com/LLOneBot/LLOneBot)
 
-3. NapCat 不同于协议实现，基于 QQ 客户端当然 QQ 客户端上干不了的事，NapCat >_< 当然也是不行的!
+3. NapCat 不同于协议实现，是基于 QQ 客户端，QQ 客户端上干不了的事，NapCat >_< 当然也是不行的!
 
 
 ## 安装 QQ

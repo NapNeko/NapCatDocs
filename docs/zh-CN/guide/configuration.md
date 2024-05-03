@@ -26,7 +26,7 @@ protocol 选择 ws-reverse
 
 ![](../../asset/img/configuration/koishi-onebot-setting.png)
 
-3.配置完成后，LLOneBot 添加 ws 反向地址
+3.配置完成后，NapCat 添加 ws 反向地址
 
 koishi onebot 的 ws 反向地址为 `ws://127.0.0.1:5140/onebot`
 
@@ -40,14 +40,13 @@ koishi onebot 的 ws 反向地址为 `ws://127.0.0.1:5140/onebot`
 
 这里假设你已经安装了 Onebot 适配器
 
-默认情况 NoneBot 是启用了反向 ws 的，可能是默认配置问题，需要配置 token 才能正常连接
+默认情况 NoneBot 是启用了反向 ws 的，如果出现 403 可能是默认配置问题，需要配置 token 才能正常连接
 
 修改 NoneBot 配置文件 `.env`，添加 `ONEBOT_ACCESS_TOKEN=你的token`，token 需要和 NapCat 配置的 token 一致
 
 然后启用 NoneBot，可以看到 NoneBot 输出的端口号，如 `8080`
 
-### 2.配置 LLOneBot
-
+### 2.配置 NapCat
 
 在 NapCat 配置添加反向 ws 地址，地址为 `ws://127.0.0.1:8080/onebot/v11/ws`, 这里的 `8080` 是 NoneBot 输出的端口号，`/onebot/v11/ws` 是 NoneBot onebot 适配器默认的路径
 
@@ -84,7 +83,7 @@ http 事件上报，不支持快捷回复等快捷操作
 ::: 
 
 ## 反向WS配置
-::: details 用于 LLOneBot 主动连接应用端绑定的反向WS地址
+::: details 用于 NapCat 主动连接应用端绑定的反向WS地址
 
 如在 NoneBot2 配置了 onebot 的端口为 8080，路径为 `/onebot/v11/ws`
 
