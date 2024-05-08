@@ -1,7 +1,7 @@
 # WebUI
 默认端口为6099,当端口被占用时，会自动对端口+1，直到找到可用端口。
 
-启动后打开`./config/napcat.json`文件，token密码可在其中找到
+启动后打开`./config/webui.json`文件，token密码可在其中找到
 
 ::: details 配置介绍
 ```json5
@@ -14,9 +14,9 @@
 ```
 :::
 
-访问 http://IP:端口/webui/ 即可
+访问 http://IP:端口/webui/login.html 即可
 
-1. *token密钥* 在`./config/napcat.json`文件找到 首先登录WebUi
+1. *token密钥* 在`./config/webui.json`文件找到 首先登录WebUi
 
 2. 进入QQ登录 点击Qrcode 进行二维码登录
 
