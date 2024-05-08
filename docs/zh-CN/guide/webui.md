@@ -4,17 +4,19 @@
 启动后打开`./config/napcat.json`文件，token密码可在其中找到
 
 ::: details 配置介绍
+```json5
 {
     "port": 6099,//默认起始端口
     "token": "random",//登录密钥
     "loginRate": 3//每分钟登录次数限制
     
 }
+```
 :::
 
 访问 http://IP:端口/webui/ 即可
 
-1. * token 密钥* 在`./config/napcat.json`文件找到 首先登录WebUi
+1. *token密钥* 在`./config/napcat.json`文件找到 首先登录WebUi
 
 2. 进入QQ登录 点击Qrcode 进行二维码登录
 
