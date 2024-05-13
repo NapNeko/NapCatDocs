@@ -1,8 +1,37 @@
 ## 基础配置介绍
 
+::: details 用 WebUI 配置
+
+如果你已经启动了 NapCat，可以通过 WebUI 进行配置
+
+默认端口为6099,当端口被占用时，会自动对端口+1，直到找到可用端口，端口号会在启动时显示
+
+启动后打开`./config/webui.json`文件，token 密码可在其中找到
+
+```json5
+{
+    "port": 6099, // WebUI 端口
+    "token": "xxxx", //登录密钥，默认是自动生成的随机登录密码
+    "loginRate": 3, //每分钟登录次数限制
+}
+```
+
+访问 http://IP:端口/webui/login.html 即可
+
+1. *token密钥* 在`./config/webui.json`文件找到 首先登录WebUi
+
+2. 进入QQ登录 点击Qrcode 进行二维码登录
+
+3. 登录成功后，即可修改配置
+
+4. 配置完成后，点击保存,重启即可生效
+
+:::
+
+::: details 用文件配置 OneBot11 设置
+
 **重启登录后配置才能生效哦**
 
-::: details 配置 OneBot11 设置
 打开 NapCat 的`config`目录，找到名为 `onebot11_<你的QQ号>.json`的文件，如`onebot11_1234567.json`
 
 如果没有此文件可以复制`onebot11.json`重命名为`onebot11_<你的QQ号>.json`
