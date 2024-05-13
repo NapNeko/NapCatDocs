@@ -63,7 +63,12 @@ sudo apt install ./qq.deb
 :::
 
 ::: details Linux 非 Docker
-`./napcat.sh`
+终端运行
+```shell
+chmod u+x ./napcat.sh
+./napcat.sh
+```
+
 请勿用`sh napcat.sh`启动，可能会出现路径问题无法启动
 :::
 
