@@ -1,24 +1,23 @@
-# Api List
+# API List
 
-## api 详细说明
-
-[onebot v11](https://11.onebot.dev/)
-
-[go-cqhttp](https://docs.go-cqhttp.org/api)
+NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https://docs.go-cqhttp.org/api) 的大部分 API，对于 API 的详细说明请自行点击相关链接查看。
 
 ## 连接方式支持情况
+
 | 连接方式           |可用|
 |----------------|:-:| 
 | HTTP 接口调用      | ✔ |
-| HTTP 事件上报      | ✔ |
+| HTTP POST 事件上报 | ✔ |
 | HTTP POST 快速操作 | ✔ |
-| 正向WS连接         | ✔ |
-| 反向WS连接         | ✔ |
+| 正向 WS 连接       | ✔ |
+| 反向 WS 连接       | ✔ |
 
 
 
-## Api 支持情况
-::: details OneBot V11
+## API 支持情况
+
+::: details OneBot 11 API
+
 | 功能 |     Api    |可用| 备注 |
 | --- | -------------  |:--:| -------------- | 
 | 获取 bot 账号信息 |   get_login_info | ✔ | |
@@ -61,7 +60,8 @@
 | 清理缓存 | clean_cache | ✔ |
 ::: 
 
-::: details Go-CQHTTP Api 支持情况
+::: details go-cqhttp API
+
 |     Api    |可用|
 | -------------  |:--:|
 |   send_forward_msg | ✔ |
