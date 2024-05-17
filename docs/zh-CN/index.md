@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: "NapCatQQ"
+  name: "NapCat"
   # text: ""
   tagline: "基于 PC NTQQ 的 QQ Bot 协议端实现"
   actions:

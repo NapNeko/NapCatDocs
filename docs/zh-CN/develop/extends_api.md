@@ -35,7 +35,7 @@
 ```
 :::
 
-::: details ~~`/set_qq_avatar` 设置头像~~
+::: details `/set_qq_avatar` 设置头像~~
 
 **暂不支持**
 
