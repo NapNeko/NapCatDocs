@@ -1,4 +1,4 @@
-## 上报事件支持情况
+# 上报事件支持情况
 
 | 事件类型    | 可用 | 备注 |
 |---------|:--:|:--:|
@@ -46,4 +46,4 @@ emoji_id 参考 <https://bot.q.qq.com/wiki/develop/api-v2/openapi/emoji/model.ht
 
 ## 表情回应发送
 
-参考 [扩展api](./extends_api.md)
+参考 [扩展 API](./extends_api.md)

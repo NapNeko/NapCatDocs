@@ -1,12 +1,12 @@
-## 基础配置介绍
+# 基础配置介绍
 
 ::: details 用 WebUI 配置
 
-如果你已经启动了 NapCat，可以通过 WebUI 进行配置
+如果你已经启动了 NapCat，并且有多于 1 个开放端口，则可以通过 WebUI 进行配置。
 
-默认端口为6099,当端口被占用时，会自动对端口+1，直到找到可用端口，端口号会在启动时显示
+默认端口为 `6099`。当端口被占用时，会自动对端口 +1，直到找到可用端口，端口号会在启动时显示。
 
-启动后打开`./config/webui.json`文件，token 密码可在其中找到
+启动后打开 `./config/webui.json` 文件，token 密码可在其中找到。
 
 ```json5
 {
@@ -16,29 +16,23 @@
 }
 ```
 
-访问 http://IP:端口/webui/login.html 即可
+访问 `http://IP:端口/webui/login.html`，然后进行以下操作：
 
-1. *token密钥* 在`./config/webui.json`文件找到 首先登录WebUi
+1. 进入 QQ 登录，点击 `QRCode` 进行二维码登录。
 
-2. 进入QQ登录 点击Qrcode 进行二维码登录
+2. 登录成功后，即可修改配置。
 
-3. 登录成功后，即可修改配置
-
-4. 配置完成后，点击保存,重启即可生效
+3. 配置完成后，点击保存，重启即可生效。
 
 :::
 
 ::: details 用文件配置 OneBot11 设置
 
-**重启登录后配置才能生效哦**
+和上面一样，**重启登录后配置才能生效**。
 
-打开 NapCat 的`config`目录，找到名为 `onebot11_<你的QQ号>.json`的文件，如`onebot11_1234567.json`
-
-如果没有此文件可以复制`onebot11.json`重命名为`onebot11_<你的QQ号>.json`
+打开 NapCat 的 `config` 目录，找到名为 `onebot11_<你的QQ号>.json` 的文件，如 `onebot11_1234567.json`；如果没有此文件可以复制 `onebot11.json` 重命名为 `onebot11_<你的QQ号>.json`。
 
 下面是配置内容参数解释：
-
-**注意：请勿将注释内容写入配置文件，否则会导致配置文件解析失败**
 
 ```json5
 {
@@ -81,16 +75,18 @@
 }
 
 ```
-```
+
+:::warning
+
+请勿将注释内容写入配置文件，否则会导致配置文件解析失败。
+
 :::
 
-::: details 配置NapCat其它设置（如果不懂干嘛，不用看啦）
+::: details 配置 NapCat 其它设置（如果不懂干嘛，不用看啦）
 
-启动登录NapCat后 打开NapCat的`config`目录，找到名为 `napcat_<你的QQ号>.json`的文件，如`napcat_1234567.json`
+启动登录 NapCat 后，打开NapCat的 `config` 目录，找到名为 `napcat_<你的QQ号>.json` 的文件，如 `napcat_1234567.json`。
 
 配置内容参数解释：
-
-**注意：请勿将注释内容写入配置文件，否则会导致配置文件解析失败**
 
 ```json5
 {
@@ -103,4 +99,9 @@
   "consoleLogLevel": "info"
 }
 ```
+
+:::warning
+
+请勿将注释内容写入配置文件，否则会导致配置文件解析失败。
+
 :::

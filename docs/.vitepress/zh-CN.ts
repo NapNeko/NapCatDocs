@@ -61,7 +61,7 @@ function sidebarGuide() {
             items: [
                 { text: '快速开始', link: 'guide/getting-started', activeMatch: '/zh-CN/guide/' },
                 { text: '基础配置', link: 'guide/config', activeMatch: '/zh-CN/guide/' },
-                { text: '对接框架', link: 'guide/configuration', activeMatch: '/zh-CN/guide/' },
+                { text: '接入框架', link: 'guide/integration', activeMatch: '/zh-CN/guide/' },
                 { text: '常见问题', link: 'guide/faq', activeMatch: '/zh-CN/guide/' },
                 { text: '版本日志', link: 'guide/version', activeMatch: '/zh-CN/guide/' }
             ]
@@ -74,10 +74,10 @@ function sidebarDevelop() {
             text: '开发信息',
             collapsed: false,
             items: [
-                { text: 'Api List', link: 'develop/api', activeMatch: '/zh-CN/develop/' },
+                { text: 'API List', link: 'develop/api', activeMatch: '/zh-CN/develop/' },
                 { text: '上报事件', link: 'develop/event', activeMatch: '/zh-CN/develop/event' },
                 { text: '消息类型', link: 'develop/msg', activeMatch: '/zh-CN/develop/msg' },
-                { text: '扩展api', link: 'develop/extends_api', activeMatch: '/zh-CN/develop/extends_api' },
+                { text: '扩展 API', link: 'develop/extends_api', activeMatch: '/zh-CN/develop/extends_api' },
                 { text: '关于项目', link: 'develop/about', activeMatch: '/zh-CN/develop/about' }
             ]
         }
