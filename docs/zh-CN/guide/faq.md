@@ -68,7 +68,7 @@ Linux 下 QQ 配置的目录位于 `~/.config/QQ`；Windows 下一般是**文档
 
 :::
 
-：：： details “ MH Hook Hk sub XXXX Error ” 崩溃报错
+::: details “ MH Hook Hk sub XXXX Error ” 崩溃报错
 
 如果你的此前使用LLOneBot，且使用过Liteloader某某一键包、或者使用了验证跳过的dll。
 
