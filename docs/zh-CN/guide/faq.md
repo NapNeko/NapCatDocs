@@ -67,3 +67,9 @@ Linux 下 QQ 配置的目录位于 `~/.config/QQ`；Windows 下一般是**文档
 由于新版本使用了 Native Hook，如果你的 NapCatQQ 崩溃了，尝试删除 `MoeHoo-xxxx.node`。
 
 :::
+
+::: details “ MH Hook Hk sub XXXX Error ” 崩溃报错
+
+如果你的此前使用LLOneBot，且迁移未完全卸载。尝试完全清除卸载QQ包括LLOneBot数据后，再重装重试。
+
+:::
