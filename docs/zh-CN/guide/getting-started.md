@@ -67,6 +67,13 @@ sudo apt install ./qq.deb
 
 :::
 
+::: details Linux一键脚本
+墙裂推荐！
+
+`curl -o napcat.sh https://fastly.jsdelivr.net/gh/NapNeko/NapCat-Installer@master/script/install.sh && sudo bash napcat.sh`
+
+:::
+
 ::: details [Linux Docker](https://github.com/NapNeko/NapCat-Docker)
 :::
 
