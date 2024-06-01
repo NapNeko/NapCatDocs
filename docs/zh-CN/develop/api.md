@@ -33,7 +33,7 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 | 获取群信息 |   get_group_info | ✔ |
 | 获取群成员列表 |   get_group_member_list | ✔ |
 | 获取群成员信息 |   get_group_member_info | ✔ |
-| 获取群荣誉信息 | get_group_honor_info | ❌ |
+| 获取群荣誉信息 | get_group_honor_info | ✔ |
 | 设置群组专属头衔 |   set_group_special_title | ❌ |
 | 群匿名禁言 |   set_group_anonymous_ban | ❌ |
 | 开关群匿名 |   set_group_anonymous | ❌ |
@@ -56,19 +56,25 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 | 获取 Cookies |  get_cookies | ✔ |
 | 获取 CSRF Token |  get_csrf_token | ❌ |
 | 获取 QQ 相关接口凭证 |  get_credentials | ❌ |
-| 重启 OneBot 实现 | set_restart | ❌ |
+| 重启 OneBot 实现 | set_restart | ✔ |
 | 清理缓存 | clean_cache | ✔ |
 ::: 
 
 ::: details go-cqhttp API
 
 |     Api    |可用|
-| -------------  |:--:|
-|   send_forward_msg | ✔ |
-|   send_private_forward_msg | ✔ |
-|   send_group_forward_msg | ✔ |
-|   get_forward_msg | ✔ |
-|   upload_group_file | ✔ |
-|   download_file | ✔ |
-| _get_group_notice | ✔ |
+| ------------------------  |:--:|
+| send_forward_msg          | ✔ |
+| send_private_forward_msg  | ✔ |
+| send_group_forward_msg    | ✔ |
+| get_forward_msg           | ✔ |
+| upload_group_file         | ✔ |
+| download_file             | ✔ |
+| _get_group_notice         | ✔ |
+| get_essence_msg_list      | ✔ |
+| _send_group_notice        | ✔ |
+| _get_group_notice         | ✔ |
+| get_group_system_msg      | ✔ |
+| ocr_image                 | ✔ |
+| get_online_clients        | ✔ |
 :::
