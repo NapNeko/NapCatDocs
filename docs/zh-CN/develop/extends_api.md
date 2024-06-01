@@ -160,3 +160,38 @@ emoji_id 参考 <https://bot.q.qq.com/wiki/develop/api-v2/openapi/emoji/model.ht
 无需参数
 
 :::
+
+::: details `set_online_status` 设置自身在线状态
+// 当前可设置状态
+```json5
+{ "status": 10, "extStatus": 1027, "batteryStatus": 0 }
+{ "status": 30, "extStatus": 0, "batteryStatus": 0 }
+{ "status": 50, "extStatus": 0, "batteryStatus": 0 }
+{ "status": 60, "extStatus": 0, "batteryStatus": 0 }
+{ "status": 70, "extStatus": 0, "batteryStatus": 0 }
+```
+:::
+
+::: details `get_friends_with_category` 获取好友分类列表
+
+无需参数
+
+:::
+
+::: details 群文件相关接口
+```
+get_group_file_count {group_id}
+get_group_file_list {group_id}
+set_group_file_folder {group_id}
+del_group_file {group_id,file_id}
+del_group_file_folder {group_id,folder_id}
+```
+:::
+
+::: details `translate_en2zh` 英译中接口
+```json5
+{
+  "words": "hello"
+}
+```
+:::
