@@ -19,7 +19,7 @@
 
 发送图片时支持参数 `summary` 用于自定义显示的文件名
 
-```json5
+```json
 {
   "group_id": 123456,
   "message": [
@@ -39,7 +39,7 @@
 
 **暂不支持**
 
-```json5
+```json
 {
   "file": "file://D:/1.jpg"  // 支持http://, base64://
 }
@@ -50,7 +50,7 @@
 
 **暂不支持**
 
-```json5
+```json
 {
   "status": "ok",
   "retcode": 0,
@@ -73,7 +73,7 @@
 
 ::: details `/get_file` 下载收到的群文件或私聊文件
 
-```json5
+```json
 {
   "file_id": "/xxxxx-xxxxx"
 }
@@ -81,7 +81,7 @@
 
 return:
 
-```json5
+```json
 {
   "status": "ok",
   "retcode": 0,
@@ -106,7 +106,7 @@ return:
 
 ::: details `/forward_friend_single_msg` 转发单条消息到好友
 
-```json5
+```json
 {
   "user_id": 123456,
   "message_id": 123456
@@ -117,7 +117,7 @@ return:
 
 ::: details `/forward_group_single_msg` 转发单条消息到群
 
-```json5
+```json
 {
   "group_id": 123456,
   "message_id": 123456
@@ -126,7 +126,7 @@ return:
 :::
 
 ::: details `/set_msg_emoji_like` 发送表情回应
-```json5
+```json
 {
     "message_id": "-2147480026",
     "emoji_id": "32"
@@ -138,7 +138,7 @@ emoji_id 参考 <https://bot.q.qq.com/wiki/develop/api-v2/openapi/emoji/model.ht
 
 ::: details `/mark_private_msg_as_read` 设置私聊消息已读
 
-```json5
+```json
 {
   "user_id": 123456
 }
@@ -148,7 +148,7 @@ emoji_id 参考 <https://bot.q.qq.com/wiki/develop/api-v2/openapi/emoji/model.ht
 
 ::: details `/mark_group_msg_as_read` 设置群聊消息已读
 
-```json5
+```json
 {
   "group_id": 123456
 }
@@ -163,7 +163,7 @@ emoji_id 参考 <https://bot.q.qq.com/wiki/develop/api-v2/openapi/emoji/model.ht
 
 ::: details `set_online_status` 设置自身在线状态
 // 当前可设置状态
-```json5
+```json
 { "status": 10, "extStatus": 1027, "batteryStatus": 0 }
 { "status": 30, "extStatus": 0, "batteryStatus": 0 }
 { "status": 50, "extStatus": 0, "batteryStatus": 0 }
@@ -189,7 +189,7 @@ del_group_file_folder {group_id,folder_id}
 :::
 
 ::: details `translate_en2zh` 英译中接口
-```json5
+```json
 {
   "words": "hello"
 }
