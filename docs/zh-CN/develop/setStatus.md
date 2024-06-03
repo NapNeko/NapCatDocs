@@ -160,7 +160,7 @@
  { status: 10, extStatus: 1021, batteryStatus: 0 } 
 ```
 ## 我的电量
-···json5
+```json5
  { 
     status: 10, 
     extStatus: 1000,
