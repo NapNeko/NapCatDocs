@@ -17,7 +17,8 @@
 1. 在 [此处](https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-2024-02-15-git-a2cfd6062c-full_build.7z) 下载官方许可的 FFmpeg；
 2. 将其中的文件夹解压至一个你知道的地方（例如 `C:\Program Files`），然后重命名为 `ffmpeg`；
 3. 你的 `ffmpeg` 文件夹的结构看起来应该是这样的：
-    ```
+
+    ``` text
     ffmpeg
     |___bin
     |___|___ffmpeg.exe
@@ -28,6 +29,7 @@
     |___LICENSE
     \___README.txt
     ```
+
     ::: danger 注意
     **请一定要保证 `bin` 文件夹内同时包含 `ffmpeg.exe`、`ffplay.exe` 以及 `ffprobe.exe`！** 否则会产生意想不到的错误。
     :::

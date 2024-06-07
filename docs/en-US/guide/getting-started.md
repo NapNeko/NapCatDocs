@@ -1,40 +1,103 @@
-# Quick Start
+# NapCatQQ
 
-## Linux Docker Quick Installation
-Execute any of the following scripts, follow the prompts to set the NoVnc password, and you can run it. For script issues and exceptions, refer [llonebot-docker](https://github.com/MliKiowa/llonebot-docker) project.
+NapCatQQ is a QQ Bot framework based on the PC NTQQ client body, which is stable, secure, and quickly deployable.
 
- ```bash
-curl https://cdn.jsdelivr.net/gh/MliKiowa/llonebot-docker/fastboot.sh -o fastboot.sh & chmod +x fastboot.sh & sudo sh fastboot.sh
- ```
- ```bash
-wget -O fastboot.sh https://cdn.jsdelivr.net/gh/MliKiowa/llonebot-docker/fastboot.sh & chmod +x fastboot.sh & sudo sh fastboot.sh
- ```
+## Advantages of NapCatQQ
 
-## General Manual Installation
+- No need for a graphical environment, performs well on Linux, and has a fundamental difference from existing Hook frameworks, far superior in performance and memory usage.
 
-Install the plugin for this project, OneBotApi. Note that versions of this plugin below 2.0 do not support LiteLoader 1.0.0 and above.
-Regarding the installation method for the plugin: After downloading, unzip and copy it to the plugin directory.
+- Simple configuration, supports remote browser access for configuration, easy and simple to complete.
 
+- Rapid adaptation to NTQQ functions, continuous updates to follow the latest version of QQ.
 
-1.Install[LiteLoaderQQNT](https://liteloaderqqnt.github.io/guide/install.html)
+## Things to Know Before Starting (Read Three Times!)
 
-2.Install the plugin for project [OneBotApi](https://github.com/linyuchen/LiteLoaderQQNT-OneBotApi/releases/)OneBotApi. Note that versions of this plugin below 2.0 do not support LiteLoader 1.0.0 and above.
+:::warning
 
-*Regarding the installation method for the plugin: After downloading, unzip and copy it to the plugin directory.*
+- NapCat is a QQ Bot framework based on the PC NTQQ client body, so you need to install the **QQ version corresponding to NapCatQQ** in advance to run NapCat.
 
-*Plugin directory::`LiteLoaderQQNT/plugins`*
+- When NapCat is online, you cannot achieve human-computer unity using the PC QQ client, but you can choose to log in synchronously on the mobile client. If you want human-computer unity on PC, please use [LLOneBot](https://github.com/LLOneBot/LLOneBot).
 
-The post-installation directory structure will look like this:
+- NapCat is different from protocol implementation; it is based on the QQ client. Things that cannot be done on the QQ client, NapCat >_< can't do it either!
+
+:::
+
+## Install QQ
+
+NapCatQQ v1.4.7:
+
+[Windows 9.9.10-24108](https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.10_240523_x64_01.exe) | [Linux 3.2.7-23361](https://dldir1.qq.com/qqfile/qq/QQNT/8b4fdf81/linuxqq_3.2.7-23361_amd64.deb)
+
+Linux does not need a desktop to install NTQQ. The specific command is as follows:
+
+```shell
+sudo apt install libgbm1 libasound2
+sudo apt install ./qq.deb
 ```
-├── plugins
-│   ├── LLOneBot
-│   │   └── main.js
-│   │   └── preload.js
-│   │   └── renderer.js
-│   │   └── manifest.json
-│   │   └── node_modules/...
+
+For more versions, please refer to [Version Update Log](./version.md).
+
+## Download NapCatQQ
+
+Download link: <https://github.com/NapNeko/NapCatQQ/releases>
+
+## Configuration
+
+To avoid secondary startup, you can pre-configure the basic settings of NapCat, see [Configure NapCat](./config.md).
+
+## Startup
+
+::: details Windows
+
+After installing the corresponding version of QQ, in most cases, you only need to unzip NapCat and place it anywhere you want. But be careful, the path cannot contain spaces. Then, double-click `napcat.bat` to run!
+
+Wait! If you encounter garbled characters, you can try double-clicking `napcat-utf8.bat` to start.
+
+If the above method still does not work, you can try to start with PowerShell:
+
+Start PowerShell, run `powershell ./napcat.ps1` or `napcat.bat`, if garbled characters appear, you can try to run `napcat-utf8.ps1` or `napcat-utf8.bat`.
+
+If it still doesn't work, you can try `powershell.exe -ExecutionPolicy Bypass -File ".\napcat.ps1"`.
+
+**It is recommended to directly click the bat to run, because PowerShell itself will occupy about 20 MB of memory.**
+
+:::
+
+::: details Linux One-Click Script
+Highly recommended!
+
+`curl -o napcat.sh https://fastly.jsdelivr.net/gh/NapNeko/NapCat-Installer@master/script/install.sh && sudo bash napcat.sh`
+
+:::
+
+::: details [Linux Docker](https://github.com/NapNeko/NapCat-Docker)
+:::
+
+::: details Linux Non-Docker
+
+Run in the terminal
+
+```shell
+chmod u+x ./napcat.sh
+./napcat.sh
 ```
 
-## Installation Using Termux
+Do not start with `sh napcat.sh`, as it may cause path problems and fail to start.
 
-见<https://github.com/LLOneBot/llonebot-termux>
+:::
+
+::: details Quick Login (No Need to Scan)
+
+If you have successfully logged in to the official QQ or NapCatQQ, you can add the parameter `-q <Your QQ>` for quick login without scanning. For example, `napcat.bat -q 1234567` or `napcat.sh -q 1234567`.
+
+:::
+
+### After Startup
+
+Congratulations, if you see this, you have successfully started NapCat, you can try reading the advanced instructions below!
+
+[How to Configure NapCat's Basic Settings](/zh-CN/guide/config.md)
+
+[How to Configure NapCat's Voice Sending](/zh-CN/guide/faq.md) Refer to the entry `Voice/Video Sending Failed`
+
+[How to Solve NapCat Crash Issues](/zh-CN/guide/faq.md)

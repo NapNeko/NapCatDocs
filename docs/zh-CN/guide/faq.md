@@ -4,13 +4,13 @@
 
 目前没有支持全部的 OneBot 规范接口，请检查是否调用了不支持的接口。
 
-::: 
+:::
 
 ::: details 如何使用 CQ 码？
 
 将消息上报类型格式从消息段更改为 CQ 码即可。
 
-::: 
+:::
 
 ::: details 二维码无法扫描
 
@@ -31,6 +31,7 @@ NapCat 会自动保存二维码到目录，可以手动打开图片扫描。
 ```powershell
 $env:FFMPEG_PATH="d:\ffmpeg\bin\ffmpeg.exe"
 ```
+
 :::
 
 ::: details Windows 系统启动，出现 QQ 本体界面
@@ -38,7 +39,6 @@ $env:FFMPEG_PATH="d:\ffmpeg\bin\ffmpeg.exe"
 尝试管理员启动 NapCat。如果仍然失败，请反馈 NapCat 开发群。
 
 :::
-
 
 ::: details 出现 `error code v2:-1` 之类的提示
 

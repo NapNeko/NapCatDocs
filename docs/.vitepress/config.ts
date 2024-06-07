@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
-import { shared } from './shared'
 import { enUS } from './en-US'
+import { shared } from './shared'
 import { zhCN } from './zh-CN'
 
 export default defineConfig({
