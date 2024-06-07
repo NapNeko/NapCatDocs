@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: "LLOneBot"
-  text: "A QQ BOT implemented based on NTQQ"
-  tagline: "~"
+  # text: ""
+  tagline: "A QQ BOT implemented based on NTQQ"
   actions:
     - theme: brand
       text: Start

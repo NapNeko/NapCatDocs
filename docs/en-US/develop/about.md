@@ -1,1 +1,3 @@
-当前文档最新版本 : 3.11.0
+# About
+
+[QQ Group 545402644](https://qm.qq.com/q/CKRbpb8H3a)

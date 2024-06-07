@@ -1,6 +1,6 @@
 ---
 title: 'Vuetom Theme'
-lang: en-US
+lang: zh-CN
 page: true
 ---
 
