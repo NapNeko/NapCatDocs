@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: "LLOneBot"
+  name: "NapCat"
   # text: ""
   tagline: "A QQ BOT implemented based on NTQQ"
   actions:
@@ -11,7 +11,7 @@ hero:
       link: '/en-US/guide/getting-started'
     - theme: alt
       text: Github
-      link: https://github.com/LLOneBot/LLOneBot
+      link: https://github.com/NapNeko/NapCat
 
 features:
   - title: Ready to use
@@ -19,6 +19,6 @@ features:
   - title: Secure and stable
     details:  Implemented through Electron’s own mechanism, using NTQQ’s own code for message sending and receiving, can be synchronized with mobile QQ login.
   - title: Fast adaptation
-    details: Based on the OneBotV11 protocol, plugins can be quickly migrated to the LLOneBot platform without the need for adaptation efforts.
+    details: Based on the OneBotV11 protocol, plugins can be quickly migrated to the NapCat platform without the need for adaptation efforts.
 ---
 
