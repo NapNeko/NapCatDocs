@@ -26,7 +26,8 @@ NapCatQQ 是基于 PC NTQQ 客户端本体实现的 QQ Bot 框架，稳定安全
 
 NapCatQQ v1.4.7：
 
-[Windows 9.9.10-24108](https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.10_240523_x64_01.exe) | [Linux 3.2.7-23361](https://dldir1.qq.com/qqfile/qq/QQNT/8b4fdf81/linuxqq_3.2.7-23361_amd64.deb)
+[Windows X64 9.9.11-24815](https://dldir1.qq.com/qqfile/qq/QQNT/c3b55e07/QQ9.9.11.24815_x64.exe) | [Linux 3.2.9-248156-AMD64-DEB](https://dldir1.qq.com/qqfile/qq/QQNT/cbb0e5d9/linuxqq_3.2.9-24815_amd64.deb) | [Linux 3.2.9-248156-AMD64-RPM](https://dldir1.qq.com/qqfile/qq/QQNT/cbb0e5d9/linuxqq_3.2.9-24815_x86_64.rpm)
+
 
 Linux 无需桌面安装 NTQQ，具体命令如下：
 
