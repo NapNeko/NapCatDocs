@@ -86,6 +86,9 @@ Do not start with `sh napcat.sh`, as it may cause path problems and fail to star
 
 :::
 
+::: details [Android Termux](https://github.com/NapNeko/NapCat-Termux)
+:::
+
 ::: details Quick Login (No Need to Scan)
 
 If you have successfully logged in to the official QQ or NapCatQQ, you can add the parameter `-q <Your QQ>` for quick login without scanning. For example, `napcat.bat -q 1234567` or `napcat.sh -q 1234567`.
