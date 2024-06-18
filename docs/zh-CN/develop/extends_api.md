@@ -20,7 +20,7 @@
 
 发送图片时支持参数 `summary` 用于自定义显示的文件名
 
-```json
+```json5
 {
   "group_id": 123456,
   "message": [
@@ -37,13 +37,11 @@
 
 :::
 
-::: details `/set_qq_avatar` 设置头像~~
+::: details `/set_qq_avatar` 设置头像
 
-**暂不支持**
-
-```json
+```json5
 {
-  "file": "file://D:/1.jpg"  // 支持http://, base64://
+  "file": "file://D:/1.jpg"  // 支持 http, base64
 }
 ```
 
@@ -89,12 +87,12 @@
 :::
 
 ::: details `message_sent` 事件的 `target_id`
-相比于 go-cq 多了个 `target_id` 字段表示发送的目标QQ号或者群号
+相比于 go-cqhttp 增加字段 `target_id`, 表示发送的目标 QQ 号或者群号
 :::
 
 ::: details `/get_file` 下载收到的群文件或私聊文件
 
-```json
+```json5
 {
   "file_id": "/xxxxx-xxxxx"
 }
@@ -102,12 +100,12 @@
 
 return:
 
-```json
+```json5
 {
   "status": "ok",
   "retcode": 0,
   "data": {
-    "file": "d:/xxxx",  // 文件的绝对路径
+    "file": "D:/path/to/file",  // 文件的绝对路径
     "file_name": "文件名",
     "file_size": 123123,
     "base64": "/9j/4AAQSkZJRgABAQEASxxxx", // 文件的 base64 编码, 需要在 LLOneBot 的配置文件中开启 base64
@@ -128,7 +126,7 @@ return:
 
 ::: details `/forward_friend_single_msg` 转发单条消息到好友
 
-```json
+```json5
 {
   "user_id": 123456,
   "message_id": 123456
@@ -139,7 +137,7 @@ return:
 
 ::: details `/forward_group_single_msg` 转发单条消息到群
 
-```json
+```json5
 {
   "group_id": 123456,
   "message_id": 123456
@@ -150,7 +148,7 @@ return:
 
 ::: details `/set_msg_emoji_like` 发送表情回应
 
-```json
+```json5
 {
     "message_id": "-2147480026",
     "emoji_id": "32"
@@ -163,7 +161,7 @@ emoji_id 参考 <https://bot.q.qq.com/wiki/develop/api-v2/openapi/emoji/model.ht
 
 ::: details `/mark_private_msg_as_read` 设置私聊消息已读
 
-```json
+```json5
 {
   "user_id": 123456
 }
@@ -174,7 +172,7 @@ emoji_id 参考 <https://bot.q.qq.com/wiki/develop/api-v2/openapi/emoji/model.ht
 
 ::: details `/mark_group_msg_as_read` 设置群聊消息已读
 
-```json
+```json5
 {
   "group_id": 123456
 }
@@ -188,13 +186,13 @@ emoji_id 参考 <https://bot.q.qq.com/wiki/develop/api-v2/openapi/emoji/model.ht
 
 :::
 
-::: details `set_online_status` 设置自身在线状态
+::: details `/set_online_status` 设置自身在线状态
 
 [当前可设置状态](./status_list.md)
 
 :::
 
-::: details `get_friends_with_category` 获取好友分类列表
+::: details `/get_friends_with_category` 获取好友分类列表
 
 无需参数
 
@@ -203,16 +201,16 @@ emoji_id 参考 <https://bot.q.qq.com/wiki/develop/api-v2/openapi/emoji/model.ht
 ::: details 群文件相关接口
 
 ``` text
-get_group_file_count {group_id}
-get_group_file_list {group_id}
-set_group_file_folder {group_id}
-del_group_file {group_id,file_id}
-del_group_file_folder {group_id,folder_id}
+/get_group_file_count {group_id}
+/get_group_file_list {group_id}
+/set_group_file_folder {group_id}
+/del_group_file {group_id,file_id}
+/del_group_file_folder {group_id,folder_id}
 ```
 
 :::
 
-::: details `translate_en2zh` 英译中接口
+::: details `/translate_en2zh` 英译中接口
 
 ```json
 {
