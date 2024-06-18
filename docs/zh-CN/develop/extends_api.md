@@ -49,25 +49,42 @@
 
 :::
 
-::: details ~~`/get_ignored_group_joining_request` 获取已过滤的加群通知~~
+::: details `/get_group_system_msg` 获取群系统通知（包括邀请加群、已过滤的加群请求）
 
-**暂不支持**
-
-```json
+```json5
 {
   "status": "ok",
   "retcode": 0,
-  "data": [
-    {
-      "group_id": 123122,
-      "user_id": 123123,
-      "flag": "1710117534729787"
-    }
-  ],
+  "data": {
+    "InvitedRequest": [ // 入群邀请
+      {
+        request_id: "some ID",
+        invitor_uin: 123456,
+        invitor_nick: "some nickname",
+        group_id: 12345678,
+        group_name: "some group name",
+        checked: true, // boolean
+        actor: 0, // if checked (handled) -> the QQ number of handler; not checked -> 0
+      }, //...
+    ],
+    "join_requests": [ // 被过滤的加群申请
+      {
+        request_id: "some ID",
+        requester_uin: 123456,
+        requester_nick: "some nickname",
+        group_id: 12345678,
+        group_name: "some group name",
+        checked: true, // boolean
+        actor: 0, // if checked (handled) -> the QQ number of handler; not checked -> 0
+      }
+    ]
+  },
   "message": "",
   "wording": "",
 }
 ```
+
+两者加起来最多返回 10 条.
 
 :::
 
