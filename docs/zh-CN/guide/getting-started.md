@@ -88,7 +88,11 @@ chmod u+x ./napcat.sh
 
 ::: details [手机 Termux](https://github.com/NapNeko/NapCat-Termux)
 :::
-
+::: details Windows 桌面程序 图形化
+目前处于开发阶段 [点击前往](https://github.com/HeartfeltJoy/NapCatQQ-Desktop/releases/)
+当前阶段 缺少自动下载NC的功能 和 相关教程 和 中文设置
+待稳定后可以尝试
+:::
 ::: details 快速登录（无需扫码）
 
 如果你已经成功登录过官方 QQ 或者 NapCatQQ，可以加参数` -q <你的QQ>` 进行快速登录而无需扫码，如 `napcat.bat -q 1234567` 或者  `napcat.sh -q 1234567`。
