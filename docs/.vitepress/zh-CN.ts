@@ -63,6 +63,7 @@ function sidebarGuide() {
         { text: '基础配置', link: 'guide/config', activeMatch: '/zh-CN/guide/' },
         { text: '接入框架', link: 'guide/integration', activeMatch: '/zh-CN/guide/' },
         { text: '常见问题', link: 'guide/faq', activeMatch: '/zh-CN/guide/' }
+        { text: '社区资源', link: 'guide/resource', activeMatch: '/zh-CN/guide/' },
         // { text: '版本日志', link: 'guide/version', activeMatch: '/zh-CN/guide/' }
       ]
     }
