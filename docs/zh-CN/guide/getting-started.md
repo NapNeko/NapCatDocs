@@ -21,7 +21,6 @@ NapCatQQ 是基于 PC NTQQ 客户端本体实现的 QQ Bot 框架，稳定安全
 - NapCat 不同于协议实现，是基于 QQ 客户端，QQ 客户端上干不了的事，NapCat >_< 当然也是不行的!
 
 :::
-
 ## 安装 QQ
 
 NapCatQQ v1.4.7：
@@ -41,6 +40,9 @@ sudo apt install ./qq.deb
 ## 下载 NapCatQQ
 
 下载地址: <https://github.com/NapNeko/NapCatQQ/releases>
+
+## 关于QQ 9.9.12 NapCat1.6.4 以上版本提示
+[前往了解](/zh-CN/guide/BootWay03.md)
 
 ## 配置
 
