@@ -40,7 +40,10 @@ if (hasNapcatParam) {
 ## 启动NapCat
 打开NTQQ目录
 ![way0302](../../asset/img/getting-started/install.way03.02.png)
+## 你也可以手动创建 启动脚本文本
+[参考脚本](https://github.com/NapNeko/NapCatQQ/blob/main/script/NapCat.164.bat)
 
+新建一个文件 NapCat.164.bat 到任意位置 复制参考脚本内容 后保存
 ### Win11
 在空白处右键 在终端打开 然后在终端输入
 ```bash
