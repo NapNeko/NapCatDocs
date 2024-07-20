@@ -41,7 +41,7 @@ sudo apt install ./qq.deb
 
 下载地址: <https://github.com/NapNeko/NapCatQQ/releases>
 
-## 关于QQ 9.9.12 NapCat1.6.4 以上版本提示
+## 关于QQ 9.9.12/3.2.10 NapCat1.6.4 以上版本提示
 [前往了解](/zh-CN/guide/BootWay03.md)
 
 ## 配置
