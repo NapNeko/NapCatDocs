@@ -42,6 +42,7 @@ sudo apt install ./qq.deb
 下载地址: <https://github.com/NapNeko/NapCatQQ/releases>
 
 ## 关于QQ 9.9.12/3.2.10 NapCat1.6.4 以上版本提示
+！！！ 请阅读必读条目
 [前往了解](/zh-CN/guide/BootWay03.md)
 
 ## 配置
@@ -67,7 +68,7 @@ sudo apt install ./qq.deb
 :::
 
 ::: details Linux一键脚本
-墙裂推荐！
+该脚本仅支持docker模式
 
 `curl -o napcat.sh https://fastly.jsdelivr.net/gh/NapNeko/NapCat-Installer@master/script/install.sh && sudo bash napcat.sh`
 
@@ -88,8 +89,6 @@ chmod u+x ./napcat.sh
 
 :::
 
-::: details [手机 Termux](https://github.com/NapNeko/NapCat-Termux)
-:::
 ::: details Windows 桌面程序 图形化
 目前处于开发阶段 [点击前往](https://github.com/HeartfeltJoy/NapCatQQ-Desktop/releases/)
 当前阶段 缺少自动下载NC的功能 和 相关教程 和 中文设置
