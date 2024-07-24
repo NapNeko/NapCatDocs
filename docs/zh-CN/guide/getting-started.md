@@ -21,83 +21,38 @@ NapCatQQ 是基于 PC NTQQ 客户端本体实现的 QQ Bot 框架，稳定安全
 - NapCat 不同于协议实现，是基于 QQ 客户端，QQ 客户端上干不了的事，NapCat >_< 当然也是不行的!
 
 :::
+
 ## 安装 QQ
-
-NapCatQQ v1.4.7：
-
-[Windows X64 9.9.11-24815](https://dldir1.qq.com/qqfile/qq/QQNT/c3b55e07/QQ9.9.11.24815_x64.exe) | [Linux 3.2.9-248156-AMD64-DEB](https://dldir1.qq.com/qqfile/qq/QQNT/cbb0e5d9/linuxqq_3.2.9-24815_amd64.deb) | [Linux 3.2.9-248156-AMD64-RPM](https://dldir1.qq.com/qqfile/qq/QQNT/cbb0e5d9/linuxqq_3.2.9-24815_x86_64.rpm)
-
-
-Linux 无需桌面安装 NTQQ，具体命令如下：
-
-```shell
-sudo apt install libgbm1 libasound2
-sudo apt install ./qq.deb
-```
-
-更多版本请查看[版本更新记录](./version.md)。
+直接到QQ官网安装最新LinuxQQ即可
 
 ## 下载 NapCatQQ
 
 下载地址: <https://github.com/NapNeko/NapCatQQ/releases>
 
-## 关于QQ 9.9.12/3.2.10 NapCat1.6.4 以上版本提示
-！！！ 请阅读必读条目
-[前往了解](/zh-CN/guide/BootWay03.md)
+更多版本更新日志请查看[版本更新记录](./version.md)。
 
-## 配置
+## 配置NapCatQQ
 
 为了避免二次启动，可以事先配置好 NapCat 的基础设置，见 [配置 NapCat](./config.md)。
 
-## 启动
+## 启动NapCatQQ
 
-::: details Windows
+::: details NapCat Windows 图形化程序
+author: HeartfeltJoy
 
-我们安装好对应版本 QQ 后，大多数情况下，只需要解压 NapCat，并将其放到你想的的任何地方。但注意，路径不能包含空格。然后，双击 `napcat.bat` 就可以运行啦！
-
-等等! 如果你出现乱码可以尝试双击 `napcat-utf8.bat` 启动。
-
-如果上面的方法还是不行，可以尝试用 Powershell 启动：
-
-启动 PowerShell，运行 `powershell ./napcat.ps1` 或者 `napcat.bat`，如果出现乱码，可以尝试运行 `napcat-utf8.ps1` 或 `napcat-utf8.bat`。
-
-如果运行不了，可以尝试 `powershell.exe -ExecutionPolicy Bypass -File ".\napcat.ps1"`。
-
-**推荐直接点击 bat 运行，因为 PowerShell 自身会占用 20 MB 左右的内存。**
-
+[NapCat-Desktop](https://github.com/HeartfeltJoy/NapCatQQ-Desktop)
 :::
 
 ::: details Linux一键脚本
-该脚本仅支持docker模式
-
 `curl -o napcat.sh https://fastly.jsdelivr.net/gh/NapNeko/NapCat-Installer@master/script/install.sh && sudo bash napcat.sh`
-
 :::
 
 ::: details [Linux Docker](https://github.com/NapNeko/NapCat-Docker)
+[点击前往](https://github.com/NapNeko/NapCat-Docker)
 :::
 
-::: details Linux 非 Docker
-
-终端运行
-```shell
-chmod u+x ./napcat.sh
-./napcat.sh
-```
-
-请勿用`sh napcat.sh`启动，可能会出现路径问题而无法启动。
-
-:::
-
-::: details Windows 桌面程序 图形化
-目前处于开发阶段 [点击前往](https://github.com/HeartfeltJoy/NapCatQQ-Desktop/releases/)
-当前阶段 缺少自动下载NC的功能 和 相关教程 和 中文设置
-待稳定后可以尝试
-:::
-::: details 快速登录（无需扫码）
-
-如果你已经成功登录过官方 QQ 或者 NapCatQQ，可以加参数` -q <你的QQ>` 进行快速登录而无需扫码，如 `napcat.bat -q 1234567` 或者  `napcat.sh -q 1234567`。
-
+::: details 不想使用方便的方式? 想手动配置
+[前往了解BootWay3手动配置方案](/zh-CN/guide/BootWay03.md)
 :::
 
 ### 启动之后

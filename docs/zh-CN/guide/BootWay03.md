@@ -1,18 +1,18 @@
 # 安装
+
 ## 下载NapCatQQ与安装QQ
 确保你知道NC和QQ的位置
-## 如果是Linux 平台
-参考下面的docker 启动与配置nc 如果不会可以直接使用docker跑
-'''
-https://github.com/NapNeko/NapCat-Docker
-'''
+## 如果是Linux 平台 你需要做
+安装xvfb（参考 https://github.com/NapNeko/NapCat-Installer/blob/main/script/install.sh）
+
 ## 如果是Win平台 你需要做
 [修补QQ](https://liteloaderqqnt.github.io/guide/install.html#%E4%BF%AE%E8%A1%A5)
 
 请按照教程修补QQ 如果此前安装LiteLoaderQQNT 可跳过 当然也可以使用他的一键工具 然后按照下面修改
+
 ## 打开QQ下对应目录
 ![way0301](../../asset/img/getting-started/install.way03.01.png)
-
+（Linux ）
 ## 解压
 将napcat放置到如上图的位置 确保 ./napcat/napcat.mjs 存在
 
@@ -41,15 +41,15 @@ if (hasNapcatParam) {
 }
 ```
 
-## 启动NapCat
+## 启动Win NapCat
 打开NTQQ目录
 ![way0302](../../asset/img/getting-started/install.way03.02.png)
-## 一键启动脚本
+
+### Win 一键启动脚本
 <!-- [参考脚本](https://github.com/NapNeko/NapCatQQ/blob/main/script/NapCat.164.bat) -->
 
 napcat-9912 为新的启动脚本，复制到任意位置双击打开即可快速启动
-### 使用NCD启动
-[NapCat-Desktop](https://github.com/HeartfeltJoy/NapCatQQ-Desktop)
+
 ### Win11
 在空白处右键 在终端打开 然后在终端输入
 ```bash
