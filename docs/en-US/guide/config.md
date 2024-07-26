@@ -4,19 +4,23 @@
 
 If you have started NapCat and have more than one open port, you can configure it via WebUI.
 
-The default port is `6099`. When the port is occupied, it will automatically increment by 1 until an available port is found. The port number will be displayed at startup.
+The default address is `0.0.0.0`, which means it listens on all addresses. If an unavailable address is configured, the WebUI will be disabled.
 
-After startup, open the `./config/webui.json` file, and you can find the token password in it.
+The default port is `6099`. If the port is set to `0`, the WebUI will be disabled. If the port is occupied, it will automatically increment the port by 1 until it finds an available port (up to 100 attempts, after which the WebUI will be disabled). The port number will be displayed in the startup logs.
+
+After starting, you can find the token information in the startup logs in the format `[WebUi] Login Token is xxxx`, or you can open the `./config/webui.json` file to find the token.
 
 ```json5
 {
+    "host": "0.0.0.0", // WebUI addr
     "port": 6099, // WebUI port
+    "prefix": "", // WebUI URL prefix
     "token": "xxxx", // Login key, a randomly generated password by default
     "loginRate": 3, // Login rate limit per minute
 }
 ```
 
-Access `http://IP:Port/webui/login.html`, and then perform the following operations:
+Access `http://$host:$port$prefix/webui/login.html`, and then perform the following operations:
 
 1. Enter QQ login, and click `QRCode` for QR code login.
 
@@ -58,6 +62,7 @@ Below is an explanation of the configuration parameters:
     // IP address for the forward websocket service to listen on, empty means listen on all addresses
     "host": "",
     // Forward websocket service port
+    // When the port is the same as the HTTP service port, the host must also be consistent with the HTTP service host. Otherwise, this may cause startup failures.
     "port": 3001
   },
   "reverseWs": {

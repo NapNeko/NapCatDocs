@@ -4,19 +4,23 @@
 
 如果你已经启动了 NapCat，并且有多于 1 个开放端口，则可以通过 WebUI 进行配置。
 
-默认端口为 `6099`。当端口被占用时，会自动对端口 +1，直到找到可用端口，端口号会在启动时显示。
+默认地址为`0.0.0.0`，即监听所有地址。当配置了不可用的地址时 WebUI 将被禁用。
 
-启动后打开 `./config/webui.json` 文件，token 密码可在其中找到。
+默认端口为 `6099`。当端口被设置为`0`时将禁用 WebUI。当端口被占用时，会自动对端口 +1，直到找到可用端口（最多尝试100次，失败则会禁用 WebUI），端口号会在启动日志中显示。
+
+启动后可在启动日志中看到形如`[WebUi] Login Token is xxxx`的token信息，亦可打开`./config/webui.json`文件，在其中找到token。
 
 ```json5
 {
+    "host": "0.0.0.0", // WebUI 监听地址
     "port": 6099, // WebUI 端口
+    "prefix": "", // WebUI 工作前缀，此项功能将在进阶配置中解释
     "token": "xxxx", //登录密钥，默认是自动生成的随机登录密码
     "loginRate": 3, //每分钟登录次数限制
 }
 ```
 
-访问 `http://IP:端口/webui/login.html`，然后进行以下操作：
+访问 `http://$host:$port$prefix/webui/login.html`，然后进行以下操作：
 
 1. 进入 QQ 登录，点击 `QRCode` 进行二维码登录。
 
@@ -58,6 +62,7 @@
     // 正向websocket服务监听的 ip 地址，为空则监听所有地址
     "host": "",
     // 正向websocket服务端口
+    // 当port与http服务port一致时，host也需与http服务host保持一致，否则可能会导致启动失败
     "port": 3001
   },
   "reverseWs": {
