@@ -36,6 +36,7 @@ function sidebarGuide() {
       items: [
         { text: 'Getting Started', link: 'guide/getting-started', activeMatch: '/en/guide/' },
         { text: 'Basic Configuration', link: 'guide/config', activeMatch: '/en/guide/' },
+        { text: 'Advanced Configuration', link: 'guide/config_adv', activeMatch: '/en/guide/' },
         { text: 'Framework Integration', link: 'guide/integration', activeMatch: '/en/guide/' },
         { text: 'FAQ', link: 'guide/faq', activeMatch: '/en/guide/' }
         // { text: 'Changelog', link: 'guide/version', activeMatch: '/en/guide/' }
