@@ -3,7 +3,7 @@
 ## 下载NapCatQQ与安装QQ
 确保你知道NC和QQ的位置
 ## 如果是Linux 平台 你需要做
-安装xvfb（参考 https://github.com/NapNeko/NapCat-Installer/blob/main/script/install.sh）
+安装xvfb（参考 https://github.com/NapNeko/NapCat-Installer/blob/main/script/install.sh ）
 
 ## 如果是Win平台 你需要做
 [修补QQ](https://liteloaderqqnt.github.io/guide/install.html#%E4%BF%AE%E8%A1%A5)
