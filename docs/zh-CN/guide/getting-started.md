@@ -37,12 +37,6 @@ NapCatQQ 是基于 PC NTQQ 客户端本体实现的 QQ Bot 框架，稳定安全
 
 ## 启动NapCatQQ
 
-::: details NapCat Windows 图形化程序
-author: HeartfeltJoy
-
-[NapCat-Desktop](https://github.com/HeartfeltJoy/NapCatQQ-Desktop)
-:::
-
 ::: details Linux一键脚本
 `curl -o napcat.sh https://fastly.jsdelivr.net/gh/NapNeko/NapCat-Installer@master/script/install.sh && sudo bash napcat.sh`
 :::
