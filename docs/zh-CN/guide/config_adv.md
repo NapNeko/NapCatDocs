@@ -2,12 +2,12 @@
 
 ## 启用HTTPS
 
-NapCat 本身并不直接提供HTTPS服务，但是你可通过其他WEB软件例如`nginx`的反向代理功能间接实现HTTPS效果。
+NapCat 本身并不直接提供HTTPS服务，但是你可通过其他WEB软件例如Nginx的反向代理功能间接实现HTTPS效果。
 
-::: details 使用nginx为WebUI和Onebot11启用HTTPS
+::: details 使用Nginx为WebUI和Onebot11启用HTTPS
 
-::: tip
-首先我们假设你已经完成了域名绑定和SSL证书申请的步骤。
+> [!NOTE]
+> 首先我们假设你已经完成了域名绑定和SSL证书申请以及安装Nginx和NapCat的步骤，并且已经完成了NapCat的基础配置。
 
 打开`./config/webui.json`文件：
 - 将`host`修改为`127.0.0.1`。
@@ -36,7 +36,7 @@ NapCat 本身并不直接提供HTTPS服务，但是你可通过其他WEB软件�
   },
   "ws": {
     "enable": true,
-    "host": "127.0.0.1",
+    "host": "127.0.0.1", // 修改为127.0.0.1
     "port": 3000, // 这里 http 与 ws 填写相同的 host 和 port
   },
 }
@@ -62,7 +62,7 @@ server {
     ssl_certificate_key /path/to/private_key; # 这里是SSL私钥路径，需根据实际情况填写
     ssl_session_cache shared:SSL:5m;
     ssl_session_timeout 5m;
-    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4:@SECLEVEL=1;
+    ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4:@SECLEVEL=1;
     # TLSv1和TLSv1.1其实已经不安全不推荐使用了，但是有些语言的HTTPS/WSS库模块还停留在TLSv1时代，所以只能暂且保留了
     ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
     ssl_prefer_server_ciphers on;
@@ -76,6 +76,7 @@ server {
     }
 
     location /napcat/ { # 这里填的就是 webui.json 中的 prefix，但是你得在结尾补个 /
+        proxy_http_version 1.1;
         proxy_set_header Host $host:$server_port;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -102,8 +103,7 @@ server {
 
 如果顺利你就能在`https://你的域名/napcat/webui`上访问到 NapCat 的 WebUI，并且将机器人连接到`https://你的域名/onebot/`和`wss://你的域名/onebot/`了。
 
-:::warning
-
-请勿将注释内容写入配置文件，否则会导致配置文件解析失败。
+> [!WARNING]
+> 请勿将注释内容写入配置文件，否则会导致配置文件解析失败。
 
 :::
