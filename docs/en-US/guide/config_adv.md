@@ -6,8 +6,8 @@ NapCat does not directly provide HTTPS services, but you can achieve HTTPS funct
 
 ::: details Enable HTTPS for WebUI and Onebot11 using Nginx
 
-::: tip
-First, we assume you have already completed the domain binding and SSL certificate application steps.
+> [!NOTE]
+> First, we assume you have already completed the steps of domain binding, SSL certificate application, and installation of Nginx and NapCat, as well as the basic configuration of NapCat.
 
 Open the `./config/webui.json` file:
 - Change `host` to `127.0.0.1`.
@@ -36,7 +36,7 @@ Open the `./config/onebot11_xxxx.json` file, where `xxxx` is your bot's QQ numbe
   },
   "ws": {
     "enable": true,
-    "host": "127.0.0.1",
+    "host": "127.0.0.1", // Change to 127.0.0.1
     "port": 3000, // The host and port for http and ws should be the same
   },
 }
@@ -62,7 +62,7 @@ server {
     ssl_certificate_key /path/to/private_key; # Path to SSL private key, fill in according to your actual situation
     ssl_session_cache shared:SSL:5m;
     ssl_session_timeout 5m;
-    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4:@SECLEVEL=1;
+    ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4:@SECLEVEL=1;
     # TLSv1 and TLSv1.1 are actually insecure and not recommended, but some language HTTPS/WSS libraries are still stuck in the TLSv1 era, so they have to be retained for now
     ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
     ssl_prefer_server_ciphers on;
@@ -76,6 +76,7 @@ server {
     }
 
     location /napcat/ { # This should be the prefix in webui.json, but with a trailing /
+        proxy_http_version 1.1;
         proxy_set_header Host $host:$server_port;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -102,8 +103,7 @@ After completing the configuration, use `./napcat.sh -q` to start NapCat and `ng
 
 If everything goes smoothly, you should be able to access NapCat's WebUI at `https://your-domain/napcat/webui` and connect the bot to `https://your-domain/onebot/` and `wss://your-domain/onebot/`.
 
-:::warning
-
-Do not write comments into the configuration file, otherwise, it will fail to parse.
+> [!WARNING]
+> Do not write comments into the configuration file, otherwise, it will fail to parse.
 
 :::
