@@ -12,12 +12,14 @@
 
 ## 打开QQ下对应目录
 ![way0301](../../asset/img/getting-started/install.way03.01.png)
-（Linux ）
+
 ## 解压
-将napcat放置到如上图的位置 确保 ./napcat/napcat.mjs 存在
+将napcat放置到如上图的位置 确保 ./napcat/napcat.mjs 存在！！！！
+把NC放到QQ如上图的位置
 
 ## 写入启动代码
-将上图中的index.js内容删除后添加如下代码 添加后保存
+### Windows
+将上图中的QQ目录的index.js内容删除后添加如下代码 添加后保存
 ```js
 // --------------------
 // 2024.7.3 9.9.12 BootWay.03 其余方法暂不公开（此方案为临时方案 Win平台已验证）
@@ -40,7 +42,30 @@ if (hasNapcatParam) {
     require('./launcher.node').load('external_index', module);
 }
 ```
+### Linux
+Linux同样也需要修改index.js如下
+```js
+// --------------------
+// 2024.7.3 9.9.12 BootWay.03 其余方法暂不公开（此方案为临时方案 Win平台已验证）
+// 缺陷 （已知）
+// 1.与非入侵式不同 现在破坏本体代码
+// 2.重启代码与正常启动代码失效 
+// 3.Win需要补丁
+// 4.更新后丢失内容 需要重写此文件
+// 5.安装难度上升与周围基础设施失效
+// --------------------
 
+const path = require('path');
+const CurrentPath = path.dirname(__filename)
+const hasNapcatParam = process.argv.includes('--no-sandbox');
+if (hasNapcatParam) {
+    (async () => {
+        await import("file://" + path.join(CurrentPath, './napcat/napcat.mjs'));
+    })();
+} else {
+    require('./launcher.node').load('external_index', module);
+}
+```
 ## 启动Win NapCat
 打开NTQQ目录
 ![way0302](../../asset/img/getting-started/install.way03.02.png)
@@ -62,3 +87,7 @@ napcat-9912 为新的启动脚本，复制到任意位置双击打开即可快�
 ./QQ.exe --enable-logging
 ```
 即可启动
+### Linux
+```bash
+xvfb-run qq --no-sanbox
+``` 

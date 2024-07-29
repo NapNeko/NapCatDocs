@@ -36,7 +36,10 @@ NapCatQQ 是基于 PC NTQQ 客户端本体实现的 QQ Bot 框架，稳定安全
 为了避免二次启动，可以事先配置好 NapCat 的基础设置，见 [配置 NapCat](./config.md)。
 
 ## 启动NapCatQQ
-
+::: details Win 64系统手动配置
+Way5仅支持WinX64
+[前往了解BootWay5手动配置方案](/zh-CN/guide/BootWay05.md)
+:::
 ::: details Linux一键脚本
 `curl -o napcat.sh https://fastly.jsdelivr.net/gh/NapNeko/NapCat-Installer@master/script/install.sh && sudo bash napcat.sh`
 :::
@@ -46,7 +49,11 @@ NapCatQQ 是基于 PC NTQQ 客户端本体实现的 QQ Bot 框架，稳定安全
 :::
 
 ::: details 不想使用方便的方式? 想手动配置
+Way5仅支持WinX64
+[前往了解BootWay5手动配置方案](/zh-CN/guide/BootWay05.md)
+Way3支持任意系统
 [前往了解BootWay3手动配置方案](/zh-CN/guide/BootWay03.md)
+
 :::
 
 ### 启动之后
