@@ -1,25 +1,41 @@
+# 宝宝级首次安装教程
+## 方式一
+```
+curl -o install.ps1 https://cdn.jsdelivr.net/gh/NapNeko/NapCat-Installer@main/script/install.ps1
+powershell -ExecutionPolicy ByPass -File ./install.ps1 -verb runas
+```
+1. 复制上面代码
+![alt text](../../asset/img/getting-started/nc070.png)
 
-# 宝宝级首次安装教程 方式一
+2. 打开一个你想安装NC的目录（随便啦 但是一般别在C盘 笨蛋）
 
-1. 方法一 复制下面代码 打开一个你想安装NC的目录 按下图 在空白处右键 在打开黑色窗口里面 右键粘贴代码 后回车两次 下面代码会自动安装QQ和NapCatQQ
+3. 按下图 在空白处右键 然后点击在终端打开
 ![alt text](../../asset/img/getting-started/nc056.png)
+
+4. 将刚刚的复制的代码粘贴 点击仍然粘贴
 ![alt text](../../asset/img/getting-started/nc059.png)
 
+5. 如果代码没动就回车一下 等到提示框弹出哦
+
+## 方式二
 ```
 curl -o install.ps1 https://cdn.jsdelivr.net/gh/NapNeko/NapCat-Installer@main/script/install.ps1
 powershell -ExecutionPolicy ByPass -File ./install.ps1 -verb runas
 ```
+1. 复制上面代码
+![alt text](../../asset/img/getting-started/nc070.png)
 
+2. 方法二 复制下面代码 打开一个你想安装NC的目录（随便啦 但是一般别在C盘 笨蛋）
 
-2. 方法二 复制下面代码 打开一个你想安装NC的目录 按下图 在输入框里面输入wt回车 在黑色窗口 右键粘贴复制的内容 后回车两次 下面代码会自动安装QQ和NapCatQQ
+3. 按下图  在输入框里面输入wt回车 在黑色窗口
 ![alt text](../../asset/img/getting-started/nc057.png)
-![alt text](../../asset/img/getting-started/nc059.png)
-```
-curl -o install.ps1 https://cdn.jsdelivr.net/gh/NapNeko/NapCat-Installer@main/script/install.ps1
-powershell -ExecutionPolicy ByPass -File ./install.ps1 -verb runas
-```
 
-## 宝宝级首次安装教程 方式二
+4. 将刚刚的复制的代码粘贴 点击仍然粘贴
+![alt text](../../asset/img/getting-started/nc059.png)
+
+5. 如果代码没动就回车一下 等到提示框弹出哦
+
+## 宝宝级首次安装教程 方式三
 0. 下载NapCat和QQ 并安装QQ 如果这个不会参考婴儿级教程
 1. 首先找到你下载的NC目录内的这个文件 
 ![alt text](../../asset/img/getting-started/nc051.png)
