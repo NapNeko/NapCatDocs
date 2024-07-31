@@ -1,4 +1,9 @@
 # 安装
+## 更简单方式
+确保你安装了QQ 右键NC目录下这个文件 点击如图的按钮 成功启动 如果失败参考下面文档
+
+![alt text](../../asset/img/getting-started/nc057.png)
+
 ## 首次启动？
 1.首先找到你下载的NC目录内的这个文件 
 ![alt text](../../asset/img/getting-started/nc051.png)
