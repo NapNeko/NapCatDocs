@@ -23,7 +23,15 @@ NapCatQQ 是基于 PC NTQQ 客户端本体实现的 QQ Bot 框架，稳定安全
 :::
 
 ## 安装 QQ
-直接到QQ官网安装最新LinuxQQ即可
+
+在页面[版本更新记录](./version.md)查看可用的LinuxQQ版本并下载安装
+
+下载之后开始安装
+
+```
+sudo apt install libgbm1 libasound2 # 安装必要依赖
+sudo apt install ./linuxqq_3.2.7-23361_amd64.deb -y  ＃这里以3.2.7版本为例，且系统是ubuntu系统
+```
 
 ## 下载 NapCatQQ
 
