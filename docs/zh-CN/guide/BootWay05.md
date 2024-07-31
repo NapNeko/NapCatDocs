@@ -35,7 +35,7 @@ powershell -ExecutionPolicy ByPass -File ./install.ps1 -verb runas
 
 5. 如果代码没动就回车一下 等到提示框弹出哦
 
-## 宝宝级首次安装教程 方式三
+## 方式三
 0. 下载NapCat和QQ 并安装QQ 如果这个不会参考婴儿级教程
 1. 首先找到你下载的NC目录内的这个文件 
 ![alt text](../../asset/img/getting-started/nc051.png)
@@ -61,11 +61,6 @@ powershell -ExecutionPolicy ByPass -File ./BootWay05.ps1
 确保你安装了QQ 下载了NC 右键NC目录下这个文件 点击如图的按钮 成功启动 如果失败参考下面文档
 
 ![alt text](../../asset/img/getting-started/nc057.png)
-
-
-
-## 如何再次启动？
-仅进行上面的6-8步
 
 # 如果我是说如果教程没有看懂 应该如何处理?
 这个时候不要慌张 多读多学
