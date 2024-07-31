@@ -16,7 +16,7 @@
 ![alt text](../../asset/img/getting-started/nc057.png)
 8.完成后 来到弹出的黑色窗口输入
 ```
-powershell -ExecutionPolicy ByPass -File ./BootWay05-utf8.ps1 -verb runas
+powershell -ExecutionPolicy ByPass -File ./BootWay05.ps1 -verb runas
 ```
 记得回车哦
 
