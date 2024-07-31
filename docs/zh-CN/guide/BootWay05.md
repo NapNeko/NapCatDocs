@@ -1,7 +1,7 @@
 # 宝宝级首次安装教程
 ## 方式一
 ```
-curl -o install.ps1 https://cdn.jsdelivr.net/gh/NapNeko/NapCat-Installer@main/script/install.ps1
+curl -o install.ps1 https://cdn.jsdmirror.com/gh/NapNeko/NapCat-Installer@main/script/install.ps1
 powershell -ExecutionPolicy ByPass -File ./install.ps1 -verb runas
 ```
 1. 复制上面代码
@@ -19,7 +19,7 @@ powershell -ExecutionPolicy ByPass -File ./install.ps1 -verb runas
 
 ## 方式二
 ```
-curl -o install.ps1 https://cdn.jsdelivr.net/gh/NapNeko/NapCat-Installer@main/script/install.ps1
+curl -o install.ps1 https://cdn.jsdmirror.com/gh/NapNeko/NapCat-Installer@main/script/install.ps1
 powershell -ExecutionPolicy ByPass -File ./install.ps1 -verb runas
 ```
 1. 复制上面代码
