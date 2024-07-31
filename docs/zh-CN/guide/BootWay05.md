@@ -1,16 +1,22 @@
 
-# 婴儿级首次安装教程 方式一
+# 宝宝级首次安装教程 方式一
 
-1. 方法一 复制下面代码 打开一个你想安装NC的目录 按下图 在打开窗口里面 右键粘贴 后回车两次 下面代码会自动安装QQ和NapCatQQ
+1. 方法一 复制下面代码 打开一个你想安装NC的目录 按下图 在空白处右键 在打开黑色窗口里面 右键粘贴代码 后回车两次 下面代码会自动安装QQ和NapCatQQ
 ![alt text](../../asset/img/getting-started/nc056.png)
-2. 方法二 复制下面代码 打开一个你想安装NC的目录 按下图 在打开窗口里面 右键粘贴 后回车两次 下面代码会自动安装QQ和NapCatQQ
+```
+curl -o install.ps1 https://cdn.jsdelivr.net/gh/NapNeko/NapCat-Installer@main/script/install.ps1
+powershell -ExecutionPolicy ByPass -File ./install.ps1 -verb runas
+```
+
+2. 方法二 复制下面代码 打开一个你想安装NC的目录 按下图 在输入框里面输入wt回车 在黑色窗口 右键粘贴复制的内容 后回车两次 下面代码会自动安装QQ和NapCatQQ
 ![alt text](../../asset/img/getting-started/nc057.png)
 
 ```
 curl -o install.ps1 https://cdn.jsdelivr.net/gh/NapNeko/NapCat-Installer@main/script/install.ps1
 powershell -ExecutionPolicy ByPass -File ./install.ps1 -verb runas
 ```
-## 婴儿级首次安装教程 方式二
+
+## 宝宝级首次安装教程 方式二
 0. 下载NapCat和QQ 并安装QQ 如果这个不会参考婴儿级教程
 1. 首先找到你下载的NC目录内的这个文件 
 ![alt text](../../asset/img/getting-started/nc051.png)
