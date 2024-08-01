@@ -22,28 +22,10 @@ NapCatQQ 是基于 PC NTQQ 客户端本体实现的 QQ Bot 框架，稳定安全
 
 :::
 
-## 安装 QQ
+## 安装教程
 
-在页面[版本更新记录](./version.md)查看可用的LinuxQQ版本并下载安装
+### 新版安装教程
 
-下载之后开始安装
-
-```
-sudo apt install libgbm1 libasound2 # 安装必要依赖
-sudo apt install ./linuxqq_3.2.7-23361_amd64.deb -y  ＃这里以3.2.7版本为例，且系统是ubuntu系统
-```
-
-## 下载 NapCatQQ
-
-下载地址: <https://github.com/NapNeko/NapCatQQ/releases>
-
-更多版本更新日志请查看[版本更新记录](./version.md)。
-
-## 配置NapCatQQ
-
-为了避免二次启动，可以事先配置好 NapCat 的基础设置，见 [配置 NapCat](./config.md)。
-
-## 启动NapCatQQ
 ::: details Win 64系统手动配置
 Way5仅支持WinX64
 [前往了解BootWay5手动配置方案](/zh-CN/guide/BootWay05.md)
@@ -63,6 +45,35 @@ Way3支持任意系统
 [前往了解BootWay3手动配置方案](/zh-CN/guide/BootWay03.md)
 
 :::
+
+### 旧版安装教程
+
+:::warning
+
+需要注意的是，在最近版本由于QQ本体大幅变动，为了保证NapCat可用性，NapCat近期启动与安装方式将将大幅变动，使用旧版安装有可能会遇到各种报错。
+
+:::
+
+#### 安装 QQ
+
+在页面[版本更新记录](./version.md)查看可用的LinuxQQ版本并下载安装
+
+下载之后开始安装
+
+```
+sudo apt install libgbm1 libasound2 # 安装必要依赖
+sudo apt install ./linuxqq_3.2.7-23361_amd64.deb -y  ＃这里以3.2.7版本为例，且系统是ubuntu系统
+```
+
+#### 下载 NapCatQQ
+
+下载地址: <https://github.com/NapNeko/NapCatQQ/releases>
+
+更多版本更新日志请查看[版本更新记录](./version.md)。
+
+#### 配置NapCatQQ
+
+为了避免二次启动，可以事先配置好 NapCat 的基础设置，见 [配置 NapCat](./config.md)。
 
 ### 启动之后
 
