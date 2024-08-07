@@ -78,3 +78,6 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 | get_online_clients       |   ✔   |
 
 :::
+
+## 接口文档
+[完整参考文档](./NapCat.md)
