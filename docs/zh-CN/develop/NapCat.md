@@ -23,8 +23,6 @@ generator: "@tarslib/widdershins v4.0.23"
 
 Base URLs:
 
-* <a href="http://127.0.0.1:3000">本地测试: http://127.0.0.1:3000</a>
-
 # Authentication
 
 # 消息类接口
@@ -37,25 +35,37 @@ POST /send_group_msg
 
 ```json
 {
-  "group_id": 55,
+  "group_id": 2,
   "message": [
     {
       "data": {
-        "text": "consectetur aute"
+        "text": "occaecat sunt nisi aute"
       },
-      "type": "deserunt in Ut nostrud"
+      "type": "est magna laborum et ut"
     },
     {
       "data": {
-        "text": "non"
+        "text": "ad"
       },
-      "type": "reprehenderit deserunt non nostrud"
+      "type": "reprehenderit"
     },
     {
       "data": {
-        "text": "veniam elit id culpa"
+        "text": "cupidatat ea do dolore"
       },
-      "type": "ad enim aliqua ex"
+      "type": "do dolor tempor quis id"
+    },
+    {
+      "data": {
+        "text": "Lorem Ut est pariatur"
+      },
+      "type": "cillum ut occaecat elit laboris"
+    },
+    {
+      "data": {
+        "text": "esse"
+      },
+      "type": "sunt qui minim"
     }
   ]
 }
@@ -1031,7 +1041,11 @@ POST /get_group_member_info
 > Body 请求参数
 
 ```json
-"{\r\n    \"no_cache\": true,\r\n    \"group_id\": {{groupid}},\r\n    \"user_id\": 1627126029\r\n}"
+{
+  "no_cache": false,
+  "group_id": "87",
+  "user_id": "10"
+}
 ```
 
 ### 请求参数
@@ -1066,7 +1080,10 @@ POST /get_group_member_list
 > Body 请求参数
 
 ```json
-"{\r\n    \"no_cache\": true,\r\n    \"group_id\": {{groupid}},\r\n    \"user_id\": 1627126029\r\n}"
+{
+  "no_cache": false,
+  "group_id": "84"
+}
 ```
 
 ### 请求参数
