@@ -36,7 +36,29 @@ POST /send_group_msg
 > Body 请求参数
 
 ```json
-"{\r\n    \"group_id\": {{groupid}},\r\n    \"message\": [\r\n        {\r\n            \"data\": {\r\n                \"text\": \"Excepteur aliqua in ad\"\r\n            },\r\n            \"type\": \"veniam commodo consequat nostrud adipisicing\"\r\n        },\r\n        {\r\n            \"data\": {\r\n                \"text\": \"in do enim aliquip deserunt\"\r\n            },\r\n            \"type\": \"commodo\"\r\n        }\r\n    ]\r\n}"
+{
+  "group_id": 55,
+  "message": [
+    {
+      "data": {
+        "text": "consectetur aute"
+      },
+      "type": "deserunt in Ut nostrud"
+    },
+    {
+      "data": {
+        "text": "non"
+      },
+      "type": "reprehenderit deserunt non nostrud"
+    },
+    {
+      "data": {
+        "text": "veniam elit id culpa"
+      },
+      "type": "ad enim aliqua ex"
+    }
+  ]
+}
 ```
 
 ### 请求参数
@@ -73,7 +95,23 @@ POST /send_private_msg
 > Body 请求参数
 
 ```json
-"{\r\n    \"user_id\": {{touserid}},\r\n    \"message\": [\r\n        {\r\n            \"data\": {\r\n                \"text\": \"菜单\"\r\n            },\r\n            \"type\": \"text\"\r\n        },\r\n        {\r\n            \"data\": {\r\n                \"text\": \"菜单\"\r\n            },\r\n            \"type\": \"text\"\r\n        },\r\n        {\r\n            \"data\": {\r\n                \"text\": \"菜单\"\r\n            },\r\n            \"type\": \"text\"\r\n        },\r\n        {\r\n            \"data\": {\r\n                \"text\": \"菜单\"\r\n            },\r\n            \"type\": \"text\"\r\n        }\r\n    ]\r\n}"
+{
+  "user_id": 74,
+  "message": [
+    {
+      "data": {
+        "text": "occaecat cupidatat"
+      },
+      "type": "cupidatat ipsum"
+    },
+    {
+      "data": {
+        "text": "sint in"
+      },
+      "type": "quis ullamco ex consectetur"
+    }
+  ]
+}
 ```
 
 ### 请求参数
@@ -110,7 +148,10 @@ POST /get_group_msg_history
 > Body 请求参数
 
 ```json
-"{\r\n    \"group_id\": {{groupid}},\r\n    \"count\": 10\r\n}"
+{
+  "group_id": 46,
+  "count": 10
+}
 ```
 
 ### 请求参数
