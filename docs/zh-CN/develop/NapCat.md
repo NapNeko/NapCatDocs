@@ -36,7 +36,7 @@ POST /send_group_msg
 > Body 请求参数
 
 ```json
-"{\r\n    \"group_id\": {{groupid}},\r\n    \"message\": [\r\n        {\r\n            \"data\": {\r\n                \"text\": \"菜单\"\r\n            },\r\n            \"type\": \"text\"\r\n        },\r\n        {\r\n            \"data\": {\r\n                \"text\": \"菜单\"\r\n            },\r\n            \"type\": \"text\"\r\n        },\r\n        {\r\n            \"data\": {\r\n                \"text\": \"菜单\"\r\n            },\r\n            \"type\": \"text\"\r\n        },\r\n        {\r\n            \"data\": {\r\n                \"text\": \"菜单\"\r\n            },\r\n            \"type\": \"text\"\r\n        }\r\n    ]\r\n}"
+"{\r\n    \"group_id\": {{groupid}},\r\n    \"message\": [\r\n        {\r\n            \"data\": {\r\n                \"text\": \"Excepteur aliqua in ad\"\r\n            },\r\n            \"type\": \"veniam commodo consequat nostrud adipisicing\"\r\n        },\r\n        {\r\n            \"data\": {\r\n                \"text\": \"in do enim aliquip deserunt\"\r\n            },\r\n            \"type\": \"commodo\"\r\n        }\r\n    ]\r\n}"
 ```
 
 ### 请求参数
@@ -44,6 +44,11 @@ POST /send_group_msg
 |名称|位置|类型|必选|说明|
 |---|---|---|---|---|
 |body|body|object| 否 |none|
+|» group_id|body|integer| 是 |none|
+|» message|body|[object]| 是 |none|
+|»» data|body|object| 是 |none|
+|»»» text|body|string| 是 |none|
+|»» type|body|string| 是 |none|
 
 > 返回示例
 
@@ -68,35 +73,7 @@ POST /send_private_msg
 > Body 请求参数
 
 ```json
-{
-  "user_id": 1627126029,
-  "message": [
-    {
-      "data": {
-        "text": "菜单"
-      },
-      "type": "text"
-    },
-    {
-      "data": {
-        "text": "菜单"
-      },
-      "type": "text"
-    },
-    {
-      "data": {
-        "text": "菜单"
-      },
-      "type": "text"
-    },
-    {
-      "data": {
-        "text": "菜单"
-      },
-      "type": "text"
-    }
-  ]
-}
+"{\r\n    \"user_id\": {{touserid}},\r\n    \"message\": [\r\n        {\r\n            \"data\": {\r\n                \"text\": \"菜单\"\r\n            },\r\n            \"type\": \"text\"\r\n        },\r\n        {\r\n            \"data\": {\r\n                \"text\": \"菜单\"\r\n            },\r\n            \"type\": \"text\"\r\n        },\r\n        {\r\n            \"data\": {\r\n                \"text\": \"菜单\"\r\n            },\r\n            \"type\": \"text\"\r\n        },\r\n        {\r\n            \"data\": {\r\n                \"text\": \"菜单\"\r\n            },\r\n            \"type\": \"text\"\r\n        }\r\n    ]\r\n}"
 ```
 
 ### 请求参数
@@ -104,6 +81,11 @@ POST /send_private_msg
 |名称|位置|类型|必选|说明|
 |---|---|---|---|---|
 |body|body|object| 否 |none|
+|» user_id|body|integer| 是 |none|
+|» message|body|[object]| 是 |none|
+|»» data|body|object| 是 |none|
+|»»» text|body|string| 是 |none|
+|»» type|body|string| 是 |none|
 
 > 返回示例
 
@@ -128,10 +110,7 @@ POST /get_group_msg_history
 > Body 请求参数
 
 ```json
-{
-  "group_id": 809079648,
-  "count": 10
-}
+"{\r\n    \"group_id\": {{groupid}},\r\n    \"count\": 10\r\n}"
 ```
 
 ### 请求参数
@@ -139,7 +118,8 @@ POST /get_group_msg_history
 |名称|位置|类型|必选|说明|
 |---|---|---|---|---|
 |body|body|object| 否 |none|
-|» group_id|body|number| 是 |none|
+|» group_id|body|integer| 是 |none|
+|» count|body|integer| 是 |none|
 
 > 返回示例
 
