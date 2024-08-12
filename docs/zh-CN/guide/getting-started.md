@@ -1,28 +1,36 @@
-# NapCatQQ
+## NapCatQQ
+NapCatQQ V2 正式开始测试，在使用请你需要了解一些小知识哦。
 
-NapCatQQ 是基于 PC NTQQ 客户端本体实现的 QQ Bot 框架，稳定安全，快速部署。
+### 猫猫框架能够做些什么？
+猫猫框架 通过魔法的手段获得了QQ的发送消息 接收消息的接口，为了大家能够自由使用这些接口，
 
-## NapCatQQ 的优势
+猫猫框架 将通过一种名为OneBot的约定将你的Http/Ws请求按照规范读取，再去调用猫猫框架所获得的QQ发送接口之类的接口。
 
-- 不需要图形环境，Linux表现优异，与现有Hook框架有着本质区别，在性能与内存占用方面远远优于基于Hook的框架。
+### 了解猫猫框架的撸法
+[前往下载NapCat](https://github.com/NapNeko/NapCatQQ/releases) 
 
-- 配置简单，支持浏览器远程进入进行配置，简单轻松即可完成配置。
+可能各位已经看见了有两个压缩包 我应当如何选择呢 下列的方式一和三选择 NapCat.Framwork.zip 而方式二则下载 NapCat.Shell.zip
 
-- NTQQ功能适配快速，更新持续跟进QQ最新版。
+1. [LiteLoader](https://liteloaderqqnt.github.io/) 插件运行模式 能够人机合一 使用教程参考下图LiteLoader启动
 
-## 启动前需要了解的三两事 (！你给我好好读三遍)
+2. Shell 运行模式 当你不需要图形化界面或者内存紧张可以使用此方法
 
-:::warning
+3. Only Gui 运行模式 当你不想使用LiteLoader插件时，却又想人机合一，又想折腾时可以考虑此方法。
 
-- NapCat 是基于 PC NTQQ 客户端本体实现的 QQ Bot 框架，所以说需要提前安装好和 **NapCatQQ 对应的 QQ 版本**才能运行 NapCat。
+### LiteLoader模式手动撸猫
+1. 安装LiteLoader 如果已安装则跳过
 
-- NapCat 在线时，你不能使用 PC QQ 客户端实现人机合一，但是可以选择同步登录移动客户端，如果想要在 PC 上人机合一请使用 [LLOneBot](https://github.com/LLOneBot/LLOneBot)
+[点我前往](https://liteloaderqqnt.github.io/) 
 
-- NapCat 不同于协议实现，是基于 QQ 客户端，QQ 客户端上干不了的事，NapCat >_< 当然也是不行的!
+2. 在这里将NapCat.Framwork.zip导入进去即可
 
-:::
+![在这里](../../asset/img/getting-started/ll01.png)
 
-## 一键安装
+### LiteLoader模式一键撸猫
+很抱歉哦 正在开发中
+
+### Shell模式一键撸猫
+此方案暂未适配哦
 
 ::: details Linux一键脚本
 `curl -o napcat.sh https://fastly.jsdelivr.net/gh/NapNeko/NapCat-Installer@master/script/install.sh && sudo bash napcat.sh`
@@ -31,48 +39,31 @@ NapCatQQ 是基于 PC NTQQ 客户端本体实现的 QQ Bot 框架，稳定安全
 ::: details [Linux Docker](https://github.com/NapNeko/NapCat-Docker)
 [点击前往](https://github.com/NapNeko/NapCat-Docker)
 :::
-
-## 手动安装
-
-### 安装 QQ
-
-在页面[版本更新记录](./version.md)查看可用的LinuxQQ版本并下载安装
-
-下载之后开始安装
-
-```
-sudo apt install libgbm1 libasound2 # 安装必要依赖
-sudo apt install ./linuxqq_3.2.7-23361_amd64.deb -y  ＃这里以3.2.7版本为例，且系统是ubuntu系统
-```
-
-### 下载 NapCatQQ
-
-下载地址: <https://github.com/NapNeko/NapCatQQ/releases>
-
-更多版本更新日志请查看[版本更新记录](./version.md)。
-
-### 配置NapCatQQ
-
-为了避免二次启动，可以事先配置好 NapCat 的基础设置，见 [配置 NapCat](./config.md)。
-
-### 启动NapCatQQ
+### Shell模式手动撸猫
 
 ::: details Win 64系统手动配置
-Way5仅支持WinX64
 [前往了解BootWay5手动配置方案](/zh-CN/guide/BootWay05.md)
 :::
 
 ::: details 不想使用方便的方式? 想手动配置
-Way5仅支持WinX64
-[前往了解BootWay5手动配置方案](/zh-CN/guide/BootWay05.md)
 Way3支持任意系统
 [前往了解BootWay3手动配置方案](/zh-CN/guide/BootWay03.md)
-
 :::
 
-### 启动之后
+### Only Gui模式的一键撸猫
+暂未适配哦
 
-恭喜你，如果看到这里，你已经成功启动了 NapCat，可以尝试阅读下面的进阶说明！
+### Only Gui模式的手动撸猫
+Way3支持任意系统
+[前往了解BootWay3手动配置方案](/zh-CN/guide/BootWay03-nogui.md)
+
+### 如何调教猫猫
+
+[配置 NapCat](./config.md)。
+
+## 启动之后
+
+恭喜你，如果看到这里，你已经成功启动了它，可以尝试阅读下面的进阶说明！
 
 [如何进行 NapCat 的基础设置](/zh-CN/guide/config.md)
 
