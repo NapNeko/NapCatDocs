@@ -32,7 +32,7 @@
 基于版本: [Windows 9.9.10-24108](https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.10_240523_x64_01.exe) | [Linux 3.2.7-23361](https://dldir1.qq.com/qqfile/qq/QQNT/8b4fdf81/linuxqq_3.2.7-23361_amd64.deb) 开发
 
 ::: details 更新日志
-![logo](../../asset/img/logo.png)
+![logo](../../public/logo.png)
 :::
 
 ## V1.4.3
