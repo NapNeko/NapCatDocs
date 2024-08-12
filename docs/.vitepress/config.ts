@@ -8,5 +8,6 @@ export default defineConfig({
   locales: {
     'en-US': { label: 'English', ...enUS },
     'zh-CN': { label: '简体中文', ...zhCN }
-  }
+  },
+  head: [['link', { rel: 'icon', href: '/asset/img/logo.png' }]]
 })
