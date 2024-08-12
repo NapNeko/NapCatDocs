@@ -1,4 +1,6 @@
-## NapCatQQ
+# NapCatQQ
+## V2 Is Coming
+
 NapCatQQ V2 正式开始测试，在使用请你需要了解一些小知识哦。
 
 ### 猫猫框架能够做些什么？
