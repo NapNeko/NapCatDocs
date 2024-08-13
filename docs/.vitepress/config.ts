@@ -9,5 +9,5 @@ export default defineConfig({
     'en-US': { label: 'English', ...enUS },
     'zh-CN': { label: '简体中文', ...zhCN }
   },
-  head: [['link', { rel: 'icon', href: '/asset/img/logo.png' }]]
+  head: [['link', { rel: 'icon', href: '/logo.png' }]]
 })
