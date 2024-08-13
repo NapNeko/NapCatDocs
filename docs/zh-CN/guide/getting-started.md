@@ -40,16 +40,16 @@ curl -o install.ps1 https://cdn.jsdmirror.com/gh/NapNeko/NapCat-Installer@main/s
 powershell -ExecutionPolicy ByPass -File ./install.ps1 -verb runas
 ```
 1. 点击复制上面代码，如下图。
-  ![复制代码](../../../../asset/img/getting-started/nc070.png)
+  ![复制代码](../../asset/img/getting-started/nc070.png)
 
 2. 打开一个你想安装猫猫框架的目录（随便啦，但是一般别在 C 盘，笨蛋）
 
 3. 在空白处右键，点击在终端打开。若无此选项卡，可以在地址栏中输入 wt 并回车。
-  ![alt text](../../../../asset/img/getting-started/nc056.png)
-  ![alt text](../../../../asset/img/getting-started/nc057.png)
+  ![alt text](../../asset/img/getting-started/nc056.png)
+  ![alt text](../../asset/img/getting-started/nc057.png)
 
 4. 在终端中右键（不要用 Ctrl+V - 这样有可能造成不可预料的后果！），将刚刚的复制的代码粘贴进终端。如果终端有警告，点击仍然粘贴。
-  ![alt text](../../../../asset/img/getting-started/nc059.png)
+  ![alt text](../../asset/img/getting-started/nc059.png)
 
 5. 如果代码没动就回车一下，等到提示框弹出。
 
