@@ -24,7 +24,7 @@ NapCat 会自动保存二维码到目录，可以手动打开图片扫描。
 
 ::: details 语音、视频发送失败
 
-这种情况需要你手动配置 ffmpeg 路径。ffmpeg 可以点击[这里](/zh-CN/guide/ffmpeg)下载。
+这种情况需要你手动配置 ffmpeg 路径。ffmpeg 可以点击[这里](config/ffmpeg.md)下载。
 
 将 ffmpeg 目录加入环境变量，如果仍未生效，可以修改 NapCat 启动脚本加入 FFMPEG_PATH 变量，指定到 ffmpeg 程序的完整路径。例如，Windows 上，可以修改 napcat.ps1，在第一行前加入
 

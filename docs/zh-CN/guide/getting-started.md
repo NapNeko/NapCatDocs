@@ -45,20 +45,20 @@ NapCatQQ V2 正式开始测试，欢迎来到 NapCatQQ (aka 猫猫框架) 的使
 
 目前已经研究完成并公布的启动方式有 BootWay03 和 05。
 
-[前往了解 BootWay05](/zh-CN/guide/BootWay05.md)（仅支持 Windows x64）
+[前往了解 BootWay05](./boot/shell/BootWay05)（仅支持 Windows x64）
 
-[前往了解 BootWay03](/zh-CN/guide/BootWay03.md)（支持 Windows 和 Linux）
+[前往了解 BootWay03](./boot/shell/BootWay03)（支持 Windows 和 Linux）
 
 ## Only GUI
 
-目前该方案没有完整支持，仅有[手动方案](/zh-CN/guide/BootWay03-nogui.md)，与上面的 BootWay03 类似。
+目前该方案没有完整支持，仅有[手动方案](./boot/only-gui/BootWay03)，与上面的 BootWay03 类似。
 
 ## 启动之后
 
 恭喜你，如果看到这里，你已经成功启动了它，可以尝试阅读下面的进阶说明！
 
-[如何进行 NapCat 的基础设置](/zh-CN/guide/config.md)
+[如何进行 NapCat 的基础设置](./config/basic.md)
 
-[如何配置 NapCat 的语音发送](/zh-CN/guide/faq.md) 参考 `语音、视频发送失败` 发生失败条目
+[如何配置 NapCat 的语音发送](./faq.md) 参考 `语音、视频发送失败` 发生失败条目
 
-[遇到 NapCat 崩溃问题如何解决](/zh-CN/guide/faq.md)
+[遇到 NapCat 崩溃问题如何解决](./faq.md)
