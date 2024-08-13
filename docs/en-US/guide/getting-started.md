@@ -99,8 +99,8 @@ If you have successfully logged in to the official QQ or NapCatQQ, you can add t
 
 Congratulations, if you see this, you have successfully started NapCat, you can try reading the advanced instructions below!
 
-[How to Configure NapCat's Basic Settings](/zh-CN/guide/config.md)
+[How to Configure NapCat's Basic Settings](config.md)
 
-[How to Configure NapCat's Voice Sending](/zh-CN/guide/faq.md) Refer to the entry `Voice/Video Sending Failed`
+[How to Configure NapCat's Voice Sending](faq.md) Refer to the entry `Voice/Video Sending Failed`
 
-[How to Solve NapCat Crash Issues](/zh-CN/guide/faq.md)
+[How to Solve NapCat Crash Issues](faq.md)

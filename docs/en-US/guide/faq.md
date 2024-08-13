@@ -24,7 +24,7 @@ Act quickly, as the QR code will expire!
 
 ::: details Voice/Video Sending Failed
 
-In this case, you need to manually configure the ffmpeg path. You can download ffmpeg [here](/zh-CN/guide/ffmpeg).
+In this case, you need to manually configure the ffmpeg path. You can download ffmpeg [here](ffmpeg.md).
 
 Add the ffmpeg directory to the environment variable. If it still does not work, you can modify the NapCat startup script to add the FFMPEG_PATH variable, specifying the full path to the ffmpeg program. For example, on Windows, you can modify napcat.ps1, and add the following before the first line:
 
