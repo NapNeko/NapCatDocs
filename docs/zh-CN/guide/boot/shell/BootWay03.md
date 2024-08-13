@@ -1,6 +1,6 @@
 # BootWay03 撸猫教程
 
-首先，安装 QQ，确保你知道 QQ 的目录。Linux 一般在 `/opt/QQ`；Windows 一般在系统盘下 `Program Files\Tencent\QQNT`，具体定位方法可以参考 [BootWay05 教程](BootWay05.md)的手动安装部分。 
+首先，安装 QQ，确保你知道 QQ 的目录。Linux 一般在 `/opt/QQ`；Windows 一般在系统盘下 `Program Files\Tencent\QQNT`，具体定位方法可以参考 [BootWay05 教程](BootWay05.md)。 
 
 ## 预处理
 
