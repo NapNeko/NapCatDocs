@@ -1,81 +1,59 @@
-# NapCatQQ
-## V2 Is Coming
+# 快速开始
 
-NapCatQQ V2 正式开始测试，在使用请你需要了解一些小知识哦。
+NapCatQQ V2 正式开始测试，欢迎来到 NapCatQQ (aka 猫猫框架) 的使用文档！
 
-### 猫猫框架能够做些什么？
-::: details 点我查看
-猫猫框架 通过魔法的手段获得了QQ的发送消息 接收消息的接口，为了大家能够自由使用这些接口，
+## 开始之前
 
-猫猫框架 将通过一种名为OneBot的约定将你的Http/Ws请求按照规范读取，再去调用猫猫框架所获得的QQ发送接口之类的接口。
+在开始使用之前，你需要了解以下内容。
+
+::: details 猫猫框架的原理是什么，能够做些什么？
+
+猫猫框架通过魔法的手段获得了 QQ 的发送消息、接收消息等接口，为了方便使用，猫猫框架将通过一种名为 [OneBot](https://11.onebot.dev) 的约定将你的 HTTP / WebSocket 请求按照规范读取，再去调用猫猫框架所获得的QQ发送接口之类的接口。
+
 :::
 
-### 了解猫猫框架的撸法
+现在，前往 [NapCatQQ 的 release 页面](https://github.com/NapNeko/NapCatQQ/releases)，各位可以看到有两个压缩包，文件名后缀分别为 `Shell` 和 `Framework`，应当如何选择呢？这就需要了解猫猫框架的启动方式了。
 
-::: details 点我查看
-[前往下载NapCat](https://github.com/NapNeko/NapCatQQ/releases) 
+1. 作为 [LiteLoaderQQNT](https://liteloaderqqnt.github.io/) 插件运行，类似 [LLOneBot](https://llonebot.github.io)，可以实现“人机合一”。
 
-可能各位已经看见了有两个压缩包 我应当如何选择呢 下列的方式一和三选择 NapCat.Framwork.zip 而方式二则下载 NapCat.Shell.zip
+2. 通过命令行启动，当你不需要或没有图形化界面，或者内存紧张，可以使用此方法。
 
-1. [LiteLoader](https://liteloaderqqnt.github.io/) 插件运行模式 能够人机合一 使用教程参考下图LiteLoader启动
+3. “Only GUI” 模式，当你不想使用 LiteLoader 插件时，却又想人机合一，又想折腾时，可以考虑此方法。
 
-2. Shell 运行模式 当你不需要图形化界面或者内存紧张可以使用此方法
+方法 1 和 3 都是“有头启动”，应当使用 Framework 版本；方法 2 是无头启动，应当使用 Shell 版本。我们目前对方法 1 和 2 有较为完整的文档支持，方法 3 还请自行探索。
 
-3. Only Gui 运行模式 当你不想使用LiteLoader插件时，却又想人机合一，又想折腾时可以考虑此方法。
-:::
+## 作为 LiteLoader 插件启动
 
-### LiteLoader模式手动撸猫
+1. 按照 [LiteLoaderQQNT 官网](https://liteloaderqqnt.github.io/)的指导安装 LiteLoaderQQNT 框架。
 
-::: details 点我查看
-1. 安装LiteLoader 如果已安装则跳过
-
-[点我前往](https://liteloaderqqnt.github.io/) 
-
-2. 在这里将NapCat.Framwork.zip导入进去即可
-
+2. 在 LiteLoaderQQNT 的设置页面（如下图）将 `NapCat.Framework.zip` 导入即可。
 ![在这里](../../asset/img/getting-started/ll01.png)
-:::
 
-### LiteLoader模式一键撸猫
-::: details 点我查看
-很抱歉哦 正在开发中
-:::
-### Shell模式一键撸猫
-::: details 前置说明
-此方案暂未适配V2哦
-:::
+## 通过命令行启动
 
-::: details Linux一键脚本
+### 一键撸猫
+
+此方案暂未适配 V2，仅供参考。
+
+::: details Linux 一键脚本
 `curl -o napcat.sh https://fastly.jsdelivr.net/gh/NapNeko/NapCat-Installer@master/script/install.sh && sudo bash napcat.sh`
 :::
 
 ::: details [Linux Docker](https://github.com/NapNeko/NapCat-Docker)
-[点击前往](https://github.com/NapNeko/NapCat-Docker)
-:::
-### Shell模式手动撸猫
-
-::: details Win 64系统手动配置
-[前往了解BootWay5手动配置方案](/zh-CN/guide/BootWay05.md)
+[使用 NapCat-Docker](https://github.com/NapNeko/NapCat-Docker)
 :::
 
-::: details 不想使用方便的方式? 想手动配置
-Way3支持任意系统
-[前往了解BootWay3手动配置方案](/zh-CN/guide/BootWay03.md)
-:::
+### 手动撸猫
 
-### Only Gui模式的一键撸猫
-::: details 查看
-此方案暂时没有哦
-:::
+目前已经研究完成并公布的启动方式有 BootWay03 和 05。
 
-### Only Gui模式的手动撸猫
-::: details 点我查看
-Way3支持任意系统
-[前往了解BootWay3手动配置方案](/zh-CN/guide/BootWay03-nogui.md)
-:::
-### 如何调教猫猫
+[前往了解 BootWay05](/zh-CN/guide/BootWay05.md)（仅支持 Windows x64）
 
-[配置 NapCat](./config.md)。
+[前往了解 BootWay03](/zh-CN/guide/BootWay03.md)（支持 Windows 和 Linux）
+
+## Only GUI
+
+目前该方案没有完整支持，仅有[手动方案](/zh-CN/guide/BootWay03-nogui.md)，与上面的 BootWay03 类似。
 
 ## 启动之后
 
