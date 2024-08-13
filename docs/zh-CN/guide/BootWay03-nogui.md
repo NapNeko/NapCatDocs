@@ -23,27 +23,17 @@
 ```js
 
 const path = require('path');
-const CurrentPath = path.dirname(__filename)
-const hasNapcatParam = process.argv.includes('--enable-logging');
-if (hasNapcatParam) {
-    (async () => {
-        await import("file://" + path.join(CurrentPath, './napcat/napcat.mjs'));
-    })();
-} 
+const CurrentPath = path.dirname(__filename);
+await import("file://" + path.join(CurrentPath, './napcat/napcat.mjs'));
 require('./launcher.node').load('external_index', module);
 ```
 ### Linux
-Linux同样也需要修改index.js如下
+Linux同样也需要修改index.js（这个文件一般在`\opt\QQ\resources\app\app_launcher`）如下
 ```js
 
 const path = require('path');
-const CurrentPath = path.dirname(__filename)
-const hasNapcatParam = process.argv.includes('--no-sandbox');
-if (hasNapcatParam) {
-    (async () => {
-        await import("file://" + path.join(CurrentPath, './napcat/napcat.mjs'));
-    })();
-} 
+const CurrentPath = path.dirname(__filename);
+await import("file://" + path.join(CurrentPath, './napcat/napcat.mjs'));
 require('./launcher.node').load('external_index', module);
 ```
 ## 启动Win NapCat
@@ -56,7 +46,7 @@ require('./launcher.node').load('external_index', module);
 napcat-9912 为新的启动脚本，复制到任意位置双击打开即可快速启动
 
 ### Win11
-在空白处右键 在终端打开 然后在终端输入
+在空白处右键 在终端打开 然后在终端输入 这部是为了更方便获取webui状态 进入配置 不使用这步骤启动 而正常启动 则需要保证你知道webui工作位置 （查看webui配置条目）
 ```bash
 ./QQ.exe --enable-logging
 ```
@@ -69,5 +59,5 @@ napcat-9912 为新的启动脚本，复制到任意位置双击打开即可快�
 即可启动
 ### Linux
 ```bash
-xvfb-run qq --no-sanbox
+qq
 ``` 
