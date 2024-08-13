@@ -1,4 +1,4 @@
-# NapCatQQ
+# 快速开始 (V1)
 
 NapCatQQ 是基于 PC NTQQ 客户端本体实现的 QQ Bot 框架，稳定安全，快速部署。
 
