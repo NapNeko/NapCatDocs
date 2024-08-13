@@ -33,10 +33,8 @@ NapCatQQ V2 正式开始测试，欢迎来到 NapCatQQ (aka 猫猫框架) 的使
 
 ### 一键撸猫
 
-此方案暂未适配 V2，仅供参考。
-
-::: details Linux 一键脚本
-`curl -o napcat.sh https://fastly.jsdelivr.net/gh/NapNeko/NapCat-Installer@master/script/install.sh && sudo bash napcat.sh`
+::: details Linux 一键脚本(支持Ubuntu 20+/Debian 10+, Centos系仅支持9)
+`curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh && sudo bash napcat.sh`
 :::
 
 ::: details [Linux Docker](https://github.com/NapNeko/NapCat-Docker)
