@@ -1,5 +1,7 @@
 # 基础配置介绍
 
+下文所指的 NapCat 的目录为 `${QQ 安装目录}/resource/app/app_launcher/napcat`
+
 ::: details 用 WebUI 配置
 
 如果你已经启动了 NapCat，并且有多于 1 个开放端口，则可以通过 WebUI 进行配置。
@@ -101,7 +103,7 @@
 
 ::: details 配置 NapCat 其它设置（如果不懂干嘛，不用看啦）
 
-启动登录 NapCat 后，打开NapCat的 `config` 目录，找到名为 `napcat_<你的QQ号>.json` 的文件，如 `napcat_1234567.json`。
+启动登录 NapCat 后，打开 NapCat 的 `config` 目录，找到名为 `napcat_<你的QQ号>.json` 的文件，如 `napcat_1234567.json`。
 
 配置内容参数解释：
 
