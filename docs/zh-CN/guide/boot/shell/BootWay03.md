@@ -75,5 +75,5 @@ napcat-9912 为新的启动脚本，复制到任意位置双击打开即可快�
 
 Linux QQ 在安装时即被加入 `PATH`，可以通过以下命令运行：
 ```bash
-xvfb-run qq --no-sanbox
+xvfb-run qq --no-sandbox
 ``` 
