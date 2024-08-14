@@ -49,7 +49,7 @@ export const zhCN = defineConfig({
 
 function nav() {
   return [
-    { text: '指南', link: '/zh-CN/guide/getting-started', activeMatch: '/zh-CN/guide' },
+    { text: '使用', link: '/zh-CN/guide/getting-started', activeMatch: '/zh-CN/guide' },
     { text: '开发', link: '/zh-CN/develop/api', activeMatch: '/zh-CN/develop' }
   ]
 }
@@ -60,8 +60,13 @@ function sidebarGuide() {
       collapsed: false,
       items: [
         { text: '快速开始', link: 'guide/getting-started', activeMatch: '/zh-CN/guide/' },
-        { text: '基础配置', link: 'guide/config', activeMatch: '/zh-CN/guide/' },
-        { text: '进阶配置', link: 'guide/config_adv', activeMatch: '/zh-CN/guide/' },
+        {
+          text: '配置',
+          items: [
+            { text: '基础配置', link: 'guide/config/basic', activeMatch: '/zh-CN/guide/' },
+            { text: '进阶配置', link: 'guide/config/advanced', activeMatch: '/zh-CN/guide/' },
+          ]
+        },
         { text: '接入框架', link: 'guide/integration', activeMatch: '/zh-CN/guide/' },
         { text: '常见问题', link: 'guide/faq', activeMatch: '/zh-CN/guide/' },
         { text: '社区资源', link: 'guide/resource', activeMatch: '/zh-CN/guide/' },
