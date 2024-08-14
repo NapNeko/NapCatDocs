@@ -4,11 +4,11 @@
 
 如果你已经启动了 NapCat，并且有多于 1 个开放端口，则可以通过 WebUI 进行配置。
 
-默认地址为`0.0.0.0`，即监听所有地址。当配置了不可用的地址时 WebUI 将被禁用。
+默认地址为 `0.0.0.0`，即监听所有地址。当配置了不可用的地址时 WebUI 将被禁用。
 
-默认端口为 `6099`。当端口被设置为`0`时将禁用 WebUI。当端口被占用时，会自动对端口 +1，直到找到可用端口（最多尝试100次，失败则会禁用 WebUI），端口号会在启动日志中显示。
+默认端口为 `6099`。当端口被设置为 `0` 时将禁用 WebUI。当端口被占用时，会自动对端口 +1，直到找到可用端口（最多尝试100次，失败则会禁用 WebUI），端口号会在启动日志中显示。
 
-启动后可在启动日志中看到形如`[WebUi] Login Token is xxxx`的token信息，亦可打开`./config/webui.json`文件，在其中找到token。
+启动后可在启动日志中看到形如 `[WebUi] Login Token is xxxx` 的token信息，亦可打开 NapCat 的 `config` 目录下的 `webui.json` 文件（形如 `/opt/QQ/resources/app/app_launcher/napcat/config/webui.json` ），在其中找到token。
 
 ```json5
 {
