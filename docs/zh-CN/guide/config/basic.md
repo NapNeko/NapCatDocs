@@ -1,6 +1,6 @@
 # 基础配置介绍
 
-下文所指的 NapCat 的目录为 `${QQ 安装目录}/resource/app/app_launcher/napcat`
+下文所指的 NapCat 的目录为 `${QQ 安装目录}/resource/app/app_launcher/napcat`，对于 `${QQ 安装目录}`，Linux 一般在 `/opt/QQ`；Windows 一般在 `<系统盘>:\Program Files\Tencent\QQNT`
 
 ::: details 用 WebUI 配置
 
