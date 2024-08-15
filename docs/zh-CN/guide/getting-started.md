@@ -55,24 +55,23 @@ powershell -ExecutionPolicy ByPass -File ./install.ps1 -verb runas
 
 :::
 
-::: details Linux 一键脚本 (支持Ubuntu 20+/Debian 10+, Centos系仅支持9)
+::: details Linux 一键脚本 (适用于 Ubuntu **20+** / Debian **10+** / CentOS **9**)
 `curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh && sudo bash napcat.sh`
 :::
 
 ::: details Linux 下使用 Docker
 [使用 NapCat-Docker](https://github.com/NapNeko/NapCat-Docker)
 :::
-### 半自动撸猫
-半自动撸猫仅支持Linux,适用于deb/redhat系以外的Linux发行版
-[半自动安装napcat](./boot/shell/BootWay03-Linux-SemiAuto)
 
-### 手动撸猫
+### 手动/半自动撸猫
 
 目前已经研究完成并公布的启动方式有 BootWay03 和 05。
 
-[前往了解 BootWay05](./boot/shell/BootWay05)（仅支持 Windows x64）
+[前往了解 BootWay05 手动方案](./boot/shell/BootWay05)（仅适用于 Windows x64）
 
-[前往了解 BootWay03](./boot/shell/BootWay03)（支持 Windows 和 Linux）
+[前往了解 BootWay05 半自动方案](./boot/shell/BootWay03-Linux-SemiAuto.md)（适用于 Deb / Red Hat 系**以外**的 Linux 发行版）
+
+[前往了解 BootWay03 手动方案](./boot/shell/BootWay03)（适用于 Windows 和 Linux）
 
 ## Only GUI
 
