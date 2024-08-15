@@ -66,7 +66,7 @@ If it still doesn't work, you can try `powershell.exe -ExecutionPolicy Bypass -F
 ::: details Linux One-Click Script
 Highly recommended!
 
-`curl -o napcat.sh https://fastly.jsdelivr.net/gh/NapNeko/NapCat-Installer@master/script/install.sh && sudo bash napcat.sh`
+`curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh && sudo bash napcat.sh`
 
 :::
 

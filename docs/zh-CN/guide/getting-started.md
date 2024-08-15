@@ -36,7 +36,7 @@ NapCatQQ V2 正式开始测试，欢迎来到 NapCatQQ (aka 猫猫框架) 的使
 ::: details Windows x64 一键脚本
 
 ```
-curl -o install.ps1 https://cdn.jsdmirror.com/gh/NapNeko/NapCat-Installer@main/script/install.ps1
+curl -o install.ps1 https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.ps1
 powershell -ExecutionPolicy ByPass -File ./install.ps1 -verb runas
 ```
 1. 点击复制上面代码，如下图。
