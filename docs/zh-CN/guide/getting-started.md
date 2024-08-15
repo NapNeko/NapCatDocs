@@ -69,7 +69,7 @@ powershell -ExecutionPolicy ByPass -File ./install.ps1 -verb runas
 
 [前往了解 BootWay05 手动方案](./boot/shell/BootWay05)（仅适用于 Windows x64）
 
-[前往了解 BootWay05 半自动方案](./boot/shell/BootWay03-Linux-SemiAuto.md)（适用于 Deb / Red Hat 系**以外**的 Linux 发行版）
+[前往了解 BootWay03 半自动方案](./boot/shell/BootWay03-Linux-SemiAuto.md)（适用于 Deb / Red Hat 系**以外**的 Linux 发行版）
 
 [前往了解 BootWay03 手动方案](./boot/shell/BootWay03)（适用于 Windows 和 Linux）
 
