@@ -62,6 +62,9 @@ powershell -ExecutionPolicy ByPass -File ./install.ps1 -verb runas
 ::: details Linux 下使用 Docker
 [使用 NapCat-Docker](https://github.com/NapNeko/NapCat-Docker)
 :::
+### 半自动撸猫
+半自动撸猫仅支持Linux,适用于deb/redhat系以外的Linux发行版
+[半自动安装napcat](./boot/shell/BootWay-Halfauto.md)
 
 ### 手动撸猫
 
