@@ -64,6 +64,10 @@ powershell -ExecutionPolicy ByPass -File ./install.ps1 -verb runas
 [使用 NapCat-Docker](https://github.com/NapNeko/NapCat-Docker)
 :::
 
+::: details Termux 一键脚本
+`curl -o napcat.termux.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.termux.sh && bash napcat.termux.sh`
+:::
+
 ### 手动/半自动撸猫
 
 目前已经研究完成并公布的启动方式有 BootWay03 和 05。
