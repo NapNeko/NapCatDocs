@@ -68,7 +68,7 @@ powershell -ExecutionPolicy ByPass -File ./install.ps1 -verb runas
 `curl -o napcat.termux.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.termux.sh && bash napcat.termux.sh`
 :::
 
-::: 在 Railway 上部署
+::: details 在 Railway 上部署
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/aRUNRZ?referralCode=Ns2Kracy)
 :::
 
