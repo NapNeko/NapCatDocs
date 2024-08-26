@@ -41,31 +41,7 @@ POST /send_group_msg
       "data": {
         "text": "occaecat sunt nisi aute"
       },
-      "type": "est magna laborum et ut"
-    },
-    {
-      "data": {
-        "text": "ad"
-      },
-      "type": "reprehenderit"
-    },
-    {
-      "data": {
-        "text": "cupidatat ea do dolore"
-      },
-      "type": "do dolor tempor quis id"
-    },
-    {
-      "data": {
-        "text": "Lorem Ut est pariatur"
-      },
-      "type": "cillum ut occaecat elit laboris"
-    },
-    {
-      "data": {
-        "text": "esse"
-      },
-      "type": "sunt qui minim"
+      "type": "text"
     }
   ]
 }

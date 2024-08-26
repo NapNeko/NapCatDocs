@@ -69,10 +69,10 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 | get_forward_msg          |   ✔   |
 | upload_group_file        |   ✔   |
 | download_file            |   ✔   |
-| _get_group_notice        |   ✔   |
 | get_essence_msg_list     |   ✔   |
-| _send_group_notice       |   ✔   |
 | _get_group_notice        |   ✔   |
+| _send_group_notice       |   ✔   |
+| _del_group_notice        |   ✔   |
 | get_group_system_msg     |   ✔   |
 | ocr_image                |   ✔   |
 | get_online_clients       |   ✔   |

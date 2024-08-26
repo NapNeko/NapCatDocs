@@ -22,6 +22,7 @@ NapCatQQ V2 正式开始测试，欢迎来到 NapCatQQ (aka 猫猫框架) 的使
 
 方法 1 和 3 都是“有头启动”，应当使用 Framework 版本；方法 2 是无头启动，应当使用 Shell 版本。我们目前对方法 1 和 2 有较为完整的文档支持，方法 3 还请自行探索。
 
+请注意方法 1 和 3 “有头启动”仅在2.0.x 2.2.x 版本受到支持 2.1.x 1.x.x 版本均处于不可用状态
 ## 作为 LiteLoader 插件启动
 
 1. 按照 [LiteLoaderQQNT 官网](https://liteloaderqqnt.github.io/)的指导安装 LiteLoaderQQNT 框架。
@@ -61,6 +62,10 @@ powershell -ExecutionPolicy ByPass -File ./install.ps1 -verb runas
 
 ::: details Linux 下使用 Docker
 [使用 NapCat-Docker](https://github.com/NapNeko/NapCat-Docker)
+:::
+
+::: details Termux 一键脚本
+`curl -o napcat.termux.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.termux.sh && bash napcat.termux.sh`
 :::
 
 ### 手动/半自动撸猫
