@@ -61,7 +61,11 @@ powershell -ExecutionPolicy ByPass -File ./install.ps1 -verb runas
 :::
 
 ::: details Linux 下使用 Docker
+
+用不来怎么办？ [点我前往不知名的友人提供的教程](https://www.xinz.fun/archives/Napcat)
+
 [使用 NapCat-Docker](https://github.com/NapNeko/NapCat-Docker)
+
 :::
 
 ::: details Termux 一键脚本
