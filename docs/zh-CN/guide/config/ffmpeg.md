@@ -53,3 +53,11 @@
 你可以使用 [Homebrew](https://brew.sh/) 安装 FFmpeg，也可以 [在此处](https://evermeet.cx/ffmpeg/) 手动下载二进制文件安装。
 
 注意如果你选择手动安装，请确保你下载并安装了 [FFmpeg](https://evermeet.cx/ffmpeg/#:~:text=static%20%2D%2Ddisable%2Dffplay-,FFmpeg,-ffmpeg%2D114296%2Dg5ff0eb34d2)、[FFprobe](https://evermeet.cx/ffmpeg/#:~:text=external%20ffmpeg%20libraries-,FFprobe,-ffprobe%2D114296%2Dg5ff0eb34d2) 以及 [FFplay](https://evermeet.cx/ffmpeg/#:~:text=external%20ffprobe%20libraries-,FFplay,-ffplay%2D113169%2Dge1c1dc8347) 三个库，否则可能会产生意想不到的错误。
+
+## 配置环境变量
+
+将 ffmpeg 目录加入环境变量，如果仍未生效，可以修改 NapCat 启动脚本加入 FFMPEG_PATH 变量，指定到 ffmpeg 程序的完整路径。例如，Windows 上，可以修改 napcat.ps1，在第一行前加入
+
+```powershell
+$env:FFMPEG_PATH="d:\ffmpeg\bin\ffmpeg.exe"
+```

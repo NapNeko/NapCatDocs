@@ -1,6 +1,6 @@
 # BootWay03 撸猫教程
 
-首先，安装 QQ，确保你知道 QQ 的目录。Linux 一般在 `/opt/QQ`；Windows 一般在系统盘下 `Program Files\Tencent\QQNT`，具体定位方法可以参考 [BootWay05 教程](BootWay05.md)。 
+首先，安装 QQ，确保你知道 QQ 的目录。Linux 一般在 `/opt/QQ`；Windows 一般在系统盘下 `Program Files\Tencent\QQNT`，具体定位方法可以参考 [BootWay05 教程](BootWay05.md)。
 
 ## 预处理
 
@@ -67,6 +67,7 @@ napcat-9912 为新的启动脚本，复制到任意位置双击打开即可快�
 在终端中启动 QQ，增加 `--enable-logging` 的 flag。
 
 具体来说，可以启动一个工作目录在 NTQQ 的终端（参考 [BootWay05 教程](BootWay05.md)的手动安装部分），输入以下内容并回车：
+
 ```bash
 .\QQ.exe --enable-logging
 ```
@@ -74,6 +75,7 @@ napcat-9912 为新的启动脚本，复制到任意位置双击打开即可快�
 ### Linux
 
 Linux QQ 在安装时即被加入 `PATH`，可以通过以下命令运行：
+
 ```bash
 xvfb-run qq --no-sandbox
-``` 
+```
