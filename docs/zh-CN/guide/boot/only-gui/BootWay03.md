@@ -1,6 +1,6 @@
 # BootWay03 撸猫教程（Only GUI）
 
-首先，安装 QQ，确保你知道 QQ 的目录。Linux 一般在 `/opt/QQ`；Windows 一般在系统盘下 `Program Files\Tencent\QQNT`，具体定位方法可以参考 [BootWay05 教程](../shell/BootWay05.md)。 
+首先，安装 QQ，确保你知道 QQ 的目录。Linux 一般在 `/opt/QQ`；Windows 一般在系统盘下 `Program Files\Tencent\QQNT`，具体定位方法可以参考 [BootWay05 教程](../shell/BootWay05.md)。
 
 ## 预处理
 
@@ -31,7 +31,8 @@ require('./launcher.node').load('external_index', module);
 在终端中启动 QQ，增加 `--enable-logging` 的 flag，这是为了方便获取控制台输出，以查看 NC 初始化状态和 WebUI 登入的凭据。
 
 具体来说，可以启动一个工作目录在 NTQQ 的终端（参考 [BootWay05 教程](../shell/BootWay05.md)的手动安装部分），输入以下内容并回车：
-```bash
+
+``` bash
 .\QQ.exe --enable-logging
 ```
 
