@@ -2,26 +2,26 @@
 
 | Event Type                   | Available |                  Note                  |
 | ---------------------------- | :-------: | :------------------------------------: |
-| Message                      |     ✔     |                                        |
-| Reaction                     |     ✔     |                                        |
-| Friend Message Recall        |     ✔     |                                        |
-| Group Message Recall         |     ✔     |                                        |
-| Friend Request               |     ✔     |                                        |
-| Group Invite Request         |     ✔     |                                        |
-| Group Join Request           |     ✔     |       Requires admin permissions       |
-| Management Change            |     ✔     |       Requires admin permissions       |
-| Group Member Addition        |     ✔     |                                        |
-| Group Member Removal         |     ✔     |                                        |
-| Group File Upload            |     ✔     |                                        |
-| Group Mute                   |     ✔     |                                        |
-| Group Member Nickname Change |     ✔     |                                        |
-| Group Member Title Change    |     ✔     |                                        |
-| Poke in Group                |     ✔     | ID not available will be reported as 0 |
-| Poke a Friend                |     ✔     |                                        |
+| Message                      |     ✅     |                                        |
+| Reaction                     |     ✅     |                                        |
+| Friend Message Recall        |     ✅     |                                        |
+| Group Message Recall         |     ✅     |                                        |
+| Friend Request               |     ✅     |                                        |
+| Group Invite Request         |     ✅     |                                        |
+| Group Join Request           |     ✅     |       Requires admin permissions       |
+| Management Change            |     ✅     |       Requires admin permissions       |
+| Group Member Addition        |     ✅     |                                        |
+| Group Member Removal         |     ✅     |                                        |
+| Group File Upload            |     ✅     |                                        |
+| Group Mute                   |     ✅     |                                        |
+| Group Member Nickname Change |     ✅     |                                        |
+| Group Member Title Change    |     ✅     |                                        |
+| Poke in Group                |     ✅     | ID not available will be reported as 0 |
+| Poke a Friend                |     ✅     |                                        |
 | Group Red Packet Luck King   |     ❌     |                                        |
 | Group Member Honor Change    |     ❌     |                                        |
-| Lifecycle                    |     ✔     |  Currently only ws connect available   |
-| ws Heartbeat                 |     ✔     |                                        |
+| Lifecycle                    |     ✅     |  Currently only ws connect available   |
+| ws Heartbeat                 |     ✅     |                                        |
 
 ## Reaction Reporting
 
