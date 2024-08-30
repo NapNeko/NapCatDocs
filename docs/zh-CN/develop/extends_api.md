@@ -203,11 +203,11 @@ emoji_id 参考 <https://bot.q.qq.com/wiki/develop/api-v2/openapi/emoji/model.ht
 ::: details 群文件相关接口
 
 ``` text
-/get_group_file_count {group_id}
-/get_group_file_list {group_id}
-/set_group_file_folder {group_id}
-/del_group_file {group_id,file_id}
-/del_group_file_folder {group_id,folder_id}
+/get_group_file_count {group_id} 获取群文件数量
+/get_group_file_list {group_id, start_index, file_count, folder_id(可选)} 获取群文件列表
+/set_group_file_folder {group_id, folder_name} 创建群文件夹
+/del_group_file {group_id, file_id} 删除群文件
+/del_group_file_folder {group_id, folder_id} 删除群文件夹
 ```
 
 :::
