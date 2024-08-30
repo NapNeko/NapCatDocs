@@ -6,7 +6,7 @@ BootWay05 仅支持 Windows 64 位系统，需要确保你的电脑上安装 & �
 
 ## 替换文件
 
-首先找到你下载的 NC 目录内的文件 `dbghelp.dll`： 
+首先找到你下载的 NC 目录内的文件 `dbghelp.dll`：
 ![alt text](../../../../asset/img/getting-started/nc051.png)
 
 点击复制，完成后不要关闭文件管理窗口，否则会影响剪贴板。
@@ -22,9 +22,11 @@ BootWay05 仅支持 Windows 64 位系统，需要确保你的电脑上安装 & �
 ## 首次启动
 
 启动一个工作目录在 NC 目录的终端，输入
-```
+
+``` bash
 powershell -ExecutionPolicy ByPass -File ./BootWay05.ps1
 ```
+
 并回车。
 
 ## 再次启动

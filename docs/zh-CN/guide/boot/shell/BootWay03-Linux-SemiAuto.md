@@ -3,7 +3,8 @@
 手动安装 Linux QQ，并用你的包管理器安装以下包：`zip unzip jq curl xvfb screen`。
 
 下载[最新 NapCat Release](https://github.com/NapNeko/NapCatQQ/releases) 中的 `NapCat.Shell.zip` 到用户目录某处（建议先切换到 `bash` 或者 `zsh`，不知道这是什么的就不用管了），然后复制以下内容，粘贴到终端里，然后按下 Enter 执行：
-```
+
+``` bash
 mkdir ./NapCat/
 mkdir ./tmp/
 unzip -q -o -d ./tmp NapCat.Shell.zip
@@ -18,13 +19,13 @@ sudo bash -c "echo \"$output_index_js\" > \"$target_folder/index.js\""
 
 然后使用
 
-```
+``` bash
 xvfb-run -a qq --no-sandbox -q
 ```
 
 或者
 
-```
+``` bash
 xvfb-run -a linuxqq --no-sandbox -q
 ```
 

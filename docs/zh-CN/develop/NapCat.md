@@ -49,14 +49,14 @@ POST /send_group_msg
 
 ### 请求参数
 
-|名称|位置|类型|必选|说明|
-|---|---|---|---|---|
-|body|body|object| 否 |none|
-|» group_id|body|integer| 是 |none|
-|» message|body|[object]| 是 |none|
-|»» data|body|object| 是 |none|
-|»»» text|body|string| 是 |none|
-|»» type|body|string| 是 |none|
+| 名称       | 位置 | 类型     | 必选 | 说明 |
+| ---------- | ---- | -------- | ---- | ---- |
+| body       | body | object   | 否   | none |
+| » group_id | body | integer  | 是   | none |
+| » message  | body | [object] | 是   | none |
+| »» data    | body | object   | 是   | none |
+| »»» text   | body | string   | 是   | none |
+| »» type    | body | string   | 是   | none |
 
 > 返回示例
 
@@ -68,9 +68,9 @@ POST /send_group_msg
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
@@ -102,14 +102,14 @@ POST /send_private_msg
 
 ### 请求参数
 
-|名称|位置|类型|必选|说明|
-|---|---|---|---|---|
-|body|body|object| 否 |none|
-|» user_id|body|integer| 是 |none|
-|» message|body|[object]| 是 |none|
-|»» data|body|object| 是 |none|
-|»»» text|body|string| 是 |none|
-|»» type|body|string| 是 |none|
+| 名称      | 位置 | 类型     | 必选 | 说明 |
+| --------- | ---- | -------- | ---- | ---- |
+| body      | body | object   | 否   | none |
+| » user_id | body | integer  | 是   | none |
+| » message | body | [object] | 是   | none |
+| »» data   | body | object   | 是   | none |
+| »»» text  | body | string   | 是   | none |
+| »» type   | body | string   | 是   | none |
 
 > 返回示例
 
@@ -121,9 +121,9 @@ POST /send_private_msg
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
@@ -142,11 +142,11 @@ POST /get_group_msg_history
 
 ### 请求参数
 
-|名称|位置|类型|必选|说明|
-|---|---|---|---|---|
-|body|body|object| 否 |none|
-|» group_id|body|integer| 是 |none|
-|» count|body|integer| 是 |none|
+| 名称       | 位置 | 类型    | 必选 | 说明 |
+| ---------- | ---- | ------- | ---- | ---- |
+| body       | body | object  | 否   | none |
+| » group_id | body | integer | 是   | none |
+| » count    | body | integer | 是   | none |
 
 > 返回示例
 
@@ -158,9 +158,9 @@ POST /get_group_msg_history
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
@@ -178,9 +178,9 @@ POST /get_robot_uin_range
 
 ### 请求参数
 
-|名称|位置|类型|必选|说明|
-|---|---|---|---|---|
-|body|body|object| 否 |none|
+| 名称 | 位置 | 类型   | 必选 | 说明 |
+| ---- | ---- | ------ | ---- | ---- |
+| body | body | object | 否   | none |
 
 > 返回示例
 
@@ -220,24 +220,24 @@ POST /get_robot_uin_range
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
 状态码 **200**
 
-|名称|类型|必选|约束|中文名|说明|
-|---|---|---|---|---|---|
-|» status|string|true|none||none|
-|» retcode|integer|true|none||none|
-|» data|[object]|true|none||none|
-|»» minUin|string|true|none||none|
-|»» maxUin|string|true|none||none|
-|» message|string|true|none||none|
-|» wording|string|true|none||none|
-|» echo|null|true|none||none|
+| 名称      | 类型     | 必选 | 约束 | 中文名 | 说明 |
+| --------- | -------- | ---- | ---- | ------ | ---- |
+| » status  | string   | true | none |        | none |
+| » retcode | integer  | true | none |        | none |
+| » data    | [object] | true | none |        | none |
+| »» minUin | string   | true | none |        | none |
+| »» maxUin | string   | true | none |        | none |
+| » message | string   | true | none |        | none |
+| » wording | string   | true | none |        | none |
+| » echo    | null     | true | none |        | none |
 
 ## POST 好友列表与分类获取
 
@@ -253,10 +253,10 @@ POST /get_friends_with_category
 
 ### 请求参数
 
-|名称|位置|类型|必选|说明|
-|---|---|---|---|---|
-|body|body|object| 否 |none|
-|» no_cache|body|boolean| 是 |none|
+| 名称       | 位置 | 类型    | 必选 | 说明 |
+| ---------- | ---- | ------- | ---- | ---- |
+| body       | body | object  | 否   | none |
+| » no_cache | body | boolean | 是   | none |
 
 > 返回示例
 
@@ -268,9 +268,9 @@ POST /get_friends_with_category
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
@@ -290,12 +290,12 @@ POST /fetch_emoji_like
 
 ### 请求参数
 
-|名称|位置|类型|必选|说明|
-|---|---|---|---|---|
-|body|body|object| 否 |none|
-|» message_id|body|integer| 是 |none|
-|» emojiType|body|integer| 是 |none|
-|» emojiId|body|integer| 是 |none|
+| 名称         | 位置 | 类型    | 必选 | 说明 |
+| ------------ | ---- | ------- | ---- | ---- |
+| body         | body | object  | 否   | none |
+| » message_id | body | integer | 是   | none |
+| » emojiType  | body | integer | 是   | none |
+| » emojiId    | body | integer | 是   | none |
 
 > 返回示例
 
@@ -338,31 +338,31 @@ POST /fetch_emoji_like
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
 状态码 **200**
 
-|名称|类型|必选|约束|中文名|说明|
-|---|---|---|---|---|---|
-|» status|string|true|none||none|
-|» retcode|integer|true|none||none|
-|» data|object|true|none||none|
-|»» result|integer|true|none||none|
-|»» errMsg|string|true|none||none|
-|»» emojiLikesList|[object]|true|none||none|
-|»»» tinyId|string|false|none||none|
-|»»» nickName|string|false|none||none|
-|»»» headUrl|string|false|none||none|
-|»» cookie|string|true|none||none|
-|»» isLastPage|boolean|true|none||none|
-|»» isFirstPage|boolean|true|none||none|
-|» message|string|true|none||none|
-|» wording|string|true|none||none|
-|» echo|null|true|none||none|
+| 名称              | 类型     | 必选  | 约束 | 中文名 | 说明 |
+| ----------------- | -------- | ----- | ---- | ------ | ---- |
+| » status          | string   | true  | none |        | none |
+| » retcode         | integer  | true  | none |        | none |
+| » data            | object   | true  | none |        | none |
+| »» result         | integer  | true  | none |        | none |
+| »» errMsg         | string   | true  | none |        | none |
+| »» emojiLikesList | [object] | true  | none |        | none |
+| »»» tinyId        | string   | false | none |        | none |
+| »»» nickName      | string   | false | none |        | none |
+| »»» headUrl       | string   | false | none |        | none |
+| »» cookie         | string   | true  | none |        | none |
+| »» isLastPage     | boolean  | true  | none |        | none |
+| »» isFirstPage    | boolean  | true  | none |        | none |
+| » message         | string   | true  | none |        | none |
+| » wording         | string   | true  | none |        | none |
+| » echo            | null     | true  | none |        | none |
 
 ## POST 获取最近联系人
 
@@ -378,10 +378,10 @@ POST /get_recent_contact
 
 ### 请求参数
 
-|名称|位置|类型|必选|说明|
-|---|---|---|---|---|
-|body|body|object| 否 |none|
-|» count|body|number| 是 |none|
+| 名称    | 位置 | 类型   | 必选 | 说明 |
+| ------- | ---- | ------ | ---- | ---- |
+| body    | body | object | 否   | none |
+| » count | body | number | 是   | none |
 
 > 返回示例
 
@@ -393,9 +393,9 @@ POST /get_recent_contact
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
@@ -413,10 +413,10 @@ POST /fetch_custom_face
 
 ### 请求参数
 
-|名称|位置|类型|必选|说明|
-|---|---|---|---|---|
-|body|body|object| 否 |none|
-|» count|body|number| 是 |none|
+| 名称    | 位置 | 类型   | 必选 | 说明 |
+| ------- | ---- | ------ | ---- | ---- |
+| body    | body | object | 否   | none |
+| » count | body | number | 是   | none |
 
 > 返回示例
 
@@ -437,22 +437,22 @@ POST /fetch_custom_face
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
 状态码 **200**
 
-|名称|类型|必选|约束|中文名|说明|
-|---|---|---|---|---|---|
-|» status|string|true|none||none|
-|» retcode|integer|true|none||none|
-|» data|[string]|true|none||none|
-|» message|string|true|none||none|
-|» wording|string|true|none||none|
-|» echo|null|true|none||none|
+| 名称      | 类型     | 必选 | 约束 | 中文名 | 说明 |
+| --------- | -------- | ---- | ---- | ------ | ---- |
+| » status  | string   | true | none |        | none |
+| » retcode | integer  | true | none |        | none |
+| » data    | [string] | true | none |        | none |
+| » message | string   | true | none |        | none |
+| » wording | string   | true | none |        | none |
+| » echo    | null     | true | none |        | none |
 
 ## POST 创建文本收藏
 
@@ -469,11 +469,11 @@ POST /create_collection
 
 ### 请求参数
 
-|名称|位置|类型|必选|说明|
-|---|---|---|---|---|
-|body|body|object| 否 |none|
-|» rawData|body|string| 是 |none|
-|» brief|body|string| 是 |none|
+| 名称      | 位置 | 类型   | 必选 | 说明 |
+| --------- | ---- | ------ | ---- | ---- |
+| body      | body | object | 否   | none |
+| » rawData | body | string | 是   | none |
+| » brief   | body | string | 是   | none |
 
 > 返回示例
 
@@ -485,9 +485,9 @@ POST /create_collection
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
@@ -506,11 +506,11 @@ POST /get_collection_list
 
 ### 请求参数
 
-|名称|位置|类型|必选|说明|
-|---|---|---|---|---|
-|body|body|object| 否 |none|
-|» category|body|number| 是 |none|
-|» count|body|number| 是 |none|
+| 名称       | 位置 | 类型   | 必选 | 说明 |
+| ---------- | ---- | ------ | ---- | ---- |
+| body       | body | object | 否   | none |
+| » category | body | number | 是   | none |
+| » count    | body | number | 是   | none |
 
 > 返回示例
 
@@ -522,9 +522,9 @@ POST /get_collection_list
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
@@ -540,9 +540,9 @@ POST /get_profile_like
 
 ### 请求参数
 
-|名称|位置|类型|必选|说明|
-|---|---|---|---|---|
-|body|body|object| 否 |none|
+| 名称 | 位置 | 类型   | 必选 | 说明 |
+| ---- | ---- | ------ | ---- | ---- |
+| body | body | object | 否   | none |
 
 > 返回示例
 
@@ -554,9 +554,9 @@ POST /get_profile_like
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
@@ -574,10 +574,10 @@ POST /ocr_image
 
 ### 请求参数
 
-|名称|位置|类型|必选|中文名|说明|
-|---|---|---|---|---|---|
-|body|body|object| 否 ||none|
-|» image|body|string| 是 | 图片|图片路径|
+| 名称    | 位置 | 类型   | 必选 | 中文名 | 说明     |
+| ------- | ---- | ------ | ---- | ------ | -------- |
+| body    | body | object | 否   |        | none     |
+| » image | body | string | 是   | 图片   | 图片路径 |
 
 > 返回示例
 
@@ -589,9 +589,9 @@ POST /ocr_image
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
@@ -610,11 +610,11 @@ POST /set_group_head
 
 ### 请求参数
 
-|名称|位置|类型|必选|中文名|说明|
-|---|---|---|---|---|---|
-|body|body|object| 否 ||none|
-|» file|body|string(uri)| 是 | 头像|群头像链接或者路径|
-|» groupCode|body|string| 是 | 群号|需要有管理员权限|
+| 名称        | 位置 | 类型        | 必选 | 中文名 | 说明               |
+| ----------- | ---- | ----------- | ---- | ------ | ------------------ |
+| body        | body | object      | 否   |        | none               |
+| » file      | body | string(uri) | 是   | 头像   | 群头像链接或者路径 |
+| » groupCode | body | string      | 是   | 群号   | 需要有管理员权限   |
 
 > 返回示例
 
@@ -626,9 +626,9 @@ POST /set_group_head
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
@@ -646,10 +646,10 @@ POST /set_self_longnick
 
 ### 请求参数
 
-|名称|位置|类型|必选|中文名|说明|
-|---|---|---|---|---|---|
-|body|body|object| 否 ||none|
-|» longNick|body|string| 是 | 个性签名|none|
+| 名称       | 位置 | 类型   | 必选 | 中文名   | 说明 |
+| ---------- | ---- | ------ | ---- | -------- | ---- |
+| body       | body | object | 否   |          | none |
+| » longNick | body | string | 是   | 个性签名 | none |
 
 > 返回示例
 
@@ -661,9 +661,9 @@ POST /set_self_longnick
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
@@ -683,12 +683,12 @@ POST /set_online_status
 
 ### 请求参数
 
-|名称|位置|类型|必选|中文名|说明|
-|---|---|---|---|---|---|
-|body|body|object| 否 ||none|
-|» status|body|integer| 是 ||none|
-|» extStatus|body|integer| 是 ||none|
-|» batteryStatus|body|integer| 是 ||none|
+| 名称            | 位置 | 类型    | 必选 | 中文名 | 说明 |
+| --------------- | ---- | ------- | ---- | ------ | ---- |
+| body            | body | object  | 否   |        | none |
+| » status        | body | integer | 是   |        | none |
+| » extStatus     | body | integer | 是   |        | none |
+| » batteryStatus | body | integer | 是   |        | none |
 
 > 返回示例
 
@@ -700,9 +700,9 @@ POST /set_online_status
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
@@ -722,12 +722,12 @@ POST /set_self_profile
 
 ### 请求参数
 
-|名称|位置|类型|必选|中文名|说明|
-|---|---|---|---|---|---|
-|body|body|object| 否 ||none|
-|» nick|body|string| 是 ||none|
-|» longNick|body|string| 是 ||none|
-|» sex|body|string| 是 ||none|
+| 名称       | 位置 | 类型   | 必选 | 中文名 | 说明 |
+| ---------- | ---- | ------ | ---- | ------ | ---- |
+| body       | body | object | 否   |        | none |
+| » nick     | body | string | 是   |        | none |
+| » longNick | body | string | 是   |        | none |
+| » sex      | body | string | 是   |        | none |
 
 > 返回示例
 
@@ -739,9 +739,9 @@ POST /set_self_profile
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
@@ -761,12 +761,12 @@ POST /ArkSharePeer
 
 ### 请求参数
 
-|名称|位置|类型|必选|中文名|说明|
-|---|---|---|---|---|---|
-|body|body|object| 否 ||none|
-|» user_id|body|string| 否 ||none|
-|» group_id|body|string| 否 ||none|
-|» phoneNumber|body|string| 否 ||none|
+| 名称          | 位置 | 类型   | 必选 | 中文名 | 说明 |
+| ------------- | ---- | ------ | ---- | ------ | ---- |
+| body          | body | object | 否   |        | none |
+| » user_id     | body | string | 否   |        | none |
+| » group_id    | body | string | 否   |        | none |
+| » phoneNumber | body | string | 否   |        | none |
 
 > 返回示例
 
@@ -778,9 +778,9 @@ POST /ArkSharePeer
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
@@ -798,10 +798,10 @@ POST /ArkShareGroupEx
 
 ### 请求参数
 
-|名称|位置|类型|必选|中文名|说明|
-|---|---|---|---|---|---|
-|body|body|object| 否 ||none|
-|» group_id|body|string| 是 ||none|
+| 名称       | 位置 | 类型   | 必选 | 中文名 | 说明 |
+| ---------- | ---- | ------ | ---- | ------ | ---- |
+| body       | body | object | 否   |        | none |
+| » group_id | body | string | 是   |        | none |
 
 > 返回示例
 
@@ -813,9 +813,9 @@ POST /ArkShareGroupEx
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
@@ -833,10 +833,10 @@ POST /mark_group_msg_as_read
 
 ### 请求参数
 
-|名称|位置|类型|必选|中文名|说明|
-|---|---|---|---|---|---|
-|body|body|object| 否 ||none|
-|» group_id|body|string| 是 ||none|
+| 名称       | 位置 | 类型   | 必选 | 中文名 | 说明 |
+| ---------- | ---- | ------ | ---- | ------ | ---- |
+| body       | body | object | 否   |        | none |
+| » group_id | body | string | 是   |        | none |
 
 > 返回示例
 
@@ -848,9 +848,9 @@ POST /mark_group_msg_as_read
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
@@ -868,10 +868,10 @@ POST /mark_private_msg_as_read
 
 ### 请求参数
 
-|名称|位置|类型|必选|中文名|说明|
-|---|---|---|---|---|---|
-|body|body|object| 否 ||none|
-|» group_id|body|string| 是 ||none|
+| 名称       | 位置 | 类型   | 必选 | 中文名 | 说明 |
+| ---------- | ---- | ------ | ---- | ------ | ---- |
+| body       | body | object | 否   |        | none |
+| » group_id | body | string | 是   |        | none |
 
 > 返回示例
 
@@ -883,9 +883,9 @@ POST /mark_private_msg_as_read
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
@@ -909,10 +909,10 @@ POST /translate_en2zh
 
 ### 请求参数
 
-|名称|位置|类型|必选|中文名|说明|
-|---|---|---|---|---|---|
-|body|body|object| 否 ||none|
-|» words|body|[string]| 是 ||none|
+| 名称    | 位置 | 类型     | 必选 | 中文名 | 说明 |
+| ------- | ---- | -------- | ---- | ------ | ---- |
+| body    | body | object   | 否   |        | none |
+| » words | body | [string] | 是   |        | none |
 
 > 返回示例
 
@@ -924,9 +924,9 @@ POST /translate_en2zh
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
@@ -946,9 +946,9 @@ POST /get_friend_list
 
 ### 请求参数
 
-|名称|位置|类型|必选|中文名|说明|
-|---|---|---|---|---|---|
-|body|body|object| 否 ||none|
+| 名称 | 位置 | 类型   | 必选 | 中文名 | 说明 |
+| ---- | ---- | ------ | ---- | ------ | ---- |
+| body | body | object | 否   |        | none |
 
 > 返回示例
 
@@ -960,9 +960,9 @@ POST /get_friend_list
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
@@ -980,9 +980,9 @@ POST /get_stranger_info
 
 ### 请求参数
 
-|名称|位置|类型|必选|中文名|说明|
-|---|---|---|---|---|---|
-|body|body|object| 否 ||none|
+| 名称 | 位置 | 类型   | 必选 | 中文名 | 说明 |
+| ---- | ---- | ------ | ---- | ------ | ---- |
+| body | body | object | 否   |        | none |
 
 > 返回示例
 
@@ -996,17 +996,17 @@ POST /get_stranger_info
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
 状态码 **200**
 
-|名称|类型|必选|约束|中文名|说明|
-|---|---|---|---|---|---|
-|» user_id|string|true|none||none|
+| 名称      | 类型   | 必选 | 约束 | 中文名 | 说明 |
+| --------- | ------ | ---- | ---- | ------ | ---- |
+| » user_id | string | true | none |        | none |
 
 # 群组接口
 
@@ -1026,12 +1026,12 @@ POST /get_group_member_info
 
 ### 请求参数
 
-|名称|位置|类型|必选|中文名|说明|
-|---|---|---|---|---|---|
-|body|body|object| 否 ||none|
-|» no_cache|body|boolean| 是 ||none|
-|» group_id|body|string| 是 ||none|
-|» user_id|body|string| 是 ||none|
+| 名称       | 位置 | 类型    | 必选 | 中文名 | 说明 |
+| ---------- | ---- | ------- | ---- | ------ | ---- |
+| body       | body | object  | 否   |        | none |
+| » no_cache | body | boolean | 是   |        | none |
+| » group_id | body | string  | 是   |        | none |
+| » user_id  | body | string  | 是   |        | none |
 
 > 返回示例
 
@@ -1043,9 +1043,9 @@ POST /get_group_member_info
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
@@ -1064,11 +1064,11 @@ POST /get_group_member_list
 
 ### 请求参数
 
-|名称|位置|类型|必选|中文名|说明|
-|---|---|---|---|---|---|
-|body|body|object| 否 ||none|
-|» no_cache|body|boolean| 是 ||none|
-|» group_id|body|string| 是 ||none|
+| 名称       | 位置 | 类型    | 必选 | 中文名 | 说明 |
+| ---------- | ---- | ------- | ---- | ------ | ---- |
+| body       | body | object  | 否   |        | none |
+| » no_cache | body | boolean | 是   |        | none |
+| » group_id | body | string  | 是   |        | none |
 
 > 返回示例
 
@@ -1080,9 +1080,9 @@ POST /get_group_member_list
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
@@ -1103,9 +1103,9 @@ POST /group_poke
 
 ### 请求参数
 
-|名称|位置|类型|必选|中文名|说明|
-|---|---|---|---|---|---|
-|body|body|object| 否 ||none|
+| 名称 | 位置 | 类型   | 必选 | 中文名 | 说明 |
+| ---- | ---- | ------ | ---- | ------ | ---- |
+| body | body | object | 否   |        | none |
 
 > 返回示例
 
@@ -1117,9 +1117,9 @@ POST /group_poke
 
 ### 返回结果
 
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 ### 返回数据结构
 
