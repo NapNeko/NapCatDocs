@@ -1086,6 +1086,270 @@ POST /get_group_member_list
 
 ### 返回数据结构
 
+
+# 群文件接口  
+## POST 获取群文件数量
+
+POST /get_group_file_count
+> Body 请求参数
+
+```json
+{
+  "group_id": "84"
+}
+```
+
+### 请求参数
+
+|名称|位置|类型|必选|中文名|说明|
+|---|---|---|---|---|---|
+|body|body|object| 否 ||none|
+|» group_id|body|string| 是 ||none|
+
+> 返回示例
+
+> 200 Response
+
+```json
+{
+    "status": "ok",
+    "retcode": 0,
+    "data": {
+        "count": 6
+    },
+    "message": "",
+    "wording": "",
+    "echo": null
+}
+```
+
+### 返回结果
+
+|状态码|状态码含义|说明|数据模型|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+
+## POST 获取群文件列表
+
+POST /get_group_file_list
+> Body 请求参数
+
+```json
+{
+  "group_id": "84",
+  "start_index": 0,
+  "file_count": 100,
+}
+```
+
+### 请求参数
+
+|名称|位置|类型|必选|中文名|说明|
+|---|---|---|---|---|---|
+|body|body|object| 否 ||none|
+|» group_id|body|string| 是 ||none|
+|» start_index|body|number| 是 |起始索引|none|
+|» file_count|body|number| 是 |文件数量|none|
+|» folder_id|body|string| 否 |文件夹编号|none|
+
+
+> 返回示例
+
+> 200 Response
+
+```json
+{
+    "status": "ok",
+    "retcode": 0,
+    "data": {
+        "FileList": [
+            {
+                "peerId": "84",
+                "type": 1,
+                "folderInfo": null,
+                "fileInfo": {
+                    "fileModelId": "7408820325581462555",
+                    "fileId": "NapCatOneBot-ModeldFile-2-1149228175-7408820325581462555",
+                    "fileName": "1145.mp4",
+                    "fileSize": "3506681",
+                    "busId": 102,
+                    "uploadedSize": "1719850005",
+                    "uploadTime": 0,
+                    "deadTime": 0,
+                    "modifyTime": 1719850009,
+                    "downloadTimes": 2,
+                    "sha":"Y+dv����4�|��h�Õ",
+                    "sha3": "",
+                    "md5":"f���8�R� ��x��",
+                    "uploaderLocalPath": "",
+                    "uploaderName": "老王",
+                    "uploaderUin": "7745",
+                    "parentFolderId": "/",
+                    "localPath": "",
+                    "transStatus": 0,
+                    "transType": 0,
+                    "elementId": "0",
+                    "isFolder": false
+                }
+            },
+        ]
+    },
+    "message": "",
+    "wording": "",
+    "echo": null
+}
+```
+
+### 返回结果
+
+|状态码|状态码含义|说明|数据模型|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+
+## POST 创建群文件夹
+
+POST /set_group_file_folder
+> Body 请求参数
+
+```json
+{
+  "group_id": "84",
+  "folder_name": "神奇文件夹"
+}
+```
+
+### 请求参数
+
+|名称|位置|类型|必选|中文名|说明|
+|---|---|---|---|---|---|
+|body|body|object| 否 ||none|
+|» group_id|body|string| 是 ||none|
+|» folder_name|body|string| 是 ||none|
+
+> 返回示例
+
+> 200 Response
+
+```json
+{
+    "status": "ok",
+    "retcode": 0,
+    "data": {
+        "result": {
+            "retCode": 0,
+            "retMsg": "ok",
+            "clientWording": ""
+        },
+        "groupItem": {
+            "peerId": "84",
+            "type": 2,
+            "folderInfo": {
+                "folderId": "/b740a69b-9579-418f-b410-78a798110e21",
+                "parentFolderId": "/",
+                "folderName": "神奇文件夹",
+                "createTime": 1725000773,
+                "modifyTime": 1725000773,
+                "createUin": "55248",
+                "creatorName": "NapCat",
+                "totalFileCount": 0,
+                "modifyUin": "55248",
+                "modifyName": "NapCat",
+                "usedSpace": "0"
+            },
+            "fileInfo": null
+        }
+    },
+    "message": "",
+    "wording": "",
+    "echo": null
+}
+```
+
+### 返回结果
+
+|状态码|状态码含义|说明|数据模型|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+
+## POST 删除群文件
+
+POST /del_group_file
+> Body 请求参数
+
+```json
+{
+  "group_id": "84",
+  "file_id": "NapCatOneBot-ModeldFile-2-729622539-7408822825986028310"
+}
+```
+
+### 请求参数
+
+|名称|位置|类型|必选|中文名|说明|
+|---|---|---|---|---|---|
+|body|body|object| 否 ||none|
+|» group_id|body|string| 是 ||none|
+|» file_id|body|string| 是 ||none|
+
+> 返回示例
+
+> 200 Response
+
+```json
+
+```
+
+### 返回结果
+
+|状态码|状态码含义|说明|数据模型|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+
+## POST 删除群文件夹
+
+POST /del_group_file_folder
+> Body 请求参数
+
+```json
+{
+  "group_id": "84",
+  "folder_id": "/b740a69b-9579-418f-b410-78a798110e21"
+}
+```
+
+### 请求参数
+
+|名称|位置|类型|必选|中文名|说明|
+|---|---|---|---|---|---|
+|body|body|object| 否 ||none|
+|» group_id|body|string| 是 ||none|
+|» folder_id|body|string| 是 ||none|
+
+> 返回示例
+
+> 200 Response
+
+```json
+{
+    "status": "ok",
+    "retcode": 0,
+    "data": {
+        "retCode": 0,
+        "retMsg": "ok",
+        "clientWording": ""
+    },
+    "message": "",
+    "wording": "",
+    "echo": null
+}
+```
+
+### 返回结果
+
+|状态码|状态码含义|说明|数据模型|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+
 # 弃用与未完成接口
 
 ## POST TestPoke
