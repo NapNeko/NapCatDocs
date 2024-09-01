@@ -17,3 +17,10 @@ author: HeartfeltJoy
 
 [NapCat-Desktop](https://github.com/HeartfeltJoy/NapCatQQ-Desktop)
 :::
+
+# 推荐项目
+::: details OlivOS 青果核心交互栈
+author: OlivOS-Team
+
+[OlivOS](https://github.com/OlivOS-Team/OlivOS)
+:::
