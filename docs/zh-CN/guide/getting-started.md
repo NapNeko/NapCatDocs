@@ -39,7 +39,7 @@ NapCatQQ V2 正式开始测试，欢迎来到 NapCatQQ (aka 猫猫框架) 的使
 
 #### 一键撸猫
 
-::: detail Windows X64 自动化安装程序
+::: details Windows X64 自动化安装程序
 
 [前往下载](https://github.com/NapNeko/NapCat-Win-Installer/releases/tag/v1.0.0)
 
