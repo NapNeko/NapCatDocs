@@ -107,7 +107,7 @@ curl -o napcat.termux.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main
 
 [前往了解 BootWay03 半自动方案](./boot/shell/BootWay03-Linux-SemiAuto.md)（适用于 Deb / Red Hat 系**以外**的 Linux 发行版）
 
-[前往了解 BootWay03 手动方案](./boot/shell/BootWay03)（适用于 Windows 和 Linux）
+[前往了解 BootWay03 手动方案](./boot/shell/BootWay03)（适用于 Windows、Linux 和 macOS）
 
 ### 方法3: Only GUI
 
