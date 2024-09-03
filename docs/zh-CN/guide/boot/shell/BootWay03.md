@@ -1,6 +1,6 @@
 # BootWay03 撸猫教程
 
-首先，安装 QQ，确保你知道 QQ 的目录。Linux 一般在 `/opt/QQ`；Windows 一般在系统盘下 `Program Files\Tencent\QQNT`，具体定位方法可以参考 [BootWay05 教程](BootWay05.md)。
+首先，安装 QQ，确保你知道 QQ 的目录。Linux 一般在 `/opt/QQ`；Windows 一般在系统盘下 `Program Files\Tencent\QQNT`，具体定位方法可以参考 [BootWay05 教程](BootWay05.md)；macOS 一般在 `/Applications/QQ.app`。
 
 ## 预处理
 
@@ -12,7 +12,12 @@
 
 ![way0301](../../../../asset/img/getting-started/install.way03.01.png)
 
-将 `NapCat.Shell.zip` 解压到 `${QQ 安装目录}/resource/app/app_launcher/napcat`，如上图。确保 `app_launcher/napcat/napcat.mjs` 存在！
+将 `NapCat.Shell.zip` 解压到 QQ 启动目录。
+
+- Linux/Windows 在 `${QQ 安装目录}/resource/app/app_launcher/napcat`，如上图。
+- macOS 在 `${QQ 安装目录}/Contents/Resourcesapp/app_launcher/napcat`。
+
+请确保 `app_launcher/napcat/napcat.mjs` 存在！
 
 ## 写入启动代码
 
@@ -33,7 +38,7 @@ if (hasNapcatParam) {
 }
 ```
 
-### Linux
+### Linux/macOS
 
 ```js
 const path = require('path');
@@ -70,6 +75,14 @@ napcat-9912 为新的启动脚本，复制到任意位置双击打开即可快�
 
 ```bash
 .\QQ.exe --enable-logging
+```
+
+### macOS
+
+在终端中启动 QQ，增加 `--no-sandbox` 的 flag。
+
+```bash
+/Applications/QQ.app/Contents/MacOS/QQ --no-sandbox
 ```
 
 ### Linux
