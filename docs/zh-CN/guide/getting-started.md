@@ -39,13 +39,12 @@ NapCatQQ V2 正式开始测试，欢迎来到 NapCatQQ (aka 猫猫框架) 的使
 
 #### 一键撸猫
 
-::: details 非入侵式启动器
-前往 [NapCatQQ 的 release 页面](https://github.com/NapNeko/NapCatQQ/releases) 下载最新版NapCat 双击目录下launcher.bat即可启动
-:::
 
 ::: details Windows X64 自动化安装程序
 
 [前往下载](https://github.com/NapNeko/NapCat-Win-Installer/releases/tag/v1.0.0)
+
+双击目录下launcher.bat即可启动 如果是win10 则使用launcher-win10.bat
 
 复制到你需要的目录双击启动程序 即可 如果存在问题 请前往官方群和issue反馈 并尝试下面的方案
 :::
