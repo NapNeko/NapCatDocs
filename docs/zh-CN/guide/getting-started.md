@@ -73,6 +73,14 @@ powershell -ExecutionPolicy ByPass -File ./install.ps1 -verb runas
 
 :::
 
+::: details Windows图形化部署与管理工具 (测试版本)
+[源码仓库](https://github.com/NapNeko/NapCatQQ-Desktop)
+
+[下载工具](https://github.com/NapNeko/NapCatQQ-Desktop/releases)
+
+如果存在问题 请前往官方群和issue反馈 并尝试其余的方案
+:::
+
 ::: details Linux 一键脚本 (适用于 Ubuntu **20+** / Debian **10+** / CentOS **9**)
 
 ``` bash
