@@ -47,10 +47,14 @@ NapCatQQ V2 正式开始测试，欢迎来到 NapCatQQ (aka 猫猫框架) 的使
 
 安装完成 双击目录下launcher.bat即可启动 如果是win10 则使用launcher-win10.bat
 
+修改配置见本文最后 NapCat 的基础设置 同时 你可以也可以使用 图形化WebUi远程配置 
+
 注意 如果需要快速登录 打开bat 参考最后一行 修改倒数第二行加入QQ号即可
 :::
 
 ::: details Windows图形化部署与管理工具 (测试版本)
+警告 此方案 可能存在一些奇妙bug 因为刚刚打完复活赛
+
 [源码仓库](https://github.com/NapNeko/NapCatQQ-Desktop)
 
 [下载工具](https://github.com/NapNeko/NapCatQQ-Desktop/releases)
