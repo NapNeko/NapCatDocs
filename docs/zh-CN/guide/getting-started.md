@@ -49,6 +49,13 @@ NapCatQQ V2 正式开始测试，欢迎来到 NapCatQQ (aka 猫猫框架) 的使
 复制到你需要的目录双击启动程序 即可 如果存在问题 请前往官方群和issue反馈 并尝试下面的方案
 :::
 
+::: details Windows图形化部署与管理工具 (测试版本)
+[源码仓库](https://github.com/NapNeko/NapCatQQ-Desktop)
+
+[下载工具](https://github.com/NapNeko/NapCatQQ-Desktop/releases)
+
+如果存在问题 请前往官方群和issue反馈 并尝试其余的方案
+:::
 
 ::: details Windows x64 一键脚本
 
@@ -71,14 +78,6 @@ powershell -ExecutionPolicy ByPass -File ./install.ps1 -verb runas
 
 5. 如果代码没动就回车一下，等到提示框弹出。
 
-:::
-
-::: details Windows图形化部署与管理工具 (测试版本)
-[源码仓库](https://github.com/NapNeko/NapCatQQ-Desktop)
-
-[下载工具](https://github.com/NapNeko/NapCatQQ-Desktop/releases)
-
-如果存在问题 请前往官方群和issue反馈 并尝试其余的方案
 :::
 
 ::: details Linux 一键脚本 (适用于 Ubuntu **20+** / Debian **10+** / CentOS **9**)
