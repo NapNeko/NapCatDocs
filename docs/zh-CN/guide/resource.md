@@ -12,9 +12,17 @@ author: huankong233
 [node-napcat-ts](https://github.com/huankong233/node-napcat-ts)
 :::
 
+
+
 # 推荐项目
 ::: details OlivOS 青果核心交互栈
 author: OlivOS-Team
 
 [OlivOS](https://github.com/OlivOS-Team/OlivOS)
+:::
+
+::: details Rust开发SDK onebotv11_rs
+author: canxin121
+
+[onebotv11_rs](https://github.com/canxin121/onebotv11_rs)
 :::
