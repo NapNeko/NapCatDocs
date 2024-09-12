@@ -49,7 +49,9 @@ NapCatQQ V2 正式开始测试，欢迎来到 NapCatQQ (aka 猫猫框架) 的使
 
 修改配置见本文最后 NapCat 的基础设置 同时 你可以也可以使用 图形化WebUi远程配置 
 
-注意 如果需要快速登录 打开bat 参考最后一行 修改倒数第二行加入QQ号即可
+注意 如果需要快速登录 命令行执行 或者 新建bat
+`./launcher.bat 123456`
+`./auncher-win10.bat 123456`
 :::
 
 ::: details Windows图形化部署与管理工具 (测试版本)
