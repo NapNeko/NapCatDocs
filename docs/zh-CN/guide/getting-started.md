@@ -51,9 +51,9 @@ NapCatQQ V2 正式开始测试，欢迎来到 NapCatQQ (aka 猫猫框架) 的使
 
 注意 如果需要快速登录 命令行执行 或者 新建bat
 
-Win11: `./launcher.bat 123456`
+Win11: `.\launcher.bat 123456`
 
-Win 10: `./launcher-win10.bat 123456`
+Win 10: `.\launcher-win10.bat 123456`
 
 :::
 
