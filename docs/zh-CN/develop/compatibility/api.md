@@ -82,7 +82,7 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 | `_send_group_notice`             | 发送群公告                      |   ✅   |                                        |
 | `_get_group_notice`              | 获取群公告                      |   ✅   |                                        |
 | `upload_group_file`              | 上传群文件                      |   ✅   |                                        |
-| `delete_group_file`              | 删除群文件                      |   ❌   | 使用 `del_geoup_file` 代替             |
+| `delete_group_file`              | 删除群文件                      |   ❌   | 使用 `del_group_file` 代替             |
 | `create_group_file_folder`       | 创建群文件文件夹                |   ❌   | 使用 `set_group_file_folder` 代替      |
 | `delete_group_folder`            | 删除群文件文件夹                |   ❌   | 使用 `del_group_file_folder` 代替      |
 | `get_group_file_system_info`     | 获取群文件系统信息              |   ❌   | 部分实现 见接口 `get_group_file_count` |
