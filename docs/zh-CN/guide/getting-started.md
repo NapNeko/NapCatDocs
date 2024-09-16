@@ -57,7 +57,7 @@ Win 10: `.\launcher-win10.bat 123456`
 
 :::
 
-::: details Windows图形化部署与管理工具 (测试版本)
+<!-- ::: details Windows图形化部署与管理工具 (测试版本)
 警告 此方案 可能存在一些奇妙bug 因为刚刚打完复活赛
 
 [源码仓库](https://github.com/NapNeko/NapCatQQ-Desktop)
@@ -65,9 +65,9 @@ Win 10: `.\launcher-win10.bat 123456`
 [下载工具](https://github.com/NapNeko/NapCatQQ-Desktop/releases)
 
 如果存在问题 请前往官方群和issue反馈 并尝试其余的方案
-:::
+::: -->
 
-::: details Windows x64 一键脚本（老版本的Powershell启动）
+<!-- ::: details Windows x64 一键脚本（老版本的Powershell启动）
 此方法不建议再使用了
 
 ``` bash
@@ -89,14 +89,14 @@ powershell -ExecutionPolicy ByPass -File ./install.ps1 -verb runas
 
 5. 如果代码没动就回车一下，等到提示框弹出。
 
-:::
-::: details Linux 一键脚本 (适用于 Ubuntu **20+** / Debian **10+** / CentOS **9**)
+::: -->
+<!-- ::: details Linux 一键脚本 (适用于 Ubuntu **20+** / Debian **10+** / CentOS **9**)
 
 ``` bash
 curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh && sudo bash napcat.sh
 ```
 
-:::
+::: -->
 
 ::: details Linux 下使用 Docker
 
@@ -106,13 +106,13 @@ curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script
 
 :::
 
-::: details Termux 一键脚本
+<!-- ::: details Termux 一键脚本
 
 ``` bash
 curl -o napcat.termux.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.termux.sh && bash napcat.termux.sh
 ```
 
-:::
+::: -->
 
 ::: details 在 Railway 上部署
 
