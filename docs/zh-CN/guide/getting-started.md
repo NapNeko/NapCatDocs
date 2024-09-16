@@ -90,13 +90,13 @@ powershell -ExecutionPolicy ByPass -File ./install.ps1 -verb runas
 5. 如果代码没动就回车一下，等到提示框弹出。
 
 ::: -->
-<!-- ::: details Linux 一键脚本 (适用于 Ubuntu **20+** / Debian **10+** / CentOS **9**)
+::: details Linux 一键脚本 (适用于 Ubuntu **20+** / Debian **10+** / CentOS **9**)
 
 ``` bash
 curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh && sudo bash napcat.sh
 ```
 
-::: -->
+:::
 
 ::: details Linux 下使用 Docker
 
@@ -106,13 +106,13 @@ curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script
 
 :::
 
-<!-- ::: details Termux 一键脚本
+::: details Termux 一键脚本
 
 ``` bash
 curl -o napcat.termux.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.termux.sh && bash napcat.termux.sh
 ```
 
-::: -->
+:::
 
 ::: details 在 Railway 上部署
 
