@@ -44,7 +44,7 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 | `get_group_member_list`   | 获取群成员列表       |   ✅   |                      |
 | `get_group_honor_info`    | 获取群荣誉信息       |   ✅   |                      |
 | `get_cookies`             | 获取 Cookies         |   ✅   |                      |
-| `get_csrf_token`          | 获取 CSRF Token      |   ❌   |                      |
+| `get_csrf_token`          | 获取 CSRF Token      |   ✅   |                      |
 | `get_credentials`         | 获取 QQ 相关接口凭证 |   ❌   |                      |
 | `get_record`              | 获取语音             |   ✅   |                      |
 | `get_image`               | 获取图片             |   ✅   |                      |
@@ -61,7 +61,7 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 | -------------------------------- | ------------------------------- | :---: | -------------------------------------- |
 | `set_qq_profile`                 | 设置登录号资料                  |   ❌   | 使用 `set_self_profile` 代替           |
 | `qidian_get_account_info`        | 获取企点账号信息                |   ❌   | 不支持企点哦~                          |
-| `_get_model_show`                | 获取在线机型                    |   ❌   | QQNT还没更新这个功能                   |
+| `_get_model_show`                | 获取在线机型                    |   ✅   |                    |
 | `_set_model_show`                | 设置在线机型                    |   ❌   | QQNT还没更新这个功能                   |
 | `get_online_clients`             | 获取当前账号在线客户端列表      |   ✅   |                                        |
 | `get_unidirectional_friend_list` | 获取单向好友列表                |   ❌   | QQNT还没更新这个功能                   |
@@ -86,8 +86,8 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 | `create_group_file_folder`       | 创建群文件文件夹                |   ❌   | 使用 `set_group_file_folder` 代替      |
 | `delete_group_folder`            | 删除群文件文件夹                |   ❌   | 使用 `del_group_file_folder` 代替      |
 | `get_group_file_system_info`     | 获取群文件系统信息              |   ❌   | 部分实现 见接口 `get_group_file_count` |
-| `get_group_root_files`           | 获取群根目录文件列表            |   ❌   | 使用 `get_group_file_list` 代替        |
-| `get_group_files_by_folder`      | 获取群子目录文件列表            |   ❌   | 使用 `get_group_file_list` 代替        |
+| `get_group_root_files`           | 获取群根目录文件列表            |   ✅   |         |
+| `get_group_files_by_folder`      | 获取群子目录文件列表            |   ✅   |         |
 | `get_group_file_url`             | 获取群文件资源链接              |   ❌   | NTQQ文件下载方式不同,请使用 `get_file` |
 | `upload_private_file`            | 上传私聊文件                    |   ✅   |                                        |
 | `reload_event_filter`            | 重载事件过滤器                  |   ❌   | napcat没有事件过滤器哦~                |
