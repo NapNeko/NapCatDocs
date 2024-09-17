@@ -129,17 +129,17 @@ curl -o napcat.termux.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main
 :::
 #### 手动/半自动撸猫
 
-目前已经研究完成并公布的启动方式有 BootWay03 和 05。
+<!-- 目前已经研究完成并公布的启动方式有 BootWay03 和 05。
 
 [前往了解 BootWay05 手动方案](./boot/shell/BootWay05)（仅适用于 Windows x64）
 
 [前往了解 BootWay03 半自动方案](./boot/shell/BootWay03-Linux-SemiAuto.md)（适用于 Deb / Red Hat 系**以外**的 Linux 发行版）
 
-[前往了解 BootWay03 手动方案](./boot/shell/BootWay03)（适用于 Windows、Linux 和 macOS）
+[前往了解 BootWay03 手动方案](./boot/shell/BootWay03)（适用于 Windows、Linux 和 macOS） -->
 
 ### 方法3: Only GUI
 
-目前该方案没有完整支持，仅有[手动方案](./boot/only-gui/BootWay03)，与上面的 BootWay03 类似。
+<!-- 目前该方案没有完整支持，仅有[手动方案](./boot/only-gui/BootWay03)，与上面的 BootWay03 类似。 -->
 
 ## 使用之后
 
