@@ -43,6 +43,12 @@ NapCatQQ V2 正式开始测试，欢迎来到 NapCatQQ (aka 猫猫框架) 的使
 [NapCat.Docker.Framerwrok](https://github.com/NapNeko/NapCat.Docker.Framerwrok)
 :::
 
+::: details Windows Framework的一键启动程序
+1. 前往 [NapCatQQ 的 release 页面](https://github.com/NapNeko/NapCatQQ/releases)
+2. 选择NapCat.Framerwork.Windows.Once.zip下载
+3. 找到目录下的exe启动 (注意不要解压到带有空格或者中文的目录)
+:::
+
 ::: details Framework的Linux 一键脚本
 
 ``` bash
