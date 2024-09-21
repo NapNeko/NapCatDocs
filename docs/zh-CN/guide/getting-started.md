@@ -29,7 +29,7 @@ NapCatQQ V2 正式开始测试，欢迎来到 NapCatQQ (aka 猫猫框架) 的使
 
 ### 方法1: 作为 LiteLoader 插件启动
 #### 手动撸猫
-::: details 通过LiteLoader框架安装Framerwork版本Napcat
+::: details 通过LiteLoader框架安装Framework版本Napcat
 **请安装27597或者更高版本 注意如果28060及以上有困难尝试27597**
 1. 按照 [LiteLoaderQQNT 官网](https://liteloaderqqnt.github.io/) 的指导安装 LiteLoaderQQNT 框架。
 
@@ -37,13 +37,13 @@ NapCatQQ V2 正式开始测试，欢迎来到 NapCatQQ (aka 猫猫框架) 的使
 ![在这里](../../asset/img/getting-started/ll01.png)
 :::
 #### 一键撸猫
-::: details Framerwork Linux Docker
+::: details Framework Linux Docker
 前往仓库了解
 
 [NapCat.Docker.Framerwrok](https://github.com/NapNeko/NapCat.Docker.Framerwrok)
 :::
 
-::: details Framerwork的Linux 一键脚本
+::: details Framework的Linux 一键脚本
 
 ``` bash
 正在规划中
