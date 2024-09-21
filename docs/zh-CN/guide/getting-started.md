@@ -40,7 +40,7 @@ NapCatQQ V2 正式开始测试，欢迎来到 NapCatQQ (aka 猫猫框架) 的使
 ::: details Framerwork Linux Docker
 前往仓库了解
 
-[NapCat.Docker.Framerwro](https://github.com/NapNeko/NapCat.Docker.Framerwrok)
+[NapCat.Docker.Framerwrok](https://github.com/NapNeko/NapCat.Docker.Framerwrok)
 :::
 
 ### 方法2: 通过命令行启动
