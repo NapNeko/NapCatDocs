@@ -28,11 +28,18 @@ NapCatQQ V2 正式开始测试，欢迎来到 NapCatQQ (aka 猫猫框架) 的使
 
 
 ### 方法1: 作为 LiteLoader 插件启动
-**注意LiteLoader当前仅支持27597及其以下的 这样的情况推荐实现27597版本 如果出现异常或者失败**
+#### 手动撸猫
+**请安装27597或者更高版本 注意如果28060及以上有困难尝试27597**
 1. 按照 [LiteLoaderQQNT 官网](https://liteloaderqqnt.github.io/) 的指导安装 LiteLoaderQQNT 框架。
 
 2. 在 LiteLoaderQQNT 的设置页面（如下图）将 `NapCat.Framework.zip` 导入即可。
 ![在这里](../../asset/img/getting-started/ll01.png)
+#### 一键撸猫
+::: details Linux Docker
+前往仓库了解
+
+[NapCat.Docker.Framerwro](https://github.com/NapNeko/NapCat.Docker.Framerwrok)
+:::
 
 ### 方法2: 通过命令行启动
 
@@ -57,39 +64,16 @@ Win 10: `.\launcher-win10.bat 123456`
 
 :::
 
-<!-- ::: details Windows图形化部署与管理工具 (测试版本)
-警告 此方案 可能存在一些奇妙bug 因为刚刚打完复活赛
+::: details Windows图形化部署与管理工具 (测试版本)
+警告 此方案 可能存在一些奇妙bug 因为刚刚打完复活赛 如果失败使用上面方案
 
 [源码仓库](https://github.com/NapNeko/NapCatQQ-Desktop)
 
 [下载工具](https://github.com/NapNeko/NapCatQQ-Desktop/releases)
 
 如果存在问题 请前往官方群和issue反馈 并尝试其余的方案
-::: -->
+:::
 
-<!-- ::: details Windows x64 一键脚本（老版本的Powershell启动）
-此方法不建议再使用了
-
-``` bash
-curl -o install.ps1 https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.ps1
-powershell -ExecutionPolicy ByPass -File ./install.ps1 -verb runas
-```
-
-1. 点击复制上面代码，如下图。
-  ![复制代码](../../asset/img/getting-started/nc070.png)
-
-2. 打开一个你想安装猫猫框架的目录（随便啦，但是一般别在 C 盘，笨蛋）
-
-3. 在空白处右键，点击在终端打开。若无此选项卡，可以在地址栏中输入 wt 并回车。
-  ![alt text](../../asset/img/getting-started/nc056.png)
-  ![alt text](../../asset/img/getting-started/nc057.png)
-
-4. 在终端中右键（不要用 Ctrl+V - 这样有可能造成不可预料的后果！），将刚刚的复制的代码粘贴进终端。如果终端有警告，点击仍然粘贴。
-  ![alt text](../../asset/img/getting-started/nc059.png)
-
-5. 如果代码没动就回车一下，等到提示框弹出。
-
-::: -->
 ::: details Linux 一键脚本 (适用于 Ubuntu **20+** / Debian **10+** / CentOS **9**)
 
 ``` bash
