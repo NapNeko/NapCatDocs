@@ -30,7 +30,7 @@ NapCatQQ V2 正式开始测试，欢迎来到 NapCatQQ (aka 猫猫框架) 的使
 ### 方法1: 作为 LiteLoader 插件启动
 #### 手动撸猫
 ::: details 通过LiteLoader框架安装Framework版本Napcat
-**请安装27597或者更高版本 注意如果28060及以上有困难尝试27597**
+**请安装27597或者更高版本QQ 注意如果28060及以上有困难尝试27597**
 1. 按照 [LiteLoaderQQNT 官网](https://liteloaderqqnt.github.io/) 的指导安装 LiteLoaderQQNT 框架。
 
 2. 在 LiteLoaderQQNT 的设置页面（如下图）将 `NapCat.Framework.zip` 导入即可。
