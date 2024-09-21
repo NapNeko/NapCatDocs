@@ -43,6 +43,13 @@ NapCatQQ V2 正式开始测试，欢迎来到 NapCatQQ (aka 猫猫框架) 的使
 [NapCat.Docker.Framerwrok](https://github.com/NapNeko/NapCat.Docker.Framerwrok)
 :::
 
+::: details Framerwork的Linux 一键脚本
+
+``` bash
+正在规划中
+```
+
+:::
 ### 方法2: 通过命令行启动
 频繁掉线可以采用方式1
 
@@ -116,17 +123,11 @@ curl -o napcat.termux.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main
 :::
 #### 手动/半自动撸猫
 
-<!-- 目前已经研究完成并公布的启动方式有 BootWay03 和 05。
-
-[前往了解 BootWay05 手动方案](./boot/shell/BootWay05)（仅适用于 Windows x64）
-
-[前往了解 BootWay03 半自动方案](./boot/shell/BootWay03-Linux-SemiAuto.md)（适用于 Deb / Red Hat 系**以外**的 Linux 发行版）
-
-[前往了解 BootWay03 手动方案](./boot/shell/BootWay03)（适用于 Windows、Linux 和 macOS） -->
+暂时不再提供相关教程 由于启动方式变更
 
 ### 方法3: Only GUI
 
-<!-- 目前该方案没有完整支持，仅有[手动方案](./boot/only-gui/BootWay03)，与上面的 BootWay03 类似。 -->
+原因与上(可以实现 但是不如方案一二)
 
 ## 使用之后
 
