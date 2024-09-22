@@ -23,10 +23,11 @@ if (hasNapcatParam) {
     }, 0);
 }
 ```
+3. 安装napcat shell 到 /opt/QQ/resources/app/napcat 确保 /opt/QQ/resources/app/napcat/napcat.js存在
 
-3. 修改/opt/QQ/resources/app/package.json的main属性从`./application/app_launcher/index.js` 改为`./LoadNapCat.js`
+4. 修改/opt/QQ/resources/app/package.json的main属性从`./application/app_launcher/index.js` 改为`./LoadNapCat.js`
 
-4. 在你想要的位置创建 ./startnc.sh
+5. 在你想要的位置创建 ./startnc.sh
 
 ```bash
 chmod +777 /opt/QQ
