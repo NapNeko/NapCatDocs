@@ -61,8 +61,22 @@ NapCatQQ V2 正式开始测试，欢迎来到 NapCatQQ (aka 猫猫框架) 的使
 
 #### 一键撸猫
 
+::: details Windows X64 自动化启动器
 
-::: details Windows X64 自动化安装程序
+1. 前往 [NapCatQQ 的 release 页面](https://github.com/NapNeko/NapCatQQ/releases)
+
+2. 下载NapCat.Shell.zip解压
+
+3. 安装完成 双击目录下launcher.bat即可启动 如果是win10 则使用launcher-win10.bat
+
+注意 如果需要快速登录 命令行执行 或者 新建bat
+
+Win11: `.\launcher.bat 123456`
+
+Win 10: `.\launcher-win10.bat 123456`
+:::
+
+::: details Windows X64 自动化下载与安装程序
 
 [前往下载](https://github.com/NapNeko/NapCat-Win-Installer/releases/tag/v1.0.0)
 
