@@ -139,6 +139,8 @@ curl -o napcat.termux.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main
 
 恭喜你，如果看到这里，你已经成功启动了它，可以尝试阅读下面的进阶说明！
 
+[出现闪退如何处理](./boot/error.md) **特别篇**
+
 [如何进行 NapCat 的基础设置](./config/basic.md)
 
 [如何配置 NapCat 的语音发送](./faq.md) 参考 `语音、视频发送失败` 发生失败条目
