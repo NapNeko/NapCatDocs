@@ -44,7 +44,7 @@
 | `notice.notify.poke`          | 戳一戳                 |   ✅   | 无法获取操作ID将上报为0 |
 | `notice.notify.lucky_king`    | 群红包运气王提示       |   ❌   |                         |
 | `notice.notify.honor`         | 群成员荣誉变更         |   ❌   |                         |
-| `notice.notify.title`         | 群成员头衔变更         |   ❌   |                         |
+| `notice.notify.title`         | 群成员头衔变更         |   ✅   |                         |
 | `notice.notify.input_status`  | 输入状态更新           |   ✅   |                         |
 | `notice.group_card`           | 群成员名片更新         |   ❌   |                         |
 | `notice.offline_file`         | 接收到离线文件         |   ❌   |                         |
