@@ -44,7 +44,7 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 | `get_group_member_list`   | 获取群成员列表       |   ✅   |                      |
 | `get_group_honor_info`    | 获取群荣誉信息       |   ✅   |                      |
 | `get_cookies`             | 获取 Cookies         |   ✅   |                      |
-| `get_csrf_token`          | 获取 CSRF Token      |   ✅   |                      |
+| `get_csrf_token`          | 获取 CSRF Token      |   ❌   |                      |
 | `get_credentials`         | 获取 QQ 相关接口凭证 |   ❌   |                      |
 | `get_record`              | 获取语音             |   ✅   |                      |
 | `get_image`               | 获取图片             |   ✅   |                      |
@@ -59,9 +59,9 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 
 | Api                              | 介绍                            | 可用  | 备注                                   |
 | -------------------------------- | ------------------------------- | :---: | -------------------------------------- |
-| `set_qq_profile`                 | 设置登录号资料                  |   ❌   | 使用 `set_self_profile` 代替           |
+| `set_qq_profile`                 | 设置登录号资料                  |   ✅   |                                        |
 | `qidian_get_account_info`        | 获取企点账号信息                |   ❌   | 不支持企点哦~                          |
-| `_get_model_show`                | 获取在线机型                    |   ✅   |                    |
+| `_get_model_show`                | 获取在线机型                    |   ✅   |                                        |
 | `_set_model_show`                | 设置在线机型                    |   ❌   | QQNT还没更新这个功能                   |
 | `get_online_clients`             | 获取当前账号在线客户端列表      |   ✅   |                                        |
 | `get_unidirectional_friend_list` | 获取单向好友列表                |   ❌   | QQNT还没更新这个功能                   |
@@ -82,12 +82,12 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 | `_send_group_notice`             | 发送群公告                      |   ✅   |                                        |
 | `_get_group_notice`              | 获取群公告                      |   ✅   |                                        |
 | `upload_group_file`              | 上传群文件                      |   ✅   |                                        |
-| `delete_group_file`              | 删除群文件                      |   ❌   | 使用 `del_group_file` 代替             |
-| `create_group_file_folder`       | 创建群文件文件夹                |   ❌   | 使用 `set_group_file_folder` 代替      |
-| `delete_group_folder`            | 删除群文件文件夹                |   ❌   | 使用 `del_group_file_folder` 代替      |
-| `get_group_file_system_info`     | 获取群文件系统信息              |   ❌   | 部分实现 见接口 `get_group_file_count` |
-| `get_group_root_files`           | 获取群根目录文件列表            |   ✅   |         |
-| `get_group_files_by_folder`      | 获取群子目录文件列表            |   ✅   |         |
+| `delete_group_file`              | 删除群文件                      |   ✅   |                                        |
+| `create_group_file_folder`       | 创建群文件文件夹                |   ✅   |                                        |
+| `delete_group_folder`            | 删除群文件文件夹                |   ✅   |                                        |
+| `get_group_file_system_info`     | 获取群文件系统信息              |   ✅   |                                        |
+| `get_group_root_files`           | 获取群根目录文件列表            |   ✅   |                                        |
+| `get_group_files_by_folder`      | 获取群子目录文件列表            |   ✅   |                                        |
 | `get_group_file_url`             | 获取群文件资源链接              |   ❌   | NTQQ文件下载方式不同,请使用 `get_file` |
 | `upload_private_file`            | 上传私聊文件                    |   ✅   |                                        |
 | `reload_event_filter`            | 重载事件过滤器                  |   ❌   | napcat没有事件过滤器哦~                |
@@ -98,36 +98,39 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 
 ## napcat API
 
-| Api                         | 介绍               | 可用  | 备注 |
-| --------------------------- | ------------------ | :---: | ---- |
-| `ArkShareGroup`             | 推荐联系人/群聊    |   ✅   |      |
-| `ArkSharePeer`              | 推荐群聊           |   ✅   |      |
-| `get_robot_uin_range`       | 获取机器人QQ号区间 |   ✅   |      |
-| `set_online_status`         | 设置在线状态       |   ✅   |      |
-| `get_friends_with_category` | 获取好友分类列表   |   ✅   |      |
-| `set_qq_avatar`             | 设置头像           |   ✅   |      |
-| `get_file`                  | 获取文件信息       |   ✅   |      |
-| `forward_friend_single_msg` | 转发单条信息到私聊 |   ✅   |      |
-| `forward_group_single_msg`  | 转发单条信息到群聊 |   ✅   |      |
-| `translate_en2zh`           | 英译中翻译         |   ✅   |      |
-| `get_group_file_count`      | 获取群文件数       |   ✅   |      |
-| `get_group_file_list`       | 获取群文件列表     |   ✅   |      |
-| `set_group_file_folder`     | 新建群文件文件夹   |   ✅   |      |
-| `del_group_file`            | 删除群文件文件     |   ✅   |      |
-| `del_group_file_folder`     | 删除群文件文件夹   |   ✅   |      |
-| `set_msg_emoji_like`        | 设置消息的表情回复 |   ✅   |      |
-| `send_forward_msg`          | 发送合并转发       |   ✅   |      |
-| `mark_private_msg_as_read`  | 标记私聊信息已读   |   ✅   |      |
-| `mark_group_msg_as_read`    | 标记群聊信息已读   |   ✅   |      |
-| `get_friend_msg_history`    | 获取私聊记录       |   ✅   |      |
-| `set_self_profile`          | 设置个人资料       |   ✅   |      |
-| `create_collection`         | 创建文本收藏       |   ✅   |      |
-| `get_collection_list`       | 获取收藏列表       |   ✅   |      |
-| `set_self_longnick`         | 设置个人签名       |   ✅   |      |
-| `get_recent_contact`        | 获取最近的聊天记录 |   ✅   |      |
-| `_mark_all_as_read`         | 标记所有为已读     |   ✅   |      |
-| `get_profile_like`          | 获取自身点赞列表   |   ✅   |      |
-| `fetch_custom_face`         | 获取收藏表情       |   ✅   |      |
-| `fetch_emoji_like`          | 拉取表情回应列表   |   ✅   |      |
-| `set_input_status`          | 设置输入状态       |   ✅   |      |
-| `get_group_info_ex`         | 获取群组额外信息   |   ✅   |      |
+| Api                          | 介绍               | 可用  | 备注 |
+| ---------------------------- | ------------------ | :---: | ---- |
+| `ArkSharePeer`               | 推荐联系人/群聊    |   ✅   |      |
+| `ArkShareGroup`              | 推荐群聊           |   ✅   |      |
+| `get_robot_uin_range`        | 获取机器人QQ号区间 |   ✅   |      |
+| `set_online_status`          | 设置在线状态       |   ✅   |      |
+| `get_friends_with_category`  | 获取好友分类列表   |   ✅   |      |
+| `set_qq_avatar`              | 设置头像           |   ✅   |      |
+| `get_file`                   | 获取文件信息       |   ✅   |      |
+| `forward_friend_single_msg`  | 转发单条信息到私聊 |   ✅   |      |
+| `forward_group_single_msg`   | 转发单条信息到群聊 |   ✅   |      |
+| `translate_en2zh`            | 英译中翻译         |   ✅   |      |
+| `get_group_file_count`       | 获取群文件数       |   ✅   |      |
+| `get_group_file_list`        | 获取群文件列表     |   ✅   |      |
+| `set_group_file_folder`      | 新建群文件文件夹   |   ✅   |      |
+| `del_group_file`             | 删除群文件文件     |   ✅   |      |
+| `del_group_file_folder`      | 删除群文件文件夹   |   ✅   |      |
+| `set_msg_emoji_like`         | 设置消息的表情回复 |   ✅   |      |
+| `send_forward_msg`           | 发送合并转发       |   ✅   |      |
+| `mark_private_msg_as_read`   | 标记私聊信息已读   |   ✅   |      |
+| `mark_group_msg_as_read`     | 标记群聊信息已读   |   ✅   |      |
+| `get_friend_msg_history`     | 获取私聊记录       |   ✅   |      |
+| `set_self_profile`           | 设置个人资料       |   ✅   |      |
+| `create_collection`          | 创建文本收藏       |   ✅   |      |
+| `get_collection_list`        | 获取收藏列表       |   ✅   |      |
+| `set_self_longnick`          | 设置个人签名       |   ✅   |      |
+| `get_recent_contact`         | 获取最近的聊天记录 |   ✅   |      |
+| `_mark_all_as_read`          | 标记所有为已读     |   ✅   |      |
+| `get_profile_like`           | 获取自身点赞列表   |   ✅   |      |
+| `fetch_custom_face`          | 获取收藏表情       |   ✅   |      |
+| `fetch_emoji_like`           | 拉取表情回应列表   |   ✅   |      |
+| `set_input_status`           | 设置输入状态       |   ✅   |      |
+| `get_group_info_ex`          | 获取群组额外信息   |   ✅   |      |
+| `get_group_ignored_notifies` | 获取群组忽略的通知 |   ✅   |      |
+| `_del_group_notice`          | 删除群聊公告       |   ✅   |      |
+| `fetch_user_profile_like`    | 获取用户个人资料页 |   ✅   |      |
