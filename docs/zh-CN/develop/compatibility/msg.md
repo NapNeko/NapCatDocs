@@ -18,12 +18,12 @@
 | `rps`       | 猜拳                |   ✅   |   ✅   |                                                                   |
 | `music`     | 音乐分享            |   ❌   |   ✅   | QQ音乐传ID发送无须配置 其余需要配置签名服务器,收到的时候是 `json` |
 | `node`      | 转发消息节点        |   ❌   |   ✅   |                                                                   |
-| `forward`   | 转发消息            |   ✅   |   ❌   |                           **不能伪造**                            |
+| `forward`   | 转发消息            |   ✅   |   ❌   |                                                                   |
 | `markdown`  | `markdown`          |   ✅   |   ❌   |                                                                   |
 | `shake`     | 私聊窗口抖动/戳一戳 |   ✅   |   ❌   |                                                                   |
 | `poke`      | 群聊戳一戳          |   ✅   |   ❌   |                                                                   |
 | `share`     | 链接分享            |   ✅   |   ❌   |                        收到的时候是 `json`                        |
-| `contact`   | 推荐好友/群         |   ✅   |   ❌   |       发送可以使用接口 `ArkShareGroup`,收到的时候是 `json`        |
+| `contact`   | 推荐好友/群         |   ✅   |   ❌   |        发送可以使用接口 `ArkSharePeer`,收到的时候是 `json`        |
 | `location`  | 位置                |   ✅   |   ❌   |                        收到的时候是 `json`                        |
 | `gift`      | 礼物                |   ✅   |   ❌   |                        收到的时候是 `json`                        |
 | `anonymous` | 匿名发消息          |   ❌   |   ❌   |                         已经没有匿名了哦~                         |
