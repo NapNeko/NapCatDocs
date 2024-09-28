@@ -95,6 +95,17 @@ If you have successfully logged in to the official QQ or NapCatQQ, you can add t
 
 :::
 
+::: details Nix Setup
+
+If you would like to install NapCat using Nix，please refer[initialencounter/napcat.nix](https://github.com/initialencounter/napcat.nix)
+
+:::warning
+
+- Please note that this installation method is unofficially maintained and may encounter some issues; your feedback is welcome.
+
+:::
+
+:::
 ### After Startup
 
 Congratulations, if you see this, you have successfully started NapCat, you can try reading the advanced instructions below!
