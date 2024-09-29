@@ -49,6 +49,14 @@ NapCatQQ V2 正式开始测试，欢迎来到 NapCatQQ (aka 猫猫框架) 的使
 3. 找到目录下的exe启动 (注意不要解压到带有空格或者中文的目录)
 :::
 
+::: details Windows Framework的一键程序
+前往仓库了解
+
+[NapCat.Framerwrok.installer](https://github.com/cnxysoft/NapCat.Framework.Installer/releases)
+
+[源码仓库](https://github.com/cnxysoft/NapCat.Framework.Installer)
+:::
+
 ::: details Framework的Linux 一键脚本
 
 ``` bash
