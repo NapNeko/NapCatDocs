@@ -84,6 +84,16 @@ Win11: `.\launcher.bat 123456`
 Win 10: `.\launcher-win10.bat 123456`
 :::
 
+::: details Windows图形化部署与管理工具
+警告 此方案 可能存在一些奇妙bug 如果出现问题 请耐心尝试其余方案
+
+[源码仓库](https://github.com/NapNeko/NapCatQQ-Desktop)
+
+[下载工具](https://github.com/NapNeko/NapCatQQ-Desktop/releases)
+
+如果存在问题 请前往官方群和issue反馈 并尝试其余的方案
+:::
+
 ::: details Windows X64 自动化下载与安装程序
 
 [前往下载](https://github.com/NapNeko/NapCat-Win-Installer/releases/tag/v1.0.0)
@@ -102,15 +112,6 @@ Win 10: `.\launcher-win10.bat 123456`
 
 :::
 
-::: details Windows图形化部署与管理工具 (测试版本)
-警告 此方案 可能存在一些奇妙bug 因为刚刚打完复活赛 如果失败使用上面方案
-
-[源码仓库](https://github.com/NapNeko/NapCatQQ-Desktop)
-
-[下载工具](https://github.com/NapNeko/NapCatQQ-Desktop/releases)
-
-如果存在问题 请前往官方群和issue反馈 并尝试其余的方案
-:::
 
 ::: details Linux 一键脚本 (适用于 Ubuntu **20+** / Debian **10+** / CentOS **9**)
 
