@@ -128,6 +128,16 @@ curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script
 
 :::
 
+::: macOS 图形化下载与安装程序
+
+[前往下载](https://github.com/NapNeko/NapCat-Mac-Installer/releases/tag/v1.0-1)
+
+需要 macOS 12.0 或以上系统，支持下载和更新 NapCatQQ
+
+由于权限问题，补丁过程需要手动替换 package.json，请注意备份原文件～
+
+:::
+
 ::: details Termux 一键脚本
 
 ``` bash
