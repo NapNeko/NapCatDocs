@@ -128,7 +128,7 @@ curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script
 
 :::
 
-::: macOS 图形化下载与安装程序
+::: details macOS 图形化下载与安装程序
 
 [前往下载](https://github.com/NapNeko/NapCat-Mac-Installer/releases/tag/v1.0-1)
 
