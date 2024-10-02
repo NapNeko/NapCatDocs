@@ -86,6 +86,16 @@ Do not start with `sh napcat.sh`, as it may cause path problems and fail to star
 
 :::
 
+::: details macOS GUI Installer
+
+[Download link](https://github.com/NapNeko/NapCat-Mac-Installer/releases/tag/v1.0-1)
+
+Requires macOS 12.0 or above.
+
+English translation is on the way.
+
+:::
+
 ::: details [Android Termux](https://github.com/NapNeko/NapCat-Termux)
 :::
 
