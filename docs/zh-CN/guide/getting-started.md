@@ -154,13 +154,14 @@ curl -o napcat.termux.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main
 
 如果您希望使用 Nix 启动 NapCat，请查看 [initialencounter/napcat.nix](https://github.com/initialencounter/napcat.nix)
 
-:::warning
+::: warning
 
 - 请注意，该安装方式为非官方维护，可能会遇到一些问题，欢迎反馈。
 
 :::
 
 :::
+
 #### 手动/半自动撸猫
 
 暂时不再提供相关教程 由于启动方式变更
