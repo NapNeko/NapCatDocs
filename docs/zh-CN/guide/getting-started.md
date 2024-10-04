@@ -170,7 +170,7 @@ curl -o napcat.termux.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main
 #### 手动/半自动撸猫
 
 #### Arch用户康康？？
-[半自动安装教程](./boot//shell/BootWay03-Linux-SemiAuto.md)
+[半自动安装教程](./boot/shell/BootWay03-Linux-SemiAuto.md)
 ####
 
 
