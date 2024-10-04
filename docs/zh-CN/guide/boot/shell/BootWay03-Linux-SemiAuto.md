@@ -31,7 +31,7 @@ if (hasNapcatParam) {
 
 ```bash
 chmod +777 /opt/QQ
-sed -i 's/"main": ".\/application\/app_launcher\/index.js"/"main": ".\/LoadLiteLoader.js"/' /opt/QQ/resources/app/package.json
+sed -i 's/"main": ".\/application\/app_launcher\/index.js"/"main": ".\/loadNapCat.js"/' /opt/QQ/resources/app/package.json
 xvfb-run -a qq --no-sandbox
 ```
 
