@@ -169,8 +169,13 @@ curl -o napcat.termux.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main
 
 #### 手动/半自动撸猫
 
-暂时不再提供相关教程 由于启动方式变更
+#### Arch用户康康？？
+[半自动安装教程](./boot//shell/BootWay03-Linux-SemiAuto.md)
+####
 
+
+#### 暂时不再提供其余教程 由于启动方式变更
+####
 ### 方法3: Only GUI
 
 原因与上(可以实现 但是不如方案一二)
