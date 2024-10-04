@@ -23,6 +23,11 @@ if (hasNapcatParam) {
 3. 安装napcat shell 到 /opt/QQ/resources/app/napcat 确保 /opt/QQ/resources/app/napcat/napcat.js存在
 
 4. 修改/opt/QQ/resources/app/package.json的main属性从`./application/app_launcher/index.js` 改为`./LoadNapCat.js`
+这步也可以使用下面替代
+```
+chmod +777 /opt/QQ
+sed -i 's/"main": ".\/application\/app_launcher\/index.js"/"main": ".\/loadNapCat.js"/' /opt/QQ/resources/app/package.json
+```
 
-5. 启动qq --no-sandbox
+5. 启动xvfb-run -a qq --no-sandbox
 ```
