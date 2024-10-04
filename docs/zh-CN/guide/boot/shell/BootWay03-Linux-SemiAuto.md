@@ -2,10 +2,8 @@
 ## 安装教程
 1. 你需要安装28060+版本的 QQ
 
-2. 然后在创建 /opt/QQ/resources/app/loadNapCat.js 文件并写入
-
-```javascript
-const fs = require("fs");
+2. 然后执行:
+echo 'const fs = require("fs");
 const path = require("path");
 const hasNapcatParam = process.argv.includes('--no-sandbox');
 if (hasNapcatParam) {
@@ -17,8 +15,7 @@ if (hasNapcatParam) {
     setTimeout(() => {
         global.launcher.installPathPkgJson.main = "./application/app_launcher/index.js";
     }, 0);
-}
-```
+}' > /opt/QQ/resources/app/loadNapCat.js
 
 3. 安装napcat shell 到 /opt/QQ/resources/app/napcat 确保 /opt/QQ/resources/app/napcat/napcat.js存在
 
