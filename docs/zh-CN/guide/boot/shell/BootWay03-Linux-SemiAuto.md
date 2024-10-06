@@ -5,8 +5,8 @@
 2. 然后执行:
 ```javascript
 echo 'const fs = require("fs");
-const CurrentPath = path.dirname(__filename)
 const path = require("path");
+const CurrentPath = path.dirname(__filename);
 const hasNapcatParam = process.argv.includes("--no-sandbox");
 if (hasNapcatParam) {
     (async () => {
