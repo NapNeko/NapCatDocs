@@ -56,10 +56,10 @@ NapCatQQ V2 正式开始测试，欢迎来到 NapCatQQ (aka 猫猫框架) 的使
 [源码仓库](https://github.com/cnxysoft/NapCat.Framework.Installer)
 :::
 
-::: details Framework的Linux 一键脚本
+::: details Framework的Linux 一键脚本 (适用于 Ubuntu **20+** / Debian **10+** / CentOS **9** / Archlinux)
 
 ``` bash
-正在规划中
+curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.framework.sh && sudo bash napcat.sh
 ```
 
 :::
