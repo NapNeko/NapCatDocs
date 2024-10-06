@@ -11,6 +11,8 @@ const hasNapcatParam = process.argv.includes("--no-sandbox");
 if (hasNapcatParam) {
     (async () => {
         await import("file://" + path.join(CurrentPath, "./napcat/napcat.mjs"));
+        // await import("file://" + "/path/to/napcat/napcat.mjs"));
+        // 需要修改napcat的用户，在"/path/to/napcat"段写自己的napcat文件夹位置，并注释path.join所在行
     })();
 } else {
     require("./application/app_launcher/index.js");
@@ -23,14 +25,16 @@ if (hasNapcatParam) {
 ```javascript
 echo 'const fs = require("fs");
 const path = require("path");
-const CurrentPath = path.dirname(__filename)
+const CurrentPath = path.dirname(__filename);
 const hasNapcatParam = process.argv.includes("--no-sandbox");
 if (hasNapcatParam) {
     (async () => {
         await import("file://" + path.join(CurrentPath, "./napcat/napcat.mjs"));
+        // await import("file://" + "/path/to/napcat/napcat.mjs"));
+        // 需要修改napcat的用户，在"/path/to/napcat"段写自己的napcat文件夹位置，并注释path.join所在行
     })();
 } else {
-    require(String.raw`/opt/LiteLoaderQQNT`); 引号中写入你的liteloaderqqnt路径
+    require(String.raw`/opt/LiteLoaderQQNT`);  //引号中写入你的liteloaderqqnt路径
 }' > /opt/QQ/resources/app/loadNapCat.js
 ```
 3. 安装napcat shell 到 /opt/QQ/resources/app/napcat 确保 /opt/QQ/resources/app/napcat/napcat.js存在
