@@ -167,6 +167,9 @@ curl -o napcat.termux.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main
 请注意，该安装方式为非官方维护，可能会遇到一些问题，欢迎反馈。
 :::
 
+::: details linux 安装脚本 由我们可爱的万里妹妹维护(笑~
+[前往康康！](https://github.com/Fahaxikiii/napcat-scripts)
+:::
 #### 手动/半自动撸猫
 
 #### Arch用户康康？？
