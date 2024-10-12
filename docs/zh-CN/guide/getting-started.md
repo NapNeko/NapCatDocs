@@ -196,3 +196,5 @@ curl -o napcat.termux.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main
 [如何配置 NapCat 的语音发送](./faq.md) 参考 `语音、视频发送失败` 发生失败条目
 
 [遇到 NapCat 崩溃问题如何解决](./faq.md)
+
+[关于Poke等扩展Api的配置](./config/packet.md)
