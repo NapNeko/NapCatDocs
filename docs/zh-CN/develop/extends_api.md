@@ -221,3 +221,24 @@ emoji_id 参考 <https://bot.q.qq.com/wiki/develop/api-v2/openapi/emoji/model.ht
 ```
 
 :::
+
+::: details `/friend_poke` 私聊戳一戳
+
+```json
+{
+  "user_id": 123456
+}
+```
+
+:::
+
+::: details `/group_poke` 群聊戳一戳
+
+```json
+{
+  "group_id": 123456,
+  "user_id": 123456
+}
+```
+
+:::
