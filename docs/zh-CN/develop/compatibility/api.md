@@ -98,7 +98,7 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 
 ## napcat API
 
-| Api                          | 介绍               | 可用  | 备注 |
+| API                          | 介绍               | 可用  | 备注 |
 | ---------------------------- | ------------------ | :---: | ---- |
 | `ArkSharePeer`               | 推荐联系人/群聊    |   ✅   |      |
 | `ArkShareGroup`              | 推荐群聊           |   ✅   |      |
@@ -134,5 +134,6 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 | `get_group_ignored_notifies` | 获取群组忽略的通知 |   ✅   |      |
 | `_del_group_notice`          | 删除群聊公告       |   ✅   |      |
 | `fetch_user_profile_like`    | 获取用户个人资料页  |   ✅   |      |
-| `friend_poke`                | 私聊戳一戳        |   ✅   | 暂仅预览版 |
-| `group_poke`                 | 群聊戳一戳        |   ✅   | 暂仅预览版 |
+| `friend_poke`                | 私聊戳一戳        |   ✅   | 暂仅预览版，要求QQ版本27333-27597 |
+| `group_poke`                 | 群聊戳一戳        |   ✅   | 暂仅预览版，要求QQ版本27333-27597 |
+
