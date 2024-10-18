@@ -108,6 +108,10 @@ function sidebarGuide(): DefaultTheme.Sidebar {
       ]
     },
     {
+      text: '喵喵',
+      link: '/other/napcat.md'
+    },
+    {
       text: '关于',
       link: '/about'
     }

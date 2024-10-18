@@ -28,6 +28,7 @@ Win10: `launcher-win10.bat 123456`
 ```bash
 curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh && sudo bash napcat.sh
 ```
+
 仓库地址: [NapCat.installer](https://github.com/NapNeko/NapCat-Installer)
 
 ## NapCat.Docker - Linux容器化部署
