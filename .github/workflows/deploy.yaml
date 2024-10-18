@@ -1,0 +1,20 @@
+# .github/workflows/deploy.yaml
+
+name: Build and Deploy
+on: [push]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: vuepress-deploy
+        uses: huankong233/hk-vuepress-deploy@master
+        env:
+          ACCESS_TOKEN: ${{ secrets.NapCat_GH_TOKEN  }}
+          BUILD_SCRIPT: npm install pnpm -g && pnpm install && pnpm run build
+          BUILD_DIR: src/.vitepress/dist
+          TARGET_REPO: NapNeko/napneko.github.io
+          TARGET_BRANCH: main
+          COMMIT_MESSAGE: 'docs: auto update'
