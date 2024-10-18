@@ -9,9 +9,6 @@ hero:
   text: 现代化的基于 NTQQ 的 Bot 协议端实现
   actions:
     - theme: brand
-      text: 什么是 NapCatQQ?
-      link: /guide/NapCatQQ
-    - theme: alt
       text: 开始安装
       link: /guide/start-install
     - theme: alt
