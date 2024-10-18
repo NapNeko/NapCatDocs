@@ -13,7 +13,7 @@ jobs:
         uses: huankong233/hk-vuepress-deploy@master
         env:
           ACCESS_TOKEN: ${{ secrets.NapCat_GH_TOKEN  }}
-          BUILD_SCRIPT: npm install pnpm -g && pnpm install && pnpm run build
+          BUILD_SCRIPT: npm install pnpm -g && pnpm install && pnpm run docs:build
           BUILD_DIR: src/.vitepress/dist
           TARGET_REPO: NapNeko/napneko.github.io
           TARGET_BRANCH: main
