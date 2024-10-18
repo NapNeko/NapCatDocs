@@ -1,9 +1,5 @@
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-node_modules/*
-docs/.vitepress/cache/*
-docs/.vitepress/dist/*
-.vscode/*
-
+node_modules
+cache
+dist
+.vscode
 .idea
