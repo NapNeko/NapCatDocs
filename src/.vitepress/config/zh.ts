@@ -73,8 +73,8 @@ function sidebarGuide(): DefaultTheme.Sidebar {
           text: '安装方式',
           collapsed: false,
           items: [
-            { text: 'BootWay01', link: '/boot/BootWay01' },
-            { text: 'BootWay02', link: '/boot/BootWay02' }
+            { text: 'Shell', link: '/boot/Shell' },
+            { text: 'Framerwrok', link: '/boot/Framerwrok' }
           ]
         }
       ]
