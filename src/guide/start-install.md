@@ -15,7 +15,7 @@
 ### 教程
 
 - 适用教程 [方法2 - 使用命令行启动](./boot/Shell.md) <- 推荐
-- 适用教程 [方法2 - Arch手动配置](./boot/Framerwrok.md) <-Arch
+- 适用教程 [方法2 - Arch手动配置](./boot/Shell-Linux-SemiAuto.md) <-Arch
 
 ## Framework 版本
 
