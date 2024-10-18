@@ -1,20 +1,37 @@
-# .github/workflows/deploy.yaml
+name: Build
 
-name: Build and Deploy
-on: [push]
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
 jobs:
-  build-and-deploy:
+  deploy-gh-pages:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
-      - name: vuepress-deploy
-        uses: huankong233/hk-vuepress-deploy@master
+      - name: Use Node.js 
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+          registry-url: https://registry.npmjs.org
+
+      - name: Install
+        run: npm install
+
+      - name: Build
+        run: |
+              npm run docs:build
+
+      - name: deploy
         env:
-          ACCESS_TOKEN: ${{ secrets.NapCat_GH_TOKEN  }}
-          BUILD_SCRIPT: npm install pnpm -g && pnpm install && pnpm run docs:build
-          BUILD_DIR: src/.vitepress/dist
-          TARGET_REPO: NapNeko/napneko.github.io
-          TARGET_BRANCH: main
-          COMMIT_MESSAGE: 'docs: auto update'
+          NapCat_GH_TOKEN: ${{ secrets.NapCat_GH_TOKEN }}
+        run: |
+             bash ./script/deploy.sh
