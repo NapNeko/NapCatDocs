@@ -15,7 +15,7 @@ hero:
       text: GitHub
       link: https://github.com/NapNeko/NapCatQQ
   image:
-      src: /asset/logo.png
+      src: /assets/logo.png
       alt: Logo
 
 features:
