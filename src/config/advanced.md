@@ -54,9 +54,13 @@
 由于系统存在沙盒机制，无法运行外部程序，因此暂不支持。
 
 ## 配置 PakcetServer
+## WinX64
+你需要先行下载 napcat.packet.exe 的软件
+## Linux
+你需要先行下载 napcat.packet.pyc 类似文件
+python确保为3.13 安装frida和websocket依赖 启动python xxx.pyc 
 
-你需要先行下载 PacketServer 的软件
-
+## 接下来的教程
 启动后 会再当前目录生成config.json
 
 可以设置端口 再次重启生效
