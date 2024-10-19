@@ -43,7 +43,7 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 | `get_group_honor_info`    | 获取群荣誉信息       |   ✅   |                      |
 | `get_cookies`             | 获取 Cookies         |   ✅   |                      |
 | `get_csrf_token`          | 获取 CSRF Token      |   ❌   |                      |
-| `get_credentials`         | 获取 QQ 相关接口凭证 |   ❌   |                      |
+| `get_credentials`         | 获取 QQ 相关接口凭证 |   ✅   |                      |
 | `get_record`              | 获取语音             |   ✅   |                      |
 | `get_image`               | 获取图片             |   ✅   |                      |
 | `can_send_image`          | 检查是否可以发送图片 |   ✅   |                      |
