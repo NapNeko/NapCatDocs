@@ -1,0 +1,14 @@
+.main .text,.main .name span{
+    --tw-gradient-from: #99d3fb;
+    --tw-gradient-via: #a1b8fc; /* 中间颜色点 */
+    --tw-gradient-to: #ebc4fb;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to);
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* 兼容性 */
+    color: transparent; /* 确保文本颜色透明 */
+}
+.VPButton.brand{
+    background-color: #f472b6 !important;
+}
