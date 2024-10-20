@@ -20,7 +20,9 @@ napcat.packet.exe
 napcat.packet.linux 
 napcat.packet.cpython-xxx.pyc
 ```
+
 这是什么？
+
 这是用来提供NTQQ本身没有的功能的DLC  如果需要Poke 伪造合并 等等功能 需要安装 其余情况无需安装
 
 [前往了解](../../config/advanced.md)
