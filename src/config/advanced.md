@@ -93,7 +93,7 @@ packetServer 填写 `127.0.0.1:8086`(具体可见PacketServer显示的地址 IP:
 ::: warning
 该技术受到版本严重影响 且需要先启动 **PacketServer** 然后启动napcat 注意顺序
 
-其次多开 需要使用不同端口避开
+其次多开 配置连接同一个packetServer即可
 :::
 
 ### 当前支持版本
