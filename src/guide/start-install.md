@@ -3,6 +3,11 @@
 前往 [NapCatQQ 的 release 页面](https://github.com/NapNeko/NapCatQQ/releases)，各位可以看到有两种压缩包，
 文件名后缀分别为 `Shell` 和 `Framework`，应当如何选择呢？
 
+## 了解 Release文件
+使用前请务必了解
+
+[点我了解](./boot/release.md)
+
 ## Shell 版本
 
 此方法为 `无头启动`
@@ -30,5 +35,3 @@
 - 适用教程 [方法1 - 作为 LiteLoader 插件启动](./boot/Framerwrok.md) <- 推荐
 - 适用教程 `方法3 - 原生使用 NapCatQQ 启动` <- 由于启动方式变更,暂不提供教程
 
-# Release这么多文件？如何选择正确的下载
-[点我了解](./boot/release.md)
