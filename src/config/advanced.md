@@ -56,7 +56,11 @@
 ## 配置 PakcetServer
 ## WinX64
 你需要先行下载 napcat.packet.exe 的软件
-## Linux
+
+## Linux Amd64
+下载 napcat.packet.linux 组件
+
+## Win/Linux通用方案
 你需要先行下载 napcat.packet.pyc 类似文件
 python确保为3.13 安装frida和websocket依赖 启动python xxx.pyc 
 
