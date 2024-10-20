@@ -54,6 +54,9 @@
 由于系统存在沙盒机制，无法运行外部程序，因此暂不支持。
 
 ## 配置 PakcetServer
+## 这是干什么的?
+这是用来提供NTQQ本身没有的功能的DLC
+
 ## WinX64
 你需要先行下载 napcat.packet.exe 的软件
 
