@@ -131,4 +131,3 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 | `nc_get_packet_status`       | 获取PacketServer状态 |   ✅   |      |
 | `nc_get_user_status`         | 获取陌生人在线状态   |   ✅   |      |
 | `nc_get_rkey`                | 获取Rkey             |   ✅   |      |
-| `set_group_special_title`    | 设置群聊群头衔       |   ✅   |      |
