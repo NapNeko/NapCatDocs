@@ -54,20 +54,28 @@
 由于系统存在沙盒机制，无法运行外部程序，因此暂不支持。
 
 ## 配置 PakcetServer
-## 这是干什么的?
+
+### 这是干什么的?
+
 这是用来提供NTQQ本身没有的功能的DLC
 
-## WinX64
+### 安装 PacketServer
+
+#### WinX64
+
 你需要先行下载 napcat.packet.exe 的软件
 
-## Linux Amd64
+#### Linux Amd64
+
 下载 napcat.packet.linux 组件
 
-## Win/Linux通用方案
-你需要先行下载 napcat.packet.pyc 类似文件
-python确保为3.13 安装frida和websocket依赖 启动python xxx.pyc 
+#### Win/Linux通用方案
 
-## 接下来的教程
+你需要先行下载 napcat.packet.pyc 类似文件
+python确保为3.13 安装frida和websocket依赖 启动python xxx.pyc
+
+### 接下来的教程
+
 启动后 会再当前目录生成config.json
 
 可以设置端口 再次重启生效
@@ -98,19 +106,19 @@ packetServer 填写 `127.0.0.1:8086`(具体可见PacketServer显示的地址 IP:
 
 ### 当前支持版本
 
-|  支持  |          版本                |
-| :---: | --------------------------- |
-| ✅ | Windows Amd64 28418-28788     |
-| ✅ | Linux   Amd64 28498-28788     |
+| 支持  | 版本                      |
+| :---: | ------------------------- |
+|   ✅   | Windows Amd64 28418-28788 |
+|   ✅   | Linux   Amd64 28498-28788 |
 
 ### 扩展进度
 
-|  支持  |          功能               |
-| :---: | --------------------------- |
-| ✅ | 设置群头衔     |
-| ✅ | 发送群poke     |
-| ✅ | 独立Rkey获取   |
-| ✅ | 陌生人状态获取  |
-| ✅ | 伪造合并转发    |
-| ✅ | 文件直链获取    |
-| ✅ | markdown       |
+| 支持  | 功能           |
+| :---: | -------------- |
+|   ✅   | 设置群头衔     |
+|   ✅   | 发送群poke     |
+|   ✅   | 独立Rkey获取   |
+|   ✅   | 陌生人状态获取 |
+|   ✅   | 伪造合并转发   |
+|   ✅   | 文件直链获取   |
+|   ✅   | markdown       |

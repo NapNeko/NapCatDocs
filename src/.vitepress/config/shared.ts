@@ -45,7 +45,10 @@ export const shared = defineConfig({
 
   themeConfig: {
     logo: { src: 'https://avatars.githubusercontent.com/u/165024194', width: 24, height: 24 },
-
+    //开启本地搜索
+    search: {
+      provider: 'local'
+    },
     socialLinks: [{ icon: 'github', link: 'https://github.com/NapNeko/NapCatQQ' }]
   }
 })
