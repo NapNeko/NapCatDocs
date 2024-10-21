@@ -70,7 +70,7 @@
 | `notice.group_increase.invite`  | 群聊成员增加 - 管理员邀请入群   |   ✅   |                         |
 | `notice.group_recall`           | 群聊消息撤回                    |   ✅   |                         |
 | `notice.group_upload`           | 群聊文件上传                    |   ✅   |                         |
-| `notice.group_msg_emoji_like`   | 群聊表情回应                    |   ⏹   | 不稳定                  |
+| `notice.group_msg_emoji_like`   | 群聊表情回应                    |   ⏹   | 只能收到对自己的        |
 | `notice.essence`                | 群聊设精                        |   ✅   |                         |
 | `notice.essence.add`            | 群聊设精 - 增加                 |   ✅   |                         |
 | `notice.essence.delete`         | 群聊设精 - 取消                 |   ❌   |                         |
