@@ -15,16 +15,16 @@ Win10: `launcher-win10.bat 123456`
 
 仓库地址: [仓库地址](https://github.com/NapNeko/NapCat-Win-Installer)
 
-安装成功后需要快速登陆同 [NapCat.shell](#napcatshell) 方法一样
+安装成功后需要快速登陆同 [NapCat.shell](#napcatshell---win手动启动教程) 方法一样
 
 ## NapCat.Desktop - Win可视化管理工具
-
 
 此为 **社区作品** 可能会遇到一些问题，欢迎反馈。
 
 仓库地址: [仓库地址](https://github.com/NapNeko/NapCatQQ-Desktop)
 
 ## NapCat.Installer - Linux一键使用脚本
+
 ```bash
 curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh && sudo bash napcat.sh
 ```
@@ -45,15 +45,16 @@ curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script
 
 [前往下载](https://github.com/NapNeko/NapCat-Mac-Installer/releases/tag/v1.0-1)
 
-
 需要 macOS 12.0 或以上系统，支持下载和更新 NapCatQQ
 
 由于权限问题，补丁过程需要手动替换 package.json，请注意备份原文件～
 
 ## NapCat.Termux - 安卓Termux部署
+
 ```bash
 curl -o napcat.termux.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.termux.sh && bash napcat.termux.sh
 ```
+
 仓库地址: [NapCat.installer](https://github.com/NapNeko/NapCat-Installer)
 
 ## NapCat.Railway - Railway部署

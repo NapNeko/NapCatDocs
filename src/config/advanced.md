@@ -69,7 +69,8 @@
 
 下载 napcat.packet.linux 组件
 
-#### Win/Linux 通用方案 
+#### Win/Linux 通用方案
+
 (除上面支持外 还兼容Linux Arm64)
 
 你需要先行下载 napcat.packet.pyc 类似文件

@@ -17,11 +17,13 @@
 3. 找到目录下的exe启动 (注意不要解压到带有空格或者中文的目录)
 
 ## NapCat.Framework.Installer - Win平台一键安装工具
+
 此为 **社区作品** 可能会遇到一些问题，欢迎反馈。
 
 仓库地址: [NapCat.Framerwrok.installer](https://github.com/NapNeko/NapCat-Installer)
 
 ## NapCat.Installer - Linux一键部署脚本
+
 ``` bash
 curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.framework.sh && sudo bash napcat.sh
 ```
