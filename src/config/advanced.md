@@ -101,7 +101,7 @@ packetServer 填写 `127.0.0.1:8086`(具体可见PacketServer显示的地址 IP:
 填写后 **确保napcat在PacketServer启动后再启动** 登录 输入账号即可
 
 ::: warning
-该技术受到版本严重影响 且需要先启动 **PacketServer** 然后启动napcat 注意顺序
+该技术受到版本严重影响
 
 其次多开 配置连接同一个packetServer即可
 :::
