@@ -44,8 +44,8 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 | `get_group_member_list`   | 获取群成员列表       |   ✅   |          |
 | `get_group_honor_info`    | 获取群荣誉信息       |   ✅   |          |
 | `get_cookies`             | 获取 Cookies         |   ✅   |          |
-| `get_csrf_token`          | 获取 CSRF Token      |   ❌   |          |
-| `get_credentials`         | 获取 QQ 相关接口凭证 |   ❌   |          |
+| `get_csrf_token`          | 获取 CSRF Token      |   ✅   |          |
+| `get_credentials`         | 获取 QQ 相关接口凭证 |   ✅   |          |
 | `get_record`              | 获取语音             |   ✅   |          |
 | `get_image`               | 获取图片             |   ✅   |          |
 | `can_send_image`          | 检查是否可以发送图片 |   ✅   |          |
@@ -63,7 +63,7 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 | `qidian_get_account_info`        | 获取企点账号信息                |   ❌   | 不会支持 |
 | `_get_model_show`                | 获取在线机型                    |   ❌   |          |
 | `_set_model_show`                | 设置在线机型                    |   ❌   |          |
-| `get_online_clients`             | 获取当前账号在线客户端列表      |   ❌   |          |
+| `get_online_clients`             | 获取当前账号在线客户端列表      |   ✅   |          |
 | `get_unidirectional_friend_list` | 获取单向好友列表                |   ❌   |          |
 | `delete_friend`                  | 删除好友                        |   ❌   |          |
 | `delete_unidirectional_friend`   | 删除单向好友                    |   ❌   |          |
