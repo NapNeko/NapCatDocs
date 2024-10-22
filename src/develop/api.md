@@ -99,45 +99,39 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 
 ## napcat API
 
-| Api                          | 介绍                 | 可用  | 备注    |
-| ---------------------------- | -------------------- | :---: | ------- |
-| `ArkSharePeer`               | 推荐联系人/群聊      |   ✅   |         |
-| `ArkShareGroup`              | 推荐群聊             |   ✅   |         |
-| `reboot_normal`              | 无快速登录重新启动   |   ❌   |         |
-| `get_robot_uin_range`        | 获取机器人QQ号区间   |   ✅   |         |
-| `set_online_status`          | 设置在线状态         |   ✅   |         |
-| `get_friends_with_category`  | 获取好友分类列表     |   ✅   |         |
-| `set_qq_avatar`              | 设置头像             |   ✅   |         |
-| `get_file`                   | 获取文件信息         |   ✅   |         |
-| `forward_friend_single_msg`  | 转发单条信息到私聊   |   ✅   |         |
-| `forward_group_single_msg`   | 转发单条信息到群聊   |   ✅   |         |
-| `translate_en2zh`            | 英译中翻译           |   ✅   |         |
-| `get_group_file_count`       | 获取群文件数         |   ✅   |         |
-| `get_group_file_list`        | 获取群文件列表       |   ✅   |         |
-| `set_group_file_folder`      | 新建群文件文件夹     |   ✅   |         |
-| `del_group_file`             | 删除群文件文件       |   ✅   |         |
-| `del_group_file_folder`      | 删除群文件文件夹     |   ✅   |         |
-| `set_msg_emoji_like`         | 设置消息的表情回复   |   ✅   |         |
-| `send_forward_msg`           | 发送合并转发         |   ✅   |         |
-| `mark_private_msg_as_read`   | 标记私聊信息已读     |   ✅   |         |
-| `mark_group_msg_as_read`     | 标记群聊信息已读     |   ✅   |         |
-| `get_friend_msg_history`     | 获取私聊记录         |   ✅   |         |
-| `create_collection`          | 创建文本收藏         |   ✅   |         |
-| `get_collection_list`        | 获取收藏列表         |   ✅   |         |
-| `set_self_longnick`          | 设置个人签名         |   ✅   |         |
-| `get_recent_contact`         | 获取最近的聊天记录   |   ✅   |         |
-| `_mark_all_as_read`          | 标记所有为已读       |   ✅   |         |
-| `get_profile_like`           | 获取自身点赞列表     |   ✅   |         |
-| `fetch_custom_face`          | 获取收藏表情         |   ✅   |         |
-| `fetch_emoji_like`           | 拉取表情回应列表     |   ✅   |         |
-| `set_input_status`           | 设置输入状态         |   ✅   |         |
-| `get_group_info_ex`          | 获取群组额外信息     |   ✅   |         |
-| `get_group_ignored_notifies` | 获取群组忽略的通知   |   ✅   |         |
-| `_del_group_notice`          | 删除群聊公告         |   ✅   |         |
-| `fetch_user_profile_like`    | 获取用户个人资料页   |   ✅   |         |
-| `friend_poke`                | 私聊戳一戳           |   ✅   |         |
-| `group_poke`                 | 群聊戳一戳           |   ✅   |         |
-| `nc_get_packet_status`       | 获取PacketServer状态 |   ✅   |         |
-| `nc_get_user_status`         | 获取陌生人在线状态   |   ✅   |         |
-| `nc_get_rkey`                | 获取Rkey             |   ✅   |         |
-| `get_group_shut_list`        | 获取群聊被禁言用户   |   ⏹   | 存在bug |
+| Api                            | 介绍                 | 可用  | 备注    |
+| ------------------------------ | -------------------- | :---: | ------- |
+| `ArkSharePeer`                 | 推荐联系人/群聊      |   ✅   |         |
+| `ArkShareGroup`                | 推荐群聊             |   ✅   |         |
+| `get_robot_uin_range`          | 获取机器人QQ号区间   |   ✅   |         |
+| `set_online_status`            | 设置在线状态         |   ✅   |         |
+| `get_friends_with_category`    | 获取好友分类列表     |   ✅   |         |
+| `set_qq_avatar`                | 设置头像             |   ✅   |         |
+| `get_file`                     | 获取文件信息         |   ✅   |         |
+| `forward_friend_single_msg`    | 转发单条信息到私聊   |   ✅   |         |
+| `forward_group_single_msg`     | 转发单条信息到群聊   |   ✅   |         |
+| `translate_en2zh`              | 英译中翻译           |   ✅   |         |
+| `set_msg_emoji_like`           | 设置消息的表情回复   |   ✅   |         |
+| `send_forward_msg`             | 发送合并转发         |   ✅   |         |
+| `mark_private_msg_as_read`     | 标记私聊信息已读     |   ✅   |         |
+| `mark_group_msg_as_read`       | 标记群聊信息已读     |   ✅   |         |
+| `get_friend_msg_history`       | 获取私聊记录         |   ✅   |         |
+| `create_collection`            | 创建文本收藏         |   ✅   |         |
+| `get_collection_list`          | 获取收藏列表         |   ✅   |         |
+| `set_self_longnick`            | 设置个人签名         |   ✅   |         |
+| `get_recent_contact`           | 获取最近的聊天记录   |   ✅   |         |
+| `_mark_all_as_read`            | 标记所有为已读       |   ✅   |         |
+| `get_profile_like`             | 获取自身点赞列表     |   ✅   |         |
+| `fetch_custom_face`            | 获取收藏表情         |   ✅   |         |
+| `fetch_emoji_like`             | 拉取表情回应列表     |   ✅   |         |
+| `set_input_status`             | 设置输入状态         |   ✅   |         |
+| `get_group_info_ex`            | 获取群组额外信息     |   ✅   |         |
+| `get_group_ignore_add_request` | 获取群组忽略的通知   |   ✅   |         |
+| `_del_group_notice`            | 删除群聊公告         |   ✅   |         |
+| `fetch_user_profile_like`      | 获取用户个人资料页   |   ✅   |         |
+| `friend_poke`                  | 私聊戳一戳           |   ✅   |         |
+| `group_poke`                   | 群聊戳一戳           |   ✅   |         |
+| `nc_get_packet_status`         | 获取PacketServer状态 |   ✅   |         |
+| `nc_get_user_status`           | 获取陌生人在线状态   |   ✅   |         |
+| `nc_get_rkey`                  | 获取Rkey             |   ✅   |         |
+| `get_group_shut_list`          | 获取群聊被禁言用户   |   ⏹   | 存在bug |
