@@ -19,8 +19,7 @@ Win10: `launcher-win10.bat 123456`
 
 ## NapCat.Desktop - Win可视化管理工具
 
-此为 **社区作品** 可能会遇到一些问题，欢迎反馈。
-
+**内置Packet DLC 无需配置**
 仓库地址: [仓库地址](https://github.com/NapNeko/NapCatQQ-Desktop)
 
 ## NapCat.Installer - Linux一键使用脚本
