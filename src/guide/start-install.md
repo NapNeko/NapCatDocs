@@ -33,5 +33,5 @@
 
 ### 教程
 
-- 适用教程 [方法1 - 作为 LiteLoader 插件启动](./boot/Framerwrok.md) <- 推荐
+- 适用教程 [方法1 - 作为 LiteLoader 插件启动](./boot/Framework.md) <- 推荐
 - 适用教程 `方法3 - 原生使用 NapCatQQ 启动` <- 由于启动方式变更,暂不提供教程

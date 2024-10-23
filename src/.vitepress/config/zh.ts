@@ -71,10 +71,11 @@ function sidebarGuide(): DefaultTheme.Sidebar {
         { text: '开始安装', link: '/start-install' },
         {
           text: '安装方式',
+          base: '/guide/boot',
           collapsed: false,
           items: [
-            { text: 'Shell', link: '/boot/Shell' },
-            { text: 'Framerwrok', link: '/boot/Framerwrok' }
+            { text: 'Shell', link: '/Shell' },
+            { text: 'Framework', link: '/Framework' }
           ]
         }
       ]
@@ -104,7 +105,16 @@ function sidebarGuide(): DefaultTheme.Sidebar {
       items: [
         { text: '请求接口', link: '/api' },
         { text: '上报事件', link: '/event' },
-        { text: '消息类型', link: '/msg' }
+        { text: '消息类型', link: '/msg' },
+        {
+          text: '完整接口定义',
+          base: '/develop/api',
+          collapsed: false,
+          items: [
+            { text: '接口', link: '/doc' },
+            { text: '类型', link: '/type' }
+          ]
+        }
       ]
     },
     {

@@ -1,14 +1,14 @@
-# Framerwrok
+# Framework
 
-## NapCat.Framerwrok - 通用性手动教程
+## NapCat.Framework - 通用性手动教程
 
 1. 按照 [LiteLoaderQQNT 官网](https://liteloaderqqnt.github.io/) 的指导安装 LiteLoaderQQNT 框架。
 2. 在 LiteLoaderQQNT 的设置页面（如下图）将 `NapCat.Framework.zip` 导入即可。
 ![ll01.png](/assets/boot/BootWay01/ll01.png)
 
-## NapCat.Docker.Framerwrok - Linux容器化部署
+## NapCat.Docker.Framework - Linux容器化部署
 
-仓库地址: [NapCat.Docker.Framerwrok](https://github.com/NapNeko/NapCat.Docker.Framerwrok)
+仓库地址: [NapCat.Docker.Framework](https://github.com/NapNeko/NapCat.Docker.Framework)
 
 ## NapCat.Framerwork.Windows.Once - Win一键启动（内置LiteLoader）
 
@@ -20,7 +20,7 @@
 
 此为 **社区作品** 可能会遇到一些问题，欢迎反馈。
 
-仓库地址: [NapCat.Framerwrok.installer](https://github.com/NapNeko/NapCat-Installer)
+仓库地址: [NapCat.Framework.installer](https://github.com/NapNeko/NapCat-Installer)
 
 ## NapCat.Installer - Linux一键部署脚本
 
