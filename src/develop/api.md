@@ -79,7 +79,7 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 | `set_group_portrait`             | 设置群头像                      |   ✅   |          |
 | `set_essence_msg`                | 设置精华消息                    |   ✅   |          |
 | `delete_essence_msg`             | 移出精华消息                    |   ✅   |          |
-| `send_group_sign`                | 群打卡                          |   ❌   | 不会支持 |
+| `send_group_sign`                | 群打卡                          |   ✅   | 使用`set_group_sign` |
 | `_send_group_notice`             | 发送群公告                      |   ✅   |          |
 | `_get_group_notice`              | 获取群公告                      |   ✅   |          |
 | `upload_group_file`              | 上传群文件                      |   ✅   |          |
