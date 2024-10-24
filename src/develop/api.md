@@ -2,6 +2,8 @@
 
 NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https://docs.go-cqhttp.org/api) 的大部分 API，对于 API 的详细说明请自行点击相关链接查看。
 
+详细 API 用例参考 <https://api.napneko.com>
+
 ## 连接方式
 
 | 连接方式           | 可用  |
