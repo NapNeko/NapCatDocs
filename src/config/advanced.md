@@ -125,3 +125,4 @@ packetServer 填写 `127.0.0.1:8086`(具体可见PacketServer显示的地址 IP:
 |   ✅   | 伪造合并转发   |
 |   ✅   | 文件直链获取   |
 |   ✅   | markdown       |
+|   ✅   | 群签到       |
