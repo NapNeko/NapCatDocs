@@ -22,7 +22,7 @@
 
 - napcat.packet.exe
 - napcat.packet.linux
-- napcat.packet.cpython-xxx.pyc
+- napcat.packet.production.py
 
 这是什么？
 
