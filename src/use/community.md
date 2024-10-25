@@ -23,3 +23,11 @@ author: canxin121
 
 [onebotv11_rs](https://github.com/canxin121/onebotv11_rs)
 :::
+
+::: details 基于 Rust 和 OneBot 的 Bot 开发框架
+author: Threkork
+
+[文档](https://threkork.github.io/kovi-doc)
+
+[仓库](https://github.com/Threkork/Kovi)
+:::
