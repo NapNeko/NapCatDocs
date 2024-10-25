@@ -30,4 +30,6 @@ author: Threkork
 [文档](https://threkork.github.io/kovi-doc)
 
 [仓库](https://github.com/Threkork/Kovi)
+
+[napcat拓展插件](https://crates.io/crates/kovi-plugin-expand-napcat)
 :::
