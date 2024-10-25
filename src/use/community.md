@@ -27,9 +27,7 @@ author: canxin121
 ::: details Kovi - 用 Rust 实现的 Onebot 机器人开发框架
 author: Threkork
 
-[文档](https://threkork.github.io/kovi-doc)
-
-[仓库](https://github.com/Threkork/Kovi)
+[Kovi](https://github.com/Threkork/Kovi)
 
 [napcat拓展插件](https://crates.io/crates/kovi-plugin-expand-napcat)
 :::
