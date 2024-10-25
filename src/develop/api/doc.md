@@ -5,6 +5,18 @@
 - [onebot11接口文档](https://github.com/botuniverse/onebot-11/blob/master/api/public.md)
 - [gocqhttp接口文档](https://docs.go-cqhttp.org/api)
 
+## set_group_sign - 群签到
+
+### 参数
+
+| 字段名           | 数据类型 | 默认值 | 说明        |
+| ---------------- | -------- | ------ | ----------- |
+| `group_id`         | string   | -    | 群号        |
+
+### 响应数据
+
+无
+
 ## ArkSharePeer - 获取推荐好友/群聊卡片
 
 ### 参数
