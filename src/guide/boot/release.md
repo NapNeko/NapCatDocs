@@ -1,10 +1,14 @@
 # 安装前需要了解的 这些文件是什么？
 
-## NapCat.Framework.zip 是什么?
+## 难懂的问题 - Framework版本与Shell版本 究竟代表什么? 有什么差别？
+
+[看我](../start-install.md)
+
+## 文件 - NapCat.Framework.zip 是什么?
 
 这是NapCat的Framework版本的插件包
 
-## NapCat.Framework.Windows.Once.zip 是什么？
+## 文件 - NapCat.Framework.Windows.Once.zip 是什么？
 
 这是NapCat.Framework的一键启动包
 
@@ -14,11 +18,11 @@
 
 如果使用失败 请前往NapCat文档寻找Framework版本LiteLoader手动安装教程
 
-## NapCat.Shell.zip 是什么？
+## 文件 - NapCat.Shell.zip 是什么？
 
 这是Shell版本的打包文件
 
-## 可选Packet组件
+## 文件 - 可选Packet组件
 
 - napcat.packet.exe
 - napcat.packet.linux
@@ -30,6 +34,3 @@
 
 [前往了解](../../config/advanced.md)
 
-# Framework版本与Shell版本 究竟代表什么? 有什么差别？
-
-[看我](../start-install.md)
