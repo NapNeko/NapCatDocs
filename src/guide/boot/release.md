@@ -1,6 +1,6 @@
 # 安装前需要了解的 这些文件是什么？
 
-## 难懂的问题 - Framework版本与Shell版本 究竟代表什么? 有什么差别？
+## 问题 - Framework与Shell版本 有什么差别？
 
 [看我](../start-install.md)
 
