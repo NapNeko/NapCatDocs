@@ -70,11 +70,11 @@
 | `notice.group_increase.invite`  | 群聊成员增加 - 管理员邀请入群   |   ✅   |                         |
 | `notice.group_recall`           | 群聊消息撤回                    |   ✅   |                         |
 | `notice.group_upload`           | 群聊文件上传                    |   ✅   |                         |
-| `notice.group_msg_emoji_like`   | 群聊表情回应                    |   ⏹   | 只能收到对自己的        |
+| `notice.group_msg_emoji_like`   | 群聊表情回应                    |   ⏹   | 仅收自己的 其余扩展接口拉取 |
 | `notice.essence`                | 群聊设精                        |   ✅   |                         |
 | `notice.essence.add`            | 群聊设精 - 增加                 |   ✅   |                         |
 | `notice.essence.delete`         | 群聊设精 - 取消                 |   ❌   |                         |
-| `notice.notify.poke`            | 戳一戳                          |   ✅   | 无法获取操作ID将上报为0 |
+| `notice.notify.poke`            | 戳一戳                          |   ✅   |                         |
 | `notice.notify.lucky_king`      | 群红包运气王                    |   ❌   |                         |
 | `notice.notify.honor`           | 群成员荣誉变更                  |   ❌   |                         |
 | `notice.notify.honor.talkative` | 群成员荣誉变更 - 龙王           |   ❌   |                         |
