@@ -1,4 +1,4 @@
-# 安装前需要了解的
+# 安装前需要了解的 这些文件是什么？
 
 ## NapCat.Framework.zip 是什么?
 
@@ -29,3 +29,7 @@
 这是用来提供NTQQ本身没有的功能的DLC  如果需要Poke 伪造合并 等等功能 需要安装 其余情况无需安装
 
 [前往了解](../../config/advanced.md)
+
+# Framework版本与Shell版本 究竟代表什么? 有什么差别？
+
+[看我](../start-install.md)
