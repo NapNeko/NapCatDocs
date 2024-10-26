@@ -16,6 +16,16 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 
 ## OneBot 11 API
 
+<!-- | `set_group_anonymous`     | 群组匿名             |   ❌   | 不会支持 | -->
+<!-- | `set_group_anonymous_ban` | 群组匿名用户禁言     |   ❌   | 不会支持 | -->
+<!-- | `set_restart`             | 重启 OneBot 实现     |   ❌   |          | -->
+
+<!-- | `qidian_get_account_info`        | 获取企点账号信息                |   ❌   | 不会支持 | -->
+<!-- | `delete_unidirectional_friend`   | 删除单向好友                    |   ❌   |          | -->
+<!-- | `get_unidirectional_friend_list` | 获取单向好友列表                |   ❌   |          | -->
+<!-- | `.get_word_slices`               | 获取中文分词 ( 隐藏 API )       |   ❌   |          | -->
+<!-- | `reload_event_filter`            | 重载事件过滤器                  |   ❌   | 不会支持 | -->
+
 | Api                       | 介绍                 | 可用  | 备注     |
 | ------------------------- | -------------------- | :---: | -------- |
 | `send_private_msg`        | 发送私聊消息         |   ✅   |          |
@@ -27,10 +37,8 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 | `send_like`               | 发送好友赞           |   ✅   |          |
 | `set_group_kick`          | 群组踢人             |   ✅   |          |
 | `set_group_ban`           | 群组单人禁言         |   ✅   |          |
-<!-- | `set_group_anonymous_ban` | 群组匿名用户禁言     |   ❌   | 不会支持 | -->
 | `set_group_whole_ban`     | 群组全员禁言         |   ✅   |          |
 | `set_group_admin`         | 群组设置管理员       |   ✅   |          |
-<!-- | `set_group_anonymous`     | 群组匿名             |   ❌   | 不会支持 | -->
 | `set_group_card`          | 设置群名片（群备注） |   ✅   |          |
 | `set_group_name`          | 设置群名             |   ✅   |          |
 | `set_group_leave`         | 退出群组             |   ✅   |          |
@@ -54,7 +62,6 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 | `can_send_record`         | 检查是否可以发送语音 |   ✅   |          |
 | `get_status`              | 获取运行状态         |   ✅   |          |
 | `get_version_info`        | 获取版本信息         |   ✅   |          |
-| `set_restart`             | 重启 OneBot 实现     |   ❌   |          |
 | `clean_cache`             | 清理缓存             |   ✅   |          |
 
 ## go-cqhttp API
@@ -62,13 +69,10 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 | Api                              | 介绍                            | 可用  | 备注     |
 | -------------------------------- | ------------------------------- | :---: | -------- |
 | `set_qq_profile`                 | 设置登录号资料                  |   ✅   |          |
-<!-- | `qidian_get_account_info`        | 获取企点账号信息                |   ❌   | 不会支持 | -->
 | `_get_model_show`                | 获取在线机型                    |   ✅   |      仅为兼容性    |
 | `_set_model_show`                | 设置在线机型                    |   ✅   |      仅为兼容性    |
 | `get_online_clients`             | 获取当前账号在线客户端列表      |   ✅   |          |
-<!-- | `get_unidirectional_friend_list` | 获取单向好友列表                |   ❌   |          | -->
 | `delete_friend`                  | 删除好友                        |   ✅   |          |
-<!-- | `delete_unidirectional_friend`   | 删除单向好友                    |   ❌   |          | -->
 | `mark_msg_as_read`               | 标记消息已读                    |   ✅   |          |
 | `send_group_forward_msg`         | 发送合并转发 ( 群聊 )           |   ✅   |          |
 | `send_private_forward_msg`       | 发送合并转发 ( 好友 )           |   ✅   |          |
@@ -93,10 +97,8 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 | `get_group_files_by_folder`      | 获取群子目录文件列表            |   ✅   |          |
 | `get_group_file_url`             | 获取群文件资源链接              |   ✅   |          |
 | `upload_private_file`            | 上传私聊文件                    |   ✅   |          |
-<!-- | `reload_event_filter`            | 重载事件过滤器                  |   ❌   | 不会支持 | -->
 | `download_file`                  | 下载文件到缓存目录              |   ✅   |          |
 | `check_url_safely`               | 检查链接安全性                  |   ✅   |          |
-<!-- | `.get_word_slices`               | 获取中文分词 ( 隐藏 API )       |   ❌   |          | -->
 | `.handle_quick_operation`        | 对事件执行快速操作 ( 隐藏 API ) |   ✅   |          |
 
 ## napcat API
