@@ -35,6 +35,7 @@
 | `mface`            | `qq` 表情包  |   ✅   |   ✅   | 收到的 `mface` 会是 `image`, 见[商城表情](#商城表情)   |
 | `file`             | 文件         |   ✅   |   ✅   |                                                      |
 | `markdown`         | `markdown`   |   ❌   |   ✅   |         发是在双层合并转发内 无法直接发送              |
+| `lightapp`\<JSON>  | `小程序卡片`  |   ✅   |   ✅   |         发是调用扩展接口`get_mini_app_ark`             |
 
 ## 提示
 

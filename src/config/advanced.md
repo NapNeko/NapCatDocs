@@ -127,3 +127,4 @@ packetServer 填写 `127.0.0.1:8086`(具体可见PacketServer显示的地址 IP:
 |   ✅   | 文件直链获取   |
 |   ✅   | markdown       |
 |   ✅   | 群签到       |
+|   ✅   | 小程序卡片分享       |
