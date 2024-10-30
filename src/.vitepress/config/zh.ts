@@ -2,7 +2,7 @@ import { defineConfig, type DefaultTheme } from 'vitepress'
 
 export const zh = defineConfig({
   lang: 'zh-Hans',
-  description: '由 Typescript 编写的 NapcatQQ SDK',
+  description: '基于NTQQ现代化协议端Bot框架',
 
   themeConfig: {
     nav: nav(),
