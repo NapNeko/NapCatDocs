@@ -352,7 +352,7 @@
 
 无
 
-## get_profile_like - 获取资料
+## get_profile_like - 获取自身点赞列表
 
 ### 参数
 
@@ -360,9 +360,13 @@
 
 ### 响应数据
 
-| 字段名 | 数据类型 | 说明     |
-| ------ | -------- | -------- |
-| `无`   | list[]   | 错误信息 |
+| 字段名              | 数据类型 | 说明     |
+| ------------------ | -------- | -------- |
+| `total_count`      | number   | 总点赞数  |
+| `new_count`        | number   | 新点赞数  |
+| `new_nearby_count` | number   |          |
+| `last_visit_time`  | number   |          |
+| `无`               | list[]   | 错误信息  |
 
 #### list
 
