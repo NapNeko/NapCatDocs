@@ -366,7 +366,7 @@
 | `new_count`        | number   | 新点赞数  |
 | `new_nearby_count` | number   |          |
 | `last_visit_time`  | number   |          |
-| `无`               | list[]   | 错误信息  |
+| `userInfos`        | list[]   |          |
 
 #### list
 
