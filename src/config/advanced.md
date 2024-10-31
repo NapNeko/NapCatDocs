@@ -74,7 +74,7 @@
 (除上面支持外 还兼容Linux Arm64)
 
 你需要先行下载 napcat.packet.production.py 类似文件
-安装frida和websocket依赖 启动python napcat.packet.production.py
+安装frida和websockets依赖 启动python napcat.packet.production.py
 
 ### 接下来的教程
 
