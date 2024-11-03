@@ -411,7 +411,7 @@
 | ------ | ------ | ------ |
 | `character` | string | AI角色编号，必填 |
 | `group_id` | number | 群号，必填 |
-| `test` | string | 需要转成语音的文字，必填 |
+| `text` | string | 需要转成语音的文字，必填 |
 
 ### 响应数据
 
@@ -451,7 +451,7 @@
 | ------ | ------ | ------ |
 | `character` | string | AI角色编号，必填 |
 | `group_id` | number | 群号，必填 |
-| `test` | string | 需要转成语音的文字，必填 |
+| `text` | string | 需要转成语音的文字，必填 |
 
 ### 响应数据
 
