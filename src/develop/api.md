@@ -5,6 +5,7 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 详细 NapCatQQ All API 用例参考 <https://apifox.com/apidoc/shared-c3bab595-b4a3-429b-a873-cbbe6b9a1f6a>
 
 详细 OneBot/GoCQ API 用例参考 <https://api.napneko.com>
+
 ## 连接方式
 
 | 连接方式           | 可用  |
@@ -142,3 +143,6 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 | `nc_get_rkey`                  | 获取Rkey             |   ✅   |         |
 | `get_group_shut_list`          | 获取群聊被禁言用户   |   ✅   |           |
 | `get_mini_app_ark`             | 签名小程序卡片        |   ✅   |  如B站分享卡片   |
+| `get_ai_record`                | AI文字转语音         |   ✅    |         |
+| `get_ai_characters`            | 获取AI语音角色列表   |   ✅    |         |
+| `send_group_ai_record`         | 群聊发送AI语音      |   ✅    |         |
