@@ -402,3 +402,59 @@
 | 字段名 | 数据类型 | 说明     |
 | ------ | -------- | -------- |
 | `无`   | string[] | 表情列表 |
+
+## get_ai_record - AI文字转语音
+
+### 参数
+
+| 字段名 | 数据类型 | 说明 |
+| ------ | ------ | ------ |
+| `character` | string | AI角色编号，必填 |
+| `group_id` | number | 群号，必填 |
+| `text` | string | 需要转成语音的文字，必填 |
+
+### 响应数据
+
+| 字段名 | 数据类型 |说明 |
+| ------ | ------ |------ |
+| `data` | string | 转换出的语音链接 |
+
+## get_ai_characters - 获取AI语音角色列表
+
+### 参数
+
+| 字段名 | 数据类型| 说明 |
+| ------ | ------ | ------ |
+| `group_id` | number | 群号,必填|
+| `chat_type`| number | |
+
+### 响应数据
+
+| 字段名 | 数据类型 | 说明 |
+|------------|--------|-----------|
+| `type` | string | AI分类，有'推荐','古风','现代' |
+|`characters`| list[] | AI角色数据 |
+
+#### character[]
+
+| 字段名 | 数据类型 | 说明 |
+|------|------|------|
+|`character_id` | string | AI角色编号 |
+|`character_name`| string | AI角色名称 |
+|`preview_url` | string | AI角色声音预览url|
+
+## send_group_ai_record - 群聊发送AI语音
+
+### 参数
+
+| 字段名 | 数据类型 | 说明 |
+| ------ | ------ | ------ |
+| `character` | string | AI角色编号，必填 |
+| `group_id` | number | 群号，必填 |
+| `text` | string | 需要转成语音的文字，必填 |
+
+### 响应数据
+
+| 字段名 | 数据类型 | 说明 |
+| ------ | ------ | ------ |
+|`message_id`| string |所发出消息的id |
