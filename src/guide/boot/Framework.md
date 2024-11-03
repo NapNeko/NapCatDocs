@@ -1,5 +1,7 @@
 # Framework
 
+**请注意使用此方法使用低于9.9.16-29721 高于9.9.15-28060的QQ**
+
 ## NapCat.Framework - 通用性手动教程
 
 1. 按照 [LiteLoaderQQNT 官网](https://liteloaderqqnt.github.io/) 的指导安装 LiteLoaderQQNT 框架。
