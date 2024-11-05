@@ -57,7 +57,7 @@
 
 ### 这是干什么的?
 
-这是用来提供NTQQ本身没有的功能的DLC
+这是用来提供NTQQ本身没有的功能的DLC 但是自3.4.7以后的版本 Linux.Arm64 Linux.Amd64 Windows.Amd64 大部分情况无需处理阅读Packet相关教程 
 
 ### 安装 PacketServer
 

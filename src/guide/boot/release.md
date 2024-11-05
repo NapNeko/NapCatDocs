@@ -22,7 +22,7 @@
 
 这是Shell版本的打包文件
 
-## 文件 - 可选Packet组件
+## 文件 - 可选Packet组件( 注意大多数情况无需使用 )
 
 - napcat.packet.exe
 - napcat.packet.linux
