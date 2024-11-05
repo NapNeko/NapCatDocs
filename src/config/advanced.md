@@ -88,11 +88,12 @@
 
 ```json5
 {
-  "fileLog": true,
-  "consoleLog": true,
-  "fileLogLevel": "debug",
-  "consoleLogLevel": "info",
-  "packetServer":"127.0.0.1:8086"
+    "fileLog": true,
+    "consoleLog": true,
+    "fileLogLevel": "debug",
+    "consoleLogLevel": "info",
+    "packetBackend": "auto",
+    "packetServer": "127.0.0.1:8086"
 }
 ```
 
