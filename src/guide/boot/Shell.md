@@ -22,31 +22,47 @@ Win10: `launcher-win10.bat 123456`
 **内置Packet DLC 无需配置**
 仓库地址: [仓库地址](https://github.com/NapNeko/NapCatQQ-Desktop)
 
-## NapCat.Installer - Linux一键使用脚本
+## NapCat.Installer - Linux一键使用脚本(支持Ubuntu 20+/Debian 10+/Centos9)
 
 ```bash
 curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh && sudo bash napcat.sh
 ```
+<details>
+  <summary>命令选项(高级用法)</summary>
 
-需已安装whiptail，否则脚本会自动退出，可以用apt/yum安装
+  0. --tui: 使用tui可视化交互安装
 
-或者在原安装命令后面添加以下参数
+  1. --docker [y/n]: --docker y 为使用docker安装反之为shell安装
 
-1. --docker [y/n]: --docker y 为使用docker安装反之为shell安装
+  2. --qq \"123456789\": 传入docker安装时的QQ号
 
-2. --qq \"123456789\": 传入docker安装时的QQ号
+  3. --mode [ws|reverse_ws|reverse_http]: 传入docker安装时的运行模式
 
-3. --mode [ws|reverse_ws|reverse_http]: 传入docker安装时的运行模式
+  4. --confirm: 传入docker安装时的是否确认执行安装
 
-4. --confirm: 传入docker安装时的是否确认执行安装
+  5. --proxy [0|1|2|3|4|5|6]: 传入代理, 0为不使用代理, 1为使用内置的第一个,不支持自定义, docker安装可选0-7, shell安装可选0-5
 
-5. --proxy [0|1|2|3|4|5|6]: 传入代理, 0为不使用代理, 1为使用内置的第一个,不支持自定义, docker安装可选0-7, shell安装可选0-5
+  6. --cli [y/n]: shell安装时是否安装cli
 
-6. --dlc [y/n]: shell安装时是否安装dlc
+  7. --force: 传入则执行shell强制重装
 
-7. --cli [y/n]: shell安装时是否安装cli
+  **使用示例:**
+  1. 使用tui可视化交互安装:
+      ```bash
+      curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh && sudo bash napcat.sh --tui
+      ```
 
-8. --force: 传入则执行shell强制重装
+  2. 运行docker安装并传入 qq\"123456789\" 模式ws 使用第一个代理 直接安装:
+      ```bash
+      curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh && sudo bash napcat.sh --docker y --qq \"123456789\" --mode ws --proxy 1 --confirm
+      ```
+
+  3. 运行shell安装并传入 不安装cli 不使用代理 强制重装:
+      ```bash
+      curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh && sudo bash napcat.sh --docker n --cli n --proxy 0 --force
+      ```
+
+</details>
 
 仓库地址: [NapCat.installer](https://github.com/NapNeko/NapCat-Installer)
 
