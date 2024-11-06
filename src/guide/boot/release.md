@@ -12,7 +12,7 @@
 
 这是NapCat.Framework的一键启动包
 
-注意需要28060+的QQ 你可以在不破坏QQ
+注意需要29271+的QQ 你可以在不破坏QQ
 
 不需要安装的情况下通过一键Boot.exe启动NapCat.Framework(仅限亲爱的Windows系统)
 
