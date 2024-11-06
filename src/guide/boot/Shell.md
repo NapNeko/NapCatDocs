@@ -1,6 +1,6 @@
 # Shell
 
-## NapCat.shell - Win手动启动教程
+## NapCat.Shell - Win手动启动教程
 
 1. 前往 [NapCatQQ 的 release 页面](https://github.com/NapNeko/NapCatQQ/releases)
 2. 下载NapCat.Shell.zip解压
