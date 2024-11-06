@@ -55,19 +55,15 @@
 
 ## 配置 PacketBackend
 
-> [!IMPORTANT]
-> NapCat 3.6.0及以后的版本在Linux平台 (amd64, arm64), Windows平台 (amd64) **已内置 PacketBackend 实现**
-> ，您无需进行额外的配置即可享受DLC的欢乐 (/≧▽≦)/
-
-
 ### 这是干什么的?
 
-这是用来提供NTQQ本身没有的功能的DLC
+这是用来提供NTQQ本身没有的功能的DLC，以下配置方式二选一即可
 
 #### 配置 PacketBackend (Native)
 
 :::tip
-PacketBackend (Native) 在NapCat 3.6.0及以后的版本于Linux平台 (amd64, arm64), Windows平台 (amd64) 无需配置开箱即用，3.6.0之前的版本请升级NapCat到最新版本体验！
+1. NapCat 3.6.0及以后的版本在Linux平台 (amd64, arm64), Windows平台 (amd64) **已内置 PacketBackend 实现** ，您**无需进行额外的配置**即可享受DLC的欢乐 (/≧▽≦)/
+2. Mac用户请参照下方的PacketBackend (Server)配置
 :::
 
 #### 配置 PacketBackend (Server)
