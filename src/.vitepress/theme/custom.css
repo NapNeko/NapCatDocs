@@ -12,3 +12,7 @@
 .VPButton.brand{
     background-color: #f472b6 !important;
 }
+
+.VPLocalSearchBox #localsearch-list mark {
+    background-color: rgba(255, 138, 128, 0.3);
+}
