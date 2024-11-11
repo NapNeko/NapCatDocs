@@ -61,31 +61,35 @@
 
 #### 配置 PacketBackend (Native)
 
-:::tip
-1. NapCat 3.6.0及以后的版本在Linux平台 (amd64, arm64), Windows平台 (amd64) **已内置 PacketBackend 实现** ，您**无需进行额外的配置**即可享受DLC的欢乐 (/≧▽≦)/
-2. Mac用户请参照下方的PacketBackend (Server)配置
+:::tip 
+NapCat 3.6.0及以后的版本在Linux平台 (amd64, arm64), MacOS平台(arm64)，Windows平台 (amd64) **已内置 PacketBackend 实现** ，您**无需进行额外的配置**即可享受DLC的欢乐 (/≧▽≦)/
 :::
 
 #### 配置 PacketBackend (Server)
-## 下载地址
-[PacketRelease](https://github.com/NapNeko/PacketRelease/releases)
 
-#### Win Amd64
+:::warning
+PacketBackend (Server) 已过时并不推荐使用
+:::
+
+::: details 配置方法
+下载地址: [PacketRelease](https://github.com/NapNeko/PacketRelease/releases)
+
+##### Win Amd64
 
 你需要先行下载 napcat.packet.exe 的软件
 
-#### Linux Amd64
+##### Linux Amd64
 
 下载 napcat.packet.linux 组件
 
-#### Win/Linux 通用方案
+##### Win/Linux 通用方案
 
 (除上面支持外 还兼容Linux Arm64)
 
 你需要先行下载 napcat.packet.production.py 类似文件
 安装frida和websockets依赖 启动python napcat.packet.production.py
 
-#### 接下来的教程
+##### 接下来的教程
 
 启动后 会再当前目录生成config.json
 
@@ -123,6 +127,7 @@ packetServer 填写 `127.0.0.1:8086`(具体可见PacketServer显示的地址 IP:
 | Linux   Amd64 28498-29456 | ✅      | ✅      |
 | Linux   Arm64 28498-29456 | ✅      | ✅      |
 | MacOS   Arm64 28971-28971 | ✅      | ✅      |
+| MacOS   Amd64 28971-28971 | ❌      | ✅      |
 
 
 ### 扩展进度
