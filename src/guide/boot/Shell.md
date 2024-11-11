@@ -11,12 +11,6 @@
 Win11: `launcher.bat 123456`
 Win10: `launcher-win10.bat 123456`
 
-## NapCat.Win.Installer - Win专用安装器
-
-仓库地址: [仓库地址](https://github.com/NapNeko/NapCat-Win-Installer)
-
-安装成功后需要快速登陆同 [NapCat.shell](#napcatshell---win手动启动教程) 方法一样
-
 ## NapCat.Desktop - Win可视化管理工具
 
 **内置Packet DLC 无需配置**
@@ -91,6 +85,14 @@ curl -o napcat.termux.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main
 ```
 
 仓库地址: [NapCat.installer](https://github.com/NapNeko/NapCat-Installer)
+
+## NapCat.Win.Installer - Win专用安装器
+
+**不要用某人懒了没更新**
+
+仓库地址: [仓库地址](https://github.com/NapNeko/NapCat-Win-Installer)
+
+安装成功后需要快速登陆同 [NapCat.shell](#napcatshell---win手动启动教程) 方法一 一样
 
 ## NapCat.Railway - Railway部署
 
