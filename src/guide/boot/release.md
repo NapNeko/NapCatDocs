@@ -22,7 +22,7 @@
 
 这是Shell版本的打包文件
 
-## 文件 - 可选Packet组件( 注意大多数情况无需使用 )
+<!-- ## 文件 - 可选Packet组件( 注意大多数情况无需使用 )
 
 - napcat.packet.exe
 - napcat.packet.linux
@@ -33,4 +33,4 @@
 这是用来提供NTQQ本身没有的功能的DLC  如果需要Poke 伪造合并 等等功能 需要安装 其余情况无需安装
 
 [前往了解](../../config/advanced.md)
-
+ -->

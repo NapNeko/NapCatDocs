@@ -67,6 +67,8 @@
 :::
 
 #### 配置 PacketBackend (Server)
+## 下载地址
+[PacketRelease](https://github.com/NapNeko/PacketRelease/releases)
 
 #### Win Amd64
 
