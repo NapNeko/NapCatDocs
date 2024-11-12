@@ -126,8 +126,8 @@ packetServer 填写 `127.0.0.1:8086`(具体可见PacketServer显示的地址 IP:
 | Windows Amd64 28418-29456 | ✅      | ✅      |
 | Linux   Amd64 28498-29456 | ✅      | ✅      |
 | Linux   Arm64 28498-29456 | ✅      | ✅      |
-| MacOS   Arm64 28971-28971 | ✅      | ✅      |
-| MacOS   Amd64 28971-28971 | ❌      | ✅      |
+| MacOS   Arm64 29456-29456 | ✅      | ✅      |
+| MacOS   Amd64 29456-29456 | ❌      | ✅      |
 
 
 ### 扩展进度
