@@ -62,7 +62,7 @@
 #### 配置 PacketBackend (Native)
 
 :::tip 
-NapCat 3.6.0及以后的版本在Linux平台 (amd64, arm64), MacOS平台(arm64)，Windows平台 (amd64) **已内置 PacketBackend 实现** ，您**无需进行额外的配置**即可享受DLC的欢乐 (/≧▽≦)/
+NapCat 3.6.0及以后的版本在Linux平台 (amd64, arm64), MacOS平台(amd64, arm64)，Windows平台 (amd64) **已内置 PacketBackend 实现** ，您**无需进行额外的配置**即可享受DLC的欢乐 (/≧▽≦)/
 :::
 
 #### 配置 PacketBackend (Server)
