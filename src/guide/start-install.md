@@ -1,10 +1,10 @@
 # 开始安装
 ## 快速了解
-![Napcat](./assets/boot/napcat.png)
+![Napcat](/assets/boot/napcat.png)
 
 从左至右依次是 正常运行版本 / 启动 NapCat.FrameWork / 启动 NapCat.Shell
 
-![NCD](./assets/boot/ncd.png)
+![NCD](/assets/boot/ncd.png)
 
 此图为NapCat Shell Window可视化版本
 

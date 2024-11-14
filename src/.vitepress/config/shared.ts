@@ -34,7 +34,7 @@ export const shared = defineConfig({
         rel: 'icon',
         type: 'image/png',
         sizes: '32x32',
-        href: 'https://avatars.githubusercontent.com/u/165024194'
+        href: '/assets/logo.png'
       }
     ],
     ['link', {rel: 'icon', type: 'image/png', sizes: '16x16', href: 'https://avatars.githubusercontent.com/u/165024194'}],
