@@ -1,17 +1,17 @@
 # 开始安装
 ## 快速了解
-![Napcat](/assets/boot/BootWay01/napcat.png)
+<!-- ![Napcat](/assets/boot/BootWay01/napcat.png) -->
 
-从左至右依次是 正常运行版本 / 启动 NapCat.FrameWork / 启动 NapCat.Shell
+<!-- 从左至右依次是 正常运行版本 / 启动 NapCat.FrameWork / 启动 NapCat.Shell -->
 
 ![NCD](/assets/boot/BootWay01/ncd.png)
 
-此图为NapCat Shell Window可视化版本
+<!-- 此图为NapCat Shell Window可视化版本
 
 可以了解到框架与别的框架不同点有
 1. NapCat 能够 保证你的正常QQ的使用 也可以提供注入QQ本体 也可以独立运行命令行 除此外还能同时运行任意模式.
 2. NapCat 不会污染你的QQ环境 更新不会让QQ异常 也不会需要重新配置NapCat.
-3. NapCat 是非常容易使用的 并且带有可选的图形化界面与远程配置
+3. NapCat 是非常容易使用的 并且带有可选的图形化界面与远程配置 -->
 
 前往 [NapCatQQ 的 release 页面](https://github.com/NapNeko/NapCatQQ/releases)，各位可以看到有两种压缩包，
 文件名后缀分别为 `Shell` 和 `Framework`，应当如何选择呢？
