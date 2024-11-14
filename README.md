@@ -1,4 +1,4 @@
-# NapCat
+# NapCatQQ
 
 喵呜(困)
 
