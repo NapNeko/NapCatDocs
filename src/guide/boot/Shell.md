@@ -72,7 +72,7 @@ curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script
 
 ## NapCat.MacOs - MacOs安装工具
 
-[前往下载](https://github.com/NapNeko/NapCat-Mac-Installer/releases/tag/v1.0-1)
+[前往下载](https://github.com/NapNeko/NapCat-Mac-Installer/releases/)
 
 需要 macOS 12.0 或以上系统，支持下载和更新 NapCatQQ
 
