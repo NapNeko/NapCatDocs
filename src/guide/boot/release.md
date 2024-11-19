@@ -22,6 +22,9 @@
 
 这是Shell版本的打包文件
 
+## release的Win一键包是什么?
+是自带QQ的预打包版本 独立于你的QQ 不会破坏环境 绿色运行 与Once借用已有QQ的理念不同
+
 <!-- ## 文件 - 可选Packet组件( 注意大多数情况无需使用 )
 
 - napcat.packet.exe
