@@ -32,7 +32,7 @@ NapCat 的目录保存了配置文件、日志和缓存等信息。
 }
 ```
 
-访问 `/webui/login.html`，然后进行以下操作：
+访问 `/webui/`，然后进行以下操作：
 
 1. 进入 QQ 登录，点击 `QRCode` 进行二维码登录。
 
@@ -75,6 +75,7 @@ OneBot 11 标准中，对“正向 WS”“反向 WS”的定义较为模糊，�
 例如，在 NoneBot2 配置 OneBot 的端口为 `8080`，路径为 `/onebot/v11/ws`，那么配置的反向 WS 地址为  `ws://localhost:8080/onebot/v11/ws`。
 
 ### 配置内容参数解释
+请注意下面的配置可能并不适用新版本 可以前往新版本webui网络配置修改
 
 ```json5
 {
@@ -147,6 +148,6 @@ PacketServer 配置详见 [高级配置](./advanced.md#配置-pakcetserver)
   // 日志等级, 可选值: debug, info, error
   "fileLogLevel": "debug",
   "consoleLogLevel": "info",
-  "packetServer":"127.0.0.1:8086"
+  "packetServer":""
 }
 ```
