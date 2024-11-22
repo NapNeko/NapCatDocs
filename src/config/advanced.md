@@ -65,69 +65,15 @@
 NapCat 3.6.0及以后的版本在Linux平台 (amd64, arm64), MacOS平台(amd64, arm64)，Windows平台 (amd64) **已内置 PacketBackend 实现** ，您**无需进行额外的配置**即可享受DLC的欢乐 (/≧▽≦)/
 :::
 
-#### 配置 PacketBackend (Server)
-
-:::warning
-PacketBackend (Server) 已过时并不推荐使用
-:::
-
-::: details 配置方法
-下载地址: [PacketRelease](https://github.com/NapNeko/PacketRelease/releases)
-
-##### Win Amd64
-
-你需要先行下载 napcat.packet.exe 的软件
-
-##### Linux Amd64
-
-下载 napcat.packet.linux 组件
-
-##### Win/Linux 通用方案
-
-(除上面支持外 还兼容Linux Arm64)
-
-你需要先行下载 napcat.packet.production.py 类似文件
-安装frida和websockets依赖 启动python napcat.packet.production.py
-
-##### 接下来的教程
-
-启动后 会再当前目录生成config.json
-
-可以设置端口 再次重启生效
-
-打开 NapCat 的 `config` 目录，找到名为 `napcat_<你的QQ号>.json` 的文件，如 `napcat_1234567.json`。
-
-打开后如下
-
-```json5
-{
-  "fileLog": true,
-  "consoleLog": true,
-  "fileLogLevel": "debug",
-  "consoleLogLevel": "info",
-  "packetBackend": "auto", 
-  "packetServer": "127.0.0.1:8086"
-}
-```
-
-packetServer 填写 `127.0.0.1:8086`(具体可见PacketServer显示的地址 IP:端口)
-
-填写后 **确保napcat在PacketServer启动后再启动** 登录 输入账号即可
-
-::: warning
-1. 该技术受到版本严重影响
-2. packetServer多开 配置连接同一个packetServer即可
-:::
-
 ### 当前支持版本
 
-| 平台版本                      | Native | Server |
-|---------------------------|--------|--------|
-| Windows Amd64 28418-29456 | ✅      | ✅      |
-| Linux   Amd64 28498-29456 | ✅      | ✅      |
-| Linux   Arm64 28498-29456 | ✅      | ✅      |
-| MacOS   Arm64 29456-29456 | ✅      | ✅      |
-| MacOS   Amd64 29456-29456 | ✅      | ✅      |
+| 平台版本                   | Native |
+|---------------------------|----------|
+| Windows Amd64 28418-29927 | ✅      |
+| Linux   Amd64 28498-29927 | ✅      |
+| Linux   Arm64 28498-29927 | ✅      |
+| MacOS   Arm64 29456-29927 | ✅      |
+| MacOS   Amd64 29456-29927 | ✅      |
 
 
 ### 扩展进度
