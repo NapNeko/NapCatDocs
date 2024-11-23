@@ -31,3 +31,9 @@ author: Threkork
 
 [napcat拓展插件](https://crates.io/crates/kovi-plugin-expand-napcat)
 :::
+
+::: details NcatBot - python开发的sdk
+author: 木子
+大量逻辑待更新改进，欢迎优化改进完善✨
+[NcatBot](https://github.com/liyihao1110/NcatBot)
+:::
