@@ -60,6 +60,13 @@ curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script
 
 仓库地址: [NapCat.installer](https://github.com/NapNeko/NapCat-Installer)
 
+## NapCat.Win.绿色版本
+特殊说明: 绿色版仅适用 ```Windows.AMD64``` 无需安装QQ 已内置
+
+前往Release 下载无头绿色版本 然后启动Bat 
+
+如果需要快速启动 编辑bat  ```QQ.exe --enable-logging -q 10001```
+
 ## NapCat.Docker - Linux容器化部署
 
 仓库地址: [NapCat.Docker](https://github.com/NapNeko/NapCat-Docker)

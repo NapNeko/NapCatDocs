@@ -22,6 +22,13 @@
 
 仓库地址: [NapCat.Framework.installer](https://github.com/NapNeko/NapCat-Installer)
 
+## NapCat.Win.绿色版本
+特殊说明: 绿色版仅适用 ```Windows.AMD64``` 无需安装QQ 已内置
+
+前往Release 下载有头绿色版本 然后启动QQ 进入设置即可
+
+注意如果被异常 请卸载原有LL或者不使用此方案 使用第一个通用性手动教程
+
 ## NapCat.Installer - Linux一键部署脚本
 
 ``` bash

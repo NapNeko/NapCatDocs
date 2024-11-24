@@ -66,8 +66,10 @@ graph TD
 | NapCat.Framework.Windows.Once.zip | 一键包Framework包(不包含QQ) | Windows.AMD64 |
 | NapCat.Framework.zip     |     Framework本体  | AnyPlat.AnyArch | 
 | NapCat.Shell.zip |   Shell本体+启动器(不包含QQ)    | AnyPlat.AnyArch | 
-| Win无头链接 |   Shell本体+启动器(包含QQ)    | Windows.AMD64 |
-| Win有头链接 |   Framework本体+启动器(包含QQ)    | Windows.AMD64 |
+| Win无头绿色版 |   Shell本体+启动器(包含QQ)    | Windows.AMD64 |
+| Win有头绿色版 |   Framework本体+启动器(包含QQ)    | Windows.AMD64 |
+
+具体是不是要下载什么 需要取决于下面的启动方式
 
 ## 思考思考
 NapCat有着众多启动方式 这些启动方式 伴随各种特性
