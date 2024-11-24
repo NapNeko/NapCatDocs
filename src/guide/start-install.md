@@ -77,14 +77,12 @@ Shell 版本具有低内存 服务器部署简单的方案
 Framework 版本是具有可以 人机一体 方便窥屏的方案
 
 ### Shell 启动/安装方式
-
-- 适用教程 [方法1 - 作为 LiteLoader 插件启动](./boot/Framework.md) <- 推荐
-- 适用教程 `方法3 - 原生使用 NapCatQQ 启动` <- 由于启动方式变更,暂不提供教程
-
-### Framework 启动/安装方式
 - 适用教程 [方法2 - 使用命令行启动](./boot/Shell.md) <- 推荐
 - 适用教程 [方法2 - Arch手动配置](./boot/Shell-Linux-SemiAuto.md) <-Arch
 
+### Framework 启动/安装方式
+- 适用教程 [方法1 - 作为 LiteLoader 插件启动](./boot/Framework.md) <- 推荐
+- 适用教程 `方法3 - 原生使用 NapCatQQ 启动` <- 由于启动方式变更,暂不提供教程
 
 ## 安装完成！铛铛
 安装后就可以执行 ```3. 进入WebUi 启动你需要HTTP/WS 客户端与服务端```
