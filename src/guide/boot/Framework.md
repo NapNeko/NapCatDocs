@@ -17,7 +17,7 @@
 2. 在 LiteLoaderQQNT 的设置页面（如下图）将 `NapCat.Framework.zip` 导入即可。
 ![ll01.png](/assets/boot/BootWay01/ll01.png)
 
-**强烈不推荐LL官方的修补方式 因为dbghelp将导致NapCat扩展Api失效的 同时污染QQ本身环境 添加环境变量 清理LL需要一定计算机基础 包括需要调试QQ的用户 强烈推荐once或者绿色版本**
+**强烈不推荐LL官方的修补方案 其方案将导致NapCat扩展Api失效的 同时污染QQ本身环境 添加环境变量 清理LL需要一定计算机基础 包括需要调试QQ的用户 强烈推荐once或者绿色版本**
 
 ## NapCat.Docker.Framework - Linux容器化部署
 
