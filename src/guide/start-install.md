@@ -88,10 +88,10 @@ Framework 版本是具有可以 人机一体 方便窥屏的方案
 
 ## 安装完成！铛铛
 
-## Shell版本
+### Shell版本
 安装后就可以执行 ```3. 进入WebUi 启动你需要HTTP/WS 客户端与服务端```
 
 [前往WebUi配置教程](../config/basic.md)
 
-## Framework版本
+### Framework版本
 进入QQ设置
