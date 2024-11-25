@@ -64,3 +64,13 @@
 基于 `node-napcat-ts` 实现的，所以需要的配置类似
 
 只需要配置几个插件 `/src/plugins` 即可运行, 配置方法: 复制 `config.default.ts` 文件到 `config.ts` 并配置其中配置项即可运行
+
+## [Kovi](https://github.com/Threkork/Kovi)
+
+Rust Onebot V11 插件框架。
+
+将 NapCat 配置启用正向ws。
+
+编写插件或使用社区插件，编译启动即可。（[文档](https://threkork.github.io/kovi-doc)里面非常详细哟）
+
+编写插件可使用 [NapCat Api 拓展](https://crates.io/crates/kovi-plugin-expand-napcat) 。
