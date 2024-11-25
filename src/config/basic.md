@@ -49,6 +49,75 @@ HTTP客户端      --->> NapCat作为Http请求发起方 将事件推送至插�
 WebSocket服务端 --->> 通常指正向WS 既能主动推送事件也能接收请求 的双工模型
 WebSocket客户端 --->> 通常指反向WS 既能主动推送事件也能接收请求 的双工模型
 ```
+### 如果确实需要通过文件配置
+注意 **不要将注释填入**
+
+该配置文件名为 ``` ./config/onebot11_xxxx.json ``` 其中xxxx为对应QQ账户
+
+```json5
+{
+  "network": {
+    // Http服务器组
+    "httpServers": [
+      {
+        "name": "httpServer",// 名字不能重复 唯一标识
+        "enable": false,//启用状态
+        "port": 3000,// 监听端口
+        "host": "0.0.0.0",// 监听主机
+        "enableCors": true,// 暂时没有作用
+        "enableWebsocket": true,// 暂时没有作用
+        "messagePostFormat": "array",// 消息上报格式 string/array
+        "token": "",// 鉴权密钥
+        "debug": false// raw数据上报
+      }
+    ],
+    // Http客户端组
+    "httpClients": [
+      {
+        "name": "httpClient",// 名字不能重复 唯一标识
+        "enable": false,//启用状态
+        "url": "http://localhost:8080",// 上报地址
+        "messagePostFormat": "array",// 消息上报格式 string/array
+        "reportSelfMessage": false,// 是否上报自身消息
+        "token": "",// 鉴权密钥
+        "debug": false// raw数据上报
+      }
+    ],
+    // WS服务端组/正向WS 
+    "websocketServers": [
+      {
+        "name": "WsServer",// 名字不能重复 唯一标识
+        "enable": false,//启用状态
+        "host": "0.0.0.0",// 监听主机
+        "port": 3001,// 监听端口
+        "messagePostFormat": "array",// 消息上报格式 string/array
+        "reportSelfMessage": false,// 是否上报自身消息
+        "token": "",// 鉴权密钥
+        "enableForcePushEvent": true,// 暂时没有作用
+        "debug": false,// raw数据上报
+        "heartInterval": 30000// 心跳周期
+      }
+    ],
+    // WS客户端组/反向WS 
+    "websocketClients": [
+      {
+        "name": "WsClient",// 名字不能重复 唯一标识
+        "enable": false,//启用状态
+        "url": "ws://localhost:8082",// 上报地址
+        "messagePostFormat": "array",// 消息上报格式 string/array
+        "reportSelfMessage": false,// 是否上报自身消息
+        "reconnectInterval": 5000,// 重连间隔
+        "token": "",// 鉴权密钥
+        "debug": false,// raw数据上报
+        "heartInterval": 30000// 心跳周期
+      }
+    ]
+  },
+  "musicSignUrl": "",
+  "enableLocalFile2Url": false,
+  "parseMultMsg": false
+}
+```
 
 ## 配置 NapCat 其它设置（如果不懂干嘛，不用看啦）
 
