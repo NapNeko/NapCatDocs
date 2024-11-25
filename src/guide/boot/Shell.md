@@ -63,9 +63,9 @@ curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script
 ## NapCat.Win.绿色版本
 特殊说明: 绿色版仅适用 ```Windows.AMD64``` 无需安装QQ 已内置
 
-前往Release 下载无头绿色版本 然后启动Bat 
+前往Release 下载无头绿色版本 然后启动Bat 即可
 
-如果需要快速启动 编辑bat  ```QQ.exe --enable-logging -q 10001```
+如果需要快速启动 编辑bat  ```NapCatWinBootMain.exe 10001```
 
 ## NapCat.Docker - Linux容器化部署
 
