@@ -57,7 +57,7 @@ WebSocket客户端 --->> 通常指反向WS 既能主动推送事件也能接收�
 ```json5
 {
   "network": {
-    // Http服务器组
+    // Http服务器组 可以配置多个 这里演示为一个
     "httpServers": [
       {
         "name": "httpServer",// 名字不能重复 唯一标识
@@ -71,7 +71,7 @@ WebSocket客户端 --->> 通常指反向WS 既能主动推送事件也能接收�
         "debug": false// raw数据上报
       }
     ],
-    // Http客户端组
+    // Http客户端组 可以配置多个 这里演示为一个
     "httpClients": [
       {
         "name": "httpClient",// 名字不能重复 唯一标识
@@ -83,7 +83,7 @@ WebSocket客户端 --->> 通常指反向WS 既能主动推送事件也能接收�
         "debug": false// raw数据上报
       }
     ],
-    // WS服务端组/正向WS 
+    // WS服务端组/正向WS  可以配置多个 这里演示为一个
     "websocketServers": [
       {
         "name": "WsServer",// 名字不能重复 唯一标识
@@ -98,7 +98,7 @@ WebSocket客户端 --->> 通常指反向WS 既能主动推送事件也能接收�
         "heartInterval": 30000// 心跳周期
       }
     ],
-    // WS客户端组/反向WS 
+    // WS客户端组/反向WS 可以配置多个 这里演示为一个
     "websocketClients": [
       {
         "name": "WsClient",// 名字不能重复 唯一标识
