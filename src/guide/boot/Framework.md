@@ -23,11 +23,11 @@
 
 仓库地址: [NapCat.Docker.Framework](https://github.com/NapNeko/NapCat.Docker.Framework)
 
-## NapCat.Framework.Installer - Win平台一键安装工具
+<!-- ## NapCat.Framework.Installer - Win平台一键安装工具
 **请注意使用此方法使用 等于或高于9.9.15-29271的QQ**
 此为 **社区作品** 可能会遇到一些问题，欢迎反馈。
 
-仓库地址: [NapCat.Framework.installer](https://github.com/NapNeko/NapCat-Installer)
+仓库地址: [NapCat.Framework.installer](https://github.com/NapNeko/NapCat-Installer) -->
 
 
 ## NapCat.Installer - Linux一键部署脚本
