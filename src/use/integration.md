@@ -71,6 +71,6 @@ Rust Onebot V11 插件框架。
 
 将 NapCat 配置启用正向ws。
 
-编写插件或使用社区插件，编译启动即可。（[文档](https://threkork.github.io/kovi-doc)里面非常详细哟）
+编写插件或使用社区插件，编译启动即可。（[文档](https://threkork.github.io/kovi-doc)里面非常详细哦）
 
 编写插件可使用 [NapCat Api 拓展](https://crates.io/crates/kovi-plugin-expand-napcat) 。
