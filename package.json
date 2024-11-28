@@ -12,6 +12,8 @@
     "vitepress": "^1.3.4"
   },
   "devDependencies": {
-    "markdown-it-mathjax3": "^4.3.2"
+    "markdown-it-mathjax3": "^4.3.2",
+    "mermaid": "^11.4.0",
+    "vitepress-plugin-mermaid": "^2.0.17"
   }
 }

@@ -1,12 +1,12 @@
 # 基础配置
 
-NapCat 的目录保存了配置文件、日志和缓存等信息。
+<!-- NapCat 的目录保存了配置文件、日志和缓存等信息。 -->
 
 :::warning
 请勿将注释内容写入配置文件，否则会导致配置文件解析失败。
 :::
 
-## 用 WebUI 配置
+## 通过 WebUI 配置OneBot服务
 
 如果你已经启动了 NapCat，并且有多于 1 个开放端口，则可以通过 WebUI 进行配置。
 
@@ -32,110 +32,101 @@ NapCat 的目录保存了配置文件、日志和缓存等信息。
 }
 ```
 
-访问 `/webui/`，然后进行以下操作：
+访问 `http://ip:port/webui/`，然后进行以下操作：
 
 1. 进入 QQ 登录，点击 `QRCode` 进行二维码登录。
 
-2. 登录成功后，即可修改配置。
+2. 登录成功后，即可进入网络配置。
 
 3. 配置完成后，点击保存，重启即可生效。
 
-## 用文件配置 OneBot11 设置
+### 进入 网络配置 添加配置
+此时需要理解
 
-和上面一样，**重启登录后配置才能生效**。
+```
+HTTP服务端      --->> NapCat作为Http请求接受方 接收对应接口调用并回应 的单工模型
+HTTP客户端      --->> NapCat作为Http请求发起方 将事件推送至插件/应用框架 的单工模型
+WebSocket服务端 --->> 通常指正向WS 既能主动推送事件也能接收请求 的双工模型
+WebSocket客户端 --->> 通常指反向WS 既能主动推送事件也能接收请求 的双工模型
+```
+## 通过 文件 配置OneBot服务
 
-启动登录 NapCat 后，打开 NapCat 的 `config` 目录，找到名为 `onebot11_<你的QQ号>.json` 的文件，如 `onebot11_1234567.json`。
+**非常不推荐 除非你非常熟悉**
 
-### 配置 HTTP 服务
+注意 **不要将注释填入**
 
-HTTP 服务的配置主要有两方面：一方面是 HTTP 监听端口（应当由你的应用端来调用），另一方面是 HTTP 上报地址（由 NapCat 来调用你的应用端）。
-
-#### HTTP 监听端口
-
-例如，配置的端口号为 `3000`，那么 API 地址为 `http://localhost:3000`。
-
-#### HTTP 上报地址
-
-::: warning
-上报地址必须是 `http://` 开头
-:::
-
-当 NapCat 收到消息等事件时，会以 `POST` 请求的方式将事件上报到此地址。
-
-### 配置 WebSocket 服务
-
-OneBot 11 标准中，对“正向 WS”“反向 WS”的定义较为模糊，这里明确如下：正向指**接受**应用端的 WS 连接；反向指 NapCat 主动连接应用端监听的反向 WS 地址。
-
-#### 正向 WS 配置
-
-例如，配置的端口号为 `3001`，那么需要在应用端配置的 WS 地址为 `ws://localhost:3001`。
-
-#### 反向 WS 配置
-
-例如，在 NoneBot2 配置 OneBot 的端口为 `8080`，路径为 `/onebot/v11/ws`，那么配置的反向 WS 地址为  `ws://localhost:8080/onebot/v11/ws`。
-
-### 配置内容参数解释
-请注意下面的配置可能并不适用新版本 可以前往新版本webui网络配置修改
+该配置文件名为 ``` ./config/onebot11_xxxx.json ``` 其中xxxx为对应QQ账户
 
 ```json5
 {
-  "http": {
-    // 是否启用http服务, true为启动，false为禁用
-    "enable": false,
-    // HTTP服务监听的 ip 地址，为空则监听所有地址
-    "host": "",
-    // http服务端口
-    "port": 3000,
-    // http上报密钥，可为空
-    "secret": "",
-    // 是否启用http心跳
-    "enableHeart": false,
-    // 是否启用http上报服务
-    "enablePost": false,
-    // http上报地址, 如["http://127.0.0.1:8080/onebot/v11/http"]
-    "postUrls": []
+  "network": {
+    // Http服务器组 可以配置多个 这里演示为一个
+    "httpServers": [
+      {
+        "name": "httpServer",// 名字不能重复 唯一标识
+        "enable": false,//启用状态
+        "port": 3000,// 监听端口
+        "host": "0.0.0.0",// 监听主机
+        "enableCors": true,// 暂时没有作用
+        "enableWebsocket": true,// 暂时没有作用
+        "messagePostFormat": "array",// 消息上报格式 string/array
+        "token": "",// 鉴权密钥
+        "debug": false// raw数据上报
+      }
+    ],
+    // Http客户端组 可以配置多个 这里演示为一个
+    "httpClients": [
+      {
+        "name": "httpClient",// 名字不能重复 唯一标识
+        "enable": false,//启用状态
+        "url": "http://localhost:8080",// 上报地址
+        "messagePostFormat": "array",// 消息上报格式 string/array
+        "reportSelfMessage": false,// 是否上报自身消息
+        "token": "",// 鉴权密钥
+        "debug": false// raw数据上报
+      }
+    ],
+    // WS服务端组/正向WS  可以配置多个 这里演示为一个
+    "websocketServers": [
+      {
+        "name": "WsServer",// 名字不能重复 唯一标识
+        "enable": false,//启用状态
+        "host": "0.0.0.0",// 监听主机
+        "port": 3001,// 监听端口
+        "messagePostFormat": "array",// 消息上报格式 string/array
+        "reportSelfMessage": false,// 是否上报自身消息
+        "token": "",// 鉴权密钥
+        "enableForcePushEvent": true,// 暂时没有作用
+        "debug": false,// raw数据上报
+        "heartInterval": 30000// 心跳周期
+      }
+    ],
+    // WS客户端组/反向WS 可以配置多个 这里演示为一个
+    "websocketClients": [
+      {
+        "name": "WsClient",// 名字不能重复 唯一标识
+        "enable": false,//启用状态
+        "url": "ws://localhost:8082",// 上报地址
+        "messagePostFormat": "array",// 消息上报格式 string/array
+        "reportSelfMessage": false,// 是否上报自身消息
+        "reconnectInterval": 5000,// 重连间隔
+        "token": "",// 鉴权密钥
+        "debug": false,// raw数据上报
+        "heartInterval": 30000// 心跳周期
+      }
+    ]
   },
-  "ws": {
-    // 是否启用正向websocket服务
-    "enable": false,
-    // 正向websocket服务监听的 ip 地址，为空则监听所有地址
-    "host": "",
-    // 正向websocket服务端口
-    // 当port与http服务port一致时，host也需与http服务host保持一致，否则可能会导致启动失败
-    "port": 3001
-  },
-  "reverseWs": {
-    // 是否启用反向websocket服务
-    "enable": false,
-    // 反向websocket对接的地址, 如["ws://127.0.0.1:8080/onebot/v11/ws"]
-    "urls": []
-  },
-  "GroupLocalTime": {
-    "Record": false,//是否开启本地群聊时间记录
-    "RecordList": []//开启全部群 ["-1"]  单个群配置 ["11111"] 多个群 ["1","2","3"]
-  },
-  // 是否开启调试模式，开启后上报消息会携带一个raw字段，为原始消息内容
-  "debug": false,
-  // ws心跳间隔，单位毫秒
-  "heartInterval": 30000,
-  // 消息上报格式，array为消息组，string为cq码字符串
-  "messagePostFormat": "array",
-  // 是否将本地文件转换为URL，如果获取不到url则使用base64字段返回文件内容
-  "enableLocalFile2Url": true,
-  // 音乐签名URL，用于处理音乐相关请求
   "musicSignUrl": "",
-  // 是否上报自己发送的消息
-  "reportSelfMessage": false,
-  // access_token，可以为空
-  "token": ""
+  "enableLocalFile2Url": false,
+  "parseMultMsg": false
 }
 ```
 
-## 配置 NapCat 其它设置（如果不懂干嘛，不用看啦）
+## 配置 NapCat 其它设置
+
+**如果不懂干嘛，不用看啦** 在这里你可以修改日志等基础设置
 
 启动登录 NapCat 后，打开 NapCat 的 `config` 目录，找到名为 `napcat_<你的QQ号>.json` 的文件，如 `napcat_1234567.json`。
-
-PacketServer 配置详见 [高级配置](./advanced.md#配置-pakcetserver)
 
 配置内容参数解释：
 
