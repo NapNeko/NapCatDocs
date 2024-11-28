@@ -34,7 +34,13 @@ author: Threkork
 
 ::: details Python开发SDK：NcatBot
 author: 木子
-项目基本功能已实现,部分功能待更新,欢迎贡献你的pr
+
+
+使用简单易上手的python开发属于你的napcatqq机器人，采用简单的代码就可以实现复杂的任务，支持直接发送图片markdown。
+
+
+使用NcatBot，让机器人🤖开发更简单。
+
 
 [NcatBot](https://github.com/liyihao1110/NcatBot)
 :::
