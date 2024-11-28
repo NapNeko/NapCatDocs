@@ -36,7 +36,7 @@ author: Threkork
 author: 木子
 
 
-使用简单易上手的python开发属于你的napcatqq机器人，采用简单的代码就可以实现复杂的任务，支持直接发送图片markdown。
+✨使用简单易上手的python开发属于你的napcatqq机器人，采用简单的代码就可以实现复杂的任务，支持直接发送图片markdown。
 
 
 使用NcatBot，让机器人🤖开发更简单。
