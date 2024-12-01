@@ -1,5 +1,12 @@
 # Shell
 
+## NapCat.Win.绿色版本
+特殊说明: 绿色版仅适用 ```Windows.AMD64``` 无需安装QQ 已内置
+
+前往Release 下载无头绿色版本 然后启动Bat 即可
+
+如果需要快速启动 编辑bat  ```NapCatWinBootMain.exe 10001```
+
 ## NapCat.Shell - Win手动启动教程
 
 1. 前往 [NapCatQQ 的 release 页面](https://github.com/NapNeko/NapCatQQ/releases)
@@ -11,10 +18,10 @@
 Win11: `launcher.bat 123456`
 Win10: `launcher-win10.bat 123456`
 
-## NapCat.Desktop - Win可视化管理工具
+<!-- ## NapCat.Desktop - Win可视化管理工具
 
 **内置Packet DLC 无需配置**
-仓库地址: [仓库地址](https://github.com/NapNeko/NapCatQQ-Desktop)
+仓库地址: [仓库地址](https://github.com/NapNeko/NapCatQQ-Desktop) -->
 
 ## NapCat.Installer - Linux一键使用脚本(支持Ubuntu 20+/Debian 10+/Centos9)
 
@@ -59,13 +66,6 @@ curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script
 </details>
 
 仓库地址: [NapCat.installer](https://github.com/NapNeko/NapCat-Installer)
-
-## NapCat.Win.绿色版本
-特殊说明: 绿色版仅适用 ```Windows.AMD64``` 无需安装QQ 已内置
-
-前往Release 下载无头绿色版本 然后启动Bat 即可
-
-如果需要快速启动 编辑bat  ```NapCatWinBootMain.exe 10001```
 
 ## NapCat.Docker - Linux容器化部署
 
