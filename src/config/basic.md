@@ -18,7 +18,7 @@
 
 当端口被占用时，会自动对端口 +1，直到找到可用端口（最多尝试100次，失败则会禁用 WebUI），端口号会在启动日志中显示。
 
-启动后可在启动日志中看到形如 `[WebUi] Login Token is xxxx` 的token信息。
+启动后可在启动日志中看到形如 `[WebUi] WebUi Local Panel Url: http://127.0.0.1:6099/webui?token=xxxx` 的token信息。
 
 也可打开 `webui.json` 文件，在其中找到token。
 
