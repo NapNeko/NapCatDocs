@@ -32,7 +32,7 @@
 | `forward`          | 转发消息     |   ✅   |   ✅   |                                                      |
 | `node`             | 转发消息节点 |   ✅   |   ✅   |                                                      |
 | `json`             | `json` 信息  |   ✅   |   ✅   |                                                      |
-| `mface`            | `qq` 表情包  |   ✅   |   ✅   | 收到的 `mface` 会是 `image`, 见[商城表情](#商城表情)   |
+| `mface`            | `qq` 表情包  |   ✅   |   ✅   |  以image消息段上报(子类型区分) 支持mface/image消息段发送 |
 | `file`             | 文件         |   ✅   |   ✅   |                                                      |
 | `markdown`         | `markdown`   |   ❌   |   ✅   |         发是在双层合并转发内 无法直接发送              |
 | `lightapp`\<JSON>  | `小程序卡片`  |   ✅   |   ✅   |         发是调用扩展接口`get_mini_app_ark`             |
