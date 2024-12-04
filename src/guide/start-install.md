@@ -94,4 +94,9 @@ Framework 版本是具有可以 人机一体 方便窥屏的方案
 [前往WebUi配置教程](../config/basic.md)
 
 ### Framework版本
-进入QQ设置
+进入QQ设置 即可查看NapCat的选项 点击进入即可
+
+<!-- ## NapCat BenchMark
+除此NapCat还特意进行性能方面的压测和优化
+
+[前往查看测试](../guide/bench-mark.md) -->
