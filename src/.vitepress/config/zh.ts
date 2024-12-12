@@ -114,7 +114,8 @@ function sidebarGuide(): DefaultTheme.Sidebar {
             { text: '接口', link: '/doc' },
             { text: '类型', link: '/type' }
           ]
-        }
+        },
+        { text: '二次开发', link: '/plugin' }
       ]
     },
     {
