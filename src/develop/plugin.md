@@ -1,6 +1,6 @@
 # 二次开发 - 基于NapCat定制化开发方案
 ## 环境配置
-1. 拉取NapCat仓库后 在命令行执行 `npm run dev:depend` 按照NapCat本体和WebUi依赖
+1. 拉取NapCat仓库后 在命令行执行 `npm run dev:depend` 安装NapCat本体和WebUi依赖
 2. 初次构建NapCat 运行 `npm run build:shell` 或者 `npm run build:framework` 此次构建将会初始化WebUi打包文件和NapCat
 3. 启动NetWork/Plugin适配器 `/src/onebot/index.ts NapCatOneBot11Adapter->InitOneBot方法内 解除相关注释代码` 即可注册Plugin适配器
 4. 打开 `/src/onebot/network/plugin.ts` Plugin适配器代码 你可以修改这几项配置
