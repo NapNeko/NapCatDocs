@@ -4,7 +4,7 @@
 
 - [onebot11接口文档](https://github.com/botuniverse/onebot-11/blob/master/api/public.md)
 - [gocqhttp接口文档](https://docs.go-cqhttp.org/api)
-- [Apifox接口文档](https://melodicm.apifox.cn)
+- [Apifox接口文档](https://napcat.apifox.cn)
 
 ## set_group_sign - 群签到
 
