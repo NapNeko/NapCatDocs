@@ -1,6 +1,6 @@
 /* var.css */
 /*  */
-:root {
+/* :root {
     --vp-c-brand-1: #5224b6;
     --vp-c-brand-2: #352984;
     --vp-c-brand-3: #6d68c1;
@@ -8,13 +8,12 @@
     --vp-home-hero-image-filter: blur(150px);
   }
   
-  /* 主题色，浅色模式，深紫色调 */
   .dark {
     --vp-c-brand-1: #C8ABFA;
     --vp-c-brand-2: #3c30a4;
     --vp-c-brand-3: #352984;
   }
-  
+   */
   /* 移除链接跳转下划线 */
   .vp-doc a {
     text-decoration: none;

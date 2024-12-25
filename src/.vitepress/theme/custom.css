@@ -2,7 +2,7 @@
 @import './style/custom-block.css';
 @import './style/vp-code-group.css';
 @import './style/var.css';
-
+@import './style/main.css';
 
 .main .text,
 .main .name span {
