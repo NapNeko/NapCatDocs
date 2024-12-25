@@ -22,12 +22,12 @@ import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
 import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css';
 import 'vitepress-plugin-codeblocks-fold/style/index.css';
 import '@nolebase/vitepress-plugin-page-properties/client/style.css';
-
+import Layout from '../theme/Layout.vue';
 import './custom.css';
 export default {
   extends: DefaultTheme,
   Layout: () => {
-    return h(DefaultTheme.Layout, null, {
+    return h(Layout, null, {
       // 'aside-outline-before': () => h(ShareButton),
       'nav-bar-content-after': () => h(NolebaseEnhancedReadabilitiesMenu),
       'nav-screen-content-after': () => h(NolebaseEnhancedReadabilitiesScreenMenu),
