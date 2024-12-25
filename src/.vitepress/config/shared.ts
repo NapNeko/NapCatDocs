@@ -7,10 +7,14 @@ import {
   GitChangelog,
   GitChangelogMarkdownSection,
 } from '@nolebase/vitepress-plugin-git-changelog/vite';
+import { InlineLinkPreviewElementTransform } from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it';
+import timeline from 'vitepress-markdown-timeline';
+import taskLists from "markdown-it-task-lists";
+import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons';
+import { transformerTwoslash } from '@shikijs/vitepress-twoslash';
 
 export const shared = defineConfig({
   title: 'NapCatQQ',
-  
   lastUpdated: true,
   cleanUrls: true,
   metaChunk: true,
@@ -39,18 +43,31 @@ export const shared = defineConfig({
         excludes: [
           'index.md',
         ],
+      }),
+      groupIconVitePlugin({
+        customIcon: {
+          ts: 'logos:typescript',
+          js: 'logos:javascript', //js图标
+          md: 'logos:markdown', //markdown图标
+          css: 'logos:css-3', //css图标
+        },
       })
     ]
   },
   markdown: {
     math: true,
+    config: (md) => {
+      // 时间线
+      md.use(timeline)
+      // 任务列表
+      md.use(taskLists)
+      // 行内链接预览
+      md.use(InlineLinkPreviewElementTransform)
+      // 代码组图标
+      md.use(groupIconMdPlugin)
+    },
     codeTransformers: [
-      // We use `[!!code` in demo to prevent transformation, here we revert it back.
-      {
-        postprocess(code) {
-          return code.replace(/\[\!\!code/g, '[!code')
-        }
-      }
+      transformerTwoslash()
     ]
   },
 
