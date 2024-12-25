@@ -1,21 +1,12 @@
-<script setup>
-import DefaultTheme from 'vitepress/theme'
-
-const { Layout } = DefaultTheme
-</script>
-
 <template>
-    <Layout>
-        <template #home-hero-before>
-            <div
-                class="absolute flex flex-col z-[40] w-full !max-w-full items-center justify-center bg-transparent transition-bg overflow-hidden h-[60vh] -top-16 pointer-events-none opacity-[.35] dark:opacity-50">
-                <div class="jumbo absolute opacity-60 animate"></div>
-            </div>
-        </template>
-    </Layout>
+    <div
+        class="absolute flex flex-col z-[40] w-full !max-w-full items-center justify-center bg-transparent transition-bg overflow-hidden h-[60vh] -top-16 pointer-events-none opacity-[.35] dark:opacity-50">
+        <div class="jumbo absolute opacity-60 animate"></div>
+    </div>
+
 </template>
 
-<style>
+<style scoped>
 .opacity-\[\.35\] {
     opacity: .35;
 }
@@ -101,11 +92,11 @@ const { Layout } = DefaultTheme
 
 @keyframes jumbo-5f0d2d0c {
     0% {
-        background-position: 50% 50%,50% 50%
+        background-position: 50% 50%, 50% 50%
     }
 
     to {
-        background-position: 350% 50%,350% 50%
+        background-position: 350% 50%, 350% 50%
     }
 }
 
@@ -116,8 +107,8 @@ const { Layout } = DefaultTheme
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: var(--stripes),var(--rainbow);
-    background-size: 200%,100%;
+    background-image: var(--stripes), var(--rainbow);
+    background-size: 200%, 100%;
     mix-blend-mode: difference
 }
 
