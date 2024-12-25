@@ -249,7 +249,7 @@
 | `message_type` | string   | -      | 消息类型，支持 `private`、`group`，分别对应私聊、群组，如不传入，则根据传入的 *_id 参数判断 |
 | `user_id`      | number   | -      | QQ号                                                                                        |
 | `group_id`     | number   | -      | 群号                                                                                        |
-| `message`      | node[]   | -      | 消息,需要是 node, 详见 [node](../msg.md#node)                                               |
+| `messages`      | node[]   | -      | 消息,需要是 node, 详见 [node](../msg.md#node)                                               |
 
 ### 响应数据
 
