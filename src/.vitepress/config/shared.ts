@@ -3,15 +3,37 @@ import {
   PageProperties,
   PagePropertiesMarkdownSection
 } from '@nolebase/vitepress-plugin-page-properties/vite';
+import {
+  GitChangelog,
+  GitChangelogMarkdownSection,
+} from '@nolebase/vitepress-plugin-git-changelog/vite';
 
 export const shared = defineConfig({
   title: 'NapCatQQ',
-
+  
   lastUpdated: true,
   cleanUrls: true,
   metaChunk: true,
   vite: {
+    ssr: {
+      noExternal: [
+        '@nolebase/*',
+      ],
+    },
     plugins: [
+      GitChangelog({
+        maxGitLogCount: 2000,
+        repoURL: () => 'https://github.com/NapNeko/NapCatDocs',
+      }),
+      GitChangelogMarkdownSection({
+        exclude: (id) => id.endsWith('index.md'),
+        sections: {
+          // 禁用页面历史
+          disableChangelog: false,
+          // 禁用贡献者
+          disableContributors: true,
+        },
+      }) as any,
       PageProperties(),
       PagePropertiesMarkdownSection({
         excludes: [
