@@ -1,3 +1,5 @@
+@import './style/font.css';
+
 .main .text,.main .name span{
     --tw-gradient-from: #99d3fb;
     --tw-gradient-via: #a1b8fc; /* 中间颜色点 */
