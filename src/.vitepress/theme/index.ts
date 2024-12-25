@@ -21,9 +21,9 @@ import "vitepress-markdown-timeline/dist/theme/index.css";
 import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
 import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css';
 import 'vitepress-plugin-codeblocks-fold/style/index.css';
+import '@nolebase/vitepress-plugin-page-properties/client/style.css';
 
-import './custom.css'
-
+import './custom.css';
 export default {
   extends: DefaultTheme,
   Layout: () => {
