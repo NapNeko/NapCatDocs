@@ -12,6 +12,7 @@
     "vitepress": "^1.3.4"
   },
   "devDependencies": {
+    "@nolebase/vitepress-plugin-page-properties": "^2.11.1",
     "markdown-it-mathjax3": "^4.3.2",
     "mermaid": "^11.4.0",
     "vitepress-plugin-mermaid": "^2.0.17"

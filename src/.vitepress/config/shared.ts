@@ -1,4 +1,8 @@
 import { defineConfig } from 'vitepress'
+import {
+  PageProperties,
+  PagePropertiesMarkdownSection
+} from '@nolebase/vitepress-plugin-page-properties/vite';
 
 export const shared = defineConfig({
   title: 'NapCatQQ',
@@ -6,7 +10,16 @@ export const shared = defineConfig({
   lastUpdated: true,
   cleanUrls: true,
   metaChunk: true,
-
+  vite: {
+    plugins: [
+      PageProperties(),
+      PagePropertiesMarkdownSection({
+        excludes: [
+          'index.md',
+        ],
+      })
+    ]
+  },
   markdown: {
     math: true,
     codeTransformers: [
@@ -37,9 +50,9 @@ export const shared = defineConfig({
         href: '/assets/newlogo.png'
       }
     ],
-    ['link', {rel: 'icon', type: 'image/png', sizes: '16x16', href: '/assets/newlogo.png'}],
-    ['link', {rel: 'apple-touch-icon', sizes: '180x180', href: '/assets/newlogo.png'}],
-    ['link', {rel: 'mask-icon', href: '/assets/newlogo.png', color: '#5bbad5'}],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/assets/newlogo.png' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/assets/newlogo.png' }],
+    ['link', { rel: 'mask-icon', href: '/assets/newlogo.png', color: '#5bbad5' }],
     ['meta', { name: 'theme-color', content: '#5f67ee' }],
   ],
 

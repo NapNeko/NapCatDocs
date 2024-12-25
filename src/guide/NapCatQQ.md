@@ -1,6 +1,9 @@
-# 什么是 NapCatQQ
+# NapCatQQ
 
+## 欢迎回家!
 NapCatQQ V4 已启用全新风格标识和文档, 欢迎回家！ 这里是 NapCatQQ (aka 猫猫框架) 的使用文档！
+
+## 什么是 NapCatQQ 框架?
 
 猫猫框架通过魔法的手段获得了 QQ 的发送消息、接收消息等接口。
 
