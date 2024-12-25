@@ -34,17 +34,17 @@ export const shared = defineConfig({
         rel: 'icon',
         type: 'image/png',
         sizes: '32x32',
-        href: '/assets/logo.png'
+        href: '/assets/newlogo.png'
       }
     ],
-    ['link', {rel: 'icon', type: 'image/png', sizes: '16x16', href: '/assets/logo.png'}],
-    ['link', {rel: 'apple-touch-icon', sizes: '180x180', href: '/assets/logo.png'}],
-    ['link', {rel: 'mask-icon', href: '/assets/logo.png', color: '#5bbad5'}],
+    ['link', {rel: 'icon', type: 'image/png', sizes: '16x16', href: '/assets/newlogo.png'}],
+    ['link', {rel: 'apple-touch-icon', sizes: '180x180', href: '/assets/newlogo.png'}],
+    ['link', {rel: 'mask-icon', href: '/assets/newlogo.png', color: '#5bbad5'}],
     ['meta', { name: 'theme-color', content: '#5f67ee' }],
   ],
 
   themeConfig: {
-    logo: { src: '/assets/logo.png', width: 24, height: 24 },
+    logo: { src: '/assets/newlogo.png', width: 24, height: 24 },
     //开启本地搜索
     search: {
       provider: 'local'
