@@ -11,7 +11,8 @@
   "dependencies": {
     "@shikijs/vitepress-twoslash": "^1.24.4",
     "vitepress": "^1.3.4",
-    "vitepress-markdown-timeline": "^1.2.1"
+    "vitepress-markdown-timeline": "^1.2.1",
+    "vitepress-plugin-codeblocks-fold": "^1.2.35"
   },
   "devDependencies": {
     "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.11.1",
