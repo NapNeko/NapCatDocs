@@ -144,3 +144,4 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 | `get_ai_record`                | AI文字转语音         |   ✅    |         |
 | `get_ai_characters`            | 获取AI语音角色列表   |   ✅    |         |
 | `send_group_ai_record`         | 群聊发送AI语音      |   ✅    |         |
+| `send_poke`                    | 群聊/私聊戳一戳      |   ✅    |         |
