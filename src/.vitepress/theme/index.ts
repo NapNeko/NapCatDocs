@@ -2,6 +2,8 @@
 import DefaultTheme from 'vitepress/theme'
 import { h, type Plugin } from 'vue';
 import { useData, useRoute } from 'vitepress';
+import type { EnhanceAppContext } from 'vitepress';
+
 
 import { NolebaseGitChangelogPlugin, Options } from '@nolebase/vitepress-plugin-git-changelog/client';
 import { NolebasePagePropertiesPlugin } from '@nolebase/vitepress-plugin-page-properties';
@@ -18,6 +20,7 @@ import {
   NolebaseInlineLinkPreviewPlugin,
 } from '@nolebase/vitepress-plugin-inline-link-preview/client'
 
+import '@shikijs/vitepress-twoslash/style.css';
 import '@nolebase/vitepress-plugin-inline-link-preview/client/style.css'
 import "vitepress-markdown-timeline/dist/theme/index.css";
 import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
@@ -49,6 +52,7 @@ export default {
         defaultToggle: true,
       }
     } as Options);
+    app.use(TwoslashFloatingVue);
     app.component('NCard', NCard);
     app.use(TwoslashFloatingVue as unknown as Plugin);
     app.use(NolebaseGitChangelogPlugin);
