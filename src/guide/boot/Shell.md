@@ -2,21 +2,35 @@
 
 ## NapCat.Shell - Win手动启动教程 <Badge type="tip" text="recommend" />
 
-1. 前往 [NapCatQQ 的 release 页面](https://github.com/NapNeko/NapCatQQ/releases)
-2. 下载NapCat.Shell.zip解压
-3. 安装完成 双击目录下launcher.bat即可启动 如果是win10 则使用launcher-win10.bat
+1. 前往 [NapCatQQ 的 release 页面](https://github.com/NapNeko/NapCatQQ/releases) 下载NapCat.Shell.zip解压
+2. 确保QQ版本安装且最新
+3. 双击目录下launcher.bat即可启动 如果是win10 则使用launcher-win10.bat
 
-注意 如果需要快速登录 将 `QQ` 号传入第二个参数即可
+<mark>如果需要快速登录 将 QQ 号传入参数即可</mark>
 
-Win11: `launcher.bat 123456`
-Win10: `launcher-win10.bat 123456`
+::: code-group
+```bash [Windows11.bat]
+launcher.bat 123456
+```
+```bash [Windows10.bat]
+launcher-win10.bat 123456
+```
+:::
+
 
 ## NapCat.Win.绿色版本 <Badge type="tip" text="recommend" />
 特殊说明: 绿色版仅适用 ```Windows.AMD64``` 无需安装QQ 已内置
 
-前往Release 下载无头绿色版本 然后启动Bat 即可
+1. 前往 [NapCatQQ 的 release 页面](https://github.com/NapNeko/NapCatQQ/releases) 下载无头绿色版本解压
+2. 启动对应BAT即可
 
-如果需要快速启动 编辑bat  ```NapCatWinBootMain.exe 10001```
+<mark>如果需要快速启动 新建Bat文件写入如下例子</mark>
+
+::: code-group
+```bash [quick.bat]
+NapCatWinBootMain.exe 10001
+```
+:::
 
 ## NapCat.Installer - Linux一键使用脚本(支持Ubuntu 20+/Debian 10+/Centos9) <Badge type="tip" text="recommend" />
 
@@ -67,8 +81,7 @@ curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script
 仓库地址: [NapCat.Docker](https://github.com/NapNeko/NapCat-Docker)
 
 ## NapCat.Docker.Installer - Linux容器 第三方 <Badge type="tip" text="recommend" />
-
-此为 **社区作品** 可能会遇到一些问题，欢迎反馈。
+<mark>此为 社区作品 可能会遇到一些问题，欢迎反馈。</mark>
 
 仓库地址: [NapCat.Docker.Installer](https://github.com/Fahaxikiii/napcat-scripts)
 
@@ -90,25 +103,25 @@ curl -o napcat.termux.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main
 
 ## NapCat.1Panel - 1Panel插件部署 <Badge type="tip" text="community" />
 
-此为 **社区作品** 可能会遇到一些问题，欢迎反馈。
+<mark>此为 社区作品 可能会遇到一些问题，欢迎反馈。</mark>
 
 仓库地址: [NapCat.1Panel](https://github.com/Fahaxikiii/napcat-1panel)
 
 ## NapCat.Railway - Railway部署 <Badge type="tip" text="community" />
 
-此为 **社区作品** 可能会遇到一些问题，欢迎反馈。
+<mark>此为 社区作品 可能会遇到一些问题，欢迎反馈。</mark>
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/aRUNRZ?referralCode=Ns2Kracy)
 
 ## NapCat.Nix - Nix部署 <Badge type="tip" text="community" />
 
-此为 **社区作品** 可能会遇到一些问题，欢迎反馈。
+<mark>此为 社区作品 可能会遇到一些问题，欢迎反馈。</mark>
 
 仓库地址: [NapCat.Nix](https://github.com/initialencounter/napcat.nix)
 
 ## NapCat.Win.Installer - Win专用安装器 <Badge type="warning" text="dont use" />
 
-**不要用某人懒了没更新**
+<mark>不要用某人懒了没更新</mark>
 
 仓库地址: [仓库地址](https://github.com/NapNeko/NapCat-Win-Installer)
 
