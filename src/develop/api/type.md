@@ -1,4 +1,4 @@
-# API 类型
+# 状态类型 <Badge type="warning" text="developing" />
 
 施工中...
 

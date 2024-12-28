@@ -1,4 +1,4 @@
-# API 文档
+# API 文档 <Badge type="tip" text="V4" />
 
 此处仅包含 NapCatQQ 中的扩展接口
 

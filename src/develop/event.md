@@ -1,4 +1,4 @@
-# 上报事件兼容情况
+# 上报事件兼容情况 <Badge type="tip" text="V4" />
 
 ## meta_event 事件
 

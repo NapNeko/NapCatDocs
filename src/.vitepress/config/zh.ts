@@ -102,6 +102,7 @@ function sidebarGuide(): DefaultTheme.Sidebar {
         { text: '请求接口', link: '/api' },
         { text: '上报事件', link: '/event' },
         { text: '消息类型', link: '/msg' },
+        { text: '本体开发', link: '/plugin' },
         {
           text: '完整接口定义',
           base: '/develop/api',
@@ -110,8 +111,7 @@ function sidebarGuide(): DefaultTheme.Sidebar {
             { text: '接口', link: '/doc' },
             { text: '类型', link: '/type' }
           ]
-        },
-        { text: '二次开发', link: '/plugin' }
+        }
       ]
     },
     {

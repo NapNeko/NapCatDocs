@@ -24,6 +24,7 @@ import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
 import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css';
 import 'vitepress-plugin-codeblocks-fold/style/index.css';
 import '@nolebase/vitepress-plugin-page-properties/client/style.css';
+import '@nolebase/vitepress-plugin-enhanced-mark/client/style.css';
 
 import Hero from '../theme/Layout.vue';
 import NCard from './components/NCard.vue';
