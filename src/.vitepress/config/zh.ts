@@ -60,10 +60,10 @@ function sidebarGuide(): DefaultTheme.Sidebar {
     {
       text: '快速开始',
       base: '/guide',
-      collapsed: false,
+      collapsed: true,
       items: [
-        { text: '什么是 NapCatQQ', link: '/napcat' },
         { text: '目录导航', link: '/start-install' },
+        { text: '什么是 NapCatQQ', link: '/napcat' },
         { text: '启动方式', link: '/install' },
         {
           text: '安装方式',
@@ -79,7 +79,7 @@ function sidebarGuide(): DefaultTheme.Sidebar {
     {
       text: '配置',
       base: '/config',
-      collapsed: false,
+      collapsed: true,
       items: [
         { text: '基础配置', link: '/basic' },
         { text: '高级配置', link: '/advanced' }
@@ -88,7 +88,7 @@ function sidebarGuide(): DefaultTheme.Sidebar {
     {
       text: '使用',
       base: '/use',
-      collapsed: false,
+      collapsed: true,
       items: [
         { text: '接入框架', link: '/integration' },
         { text: '社区资源', link: '/community' }
@@ -97,7 +97,7 @@ function sidebarGuide(): DefaultTheme.Sidebar {
     {
       text: '开发',
       base: '/develop',
-      collapsed: false,
+      collapsed: true,
       items: [
         { text: '请求接口', link: '/api' },
         { text: '上报事件', link: '/event' },
@@ -115,12 +115,19 @@ function sidebarGuide(): DefaultTheme.Sidebar {
       ]
     },
     {
-      text: '喵喵',
-      link: '/other/napcat.md'
+      text: '其余',
+      base: '/other',
+      collapsed: true,
+      items: [
+        {
+          text: '喵喵',
+          link: '/napcat.md'
+        },
+        {
+          text: '关于',
+          link: '/about'
+        }
+      ]
     },
-    {
-      text: '关于',
-      link: '/about'
-    }
   ]
 }
