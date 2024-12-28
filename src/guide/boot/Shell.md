@@ -90,11 +90,13 @@ curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script
 由于权限问题，补丁过程需要手动替换 package.json，请注意备份原文件～
 
 ## NapCat.Termux - 安卓Termux部署 <Badge type="tip" text="recommend" />
+::: code-group
 
-```bash
+```bash [Termux]
 curl -o napcat.termux.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.termux.sh && bash napcat.termux.sh
 ```
 
+::: 
 仓库地址: [NapCat.installer](https://github.com/NapNeko/NapCat-Installer)
 
 ## NapCat.1Panel - 1Panel插件部署 <Badge type="tip" text="community" />
