@@ -29,4 +29,5 @@ features:
     title: 适配快速
     details: 采取 Core/Adapter 架构，支持多种 Bot 协议，快速迁移。
 ---
+<Confetti />
 

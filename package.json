@@ -17,6 +17,7 @@
     "@nolebase/vitepress-plugin-page-properties": "^2.11.1",
     "@shikijs/vitepress-twoslash": "^1.24.4",
     "@theojs/lumen": "^5.0.2",
+    "canvas-confetti": "^1.9.3",
     "markdown-it-mathjax3": "^4.3.2",
     "markdown-it-task-lists": "^2.1.1",
     "mermaid": "^11.4.0",
