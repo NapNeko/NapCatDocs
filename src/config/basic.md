@@ -21,8 +21,8 @@
 启动后可在启动日志中看到形如 `[WebUi] WebUi Local Panel Url: http://127.0.0.1:6099/webui?token=xxxx` 的token信息。
 
 也可打开 `webui.json` 文件，在其中找到token。
-
-```json5
+::: code-group
+```json5 [webui.json]
 {
     "host": "0.0.0.0", // WebUI 监听地址
     "port": 6099, // WebUI 端口
@@ -31,7 +31,7 @@
     "loginRate": 3, //每分钟登录次数限制
 }
 ```
-
+:::
 访问 `http://ip:port/webui/`，然后进行以下操作：
 
 1. 进入 QQ 登录，点击 `QRCode` 进行二维码登录。
@@ -58,7 +58,9 @@
 
 该配置文件名为 ``` ./config/onebot11_xxxx.json ``` 其中xxxx为对应QQ账户
 
-```json5
+::: code-group
+
+```json5 [HTTP服务端]
 {
   "network": {
     // Http服务器组 可以配置多个 这里演示为一个
@@ -72,21 +74,49 @@
         "enableWebsocket": true,// 暂时没有作用
         "messagePostFormat": "array",// 消息上报格式 string/array
         "token": "",// 鉴权密钥
-        "debug": false// raw数据上报
+        "debug": false,// raw数据上报
       }
     ],
+    "httpClients": [],
+    "websocketServers": [],
+    "websocketClients": []
+  },
+  "musicSignUrl": "",
+  "enableLocalFile2Url": false,
+  "parseMultMsg": false
+}
+```
+
+```json5 [HTTP客户端]
+{
+  "network": {
+    "httpServers": [],
     // Http客户端组 可以配置多个 这里演示为一个
     "httpClients": [
-      {
+       {
         "name": "httpClient",// 名字不能重复 唯一标识
         "enable": false,//启用状态
         "url": "http://localhost:8080",// 上报地址
         "messagePostFormat": "array",// 消息上报格式 string/array
         "reportSelfMessage": false,// 是否上报自身消息
         "token": "",// 鉴权密钥
-        "debug": false// raw数据上报
+        "debug": false,// raw数据上报
       }
     ],
+    "websocketServers": [],
+    "websocketClients": []
+  },
+  "musicSignUrl": "",
+  "enableLocalFile2Url": false,
+  "parseMultMsg": false
+}
+```
+
+```json5 [WS服务端]
+{
+  "network": {
+    "httpServers": [],
+    "httpClients": [],
     // WS服务端组/正向WS  可以配置多个 这里演示为一个
     "websocketServers": [
       {
@@ -99,9 +129,22 @@
         "token": "",// 鉴权密钥
         "enableForcePushEvent": true,// 暂时没有作用
         "debug": false,// raw数据上报
-        "heartInterval": 30000// 心跳周期
+        "heartInterval": 30000,// 心跳周期
       }
     ],
+    "websocketClients": []
+  },
+  "musicSignUrl": "",
+  "enableLocalFile2Url": false,
+  "parseMultMsg": false
+}
+```
+```json5 [WS客户端]
+{
+  "network": {
+    "httpServers": [],
+    "httpClients": [],
+    "websocketServers": [],
     // WS客户端组/反向WS 可以配置多个 这里演示为一个
     "websocketClients": [
       {
@@ -113,7 +156,7 @@
         "reconnectInterval": 5000,// 重连间隔
         "token": "",// 鉴权密钥
         "debug": false,// raw数据上报
-        "heartInterval": 30000// 心跳周期
+        "heartInterval": 30000,// 心跳周期
       }
     ]
   },
@@ -122,7 +165,7 @@
   "parseMultMsg": false
 }
 ```
-
+:::
 ## 配置 NapCat 其它设置
 
 **如果不懂干嘛，不用看啦** 在这里你可以修改日志等基础设置
@@ -131,7 +174,8 @@
 
 配置内容参数解释：
 
-```json5
+::: code-group
+```json5 [napcat_xxxx.json]
 {
   // 是否开启文件日志
   "fileLog": true,
@@ -143,3 +187,5 @@
   "packetServer":""
 }
 ```
+
+:::
