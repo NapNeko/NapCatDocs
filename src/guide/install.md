@@ -13,6 +13,7 @@ NapCat有着众多启动方式，每种方式各有优点：
 - **Shell 版本**：具有低内存、服务器部署简单的特点。
 - **Framework 版本**：具有方便人机交互、便于窥屏的特点。
 
+> 悄悄话: 我还是推荐你用Shell的 毕竟~~~
 ### Shell 启动/安装方式
 - 推荐教程：[方法2 - 使用命令行启动](./boot/Shell.md)
 - Arch 手动配置教程：[方法2 - Arch手动配置](./boot/Shell-Linux-SemiAuto.md)
