@@ -64,6 +64,7 @@ function sidebarGuide(): DefaultTheme.Sidebar {
       items: [
         { text: '什么是 NapCatQQ', link: '/napcat' },
         { text: '目录导航', link: '/start-install' },
+        { text: '启动方式', link: '/install' },
         {
           text: '安装方式',
           base: '/guide/boot',
