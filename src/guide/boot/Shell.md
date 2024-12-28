@@ -34,9 +34,21 @@ NapCatWinBootMain.exe 10001
 
 ## NapCat.Installer - Linux一键使用脚本(支持Ubuntu 20+/Debian 10+/Centos9) <Badge type="tip" text="recommend" />
 
-```bash
+::: code-group
+```bash [通用安装]
 curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh && sudo bash napcat.sh
 ```
+```bash [可视化安装]
+curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh && sudo bash napcat.sh --tui
+```
+```bash [Docker安装]
+curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh && sudo bash napcat.sh --docker y --qq "123456789" --mode ws --proxy 1 --confirm
+```
+```bash [演示代码]
+curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh && sudo bash napcat.sh --docker n --cli n --proxy 0 --force
+```
+:::
+
 <details>
   <summary>命令选项(高级用法)</summary>
 
@@ -55,22 +67,6 @@ curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script
   6. --cli [y/n]: shell安装时是否安装cli
 
   7. --force: 传入则执行shell强制重装
-
-  **使用示例:**
-  1. 使用tui可视化交互安装:
-      ```bash
-      curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh && sudo bash napcat.sh --tui
-      ```
-
-  2. 运行docker安装并传入 qq\"123456789\" 模式ws 使用第一个代理 直接安装:
-      ```bash
-      curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh && sudo bash napcat.sh --docker y --qq \"123456789\" --mode ws --proxy 1 --confirm
-      ```
-
-  3. 运行shell安装并传入 不安装cli 不使用代理 强制重装:
-      ```bash
-      curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh && sudo bash napcat.sh --docker n --cli n --proxy 0 --force
-      ```
 
 </details>
 
