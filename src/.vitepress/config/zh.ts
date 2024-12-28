@@ -14,11 +14,6 @@ export const zh = defineConfig({
       text: '在 GitHub 上编辑此页面'
     },
 
-    footer: {
-      message: '基于 MIT 许可发布',
-      copyright: `版权所有 © 2024-${new Date().getFullYear()} NapCatQQ`
-    },
-
     docFooter: {
       prev: '上一页',
       next: '下一页'
@@ -67,8 +62,8 @@ function sidebarGuide(): DefaultTheme.Sidebar {
       base: '/guide',
       collapsed: false,
       items: [
-        { text: '什么是 NapCatQQ', link: '/NapCatQQ' },
-        { text: '开始安装', link: '/start-install' },
+        { text: '什么是 NapCatQQ', link: '/napcat' },
+        { text: '目录导航', link: '/start-install' },
         {
           text: '安装方式',
           base: '/guide/boot',

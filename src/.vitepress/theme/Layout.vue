@@ -73,9 +73,12 @@
     background-size: 300%, 200%;
     background-position: 50% 50%, 50% 50%;
     height: inherit;
+    transform: translateZ(0);
     -webkit-transform: translateZ(0);
     -webkit-perspective: 1000;
+    perspective: 1000;
     -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     filter: invert(100%);
     -webkit-mask-image: radial-gradient(ellipse at 100% 0%, black 40%, transparent 70%);
     mask-image: radial-gradient(ellipse at 100% 0%, black 40%, transparent 70%);

@@ -4,8 +4,8 @@
 @import './style/var.css';
 @import './style/main.css';
 
-.main .text,
-.main .name span {
+.VPHomeHero .main .text,
+.VPHomeHero .main .name span {
     --tw-gradient-from: #99d3fb;
     --tw-gradient-via: #a1b8fc;
     /* 中间颜色点 */
