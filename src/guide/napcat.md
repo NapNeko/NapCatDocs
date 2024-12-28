@@ -1,7 +1,10 @@
 # NapCat
+<div style="display: flex; justify-content: center;">
+  <img src="/assets/newlogo.png" alt="description" width="300" height="300"/>
+</div>
 
 ## 欢迎回家!
-NapCatQQ V4 已启用全新风格标识和文档, 欢迎回家！ 这里是 NapCatQQ (aka 猫猫框架) 的使用文档！
+NapCatQQ V4 已启用全新风格标识和文档, 欢迎回家！ <mark>这里是 NapCatQQ (aka 猫猫框架) 的使用文档！</mark>
 ## NapCat 是什么?
 基于TypeScript构建的Bot框架,通过相应的启动器或者框架,主动调用QQ Node模块提供给客户端的接口,实现Bot的功能.
 
