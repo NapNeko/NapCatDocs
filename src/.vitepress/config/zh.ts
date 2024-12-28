@@ -49,8 +49,8 @@ function nav(): DefaultTheme.NavItem[] {
     },
     {
       text: '关于',
-      link: '/about',
-      activeMatch: '/about'
+      link: '/other/about',
+      activeMatch: '/other/about'
     }
   ]
 }
