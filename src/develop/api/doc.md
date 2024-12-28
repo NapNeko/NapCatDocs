@@ -6,7 +6,7 @@
 - [gocqhttp接口文档](https://docs.go-cqhttp.org/api)
 - [Apifox接口文档](https://napcat.apifox.cn)
 
-## set_group_sign - 群签到
+## set_group_sign - 群签到 <Badge type="info" text="native" />
 
 ### 参数
 
@@ -18,7 +18,7 @@
 
 无
 
-## group_poke - 群聊戳一戳
+## group_poke - 群聊戳一戳 <Badge type="info" text="native" />
 
 ### 参数
 
@@ -31,7 +31,7 @@
 
 无
 
-## friend_poke - 私聊戳一戳
+## friend_poke - 私聊戳一戳 <Badge type="info" text="native" />
 
 ### 参数
 
@@ -43,7 +43,7 @@
 
 无
 
-## ArkSharePeer - 获取推荐好友/群聊卡片
+## ArkSharePeer - 获取推荐好友/群聊卡片  <Badge type="info" text="normal" />
 
 ### 参数
 
@@ -63,7 +63,7 @@
 | `errMsg`  | string   | 错误信息 |
 | `arkJson` | string   | 卡片JSON |
 
-## ArkShareGroup - 获取推荐群聊卡片
+## ArkShareGroup - 获取推荐群聊卡片 <Badge type="info" text="normal" />
 
 ### 参数
 
@@ -77,7 +77,7 @@
 | ------ | -------- | -------- |
 | `无`   | string   | 卡片JSON |
 
-## get_robot_uin_range - 获取机器人账号范围
+## get_robot_uin_range - 获取机器人账号范围 <Badge type="info" text="normal" />
 
 ### 参数
 
@@ -96,7 +96,7 @@
 | `minUin` | number   | 最小 |
 | `maxUin` | number   | 最大 |
 
-## set_online_status - 设置在线状态
+## set_online_status - 设置在线状态 <Badge type="info" text="normal" />
 
 ### 参数
 
@@ -110,7 +110,7 @@
 
 无
 
-## get_friends_with_category - 获取分类的好友列表
+## get_friends_with_category - 获取分类的好友列表 <Badge type="info" text="normal" />
 
 ### 参数
 
@@ -157,7 +157,7 @@
 | `nickname`       | string                    | 昵称     |
 | `level`          | number                    | QQ等级   |
 
-## set_qq_avatar - 设置QQ头像
+## set_qq_avatar - 设置QQ头像 <Badge type="info" text="normal" />
 
 ### 参数
 
@@ -169,7 +169,7 @@
 
 无
 
-## get_file - 获取文件信息
+## get_file - 获取文件信息 <Badge type="info" text="normal" />
 
 ### 参数
 
@@ -187,7 +187,7 @@
 | `file_name` | string   | 文件名     |
 | `base64`    | string   | base64     |
 
-## forward_friend_single_msg - 转发到私聊
+## forward_friend_single_msg - 转发到私聊 <Badge type="info" text="normal" />
 
 ### 参数
 
@@ -200,7 +200,7 @@
 
 无
 
-## forward_group_single_msg - 转发到群聊
+## forward_group_single_msg - 转发到群聊 <Badge type="info" text="normal" />
 
 ### 参数
 
@@ -213,7 +213,7 @@
 
 无
 
-## translate_en2zh - 英译中
+## translate_en2zh - 英译中 <Badge type="info" text="normal" />
 
 ### 参数
 
@@ -227,7 +227,7 @@
 | ------ | -------- | -------- |
 | `无`   | string[] | 中文数组 |
 
-## set_msg_emoji_like - 设置表情回复
+## set_msg_emoji_like - 设置表情回复 <Badge type="info" text="normal" />
 
 ### 参数
 
@@ -240,7 +240,7 @@
 
 无
 
-## send_forward_msg - 发送合并转发
+## send_forward_msg - 发送合并转发 <Badge type="info" text="normal+native" />
 
 ### 参数
 
@@ -258,7 +258,7 @@
 | `message_id` | number   | 消息ID |
 | `res_id`     | string   | resid  |
 
-## mark_private_msg_as_read - 设置私聊已读
+## mark_private_msg_as_read - 设置私聊已读 <Badge type="info" text="normal" />
 
 ### 参数
 
@@ -270,7 +270,7 @@
 
 无
 
-## mark_group_msg_as_read - 设置群聊已读
+## mark_group_msg_as_read - 设置群聊已读 <Badge type="info" text="normal" />
 
 ### 参数
 
@@ -282,7 +282,7 @@
 
 无
 
-## get_friend_msg_history - 获取私聊历史记录
+## get_friend_msg_history - 获取私聊历史记录 <Badge type="info" text="normal" />
 
 ### 参数
 
@@ -299,11 +299,11 @@
 | ---------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | `messages` | message[] | 消息数组,参考 [onebot11](https://github.com/botuniverse/onebot-11/blob/master/api/public.md#get_msg-%E8%8E%B7%E5%8F%96%E6%B6%88%E6%81%AF) |
 
-## create_collection - 创建收藏
+## create_collection - 创建收藏 <Badge type="info" text="normal" />
 
-## get_collection_list - 获取收藏
+## get_collection_list - 获取收藏 <Badge type="info" text="normal" />
 
-## set_self_longnick - 设置签名
+## set_self_longnick - 设置签名 <Badge type="info" text="normal" />
 
 ### 参数
 
@@ -320,7 +320,7 @@
 | `result` | number   | 错误信息 |
 | `errMsg` | string   | 错误信息 |
 
-## get_recent_contact - 获取私聊历史记录
+## get_recent_contact - 获取私聊历史记录 <Badge type="info" text="normal" />
 
 ### 参数
 
@@ -342,7 +342,7 @@
 | `sendMemberName` | string   | 群昵称                                                                                                                                    |
 | `peerName`       | string   | QQ昵称                                                                                                                                    |
 
-## _mark_all_as_read - 标记所有已读
+## _mark_all_as_read - 标记所有已读 <Badge type="info" text="normal" />
 
 ### 参数
 
@@ -352,7 +352,7 @@
 
 无
 
-## get_profile_like - 获取自身点赞列表
+## get_profile_like - 获取自身点赞列表  <Badge type="info" text="normal" />
 
 ### 参数
 
@@ -389,7 +389,7 @@
 | `isSvip`         | boolean  | 超级会员 |
 | `uin`            | number   |          |
 
-## fetch_custom_face - 获取自定义表情
+## fetch_custom_face - 获取自定义表情  <Badge type="info" text="normal" />
 
 ### 参数
 
@@ -403,7 +403,7 @@
 | ------ | -------- | -------- |
 | `无`   | string[] | 表情列表 |
 
-## get_ai_record - AI文字转语音
+## get_ai_record - AI文字转语音  <Badge type="info" text="native" />
 
 ### 参数
 
@@ -419,7 +419,7 @@
 | ------ | ------ |------ |
 | `data` | string | 转换出的语音链接 |
 
-## get_ai_characters - 获取AI语音角色列表
+## get_ai_characters - 获取AI语音角色列表  <Badge type="info" text="native" />
 
 ### 参数
 
@@ -443,7 +443,7 @@
 |`character_name`| string | AI角色名称 |
 |`preview_url` | string | AI角色声音预览url|
 
-## send_group_ai_record - 群聊发送AI语音
+## send_group_ai_record - 群聊发送AI语音  <Badge type="info" text="native" />
 
 ### 参数
 
@@ -459,7 +459,7 @@
 | ------ | ------ | ------ |
 |`message_id`| string |所发出消息的id |
 
-## send_poke - 群聊/私聊戳一戳
+## send_poke - 群聊/私聊戳一戳  <Badge type="info" text="native" />
 
 ### 参数
 
