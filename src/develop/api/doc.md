@@ -6,18 +6,6 @@
 - [gocqhttp接口文档](https://docs.go-cqhttp.org/api)
 - [Apifox接口文档](https://napcat.apifox.cn)
 
-## set_group_sign - 群签到 <Badge type="info" text="native" />
-
-### 参数
-
-| 字段名           | 数据类型 | 默认值 | 说明        |
-| ---------------- | -------- | ------ | ----------- |
-| `group_id`       | string   | -      | 群号        |
-
-### 响应数据
-
-无
-
 ## group_poke - 群聊戳一戳 <Badge type="info" text="native" />
 
 ### 参数

@@ -105,7 +105,6 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 
 | Api                            | 介绍                 | 可用  | 备注    |
 | ------------------------------ | -------------------- | :---: | ------- |
-| `set_group_sign`               | 群签到               |   ✅   |        |
 | `ArkSharePeer`                 | 推荐联系人/群聊      |   ✅   |         |
 | `ArkShareGroup`                | 推荐群聊             |   ✅   |         |
 | `get_robot_uin_range`          | 获取机器人QQ号区间   |   ✅   |         |
