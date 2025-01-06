@@ -244,6 +244,18 @@
 { status: 10, extStatus: 1021, batteryStatus: 0 } 
 ```
 
+### 有亿点冷
+
+```json5
+{ status: 10, extStatus: 2050, batteryStatus: 0 } 
+```
+
+### 一月你好
+
+```json5
+{ status: 10, extStatus: 2053, batteryStatus: 0 } 
+```
+
 ### 我的电量
 
 ```json5
