@@ -36,6 +36,7 @@
     **请一定要保证 `bin` 文件夹内同时包含 `ffmpeg.exe`、`ffplay.exe` 以及 `ffprobe.exe`！** 否则会产生意想不到的错误。
     :::
 4. 添加bin目录到系统环境变量 不会可以搜索系统设置环境变量
+5. 注意安装完成后可能需要<mark>重启</mark>
 
 ::: tip 如果有其他程序也需要使用 FFmpeg
 如果其他程序支持手动选择 FFmpeg 位置，只需配置为 NapCat 所使用的 FFmpeg 即可。
