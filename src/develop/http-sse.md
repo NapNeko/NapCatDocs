@@ -10,7 +10,7 @@ HTTP Server-Sent Events (SSE) 是一种服务器推送技术，允许服务器�
 - **事件通知**: 通过 HTTP-SSE 通知获取。
 - **API 操作**: 通过 HTTP-GET 和 HTTP-POST 请求操作。
 
-至此完成双向主动通讯。该方式协议段完全作为 Server，应用端完全作为 Client，复用 HTTP 路径，同时规避轮询。
+至此完成双向主动通讯。该方式协议端完全作为 Server，应用端完全作为 Client，复用 HTTP 路径，同时规避轮询。
 
 ## 如何启用
 在配置文件 `networks` 中添加 `httpSseServers` 数组，填入以下内容：
@@ -23,4 +23,7 @@ HTTP Server-Sent Events (SSE) 是一种服务器推送技术，允许服务器�
 重启后重新查看配置，可以设置更多内容。
 
 ## 事件接口
-`/_events` 即可订阅事件
+要订阅事件，请访问 `/_events` 端点。
+
+## 常规接口
+例如 `/send_msg` 端点直接请求即可。
