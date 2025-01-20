@@ -103,6 +103,7 @@ function sidebarGuide(): DefaultTheme.Sidebar {
         { text: '上报事件', link: '/event' },
         { text: '消息类型', link: '/msg' },
         { text: '本体开发', link: '/plugin' },
+        { text: '服务器推送', link: '/http-sse' },
         {
           text: '完整接口定义',
           base: '/develop/api',
