@@ -27,11 +27,11 @@
 core.apis.GroupApi.banMember()
 // 调用 NapCat Core Api 用于禁言成员
 
-await action.get('send_group_msg')?.handle({ group_id: String(message.group_id), message: 'pong' }, adapter);
+await action.get('send_group_msg')?.handle({ group_id: String(message.group_id), message: 'pong' }, adapter, instance.config);
 // 调用 NapCat OneBot Action 用于发送消息接口，adapter 固定（此值固定为 plugin 用于标记适配器） 功能与下面的几乎无差异
 
 new SendGroupMsg(obCore, core)
-    .handle({ group_id: message.group_id, message: '正在设置头衔...', auto_escape: false }, adapter);
+    .handle({ group_id: message.group_id, message: '正在设置头衔...', auto_escape: false }, adapter, instance.config);
 // 创建并调用 NapCat OneBot Action 用于发送消息接口，adapter 固定（此值固定为 plugin 用于标记适配器）
 
 obCore.apis.MsgApi.createSendElements()
