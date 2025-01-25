@@ -13,13 +13,7 @@ HTTP Server-Sent Events (SSE) 是一种服务器推送技术，允许服务器�
 至此完成双向主动通讯。该方式协议端完全作为 Server，应用端完全作为 Client，复用 HTTP 路径，同时规避轮询。
 
 ## 如何启用
-在配置文件 `networks` 中添加 `httpSseServers` 数组，填入以下内容：
-```json
-{
-    "name": "http-sse",
-    "enable": true
-}
-```
+在WebUi中启用
 重启后重新查看配置，可以设置更多内容。
 
 ## 事件接口
