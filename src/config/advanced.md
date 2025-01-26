@@ -1,7 +1,8 @@
 # 高级配置
 
 ## 配置 FFmpeg
-
+###
+<mark>自v4.4.11起无需配置ffmpeg可享受音视频处理</mark>
 ### FFmpeg 是什么？
 
 [FFmpeg](https://ffmpeg.org/) 是知名的开源音视频处理库，被用于许多音视频编解码相关的项目中。
