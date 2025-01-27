@@ -46,7 +46,7 @@
 标有 **[选]** 发送可选
 
 ## 特性提醒
-<mark>自4.4.14开始 NapCat已Json5标准解析请求,支持尾随逗号,注释调用ws/http</mark>
+<mark>自4.4.14开始 NapCat采用JSON5标准解析请求,支持在JSON中尾随逗号与注释使用,以调用ws/http</mark>
 
 ## text
 
