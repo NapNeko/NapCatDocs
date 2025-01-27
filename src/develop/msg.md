@@ -1,4 +1,6 @@
 # 消息格式兼容情况 <Badge type="tip" text="V4" />
+## 特性提醒
+<mark>自4.4.14开始 NapCat已Json5标准解析请求,支持尾随逗号,注释调用ws/http</mark>
 
 ## 消息列表
 
