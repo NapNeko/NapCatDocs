@@ -1,6 +1,4 @@
 # 消息格式兼容情况 <Badge type="tip" text="V4" />
-## 特性提醒
-<mark>自4.4.14开始 NapCat已Json5标准解析请求,支持尾随逗号,注释调用ws/http</mark>
 
 ## 消息列表
 
@@ -39,13 +37,16 @@
 | `markdown`         | `markdown`   |   ✅   |   ✅   |         发是在双层合并转发内 无法直接发送              |
 | `lightapp`\<JSON>  | `小程序卡片`  |   ✅   |   ✅   |         发是调用扩展接口`get_mini_app_ark`             |
 
-## 提示
+## 注释提示
 
 标有 **[收]** 仅限收到
 
 标有 **[发]** 仅限发送
 
 标有 **[选]** 发送可选
+
+## 特性提醒
+<mark>自4.4.14开始 NapCat已Json5标准解析请求,支持尾随逗号,注释调用ws/http</mark>
 
 ## text
 
