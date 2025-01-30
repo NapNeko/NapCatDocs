@@ -7,10 +7,10 @@ Win一键启动（内置LiteLoader）
 2. 选择 NapCat.Framerwork.Windows.Once.zip 下载
 3. 找到目录下的exe启动 (注意不要解压到带有空格或者中文的目录)
 
-## NapCat.Win.绿色版本 <Badge type="tip" text="recommend" />
-特殊说明: 绿色版仅适用 ```Windows.AMD64``` 无需安装QQ 已内置
+## NapCat.Win.一键版本 <Badge type="tip" text="recommend" />
+特殊说明: 一键版仅适用 ```Windows.AMD64``` 无需安装QQ和NapCat 已内置
 
-前往Release 下载有头绿色版本 然后双击`NapCatWinBootMain.exe` 进入设置即可
+前往Release 下载有头一键版本 然后双击`NapCatWinBootMain.exe` 进入设置即可
 
 
 ## NapCat.Framework - 通用性手动教程  <Badge type="tip" text="recommend" />

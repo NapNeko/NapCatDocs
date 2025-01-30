@@ -133,7 +133,7 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 | `get_group_info_ex`            | 获取群组额外信息     |   ✅   |         |
 | `get_group_ignore_add_request` | 获取群组忽略的通知   |   ✅   |         |
 | `_del_group_notice`            | 删除群聊公告         |   ✅   |         |
-| `fetch_user_profile_like`      | 获取用户个人资料页   |   ✅   |         |
+| `get_profile_like`             | 获取用户点赞信息   |   ✅   |         |
 | `friend_poke`                  | 私聊戳一戳           |   ✅   |         |
 | `group_poke`                   | 群聊戳一戳           |   ✅   |         |
 | `nc_get_packet_status`         | 获取PacketServer状态 |   ✅   |         |

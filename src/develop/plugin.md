@@ -1,6 +1,8 @@
 # 本体开发 - 基于 NapCat 定制化开发方案 <Badge type="tip" text="V4" />
 该方案可以与NapCat本体代码进行捆绑 也可以使用各种内部接口 自由度大 简单代码实现方便
 
+注意此接口并不稳定 需要有一定能力 面向小功能测试+耦合一键包
+
 ## 环境配置
 
 1. 拉取 NapCat 仓库后，在命令行执行 `npm run dev:depend` 安装 NapCat 本体和 WebUi 依赖。
@@ -27,11 +29,11 @@
 core.apis.GroupApi.banMember()
 // 调用 NapCat Core Api 用于禁言成员
 
-await action.get('send_group_msg')?.handle({ group_id: String(message.group_id), message: 'pong' }, adapter);
+await action.get('send_group_msg')?.handle({ group_id: String(message.group_id), message: 'pong' }, adapter, instance.config);
 // 调用 NapCat OneBot Action 用于发送消息接口，adapter 固定（此值固定为 plugin 用于标记适配器） 功能与下面的几乎无差异
 
 new SendGroupMsg(obCore, core)
-    .handle({ group_id: message.group_id, message: '正在设置头衔...', auto_escape: false }, adapter);
+    .handle({ group_id: message.group_id, message: '正在设置头衔...', auto_escape: false }, adapter, instance.config);
 // 创建并调用 NapCat OneBot Action 用于发送消息接口，adapter 固定（此值固定为 plugin 用于标记适配器）
 
 obCore.apis.MsgApi.createSendElements()
@@ -46,9 +48,9 @@ import { NapCatOneBot11Adapter, OB11Message } from "@/onebot";
 import { NapCatCore } from "../core";
 import { ActionMap } from "@/onebot/action";
 
-export const plugin_onmessage = async (adapter: string, core: NapCatCore, obCore: NapCatOneBot11Adapter, message: OB11Message, action: ActionMap) => {
+export const plugin_onmessage = async (adapter: string, core: NapCatCore, obCtx: NapCatOneBot11Adapter, message: OB11Message, action: ActionMap, instance: OB11PluginAdapter) => {
     if (message.raw_message === 'ping') {
-        const ret = await action.get('send_group_msg')?.handle({ group_id: String(message.group_id), message: 'pong' }, adapter);
+        const ret = await action.get('send_group_msg')?.handle({ group_id: String(message.group_id), message: 'pong' }, adapter, instance.config);
         console.log(ret);
     }
 }

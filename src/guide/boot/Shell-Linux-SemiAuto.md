@@ -49,7 +49,7 @@ if (hasNapcatParam) {
 
 ### 3.安装napcat
 
-安装 napcat.shell 到 `/opt/QQ/resources/app/napcat` 确保 `/opt/QQ/resources/app/napcat/napcat.js` 存在
+安装 napcat.shell 到 `/opt/QQ/resources/app/napcat` 确保 `/opt/QQ/resources/app/napcat/napcat.mjs` 存在
 
 ### 4.修补 package.json
 

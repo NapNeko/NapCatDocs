@@ -18,8 +18,8 @@ launcher-win10.bat 123456
 :::
 
 
-## NapCat.Win.绿色版本 <Badge type="tip" text="recommend" />
-特殊说明: 绿色版仅适用 ```Windows.AMD64``` 无需安装QQ 已内置
+## NapCat.Win.一键版本 <Badge type="tip" text="recommend" />
+特殊说明: 一键版仅适用 ```Windows.AMD64``` 无需安装QQ和NapCat 已内置
 
 1. 前往 [NapCatQQ 的 release 页面](https://github.com/NapNeko/NapCatQQ/releases) 下载无头绿色版本解压
 2. 启动对应BAT即可
