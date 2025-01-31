@@ -37,7 +37,6 @@
 {
     "host": "0.0.0.0", // WebUI 监听地址
     "port": 6099, // WebUI 端口
-    "prefix": "", // WebUI 工作前缀，此项功能将在进阶配置中解释
     "token": "xxxx", //登录密钥，默认是自动生成的随机登录密码
     "loginRate": 3, //每分钟登录次数限制
 }
@@ -50,6 +49,8 @@
 2. 登录成功后，即可进入网络配置。
 
 3. 配置完成后，点击保存，重启即可生效。
+
+> 注：WebUI 自 v4.4 版本后不支持 `prefix` 配置。
 
 ## 通过 WebUI 配置OneBot服务  <Badge type="tip" text="Framework Vesion" />
 1. 登录后打开QQ设置进入NapCat选择夹
