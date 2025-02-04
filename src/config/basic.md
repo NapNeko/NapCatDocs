@@ -30,7 +30,7 @@
 
 启动后可在启动日志中看到形如 `[WebUi] WebUi Local Panel Url: http://127.0.0.1:6099/webui?token=xxxx` 的token信息。
 
-也可打开 `webui.json` 文件，在其中找到token。
+也可打开 `webui.json` 文件，在其中找到token。(使用 NapCat.Installer - Linux 一键脚本安装时, 该文件位于 `/opt/QQ/resources/app/app_launcher/napcat/config/webui.json`)
 ::: code-group
 ```json5 [webui.json]
 {
