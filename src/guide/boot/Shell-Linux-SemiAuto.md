@@ -1,46 +1,69 @@
 # BootWay03 (半自动) 教程
 
-:::warning
-此启动方式不保证可用，linux建议使用docker启动或一键启动脚本
-不回复关于这个启动方式造成的任何问题，若动手能力极强可以一试
-:::
-
 ## 安装教程
 
-### 1.依赖
+### 1.安装QQ
 
-你需要安装较新版本（至少大于所使用NapCat版本推荐ntQQ版本）的 QQ
+你需要安装28060+版本的 QQ
 
-### 2.挂载
+### 2.挂载启动
 
 执行命令
 
-``` bash（需要root权限，请自行sudo或su root
-mount --make-private /opt/QQ/resources/app/package.json /opt/QQ/resources/app/package.json
-mount --bind /opt/QQ/ path/to/napcat/QQ/
-mount --bind path/to/napcat/qqnt.json path/to/napcat/QQ/resources/app/package.json
+``` bash
+echo 'const fs = require("fs");
+const path = require("path");
+const CurrentPath = path.dirname(__filename);
+const hasNapcatParam = process.argv.includes("--no-sandbox");
+if (hasNapcatParam) {
+    (async () => {
+        await import("file://" + path.join(CurrentPath, "./napcat/napcat.mjs"));
+        // await import("file://" + "/path/to/napcat/napcat.mjs");
+        // 需要修改napcat的用户，在"/path/to/napcat"段写自己的napcat文件夹位置，并注释path.join所在行
+    })();
+} else {
+    require("./application/app_launcher/index.js");
+    setTimeout(() => {
+        global.launcher.installPathPkgJson.main = "./application/app_launcher/index.js";
+    }, 0);
+}' > /opt/QQ/resources/app/loadNapCat.js
 ```
 
-若需要持久化，可以向 /etc/fstab 加入
-
-:::warning
-括号及括号内注释不能写入/etc/fstab
-:::
-
-```
-/opt/QQ/resources/app/package.json /opt/QQ/resources/app/package.json none  bind,private,defaults(defaults可改动，具体看个人设置)  0 0
-
-/opt/QQ/         path/to/napcat/QQ/ none    bind,defaults(defaults可改动，具体看个人设置) 0 0
-
-path/to/napcat/qqnt.json path/to/napcat/QQ/resources/app/package.json none bind,defaults(defaults可改动，具体看个人设置) 0 0
-```
-
-### 3.安装
-
-解压 napcat.shell 到 `path/to/napcat/`，保证 `path/to/napcat/qqnt.json`存在
-
-### 4.启动
+如果你使用 LiteloaderQQNT ，那么执行：
 
 ``` bash
-xvfb-run -a path/to/napcat/QQ/qq --no-sandbox [-q <快速登录的qq号>]
+echo 'const fs = require("fs");
+const path = require("path");
+const CurrentPath = path.dirname(__filename);
+const hasNapcatParam = process.argv.includes("--no-sandbox");
+if (hasNapcatParam) {
+    (async () => {
+        await import("file://" + path.join(CurrentPath, "./napcat/napcat.mjs"));
+        // await import("file://" + "/path/to/napcat/napcat.mjs");
+        // 需要修改napcat的用户，在"/path/to/napcat"段写自己的napcat文件夹位置，并注释path.join所在行
+    })();
+} else {
+    require(String.raw`/opt/LiteLoaderQQNT`);  //引号中写入你的liteloaderqqnt路径
+}' > /opt/QQ/resources/app/loadNapCat.js
+```
+
+### 3.安装napcat
+
+安装 napcat.shell 到 `/opt/QQ/resources/app/napcat` 确保 `/opt/QQ/resources/app/napcat/napcat.mjs` 存在
+
+### 4.修补 package.json
+
+修改 `/opt/QQ/resources/app/package.json` 的main属性从`./application/app_launcher/index.js` 改为`./loadNapCat.js`
+
+这步也可以使用下面替代
+
+``` bash
+chmod +777 /opt/QQ
+sed -i 's/"main": ".\/application\/app_launcher\/index.js"/"main": ".\/loadNapCat.js"/' /opt/QQ/resources/app/package.json
+```
+
+### 5.启动
+
+``` bash
+xvfb-run -a qq --no-sandbox
 ```
