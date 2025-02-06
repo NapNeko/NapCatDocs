@@ -2,9 +2,14 @@
 
 ## 安装教程
 
-### 1.安装QQ
+### 1.安装QQ和其他依赖
 
-你需要安装28060+版本的 QQ
+你需要安装 28060+ 版本的 QQ 和 xvfb，后者安装方法为
+
+- Debian 系（Debian、Ubuntu 等）： `sudo apt install xvfb`
+- Arch 系： `sudo pacman install xorg-server-xvfb`
+
+其他发行版可以参考[这个页面](https://pkgs.org/search/?q=xvfb)自行选择合适的包安装，确保安装后 `xvfb-run` 命令存在
 
 ### 2.挂载启动
 
@@ -39,7 +44,7 @@ const hasNapcatParam = process.argv.includes("--no-sandbox");
 if (hasNapcatParam) {
     (async () => {
         await import("file://" + path.join(CurrentPath, "./napcat/napcat.mjs"));
-        // await import("file://" + "/path/to/napcat/napcat.mjs");
+        // await import("file:///path/to/napcat/napcat.mjs");
         // 需要修改napcat的用户，在"/path/to/napcat"段写自己的napcat文件夹位置，并注释path.join所在行
     })();
 } else {
@@ -53,13 +58,13 @@ if (hasNapcatParam) {
 
 ### 4.修补 package.json
 
-修改 `/opt/QQ/resources/app/package.json` 的main属性从`./application/app_launcher/index.js` 改为`./loadNapCat.js`
+修改 `/opt/QQ/resources/app/package.json` 的main属性从`./application/app_launcher/index.js` 改为`./loadNapCat.js`（注意：自 QQ 29927 版本左右起 main 属性内容有所变化，所以找到相似 main 属性直接改即可）
 
 这步也可以使用下面替代
 
 ``` bash
 chmod +777 /opt/QQ
-sed -i 's/"main": ".\/application\/app_launcher\/index.js"/"main": ".\/loadNapCat.js"/' /opt/QQ/resources/app/package.json
+sed -i 's/"main": ".+\/index.js"/"main": ".\/loadNapCat.js"/' /opt/QQ/resources/app/package.json
 ```
 
 ### 5.启动

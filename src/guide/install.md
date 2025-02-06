@@ -16,7 +16,7 @@ NapCat有着众多启动方式，每种方式各有优点：
 > 悄悄话: 我还是推荐你用Shell的 毕竟~~~
 ### Shell 启动/安装方式
 - 推荐教程：[方法2 - 使用命令行启动](./boot/Shell.md)
-- Arch 手动配置教程：[方法2 - Arch手动配置](./boot/Shell-Linux-SemiAuto.md)
+- Linux 手动配置教程：[方法2 - Linux手动配置](./boot/Shell-Linux-SemiAuto.md)
 
 ### Framework 启动/安装方式
 - 推荐教程：[方法1 - 作为 LiteLoader 插件启动](./boot/Framework.md)
