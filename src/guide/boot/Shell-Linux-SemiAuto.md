@@ -29,9 +29,9 @@ if (hasNapcatParam) {
 } else {
     require("./application/app_launcher/index.js");
     setTimeout(() => {
-        global.launcher.installPathPkgJson.main = "./application/app_launcher/index.js";
+        global.launcher.installPathPkgJson.main = "./application.asar/app_launcher/index.js";
     }, 0);
-}' > /opt/QQ/resources/app/loadNapCat.js
+}' > /opt/QQ/resources/app/loadNapCat.cjs
 ```
 
 如果你使用 LiteloaderQQNT，那么执行：
@@ -49,7 +49,7 @@ if (hasNapcatParam) {
     })();
 } else {
     require(String.raw`/opt/LiteLoaderQQNT`);  //引号中写入你的liteloaderqqnt路径
-}' > /opt/QQ/resources/app/loadNapCat.js
+}' > /opt/QQ/resources/app/loadNapCat.cjs
 ```
 
 ### 3. 安装 napcat
@@ -58,17 +58,17 @@ if (hasNapcatParam) {
 
 ### 4. 修补 package.json
 
-修改 `/opt/QQ/resources/app/package.json` 的 `main` 属性从 `./application/app_launcher/index.js` 改为 `./loadNapCat.js`（注意：自 QQ 29927 版本左右起 main 属性内容有所变化，找到相似 main 属性直接改即可）
+修改 `/opt/QQ/resources/app/package.json` 的 `main` 属性从 `./application/app_launcher/index.js` 改为 `./loadNapCat.cjs`（注意：自 QQ 29927 版本左右起 main 属性内容有所变化，找到相似 main 属性直接改即可）
 
 这步也可以使用下面替代
 
 ``` bash
 chmod +777 /opt/QQ
-sed -i 's/"main": ".*\/index.js"/"main": ".\/loadNapCat.js"/' /opt/QQ/resources/app/package.json
+sed -i 's/"main": ".*\/index.js"/"main": ".\/loadNapCat.cjs"/' /opt/QQ/resources/app/package.json
 ```
 
 ### 5.启动
 
 ``` bash
-xvfb-run -a qq --no-sandbox
+xvfb-run -a qq --no-sandbox <-q [快速登录的qq号]>
 ```
