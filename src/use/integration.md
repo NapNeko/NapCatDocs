@@ -47,7 +47,7 @@
 
 2. 配置OneBot
     在 NapCat WebUI页面选择 网络配置→新建→WebSocket客户端，然乎填入你需要的名称（图例中留空），反向WebSocket地址（ws://<宿主机IP>:<在 AstrBot中填写的端口>/ws，图例中为ws://127.0.0.1:618888/ws），消息格式选择Array，启用后保存
-    ![AstrBot-onebot-2](/assets/use/Astrbot-onebot-1.png)
+    ![AstrBot-onebot-2](/assets/use/Astrbot-onebot-2.png)
 
 ## OlivOS
 
