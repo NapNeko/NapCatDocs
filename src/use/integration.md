@@ -39,6 +39,19 @@
 
     配置完成后，在 NapCat 的配置中添加 WS 反向地址。Koishi OneBot 的 ws 反向地址为 `ws://127.0.0.1:5140/onebot`。添加完成后，点击保存即可。
 
+## [AstrBot](https://astrbot.app/)
+
+1. 配置AstrBot
+
+    选择 配置→消息平台→消息平台适配器→aiocqhttp(qq)，默认即可，可根据需要更改。
+
+   ![AstrBot-onebot-1](/assets/use/Astrbot-onebot-1.png)
+
+2. 配置OneBot
+
+    在 NapCat WebUI页面选择 网络配置→新建→WebSocket客户端，URL填入`ws://127.0.0.1:6199/ws`，添加完成后，点击保存即可。
+    ![AstrBot-onebot-2](/assets/use/Astrbot-onebot-2.png)
+
 ## OlivOS
 
 支持正向和反向ws以及http详见 [文档](https://doc.olivos.wiki/)
