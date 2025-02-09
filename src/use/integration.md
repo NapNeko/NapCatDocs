@@ -42,11 +42,14 @@
 ## [AstrBot](https://astrbot.app/)
 
 1. 配置AstrBot
-    选择 配置→消息平台→消息平台适配器→aiocqhttp(qq)，然后填入你需要的id（图例为napcat），反向WebSocket地址（默认0.0.0.0），端口（默认6199，服务器/Docker自行修改决定）
+
+    选择 配置→消息平台→消息平台适配器→aiocqhttp(qq)，默认即可，可根据需要更改。
+
    ![AstrBot-onebot-1](/assets/use/Astrbot-onebot-1.png)
 
 2. 配置OneBot
-    在 NapCat WebUI页面选择 网络配置→新建→WebSocket客户端，然乎填入你需要的名称（图例中留空），反向WebSocket地址（ws://<宿主机IP>:<在 AstrBot中填写的端口>/ws，图例中为ws://127.0.0.1:618888/ws），消息格式选择Array，启用后保存
+
+    在 NapCat WebUI页面选择 网络配置→新建→WebSocket客户端，URL填入`ws://127.0.0.1:6199/ws`，添加完成后，点击保存即可。
     ![AstrBot-onebot-2](/assets/use/Astrbot-onebot-2.png)
 
 ## OlivOS
