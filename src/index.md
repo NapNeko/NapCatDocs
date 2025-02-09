@@ -12,8 +12,11 @@ hero:
       text: 开始安装
       link: /guide/start-install
     - theme: alt
-      text: GitHub
+      text: GitHub(NapCatQQ)
       link: https://github.com/NapNeko/NapCatQQ
+    - theme: alt
+      text: GitHub(NapCatDocs)
+      link: https://github.com/NapNeko/NapCatDocs
   image:
       src: /assets/newlogo.png
       alt: Logo
