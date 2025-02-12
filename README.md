@@ -3,6 +3,8 @@
 喵呜(困)
 
 本项目是 **[NapCatQQ](https://github.com/NapNeko/NapCatQQ)** 的文档项目, 用于文档的更新, 部署等.
+# Logo
+@Stapxs 与 Ai 共同完成
 
 # Contribution
 
