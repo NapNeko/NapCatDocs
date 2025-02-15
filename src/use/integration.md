@@ -87,3 +87,25 @@ Rust Onebot V11 插件框架。
 编写插件或使用社区插件，编译启动即可。（[文档](https://threkork.github.io/kovi-doc)里面非常详细哦）
 
 编写插件可使用 [NapCat Api 拓展](https://crates.io/crates/kovi-plugin-expand-napcat) 。
+
+## [Mirai](https://github.com/mamoe/mirai)
+
+可通过[Overflow](https://github.com/MrXiaoM/Overflow)对接Mirai框架，以快速方便的实现Mirai插件从MCL启动方式无缝切换到NapCat继续使用。
+
+1. 配置 NapCat
+
+    按照 NapCat 相关文档下载并部署 NapCat ，启动NapCat(推荐使用控制台启动)并扫码登录Bot，打开控制台输出的WebUI网址，使用默认token登录WebUI并配置和启用ws（推荐将NapCat作为服务器端）。
+
+2. 配置 Overflow
+
+    [详见 Overflow 文档](https://mirai.mrxiaom.top/)
+
+    根据文档指引安装Overflow，将在NapCat的WebUI中配置的ws相关信息填写到overflow.json中（推荐使用正向ws，将Overflow当作是客户端），注意信息填写一致。
+
+3. 移动 Mirai 相关文件
+   
+    将原先 MCL 中的插件（plugins）、数据（data）和配置（config）文件夹下相关文件移动至 Overflow 对应文件夹下。
+
+    由于登录将由NapCat负责，与登录相关的文件无需移动，例如：AutoLogin.yml、mirai-device-generator.jar、fix-protocol-version.jar等。
+
+4. 都配置并移动好后，启动NapCat登录Bot，再启动Overflow，即可恢复Mirai插件的运行，替代原来MCL+签名服务的方式。
