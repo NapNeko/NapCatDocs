@@ -109,3 +109,15 @@ Rust Onebot V11 插件框架。
     由于登录将由NapCat负责，与登录相关的文件无需移动，例如：AutoLogin.yml、mirai-device-generator.jar、fix-protocol-version.jar等。
 
 4. 都配置并移动好后，启动NapCat登录Bot，再启动Overflow，即可恢复Mirai插件的运行，替代原来MCL+签名服务的方式。
+
+## [NcatBot](https://github.com/liyihao1110/ncatbot/)
+
+基于 NapCat 的 QQ 机器人 Python SDK，快速开发，轻松部署。
+
+使用 Python 编程，对新手十分友好，对老手十分高效。
+
+已完全对接 NapCat，提供一键安装并配置 NapCat 功能（Windows、Linux）
+
+项目发布至 PyPI，可通过 `pip install ncatbot` 直接安装。
+
+请参考使用文档 [NcatBotDocs](https://docs.ncatbot.xyz/)
