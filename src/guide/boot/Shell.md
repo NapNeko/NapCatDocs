@@ -76,7 +76,7 @@ curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script
 
 仓库地址: [NapCat.Docker](https://github.com/NapNeko/NapCat-Docker)
 
-除了常规的安装docker安装,此方法支持compose一键模板部署 astrbot,koishi,nonebot 详细参考Readme处 `一键模板化配置` 部分
+除了常规的docker run 样式的安装方法,此方法支持compose一键模板部署 astrbot,koishi,nonebot 详细参考Readme处 `一键模板化配置` 部分
 
 ## NapCat.Docker.Installer - Linux容器 第三方 <Badge type="tip" text="recommend" />
 <mark>此为 社区作品 可能会遇到一些问题，欢迎反馈。</mark>
