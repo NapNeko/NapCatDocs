@@ -52,6 +52,7 @@
 | `notice.notify.honor`           | 群成员荣誉变更                  |   ❌   |                         |
 | `notice.notify.honor.talkative` | 群成员荣誉变更 - 龙王           |   ❌   |                         |
 | `notice.notify.honor.performer` | 群成员荣誉变更 - 群聊之火       |   ❌   |                         | -->
+<!-- | `notice.notify.honor.emotion`   | 群成员荣誉变更 - 快乐源泉       |   ❌   |                         | -->
 <!-- | `notice.essence.delete`         | 群聊设精 - 取消                 |   ❌   |                         | -->
 
 | 事件名                          | 说明                            | 可用  | 备注                    |
@@ -80,7 +81,6 @@
 | `notice.essence`                | 群聊设精                        |   ✅   |                         |
 | `notice.essence.add`            | 群聊设精 - 增加                 |   ✅   |                         |
 | `notice.notify.poke`            | 戳一戳                          |   ✅   |                         |
-| `notice.notify.honor.emotion`   | 群成员荣誉变更 - 快乐源泉       |   ❌   |                         |
 | `notice.notify.input_status`    | 输入状态更新                    |   ✅   |                         |
 | `notice.notify.title`           | 群成员头衔变更                  |   ✅   |                         |
 | `notice.notify.profile_like`    | 点赞                            |   ✅   |                         |
