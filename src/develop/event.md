@@ -26,6 +26,7 @@
 | `message.group.notice`       | 群聊消息 - 系统提示     |   ❌   |      |
 
 ## message_sent 事件
+<!-- | `message_sent.group.anonymous`    | 群聊消息 - 匿名消息     |   ❌   |      | -->
 
 | 事件名                            | 说明                    | 可用  | 备注 |
 | --------------------------------- | ----------------------- | :---: | ---- |
@@ -36,7 +37,6 @@
 | `message_sent.private.other`      | 私聊消息 - 其他         |   ❌   |      |
 | `message_sent.group`              | 群聊消息                |   ✅   |      |
 | `message_sent.group.normal`       | 群聊消息 - 普通         |   ✅   |      |
-<!-- | `message_sent.group.anonymous`    | 群聊消息 - 匿名消息     |   ❌   |      | -->
 | `message_sent.group.notice`       | 群聊消息 - 系统提示     |   ❌   |      |
 
 ## request 事件
