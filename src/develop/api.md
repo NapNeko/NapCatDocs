@@ -34,7 +34,7 @@ NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https:
 | `delete_msg`              | 撤回消息             |   ✅   |          |
 | `get_msg`                 | 获取消息             |   ✅   |          |
 | `get_forward_msg`         | 获取合并转发消息     |   ✅   |          |
-| `send_like`               | 发送好友赞           |   ✅   |   推荐每次请求间隔3s，否则会被吞   |
+| `send_like`               | 发送好友赞           |   ✅   |   请注意调用频率   |
 | `set_group_kick`          | 群组踢人             |   ✅   |          |
 | `set_group_ban`           | 群组单人禁言         |   ✅   |          |
 | `set_group_whole_ban`     | 群组全员禁言         |   ✅   |          |
