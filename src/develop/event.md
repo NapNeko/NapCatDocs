@@ -1,5 +1,11 @@
 # 上报事件兼容情况 <Badge type="tip" text="V4" />
 
+<!-- | `notice.notify.lucky_king`      | 群红包运气王                    |   ❌   |                         |
+| `notice.notify.honor`           | 群成员荣誉变更                  |   ❌   |                         |
+| `notice.notify.honor.talkative` | 群成员荣誉变更 - 龙王           |   ❌   |                         |
+| `notice.notify.honor.performer` | 群成员荣誉变更 - 群聊之火       |   ❌   |                         |
+| `notice.notify.honor.emotion`   | 群成员荣誉变更 - 快乐源泉       |   ❌   |                         | -->
+
 ## meta_event 事件
 
 | 事件名                         | 说明                          | 可用  | 备注 |
@@ -11,8 +17,6 @@
 | `meta_event.heartbeat`         | 心跳                          |   ✅   |      |
 
 ## message 事件
-
-<!-- | `message.group.anonymous`    | 群聊消息 - 匿名消息     |   ❌   |      | -->
 
 | 事件名                       | 说明                    | 可用  | 备注 |
 | ---------------------------- | ----------------------- | :---: | ---- |
@@ -26,7 +30,6 @@
 | `message.group.notice`       | 群聊消息 - 系统提示     |   ❌   |      |
 
 ## message_sent 事件
-<!-- | `message_sent.group.anonymous`    | 群聊消息 - 匿名消息     |   ❌   |      | -->
 
 | 事件名                            | 说明                    | 可用  | 备注 |
 | --------------------------------- | ----------------------- | :---: | ---- |
@@ -48,12 +51,6 @@
 | `request.group.invite` | 邀请登录号入群 |   ✅   |                |
 
 ## notice 事件
-<!-- | `notice.notify.lucky_king`      | 群红包运气王                    |   ❌   |                         |
-| `notice.notify.honor`           | 群成员荣誉变更                  |   ❌   |                         |
-| `notice.notify.honor.talkative` | 群成员荣誉变更 - 龙王           |   ❌   |                         |
-| `notice.notify.honor.performer` | 群成员荣誉变更 - 群聊之火       |   ❌   |                         | -->
-<!-- | `notice.notify.honor.emotion`   | 群成员荣誉变更 - 快乐源泉       |   ❌   |                         | -->
-<!-- | `notice.essence.delete`         | 群聊设精 - 取消                 |   ❌   |                         | -->
 
 | 事件名                          | 说明                            | 可用  | 备注                    |
 | ------------------------------- | ------------------------------- | :---: | ----------------------- |
