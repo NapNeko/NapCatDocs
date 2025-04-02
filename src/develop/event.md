@@ -12,6 +12,8 @@
 
 ## message 事件
 
+<!-- | `message.group.anonymous`    | 群聊消息 - 匿名消息     |   ❌   |      | -->
+
 | 事件名                       | 说明                    | 可用  | 备注 |
 | ---------------------------- | ----------------------- | :---: | ---- |
 | `message.private`            | 私聊消息                |   ✅   |      |
@@ -21,7 +23,6 @@
 | `message.private.other`      | 私聊消息 - 其他         |   ❌   |      |
 | `message.group`              | 群聊消息                |   ✅   |      |
 | `message.group.normal`       | 群聊消息 - 普通         |   ✅   |      |
-<!-- | `message.group.anonymous`    | 群聊消息 - 匿名消息     |   ❌   |      | -->
 | `message.group.notice`       | 群聊消息 - 系统提示     |   ❌   |      |
 
 ## message_sent 事件
@@ -47,6 +48,11 @@
 | `request.group.invite` | 邀请登录号入群 |   ✅   |                |
 
 ## notice 事件
+<!-- | `notice.notify.lucky_king`      | 群红包运气王                    |   ❌   |                         |
+| `notice.notify.honor`           | 群成员荣誉变更                  |   ❌   |                         |
+| `notice.notify.honor.talkative` | 群成员荣誉变更 - 龙王           |   ❌   |                         |
+| `notice.notify.honor.performer` | 群成员荣誉变更 - 群聊之火       |   ❌   |                         | -->
+<!-- | `notice.essence.delete`         | 群聊设精 - 取消                 |   ❌   |                         | -->
 
 | 事件名                          | 说明                            | 可用  | 备注                    |
 | ------------------------------- | ------------------------------- | :---: | ----------------------- |
@@ -73,12 +79,7 @@
 | `notice.group_msg_emoji_like`   | 群聊表情回应                    |   ⏹   | 仅收自己的 其余扩展接口拉取 |
 | `notice.essence`                | 群聊设精                        |   ✅   |                         |
 | `notice.essence.add`            | 群聊设精 - 增加                 |   ✅   |                         |
-<!-- | `notice.essence.delete`         | 群聊设精 - 取消                 |   ❌   |                         | -->
 | `notice.notify.poke`            | 戳一戳                          |   ✅   |                         |
-<!-- | `notice.notify.lucky_king`      | 群红包运气王                    |   ❌   |                         |
-| `notice.notify.honor`           | 群成员荣誉变更                  |   ❌   |                         |
-| `notice.notify.honor.talkative` | 群成员荣誉变更 - 龙王           |   ❌   |                         |
-| `notice.notify.honor.performer` | 群成员荣誉变更 - 群聊之火       |   ❌   |                         | -->
 | `notice.notify.honor.emotion`   | 群成员荣誉变更 - 快乐源泉       |   ❌   |                         |
 | `notice.notify.input_status`    | 输入状态更新                    |   ✅   |                         |
 | `notice.notify.title`           | 群成员头衔变更                  |   ✅   |                         |
