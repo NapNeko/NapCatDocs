@@ -32,6 +32,14 @@ NapCatWinBootMain.exe 10001
 ```
 :::
 
+## NapCat.Win.Installer - Win下载与一键安装器 <Badge type="tip" text="normal" />
+
+<mark>如果有bug请使用上面方案</mark>
+
+[启动器下载地址](https://github.com/NapNeko/NapCat-Win-Installer/releases)
+
+安装成功后需要快速登陆同 [NapCat.shell](#napcatshell---win手动启动教程) 方法一 一样
+
 ## NapCat.Installer - Linux一键使用脚本(支持Ubuntu 20+/Debian 10+/Centos9) <Badge type="tip" text="recommend" />
 
 ::: code-group
@@ -118,11 +126,3 @@ curl -o napcat.termux.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main
 <mark>此为 社区作品 可能会遇到一些问题，欢迎反馈。</mark>
 
 仓库地址: [NapCat.Nix](https://github.com/initialencounter/napcat.nix)
-
-## NapCat.Win.Installer - Win专用安装器 <Badge type="warning" text="dont use" />
-
-<mark>不要用某人懒了没更新</mark>
-
-仓库地址: [仓库地址](https://github.com/NapNeko/NapCat-Win-Installer)
-
-安装成功后需要快速登陆同 [NapCat.shell](#napcatshell---win手动启动教程) 方法一 一样

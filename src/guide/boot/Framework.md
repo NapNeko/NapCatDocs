@@ -36,7 +36,7 @@ Win一键启动（内置LiteLoader）
 curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.framework.sh && sudo bash napcat.sh
 ```
 
-::: 
+:::
 ## NapCat.Framework.Installer - Win平台一键安装工具  <Badge type="warning" text="dont use" />
 <mark>请注意使用此方法使用 等于或高于9.9.15-29271的QQ</mark>
 
