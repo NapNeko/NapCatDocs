@@ -15,7 +15,7 @@
 
 解压后文件包括js hook_server 两部分均被混淆 技术栈为frida+websockets
 
-# 第三步部分 对JS部分代码抄袭部分确认
+## 第三步部分 对JS部分代码抄袭部分确认
 
 ```javascript
 const MODULE_NAME = 'wrapper.node';
@@ -117,6 +117,7 @@ let buffer_len = buffer_end - buffer_start;
 
 等等其余代码不再做对比 napcat最早提交时间与2024年10月
 
+## 第四部分 补充
 以下是时间与代码证据 有必要该仓库可以public
 
 ![napcat](/data/QQ_1744604365564.png)
