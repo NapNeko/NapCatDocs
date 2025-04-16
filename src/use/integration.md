@@ -78,13 +78,13 @@
 
 只需要配置几个插件 `/src/plugins` 即可运行, 配置方法: 复制 `config.default.ts` 文件到 `config.ts` 并配置其中配置项即可运行
 
-## [Kovi](https://github.com/Threkork/Kovi)
+## [Kovi](https://github.com/ThriceCola/Kovi)
 
 Rust Onebot V11 插件框架。
 
 将 NapCat 配置启用正向ws。
 
-编写插件或使用社区插件，编译启动即可。（[文档](https://threkork.github.io/kovi-doc)里面非常详细哦）
+编写插件或使用社区插件，编译启动即可。（[文档](https://thricecola.github.io/kovi-doc)里面非常详细哦）
 
 编写插件可使用 [NapCat Api 拓展](https://crates.io/crates/kovi-plugin-expand-napcat) 。
 
@@ -103,7 +103,7 @@ Rust Onebot V11 插件框架。
     根据文档指引安装Overflow，将在NapCat的WebUI中配置的ws相关信息填写到overflow.json中（推荐使用正向ws，将Overflow当作是客户端），注意信息填写一致。
 
 3. 移动 Mirai 相关文件
-   
+
     将原先 MCL 中的插件（plugins）、数据（data）和配置（config）文件夹下相关文件移动至 Overflow 对应文件夹下。
 
     由于登录将由NapCat负责，与登录相关的文件无需移动，例如：AutoLogin.yml、mirai-device-generator.jar、fix-protocol-version.jar等。
