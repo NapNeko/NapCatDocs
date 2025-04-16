@@ -24,10 +24,10 @@ author: canxin121
 [onebotv11_rs](https://github.com/canxin121/onebotv11_rs)
 :::
 
-::: details Kovi - 用 Rust 实现的 Onebot 机器人开发框架
-author: Threkork
+::: details Kovi - Rust Onebot 机器人开发框架
+author: ThriceCola
 
-[Kovi](https://github.com/Threkork/Kovi)
+[Kovi](https://github.com/ThriceCola/Kovi)
 
 [napcat拓展插件](https://crates.io/crates/kovi-plugin-expand-napcat)
 :::
