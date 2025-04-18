@@ -24,6 +24,10 @@ launcher-win10.bat 123456
 1. 前往 [NapCatQQ 的 release 页面](https://github.com/NapNeko/NapCatQQ/releases) 下载无头绿色版本解压
 2. 启动对应BAT即可
 
+由于上面的包巨大且可能并不适合下载 特此为Win64无头 提供轻量化一键部署方案
+
+对应的NapCat.Shell.Windows.OneKey.zip启动后 自动化部署一键包(此包仅适用Windows)
+
 <mark>如果需要快速启动 新建Bat文件写入如下例子</mark>
 
 ::: code-group
