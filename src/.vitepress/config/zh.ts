@@ -125,6 +125,10 @@ function sidebarGuide(): DefaultTheme.Sidebar {
           link: '/napcat.md'
         },
         {
+          text: '安全',
+          link: '/security'
+        },
+        {
           text: '关于',
           link: '/about'
         }
