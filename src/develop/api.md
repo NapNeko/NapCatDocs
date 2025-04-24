@@ -1,6 +1,6 @@
 # 请求接口兼容情况 <Badge type="tip" text="V4" />
 
-NapCatQQ 实现了 [OneBot 11](https://11.onebot.dev/) 以及 [go-cqhttp](https://docs.go-cqhttp.org/api) 的大部分 API，对于 API 的详细说明请自行点击相关链接查看。
+NapCatQQ 实现了Onebot 的大部分 API，对于 API 的详细说明请自行点击导航协议或者链接查看相关实现。
 
 详细 NapCatQQ All API 用例参考 <https://napcat.apifox.cn>
 
