@@ -94,11 +94,11 @@ if __name__ == "__main__":
 WebSocket 通信同样分为两种角色：
 
 - **WebSocket 客户端**：NapCatQQ 作为客户端，主动连接 OneBot 11 的 WebSocket 服务端，进行双向通信。
-- **WebSocket 服务器**：NapCatQQ 作为服务器，OneBot 11 作为客户端主动连接 NapCatQQ 的 WebSocket 服务端，推送事件和接收请求。
+- **WebSocket 服务器**：NapCatQQ 作为服务器，OneBot 11 作为客户端主动连接 NapCatQQ 的 WebSocket 服务端，推送事件和处理请求。
 
-### 2.1 NapCatQQ 作为 WebSocket 客户端发送请求和接收事件
+### 2.1 NapCatQQ 作为 WebSocket 客户端
 
-NapCatQQ 通过 WebSocket 连接到 OneBot 11 的 ws 或 wss 地址。连接建立后，发送 JSON 格式的请求包。
+NapCatQQ 通过 WebSocket 连接到 OneBot 11 的 ws 或 wss 地址。连接建立后，发送 JSON 格式的事件和处理请求。
 
 **发送群消息示例：**
 
@@ -138,7 +138,7 @@ NapCatQQ 通过 WebSocket 连接到 OneBot 11 的 ws 或 wss 地址。连接建�
 }
 ```
 
-**代码演示：Python WebSocket 客户端收发消息**
+**代码演示：Python WebSocket 客户端接收事件**
 
 ```python
 import asyncio
