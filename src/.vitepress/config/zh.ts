@@ -164,7 +164,7 @@ function sidebarGuide(): DefaultTheme.Sidebar {
           link: '/security'
         },
         {
-          text: '关于',
+          text: '联系',
           link: '/about'
         }
       ]
