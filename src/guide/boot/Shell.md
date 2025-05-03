@@ -18,6 +18,7 @@ launcher-win10.bat 123456
 :::
 
 
+
 ## NapCat.Win.一键版本 <Badge type="tip" text="recommend" />
 特殊说明: 一键版仅适用 ```Windows.AMD64``` 无需安装QQ和NapCat 已内置
 
@@ -35,6 +36,11 @@ launcher-win10.bat 123456
 NapCatWinBootMain.exe 10001
 ```
 :::
+
+## NapCat.Windows 可视化管理工具
+可后台托盘 多账户配置
+
+[NapCatQQ-Desktop](https://github.com/NapNeko/NapCatQQ-Desktop)
 
 ## NapCat.Win.Installer - Win下载与一键安装器 <Badge type="tip" text="normal" />
 
