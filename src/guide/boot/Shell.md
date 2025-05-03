@@ -44,41 +44,71 @@ NapCatWinBootMain.exe 10001
 
 安装成功后需要快速登陆同 [NapCat.shell](#napcatshell---win手动启动教程) 方法一 一样
 
-## NapCat.Installer - Linux一键使用脚本(支持Ubuntu 20+/Debian 10+/Centos9) <Badge type="tip" text="recommend" />
+## NapCat.Installer - Linux一键使用脚本(支持Ubuntu 20+/Debian 10+/Centos9)    <Badge type="tip" text="recommend" /> 
 
 ::: code-group
 ```bash [通用安装]
-curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh && sudo bash napcat.sh
+curl -o \
+napcat.sh \
+https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh \
+&& sudo bash napcat.sh
 ```
 ```bash [可视化安装]
-curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh && sudo bash napcat.sh --tui
+curl -o \
+napcat.sh \
+https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh \
+&& sudo bash napcat.sh \
+--tui
 ```
 ```bash [Docker安装]
-curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh && sudo bash napcat.sh --docker y --qq "123456789" --mode ws --proxy 1 --confirm
+curl -o \
+napcat.sh \
+https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh \
+&& sudo bash napcat.sh \
+--docker y \
+--qq "123456789" \
+--mode ws \
+--proxy 1 \
+--confirm
 ```
-```bash [演示代码]
-curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh && sudo bash napcat.sh --docker n --cli n --proxy 0 --force
+
+```bash [Shell强制重装]
+curl -o \
+napcat.sh \
+https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh \
+&& sudo bash napcat.sh \
+--docker n \
+--cli n \
+--proxy 0 \
+--force
+```
+
+```bash [TUI-CLI安装]
+curl -o \
+napcat.sh \
+https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh \
+&& sudo bash napcat.sh \
+--docker n \
+--cli y 
 ```
 :::
 
 <details>
   <summary>命令选项(高级用法)</summary>
 
-  0. --tui: 使用tui可视化交互安装
+  0. `--tui` 使用`tui`可视化交互安装
+   
+  1. `--docker` [y/n]: 使用 Docker 进行安装 (y) 或使用 Shell 直接安装 (n)
+      - Docker 安装: 将 NapCat 运行在隔离的容器环境中，方便管理和迁移，但需要先安装 Docker
+      - Shell 安装: 直接在当前系统环境中安装 NapCat 及其依赖
+      - `--qq`, `--mode`, `--confirm`: Docker 安装时使用的参数
 
-  1. --docker [y/n]: --docker y 为使用docker安装反之为shell安装
+  2. `--cli` [y/n]: 是否安装 NapCat TUI-CLI  (命令行UI工具) 
+      - `NapCat TUI-CLI` : 允许你在 ssh、没有桌面、WebUI 难以使用的情况下可视化交互配置 Napcat
 
-  2. --qq \"123456789\": 传入docker安装时的QQ号
+  3. `--proxy` [0-6]: 指定下载时使用的代理服务器序号, Docker安装可选0-7, shell安装可选0-5
 
-  3. --mode [ws|reverse_ws|reverse_http]: 传入docker安装时的运行模式
-
-  4. --confirm: 传入docker安装时的是否确认执行安装
-
-  5. --proxy [0|1|2|3|4|5|6]: 传入代理, 0为不使用代理, 1为使用内置的第一个,不支持自定义, docker安装可选0-7, shell安装可选0-5
-
-  6. --cli [y/n]: shell安装时是否安装cli
-
-  7. --force: 传入则执行shell强制重装
+  4. `--force` 传入则执行shell强制重装
 
 </details>
 
