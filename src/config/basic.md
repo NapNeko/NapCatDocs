@@ -53,13 +53,11 @@
 
 > 注：WebUI 自 v4.4 版本后不支持 `prefix` 配置.
 
-## 通过 WebUI 配置 OneBot 服务  <Badge type="tip" text="Framework Vesion" />
+## 通过 TUI-CLI 配置 OneBot 服务  <Badge type="tip" text="Shell Vesion" />
 
-1. 登录后打开 QQ 设置进入 NapCat 选择夹.
- 
-2. 点击进入 WebUI 进行查看.
+<mark>**前置条件**，使用Shell安装时同意安装**TUI-CLI**或者使用--cli y参数详见[Shell安装](/guide/boot/Shell#napcat-installer-linux一键使用脚本-支持ubuntu-20-debian-10-centos9) <Badge type="tip" text="recommend" />)</mark>   
 
-3. 启动与配置需要的网络服务以完成对接.
+只需要你在终端中输入 `sudo napcat` 即可进入 TUI-CLI 界面.
 
 ## 通过 文件 配置OneBot服务 <Badge type="tip" text="Any Vesion" />
 
