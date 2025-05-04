@@ -38,7 +38,34 @@ NapCatWinBootMain.exe 10001
 :::
 
 ## NapCat.Windows 可视化管理工具
-可后台托盘 多账户配置
+- [x] **安装简单**: 单EXE文件，无需安装任何依赖  
+- [x] **界面美观**: 使用 Fluent Design System 设计  
+- [x] **功能丰富**: 支持创建配置文件、管理配置文件、一键启动/停止/重启  
+- [x] **自动更新**: 支持自动检查 NapCatQQ 更新，一键更新  
+- [x] **多账户管理**: 支持同时登录和管理多个QQ账号，轻松切换不同账户  
+- [x] **后台托管**: 可最小化到系统托盘运行，不占用任务栏空间，支持后台静默运行  
+- [x] **引导安装**: 提供QQ和NapCatQQ的安装引导，自动检测并指导完成必要环境配置
+
+<details>
+  <summary>软件截图</summary>
+  
+  ![ncd_01.png](/assets/boot/ncd/ncd_01.png)
+
+  ![ncd_02.png](/assets/boot/ncd/ncd_02.png)
+
+  ![ncd_03.png](/assets/boot/ncd/ncd_03.png)
+
+  ![ncd_04.jpg](/assets/boot/ncd/ncd_04.jpg)
+
+  ![ncd_05.jpg](/assets/boot/ncd/ncd_05.jpg)
+
+  ![ncd_06.png](/assets/boot/ncd/ncd_06.png)
+
+  ![ncd_07.png](/assets/boot/ncd/ncd_07.png)
+
+  ![ncd_08.png](/assets/boot/ncd/ncd_08.png)
+
+</details>
 
 [NapCatQQ-Desktop](https://github.com/NapNeko/NapCatQQ-Desktop)
 
