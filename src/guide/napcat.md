@@ -1,6 +1,6 @@
 # NapCat
 <div style="display: flex; justify-content: center;">
-  <img src="/assets/newnewlogo.png" alt="description" width="300" height="300"/>
+  <img src="/assets/logos/napcat_8.png" alt="description" width="300" height="300"/>
 </div>
 
 ## 欢迎回家!
