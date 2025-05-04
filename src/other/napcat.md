@@ -1,5 +1,6 @@
 # Logos
 
+![napcat](/assets/newnewlogo.png)
 ![napcat](/assets/newlogo.png)
 ![napcat](/assets/logos/napcat_3.png)
 ![napcat](/assets/logos/napcat_0.png)
