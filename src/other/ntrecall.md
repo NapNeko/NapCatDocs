@@ -49,7 +49,7 @@
 
 这里有两个方案可以选择呢：
 
-1. 手动解协议方案💟
+1. 手动解协议方案(js/native hook隔离逻辑)💟
 
    根据经验，撤回的sysmsg可以通过ipc拿到协议包，或者像napcat一样注册listener直接获取sysmsg协议包。
 
@@ -59,7 +59,7 @@
 
    当然也可以对前端随便加，爱怎么改就怎么改
 
-2. node native模块方案💕
+2. node native模块方案(js/native hook需要通讯)💕
 
    可以写成node native模块，提取撤回的结构体数据。
 
@@ -67,10 +67,13 @@
 
    然后就和上面一样了
 
-3. 动态模块/patch方案💝
-   写成这个后拦截这部分，需要从外部获取msgService（通过napi操作和Hook操作）。
+3. 动态模块/patch方案(仅native hook)💝
 
-   获取到msgService后直接调用它的addLocalGrayTip，就可以添加小灰条通知
+   写成这个后如果需要通知用户消息哪条撤回了
+
+   需要从外部获取msgService（通过napi操作和Hook操作）。
+
+   获取到msgService后直接调用它的addLocalGrayTip，就可以添加小灰条通知,当然你也可以不提示用户哪条消息撤回了这样就不用写了这个了。
 
 ## 优势总结✅
 1. 无需缓存消息，所有数据均保存在 NTQQ 数据库中
