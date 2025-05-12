@@ -3,9 +3,11 @@
 喵呜(困)
 
 本项目是 **[NapCatQQ](https://github.com/NapNeko/NapCatQQ)** 的文档项目, 用于文档的更新, 部署等.
-# Logo
-@Stapxs 与 Ai 共同完成
-
+# Logo 历史
+1. 现成的猫猫
+2. @Stapxs 与 Ai 共同完成
+3. Ai猫猫
+4. 画师完成(Now)
 # Contribution
 
 如果只需要进行简单的修改可以直接修改对应文档的 markdown 源码, 如果修改较为复杂请参考以下步骤.
