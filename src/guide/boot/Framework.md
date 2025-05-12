@@ -1,4 +1,7 @@
 # Framework
+## 使用前警告
+自 QQ 9.9.19 后 LiteLoaderQQNT 维护欠缺, NapCatQQ鼓励用户迁移到Shell版本, 其官方的修补方式与安装方式不再推荐。
+
 ## NapCat.Framerwork.Windows.Once <Badge type="tip" text="recommend" />
 Win一键启动（内置LiteLoader）
 
