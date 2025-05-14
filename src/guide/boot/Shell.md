@@ -78,6 +78,7 @@ NapCatWinBootMain.exe 10001
 安装成功后需要快速登陆同 [NapCat.shell](#napcatshell---win手动启动教程) 方法一 一样
 
 ## NapCat.Installer - Linux一键使用脚本(支持Ubuntu 20+/Debian 10+/Centos9)    <Badge type="tip" text="recommend" /> 
+docker安装卡住的请使用下方项目并自行换源
 
 ::: code-group
 ```bash [通用安装]
