@@ -148,6 +148,23 @@ https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh \
 
 仓库地址: [NapCat.installer](https://github.com/NapNeko/NapCat-Installer)
 
+## NapCat.Linux.Launcher - 新式非入侵式启动器
+1. 不破坏NT自身文件
+2. 缓存与NapCat位于当前工作目录
+3. 简单方便
+4. 更新QQ不会干扰NapCat安装
+5. 可重复运行
+
+```bash
+curl -o napcat.sh https://github.moeyy.xyz/https://raw.githubusercontent.com/NapNeko/napcat-linux-installer/refs/heads/main/install.sh && sudo bash napcat.sh
+```
+
+```bash
+curl -o napcat.sh https://raw.githubusercontent.com/NapNeko/napcat-linux-installer/refs/heads/main/install.sh && sudo bash napcat.sh
+```
+
+[NapCat.Linux.Launcher](https://github.com/NapNeko/napcat-linux-installer)
+
 ## NapCat.Docker - Linux容器化部署 <Badge type="tip" text="recommend" />
 
 仓库地址: [NapCat.Docker](https://github.com/NapNeko/NapCat-Docker)
