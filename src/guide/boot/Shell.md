@@ -22,8 +22,10 @@ launcher-win10.bat 123456
 ## NapCat.Win.一键版本 <Badge type="tip" text="recommend" />
 特殊说明: 一键版仅适用 ```Windows.AMD64``` 无需安装QQ和NapCat 已内置
 
-1. 前往 [NapCatQQ 的 release 页面](https://github.com/NapNeko/NapCatQQ/releases) 下载无头绿色版本解压
-2. 启动对应BAT即可
+1. 前往 [NapCatQQ 的 release 页面](https://github.com/NapNeko/NapCatQQ/releases) 下载 NapCat.Shell.Windows.OneKey.zip 无头绿色版本解压
+2. 点击 NapCatInstaller.exe 等待自动化配置
+3. 进去 NapCat.XXXX.Shell 目录
+4. 启动 napcat.bat
 
 由于上面的包巨大且可能并不适合下载 特此为Win64无头 提供轻量化一键部署方案
 

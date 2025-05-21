@@ -13,8 +13,11 @@ Win一键启动（内置LiteLoader）
 ## NapCat.Win.一键版本 <Badge type="tip" text="recommend" />
 特殊说明: 一键版仅适用 ```Windows.AMD64``` 无需安装QQ和NapCat 已内置
 
-前往Release 下载有头一键版本 然后双击`NapCatWinBootMain.exe` 进入设置即可
-
+1. 前往 [NapCatQQ 的 release 页面](https://github.com/NapNeko/NapCatQQ/releases) 下载 NapCat.Shell.Windows.Framework.zip 有头绿色版本解压
+2. 点击 NapCatInstaller.exe 等待自动化配置
+3. 进去 NapCat.XXXX.Framework 目录
+4. 启动 NapCatWinBootMain.exe
+5. 如果频繁提示 QQ出现损坏请安装一个插件 [LiteLoaderQQNT-Kill-Update](https://github.com/xh321/LiteLoaderQQNT-Kill-Update)
 
 ## NapCat.Framework - 通用性手动教程  <Badge type="tip" text="recommend" />
 
