@@ -6,26 +6,26 @@
 
 ## 第一步 找找线索🔍
 
-打开IDA Pro把wrapper.node丢进去，先去吃个饭吧，饿死了
+打开 IDA Pro 把 wrapper.node 丢进去，先去吃个饭吧，饿死了
 
-回来后打开string view看看
+回来后打开 string view 看看
 
-根据经验，撤回的英文嘛，要么是recall要么是revoke呢。
+根据经验，撤回的英文嘛，要么是 recall 要么是 revoke 呢。
 
-字符串里有"do"之类的不是下发通知，是客户端主动发送撤回请求哦。
+字符串里有 "do" 之类的不是下发通知，是客户端主动发送撤回请求哦。
 
-其中相关的包括上面的trpc什么什么的(了解协议的小伙伴应该知道)
+其中相关的包括上面的 trpc 什么什么的（了解协议的小伙伴应该知道）
 
 ![recall](/assets/recall/1.png)
 
-"on grp recall"和"on c2c recall"，这个看起来超级可疑的
+"on grp recall" 和 "on c2c recall"，这个看起来超级可疑的
 
 ## 第二步 验证思路💭
 
-于是呢，我们找到xref "on grp recall"，跳到目标函数
+于是呢，我们找到 xref "on grp recall"，跳到目标函数
 ![recall](/assets/recall/2.png)
 
-然后对这部分打个断点，发现撤回的时候果然触发了这部分代码！
+然后对这部分打个断点，发现撤回的时候果然触发了这部分代码!
 
 ![recall](/assets/recall/3.png)
 
@@ -35,45 +35,45 @@
 
 猜测NTQQ撤回逻辑很简单嘛，肯定包括删除数据库、中断图片文件请求、回收一切相关的东西呀。
 
-为了阻止这些事情发生，我们要让recall逻辑走错路线，比如让它判断不出这是recall，或者给它填充错误的内存数据。
+为了阻止这些事情发生，我们要让 recall 逻辑走错路线，比如让它判断不出这是 recall，或者给它填充错误的内存数据。
 
 ![recall](/assets/recall/4.png)
-我选了两处地方，第一处把jnbe改成jbe(我实验的这个)，第二处也是同理，任意反转一处逻辑应该就行了。
+我选了两处地方，第一处把 jnbe 改成 jbe（我实验的这个），第二处也是同理，任意反转一处逻辑应该就行了。
 
 ![recall](/assets/recall/5.png)
 直接右键汇编 让逻辑反过来，同时保持字节数一致，这样就完成反撤回消息 此时可进行测试
 
 ## 思考之后🤔
 
-但是有个问题，如果这样破坏了recall逻辑，我怎么知道谁撤回了消息呀？我也想区分哪条撤回了
+但是有个问题，如果这样破坏了 recall 逻辑，我怎么知道谁撤回了消息呀？我也想区分哪条撤回了
 
 这里有两个方案可以选择呢：
 
-1. 手动解协议方案(js/native hook隔离逻辑)💟
+1. 手动解协议方案（js/native hook隔离逻辑）💟
 
-   根据经验，撤回的sysmsg可以通过ipc拿到协议包，或者像napcat一样注册listener直接获取sysmsg协议包。
+   根据经验，撤回的 sysmsg 可以通过 ipc 拿到协议包，或者像 napcat 一样注册 listener 直接获取 sysmsg 协议包。
 
-   解完协议后，可以调用QQ自己的api去获取撤回消息（因为我们阻止了删除数据库）。
+   解完协议后，可以调用 QQ 自己的 API 去获取撤回消息（因为我们阻止了删除数据库）。
 
-   如果想要通知，可以调用msgService的addLocalGrayTip添加小灰条提示
+   如果想要通知，可以调用 msgService 的 addLocalGrayTip 添加小灰条提示
 
    当然也可以对前端随便加，爱怎么改就怎么改
 
-2. node native模块方案(js/native hook需要通讯)💕
+2. node native 模块方案（js/native hook 需要通讯）💕
 
-   可以写成node native模块，提取撤回的结构体数据。
+   可以写成 node native 模块，提取撤回的结构体数据。
 
-   启动时注册一个js callback，撤回时native调用callback就能拿到相关结构
+   启动时注册一个js callback，撤回时 native 调用 callback 就能拿到相关结构
 
    然后就和上面一样了
 
-3. 动态模块/patch方案(仅native hook)💝
+3. 动态模块 /patch 方案（仅 native hook）💝
 
    写成这个后如果需要通知用户消息哪条撤回了
 
-   需要从外部获取msgService（通过napi操作和Hook操作）。
+   需要从外部获取 msgService（通过 napi 操作和 Hook 操作）。
 
-   获取到msgService后直接调用它的addLocalGrayTip，就可以添加小灰条通知,当然你也可以不提示用户哪条消息撤回了这样就不用写了这个了。
+   获取到 msgService 后直接调用它的 addLocalGrayTip，就可以添加小灰条通知,当然你也可以不提示用户哪条消息撤回了这样就不用写了这个了。
 
 ## 优势总结✅
 1. 无需缓存消息，所有数据均保存在 NTQQ 数据库中

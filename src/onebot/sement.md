@@ -40,13 +40,13 @@ interface OB11MessageData {
 
 ### 2. @提及 (at)
 
-用于在消息中@特定用户或全体成员。
+用于在消息中 @ 特定用户或全体成员。
 
 **发送时字段**:
-- `qq`: 要@的QQ号，使用"all"表示@全体成员
+- `qq`: 要 @ 的 QQ 号，使用 "all" 表示 @全体成员
 
 **接收时字段**:
-- `qq`: 被@的QQ号或"all"
+- `qq`: 被 @ 的 QQ 号或 "all"
 
 ```typescript
 {
@@ -62,10 +62,10 @@ interface OB11MessageData {
 用于回复特定消息。
 
 **发送时字段**:
-- `id`: 被回复消息的唯一ID
+- `id`: 被回复消息的唯一 ID
 
 **接收时字段**:
-- `id`: 被回复消息的唯一ID
+- `id`: 被回复消息的唯一 ID
 
 ```typescript
 {
@@ -85,10 +85,10 @@ interface OB11MessageData {
 用于发送QQ内置表情。
 
 **发送时字段**:
-- `id`: 表情ID
+- `id`: 表情 ID
 
 **接收时字段**:
-- `id`: 表情ID
+- `id`: 表情 ID
 - `raw`: 表情原始数据
 - `resultId`: 骰子或石头剪刀布结果ID
 - `chainCount`: 连续发送次数
@@ -110,7 +110,7 @@ interface OB11MessageData {
 用于发送QQ商城表情。
 
 **发送时字段**:
-- `emoji_id`: 表情ID
+- `emoji_id`: 表情 ID
 - `emoji_package_id`: 表情包ID
 - `key`: 表情key
 - `summary`: 表情名称
@@ -118,7 +118,7 @@ interface OB11MessageData {
 **接收时字段**:
 - 通常转换为image类型，包含额外字段:
   - `key`: 表情key
-  - `emoji_id`: 表情ID
+  - `emoji_id`: 表情 ID
   - `emoji_package_id`: 表情包ID
 
 ```typescript
@@ -177,11 +177,11 @@ interface OB11MessageData {
 
 **发送时字段**:
 - `type`: 戳一戳类型
-- `id`: 戳一戳ID
+- `id`: 戳一戳 ID
 
 **接收时字段**:
 - `type`: 戳一戳类型
-- `id`: 戳一戳ID
+- `id`: 戳一戳 ID
 
 ```typescript
 {
@@ -202,21 +202,21 @@ interface OB11MessageData {
 用于发送图片。
 
 **发送时字段**:
-- `file`: 图片文件路径、URL或Base64编码
-- `url`: 图片URL(可选)
+- `file`: 图片文件路径、URL 或 Base64 编码
+- `url`: 图片 URL(可选)
 - `summary`: 图片描述(可选)
 - `sub_type`: 图片子类型(可选)
 
 **接收时字段**:
 - `file`: 图片文件名
-- `url`: 图片在线URL
+- `url`: 图片在线 URL
 - `summary`: 图片描述
 - `sub_type`: 图片子类型
 - `file_size`: 文件大小(字节)
 - 如果是商城表情转换而来，还会包含：
-  - `key`: 表情key
-  - `emoji_id`: 表情ID
-  - `emoji_package_id`: 表情包ID
+  - `key`: 表情 key
+  - `emoji_id`: 表情 ID
+  - `emoji_package_id`: 表情包 ID
 
 ```typescript
 {
@@ -239,7 +239,7 @@ interface OB11MessageData {
 用于发送语音消息。
 
 **发送时字段**:
-- `file`: 语音文件路径、URL或Base64编码
+- `file`: 语音文件路径、URL 或 Base64 编码
 
 **接收时字段**:
 - `file`: 语音文件标识
@@ -262,12 +262,12 @@ interface OB11MessageData {
 用于发送视频。
 
 **发送时字段**:
-- `file`: 视频文件路径、URL或Base64编码
+- `file`: 视频文件路径、URL 或 Base64 编码
 - `thumb`: 视频缩略图(可选)
 
 **接收时字段**:
 - `file`: 视频文件标识
-- `url`: 视频在线URL
+- `url`: 视频在线 URL
 - `file_size`: 文件大小(字节)
 
 ```typescript
@@ -287,12 +287,12 @@ interface OB11MessageData {
 用于发送文件。
 
 **发送时字段**:
-- `file`: 文件路径、URL或Base64编码
+- `file`: 文件路径、URL 或 Base64 编码
 - `name`: 文件名(可选)
 
 **接收时字段**:
 - `file`: 文件名
-- `file_id`: 文件ID
+- `file_id`: 文件 ID
 - `file_size`: 文件大小(字节)
 
 ```typescript
@@ -315,10 +315,10 @@ interface OB11MessageData {
 用于发送JSON格式的卡片消息。
 
 **发送时字段**:
-- `data`: JSON字符串或对象
+- `data`: JSON 字符串或对象
 
 **接收时字段**:
-- `data`: JSON数据
+- `data`: JSON 数据
 
 ```typescript
 {
@@ -331,13 +331,13 @@ interface OB11MessageData {
 
 ### 2. 音乐分享 (music)
 
-用于分享音乐，**仅支持发送，接收时会转换为json类型**。
+用于分享音乐，**仅支持发送，接收时会转换为 json 类型**。
 
 **发送时字段**:
 - `type`: 音乐平台(`qq`、`163`、`kugou`、`kuwo`、`migu`、`custom`)
-- `id`: 音乐ID(平台非custom时必填)
-- `url`: 音乐链接(custom时必填)
-- `image`: 封面图片(custom时必填)
+- `id`: 音乐 ID(平台非 custom 时必填)
+- `url`: 音乐链接(custom 时必填)
+- `image`: 封面图片(custom 时必填)
 - `singer`: 歌手(可选)
 - `title`: 标题(可选)
 - `content`: 内容描述(可选)
@@ -365,7 +365,7 @@ interface OB11MessageData {
 - `id`: 转发消息ID
 
 **接收时字段**:
-- `id`: 转发消息ID
+- `id`: 转发消息 ID
 - `content`: 转发的消息内容列表(仅当解析转发内容时)
 
 ```typescript

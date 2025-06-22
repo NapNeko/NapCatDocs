@@ -27,7 +27,7 @@
 
 当端口被占用时, 会自动对端口 +1, 直到找到可用端口 (最多尝试 100 次, 失败则会禁用 WebUI), 端口号会在启动日志中显示.
 
-启动后可在启动日志中看到形如 `[WebUi] WebUi Local Panel Url: http://127.0.0.1:6099/webui?token=xxxx` 的 token 信息.
+启动后可在启动日志中看到形如 `[WebUI] WebUI Local Panel Url: http://127.0.0.1:6099/webui?token=xxxx` 的 token 信息.
 
 也可打开 `webui.json` 文件，在其中找到token。(使用 NapCat.Installer - Linux 一键脚本安装时, 该文件位于 `/opt/QQ/resources/app/app_launcher/napcat/config/webui.json`)
 ::: code-group
@@ -55,7 +55,7 @@
 
 ## 通过 TUI-CLI 配置 OneBot 服务  <Badge type="tip" text="Shell Vesion" />
 
-<mark>**前置条件**，使用Shell安装时同意安装**TUI-CLI**或者使用--cli y参数详见[Shell安装](/guide/boot/Shell#napcat-installer-linux一键使用脚本-支持ubuntu-20-debian-10-centos9) <Badge type="tip" text="recommend" />)</mark>   
+<mark>**前置条件**，使用 Shell 安装时同意安装 **TUI-CLI** 或者使用 --cli y 参数详见[Shell 安装](/guide/boot/Shell#napcat-installer-linux一键使用脚本-支持ubuntu-20-debian-10-centos9) <Badge type="tip" text="recommend" />)</mark>   
 
 只需要你在终端中输入 `sudo napcat` 即可进入 TUI-CLI 界面.
 
@@ -65,11 +65,11 @@
 
 <mark>v4.5.3 后支持载入 ./config/onebot11.json 作为默认配置</mark>
 
-该配置文件名为 ``` ./config/onebot11_xxxx.json ``` 其中xxxx为对应QQ账户
+该配置文件名为 ``` ./config/onebot11_xxxx.json ``` 其中 xxxx 为对应 QQ 账户
 
 ::: code-group
 
-```json5 [HTTP服务端]
+```json5 [HTTP 服务端]
 {
   "network": {
     // Http服务器组 可以配置多个 这里演示为一个
@@ -96,7 +96,7 @@
 }
 ```
 
-```json5 [HTTP客户端]
+```json5 [HTTP 客户端]
 {
   "network": {
     "httpServers": [],
@@ -121,7 +121,7 @@
 }
 ```
 
-```json5 [WS服务端]
+```json5 [WS 服务端]
 {
   "network": {
     "httpServers": [],
@@ -148,7 +148,7 @@
   "parseMultMsg": false
 }
 ```
-```json5 [WS客户端]
+```json5 [WS 客户端]
 {
   "network": {
     "httpServers": [],

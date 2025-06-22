@@ -39,7 +39,7 @@
 4. 添加bin目录到系统环境变量 不会可以搜索系统设置环境变量
 5. 注意安装完成后可能需要<mark>重启</mark>
 
-::: tip 如果有其他程序也需要使用 FFmpeg
+::: Tips 如果有其他程序也需要使用 FFmpeg
 如果其他程序支持手动选择 FFmpeg 位置，只需配置为 NapCat 所使用的 FFmpeg 即可。
 
 如果其他程序不支持手动选择 FFmpeg 位置，只需将 FFmpeg 的 `bin` 目录注册到系统的 `PATH` 变量中（可参考 [此教程](https://zhuanlan.zhihu.com/p/595750538#:~:text=Step%203%3A%20%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%20Path%20%E7%9A%84%E6%B7%BB%E5%8A%A0)）即可。
@@ -51,7 +51,7 @@
 
 请使用你所使用的系统的包管理器直接安装 `ffmpeg` 即可正常使用。
 
-#### macOS 系统
+#### MacOS 系统
 
 由于系统存在沙盒机制，无法运行外部程序，因此暂不支持。
 
@@ -63,8 +63,8 @@
 
 #### 配置 PacketBackend (Native)
 
-:::tip 
-NapCat 3.6.0及以后的版本在Linux平台 (amd64, arm64), MacOS平台(amd64, arm64)，Windows平台 (amd64) **已内置 PacketBackend 实现** ，您**无需进行额外的配置**即可享受DLC的欢乐 (/≧▽≦)/
+:::Tips 
+NapCat 3.6.0 及以后的版本在 Linux 平台 (amd64, arm64), MacOS平台(amd64, arm64)，Windows平台 (amd64) **已内置 PacketBackend 实现** ，您**无需进行额外的配置**即可享受 DLC 的欢乐 (/≧▽≦)/
 :::
 
 ### 当前支持版本
@@ -83,8 +83,8 @@ NapCat 3.6.0及以后的版本在Linux平台 (amd64, arm64), MacOS平台(amd64, 
 | 支持 | 功能       |
 |:--:|----------|
 | ✅  | 设置群头衔    |
-| ✅  | 发送poke   |
-| ✅  | 独立Rkey获取 |
+| ✅  | 发送 poke   |
+| ✅  | 独立 Rkey 获取 |
 | ✅  | 陌生人状态获取  |
 | ✅  | 伪造合并转发   |
 | ✅  | 文件直链获取   |
@@ -92,4 +92,4 @@ NapCat 3.6.0及以后的版本在Linux平台 (amd64, arm64), MacOS平台(amd64, 
 | ✅  | 群签到      |
 | ✅  | 小程序卡片分享  |
 | ✅  | AI 声聊    |
-| ✅  | 高性能OCR  |
+| ✅  | 高性能 OCR  |

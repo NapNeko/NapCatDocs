@@ -2,9 +2,9 @@
 
 此处仅包含 NapCatQQ 中的扩展接口
 
-- [onebot11接口文档](https://github.com/botuniverse/onebot-11/blob/master/api/public.md)
-- [gocqhttp接口文档](https://docs.go-cqhttp.org/api)
-- [Apifox接口文档](https://napcat.apifox.cn)
+- [onebot11 接口文档](https://github.com/botuniverse/onebot-11/blob/master/api/public.md)
+- [gocqhttp 接口文档](https://docs.go-cqhttp.org/api)
+- [Apifox 接口文档](https://napcat.apifox.cn)
 
 ## set_group_sign - 群签到 <Badge type="info" text="native" />
 
@@ -126,8 +126,8 @@
 
 | 字段名            | 数据类型 | 说明             |
 | ----------------- | -------- | ---------------- |
-| `categoryId`      | number   | 分类ID           |
-| `categorySortId`  | number   | 分类排序ID       |
+| `categoryId`      | number   | 分类 ID           |
+| `categorySortId`  | number   | 分类排序 ID       |
 | `categoryName`    | string   | 分类名称         |
 | `categoryMbCount` | number   | 分类内好友总数量 |
 | `onlineCount`     | number   | 在线数量         |
@@ -137,7 +137,7 @@
 
 | 字段名           | 数据类型                  | 说明     |
 | ---------------- | ------------------------- | -------- |
-| `qid`            | string                    | QQID     |
+| `qid`            | string                    | QQ ID     |
 | `longNick`       | string                    | 签名     |
 | `birthday_year`  | number                    | 生日     |
 | `birthday_month` | number                    | 生日     |
@@ -149,11 +149,11 @@
 | `categoryId`     | number                    | 分类     |
 | `richTime`       | number                    |          |
 | `richBuffer`     | `{[key: string]: number}` |          |
-| `uid`            | string                    | QQ号     |
-| `uin`            | string                    | QQ号     |
+| `uid`            | string                    | QQ 号     |
+| `uin`            | string                    | QQ 号     |
 | `nick`           | string                    | 昵称     |
 | `remark`         | string                    | 备注     |
-| `user_id`        | number                    | QQ号     |
+| `user_id`        | number                    | QQ 号     |
 | `nickname`       | string                    | 昵称     |
 | `level`          | number                    | QQ等级   |
 
@@ -175,7 +175,7 @@
 
 | 字段名    | 数据类型 | 默认值 | 说明   |
 | --------- | -------- | ------ | ------ |
-| `file_id` | string   | -      | 文件ID |
+| `file_id` | string   | -      | 文件 ID |
 
 ### 响应数据
 
@@ -193,8 +193,8 @@
 
 | 字段名       | 数据类型 | 默认值 | 说明   |
 | ------------ | -------- | ------ | ------ |
-| `message_id` | number   | -      | 消息ID |
-| `user_id`    | number   | -      | QQ号   |
+| `message_id` | number   | -      | 消息 ID |
+| `user_id`    | number   | -      | QQ 号   |
 
 ### 响应数据
 
@@ -206,7 +206,7 @@
 
 | 字段名       | 数据类型 | 默认值 | 说明   |
 | ------------ | -------- | ------ | ------ |
-| `message_id` | number   | -      | 消息ID |
+| `message_id` | number   | -      | 消息 ID |
 | `group_id`   | number   | -      | 群号   |
 
 ### 响应数据
@@ -233,8 +233,8 @@
 
 | 字段名       | 数据类型 | 默认值 | 说明   |
 | ------------ | -------- | ------ | ------ |
-| `message_id` | number   | -      | 消息ID |
-| `emoji_id`   | string   | -      | 表情ID |
+| `message_id` | number   | -      | 消息 ID |
+| `emoji_id`   | string   | -      | 表情 ID |
 
 ### 响应数据
 
@@ -247,7 +247,7 @@
 | 字段名         | 数据类型 | 默认值 | 说明                                                                                        |
 | -------------- | -------- | ------ | ------------------------------------------------------------------------------------------- |
 | `message_type` | string   | -      | 消息类型，支持 `private`、`group`，分别对应私聊、群组，如不传入，则根据传入的 *_id 参数判断 |
-| `user_id`      | number   | -      | QQ号                                                                                        |
+| `user_id`      | number   | -      | QQ 号                                                                                        |
 | `group_id`     | number   | -      | 群号                                                                                        |
 | `messages`      | node[]   | -      | 消息,需要是 node, 详见 [node](../msg.md#node)                                               |
 
@@ -255,7 +255,7 @@
 
 | 字段名       | 数据类型 | 说明   |
 | ------------ | -------- | ------ |
-| `message_id` | number   | 消息ID |
+| `message_id` | number   | 消息 ID |
 | `res_id`     | string   | resid  |
 
 ## mark_private_msg_as_read - 设置私聊已读 <Badge type="info" text="normal" />
@@ -264,7 +264,7 @@
 
 | 字段名    | 数据类型 | 默认值 | 说明 |
 | --------- | -------- | ------ | ---- |
-| `user_id` | number   | -      | QQ号 |
+| `user_id` | number   | -      | QQ 号 |
 
 ### 响应数据
 
@@ -288,7 +288,7 @@
 
 | 字段名         | 数据类型 | 默认值 | 说明     |
 | -------------- | -------- | ------ | -------- |
-| `user_id`      | string   | -      | QQ号     |
+| `user_id`      | string   | -      | QQ 号     |
 | `message_seq`  | string   | '0'    | 起始信息 |
 | `count`        | number   | 20     | 数量     |
 | `reverseOrder` | boolean  | false  | 倒序     |
@@ -332,12 +332,12 @@
 
 | 字段名           | 数据类型 | 说明                                                                                                                                      |
 | ---------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `lastestMsg`     | message  | 消息数组,参考 [onebot11](https://github.com/botuniverse/onebot-11/blob/master/api/public.md#get_msg-%E8%8E%B7%E5%8F%96%E6%B6%88%E6%81%AF) |
-| `peerUin`        | number   | QQ号                                                                                                                                      |
+| `lastestMsg`     | message  | 消息数组，参考 [onebot11](https://github.com/botuniverse/onebot-11/blob/master/api/public.md#get_msg-%E8%8E%B7%E5%8F%96%E6%B6%88%E6%81%AF) |
+| `peerUin`        | number   | QQ 号                                                                                                                                      |
 | `remark`         | string   | QQ备注                                                                                                                                    |
 | `msgTime`        | string   | 消息时间                                                                                                                                  |
 | `chatType`       | number   | 聊天类型                                                                                                                                  |
-| `msgId`          | string   | 消息ID                                                                                                                                    |
+| `msgId`          | string   | 消息 ID                                                                                                                                    |
 | `sendNickName`   | string   | QQ昵称                                                                                                                                    |
 | `sendMemberName` | string   | 群昵称                                                                                                                                    |
 | `peerName`       | string   | QQ昵称                                                                                                                                    |
@@ -372,7 +372,7 @@
 
 | 字段名           | 数据类型 | 说明     |
 | ---------------- | -------- | -------- |
-| `uid`            | string   | QQ号     |
+| `uid`            | string   | QQ 号     |
 | `src`            | number   | 来源     |
 | `latestTime`     | number   |          |
 | `count`          | number   |          |
@@ -409,7 +409,7 @@
 
 | 字段名 | 数据类型 | 说明 |
 | ------ | ------ | ------ |
-| `character` | string | AI角色编号，必填 |
+| `character` | string | AI 角色编号，必填 |
 | `group_id` | number | 群号，必填 |
 | `text` | string | 需要转成语音的文字，必填 |
 
@@ -432,16 +432,16 @@
 
 | 字段名 | 数据类型 | 说明 |
 |------------|--------|-----------|
-| `type` | string | AI分类，有'推荐','古风','现代' |
-|`characters`| list[] | AI角色数据 |
+| `type` | string | AI 分类，有'推荐','古风','现代' |
+|`characters`| list[] | AI 角色数据 |
 
 #### character[]
 
 | 字段名 | 数据类型 | 说明 |
 |------|------|------|
-|`character_id` | string | AI角色编号 |
-|`character_name`| string | AI角色名称 |
-|`preview_url` | string | AI角色声音预览url|
+|`character_id` | string | AI 角色编号 |
+|`character_name`| string | AI 角色名称 |
+|`preview_url` | string | AI 角色声音预览url|
 
 ## send_group_ai_record - 群聊发送AI语音  <Badge type="info" text="native" />
 
@@ -449,7 +449,7 @@
 
 | 字段名 | 数据类型 | 说明 |
 | ------ | ------ | ------ |
-| `character` | string | AI角色编号，必填 |
+| `character` | string | AI 角色编号，必填 |
 | `group_id` | number | 群号，必填 |
 | `text` | string | 需要转成语音的文字，必填 |
 
