@@ -37,10 +37,10 @@ new SendGroupMsg(obCore, core)
 // 创建并调用 NapCat OneBot Action 用于发送消息接口，adapter 固定（此值固定为 plugin 用于标记适配器）
 
 obCore.apis.MsgApi.createSendElements()
-// 调用 NapCat OneBot Api 用于创建消息 从OneBot构建QQNT内部消息
+// 调用 NapCat OneBot Api 用于创建消息 从 OneBot 构建 QQNT 内部消息
 ```
 
-前两种方法比较常用，obCore.apis 主要用于 OB->NT 消息内容转换，实际内容不多。 
+前两种方法比较常用，obCore.apis 主要用于 OB -> NT 消息内容转换，实际内容不多。 
 
 下面为 发送 ping 回应 ping 的群消息示例 `/src/plugin/index.ts` 
 ```typescript

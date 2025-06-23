@@ -80,7 +80,7 @@ interface OB11MessageData {
 
 ## 表情类消息段
 
-### 1. QQ表情 (face)
+### 1. QQ 表情 (face)
 
 用于发送QQ内置表情。
 
@@ -90,7 +90,7 @@ interface OB11MessageData {
 **接收时字段**:
 - `id`: 表情 ID
 - `raw`: 表情原始数据
-- `resultId`: 骰子或石头剪刀布结果ID
+- `resultId`: 骰子或石头剪刀布结果 ID
 - `chainCount`: 连续发送次数
 
 ```typescript
@@ -111,15 +111,15 @@ interface OB11MessageData {
 
 **发送时字段**:
 - `emoji_id`: 表情 ID
-- `emoji_package_id`: 表情包ID
-- `key`: 表情key
+- `emoji_package_id`: 表情包 ID
+- `key`: 表情 key
 - `summary`: 表情名称
 
 **接收时字段**:
 - 通常转换为image类型，包含额外字段:
-  - `key`: 表情key
+  - `key`: 表情 key
   - `emoji_id`: 表情 ID
-  - `emoji_package_id`: 表情包ID
+  - `emoji_package_id`: 表情包 ID
 
 ```typescript
 {

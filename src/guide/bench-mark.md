@@ -1,5 +1,5 @@
 ## 测试环境
-::: Details 测试环境
+::: details 测试环境
 ```
 测试版本：NapCat Shell V4.2.18
 操作系统：Windows 11 24H2

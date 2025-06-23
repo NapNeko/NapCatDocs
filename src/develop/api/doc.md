@@ -61,7 +61,7 @@
 | --------- | -------- | -------- |
 | `errCode` | number   | 错误信息 |
 | `errMsg`  | string   | 错误信息 |
-| `arkJson` | string   | 卡片JSON |
+| `arkJson` | string   | 卡片 JSON |
 
 ## ArkShareGroup - 获取推荐群聊卡片 <Badge type="info" text="normal" />
 
@@ -75,7 +75,7 @@
 
 | 字段名 | 数据类型 | 说明     |
 | ------ | -------- | -------- |
-| `无`   | string   | 卡片JSON |
+| `无`   | string   | 卡片 JSON |
 
 ## get_robot_uin_range - 获取机器人账号范围 <Badge type="info" text="normal" />
 
@@ -155,7 +155,7 @@
 | `remark`         | string                    | 备注     |
 | `user_id`        | number                    | QQ 号     |
 | `nickname`       | string                    | 昵称     |
-| `level`          | number                    | QQ等级   |
+| `level`          | number                    | QQ 等级   |
 
 ## set_qq_avatar - 设置QQ头像 <Badge type="info" text="normal" />
 
@@ -334,13 +334,13 @@
 | ---------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | `lastestMsg`     | message  | 消息数组，参考 [onebot11](https://github.com/botuniverse/onebot-11/blob/master/api/public.md#get_msg-%E8%8E%B7%E5%8F%96%E6%B6%88%E6%81%AF) |
 | `peerUin`        | number   | QQ 号                                                                                                                                      |
-| `remark`         | string   | QQ备注                                                                                                                                    |
+| `remark`         | string   | QQ 备注                                                                                                                                    |
 | `msgTime`        | string   | 消息时间                                                                                                                                  |
 | `chatType`       | number   | 聊天类型                                                                                                                                  |
 | `msgId`          | string   | 消息 ID                                                                                                                                    |
-| `sendNickName`   | string   | QQ昵称                                                                                                                                    |
+| `sendNickName`   | string   | QQ 昵称                                                                                                                                    |
 | `sendMemberName` | string   | 群昵称                                                                                                                                    |
-| `peerName`       | string   | QQ昵称                                                                                                                                    |
+| `peerName`       | string   | QQ 昵称                                                                                                                                    |
 
 ## _mark_all_as_read - 标记所有已读 <Badge type="info" text="normal" />
 
@@ -441,7 +441,7 @@
 |------|------|------|
 |`character_id` | string | AI 角色编号 |
 |`character_name`| string | AI 角色名称 |
-|`preview_url` | string | AI 角色声音预览url|
+|`preview_url` | string | AI 角色声音预览 url|
 
 ## send_group_ai_record - 群聊发送AI语音  <Badge type="info" text="native" />
 
