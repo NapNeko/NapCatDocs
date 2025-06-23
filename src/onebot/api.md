@@ -1,6 +1,6 @@
 # NapCatQQ API 接口文档
 
-以下仅仅是Api接口列表 一览
+以下仅仅是 API 接口列表 一览
 
 详细 NapCatQQ All API 用例参考 <https://napcat.apifox.cn>
 
@@ -17,8 +17,8 @@
 | `set_input_status` | 设置输入状态 | `user_id: number/string`, `event_type: number` |
 | `set_diy_online_status` | 设置自定义在线状态 | `face_id: number/string`, `face_type: number/string`, `wording: string` |
 | `set_online_status` | 设置在线状态 | 根据状态码设置不同的在线状态 |
-| `set_qq_profile` | 设置QQ资料 | 个人资料相关参数 |
-| `set_qq_avatar` | 设置QQ头像 | 头像相关参数 |
+| `set_qq_profile` | 设置 QQ 资料 | 个人资料相关参数 |
+| `set_qq_avatar` | 设置 QQ 头像 | 头像相关参数 |
 | `get_clientkey` | 获取客户端密钥 | 无参数 |
 
 ## 好友相关
@@ -93,8 +93,8 @@
 | `can_send_record` | 检查是否能发送语音 | 无参数 |
 | `get_file` | 获取文件 | `file: string`, `type: string` |
 | `_mark_all_as_read` | 标记所有消息为已读 | 无参数 |
-| `ocr_image` | 图片OCR识别(标准) | `image: string` |
-| `.ocr_image` | 图片OCR识别(增强) | `image: string` |
+| `ocr_image` | 图片 OCR 识别(标准) | `image: string` |
+| `.ocr_image` | 图片 OCR 识别(增强) | `image: string` |
 | `get_recent_contact` | 获取最近联系人 | `count: number/string` |
 | `send_poke` | 发送戳一戳 | 根据不同上下文需要不同参数 |
 | `get_forward_msg` | 获取合并转发消息 | `message_id: string` |
@@ -116,16 +116,16 @@
 | `trans_group_file` | 转发群文件 | `group_id: number/string`, `file_id: string`, `target_group_id: number/string` |
 | `rename_group_file` | 重命名群文件 | `group_id: number/string`, `file_id: string`, `current_parent_directory: string`, `new_name: string` |
 | `upload_private_file` | 上传私聊文件 | `user_id: number/string`, `file: string`, `name: string` |
-| `get_private_file_url` | 获取私聊文件URL | 文件相关参数 |
+| `get_private_file_url` | 获取私聊文件 URL | 文件相关参数 |
 | `download_file` | 下载文件 | `url: string`, `thread_count: number`, `headers: string[]` |
 
 ## AI 相关
 
 | 接口字符串 | 功能 | 参数 |
 |-------|------|------|
-| `get_ai_characters` | 获取AI角色列表 | 无参数 |
-| `get_ai_record` | 获取AI语音 | `character: string`, `group_id: number/string`, `text: string` |
-| `send_group_ai_record` | 发送群AI语音 | `character: string`, `group_id: number/string`, `text: string` |
+| `get_ai_characters` | 获取 AI 角色列表 | 无参数 |
+| `get_ai_record` | 获取 AI 语音 | `character: string`, `group_id: number/string`, `text: string` |
+| `send_group_ai_record` | 发送群 AI 语音 | `character: string`, `group_id: number/string`, `text: string` |
 
 ## 转发与分享
 
@@ -142,26 +142,26 @@
 
 | 接口字符串 | 功能 | 参数 |
 |-------|------|------|
-| `get_cookies` | 获取Cookies | 可选 `domain: string` |
-| `get_csrf_token` | 获取CSRF Token | 无参数 |
+| `get_cookies` | 获取 Cookies | 可选 `domain: string` |
+| `get_csrf_token` | 获取 CSRF Token | 无参数 |
 | `get_credentials` | 获取凭证信息 | 可选 `domain: string` |
 | `get_doubt_friends_add_request` | 获取可疑好友添加请求 | 无参数 |
 | `set_doubt_friends_add_request` | 设置可疑好友添加请求 | 请求相关参数 |
 | `get_stranger_info` | 获取陌生人信息 | `user_id: number/string`, 可选 `no_cache: boolean` |
-| `get_rkey` | 获取Rkey | 无参数 |
+| `get_rkey` | 获取 Rkey | 无参数 |
 | `click_inline_keyboard_button` | 点击内联键盘按钮 | `group_id: number/string`, `bot_appid: string`, `button_id: string`, `callback_data: string`, `msg_seq: string` |
 | `translate_en2zh` | 英文翻译成中文 | `text: string` |
 | `create_collection` | 创建收藏 | 收藏相关参数 |
 | `get_collection_list` | 获取收藏列表 | 无参数 |
 | `fetch_custom_face` | 获取自定义表情 | 表情相关参数 |
 | `nc_get_packet_status` | 获取数据包状态 | 无参数 |
-| `get_robot_uin_range` | 获取机器人UIN范围 | 无参数 |
+| `get_robot_uin_range` | 获取机器人 UIN 范围 | 无参数 |
 | `get_guild_list` | 获取频道列表 | 无参数 |
 | `get_guild_service_profile` | 获取频道资料 | 无参数 |
 | `_get_model_show` | 获取模型展示 | 无参数 |
 | `_set_model_show` | 设置模型展示 | 无参数 |
 | `get_group_msg_history` | 获取群消息历史 | `group_id: number/string`, `count: number` |
-| `check_url_safely` | 检查URL安全性 | `url: string` |
+| `check_url_safely` | 检查 URL 安全性 | `url: string` |
 | `.get_word_slices` | 获取词语切片 | `content: string` |
 | `.handle_quick_operation` | 处理快速操作 | `context: object`, `operation: object` |
 | `send_packet` | 发送数据包 | 数据包相关参数 |

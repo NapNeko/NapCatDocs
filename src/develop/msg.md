@@ -249,7 +249,7 @@
 
 ## node
 
-::: tip
+::: Tips
 `id` 和 `content` 二选一
 :::
 

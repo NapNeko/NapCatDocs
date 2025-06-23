@@ -1,6 +1,6 @@
 # 请求接口兼容情况 <Badge type="tip" text="V4" />
 
-NapCatQQ 实现了Onebot 的大部分 API，对于 API 的详细说明请自行点击导航协议或者链接查看相关实现。
+NapCatQQ 实现了 Onebot 的大部分 API，对于 API 的详细说明请自行点击导航协议或者链接查看相关实现。
 
 详细 NapCatQQ All API 用例参考 <https://napcat.apifox.cn>
 
@@ -108,7 +108,7 @@ NapCatQQ 实现了Onebot 的大部分 API，对于 API 的详细说明请自行�
 | `set_group_sign`               | 群签到               |   ✅   |        |
 | `ArkSharePeer`                 | 推荐联系人/群聊      |   ✅   |         |
 | `ArkShareGroup`                | 推荐群聊             |   ✅   |         |
-| `get_robot_uin_range`          | 获取机器人QQ号区间   |   ✅   |         |
+| `get_robot_uin_range`          | 获取机器人 QQ 号区间   |   ✅   |         |
 | `set_online_status`            | 设置在线状态         |   ✅   |         |
 | `get_friends_with_category`    | 获取好友分类列表     |   ✅   |         |
 | `set_qq_avatar`                | 设置头像             |   ✅   |         |
@@ -136,12 +136,12 @@ NapCatQQ 实现了Onebot 的大部分 API，对于 API 的详细说明请自行�
 | `get_profile_like`             | 获取用户点赞信息   |   ✅   |         |
 | `friend_poke`                  | 私聊戳一戳           |   ✅   |         |
 | `group_poke`                   | 群聊戳一戳           |   ✅   |         |
-| `nc_get_packet_status`         | 获取PacketServer状态 |   ✅   |         |
+| `nc_get_packet_status`         | 获取 PacketServer 状态 |   ✅   |         |
 | `nc_get_user_status`           | 获取陌生人在线状态   |   ✅   |         |
-| `nc_get_rkey`                  | 获取Rkey             |   ✅   |         |
+| `nc_get_rkey`                  | 获取 Rkey             |   ✅   |         |
 | `get_group_shut_list`          | 获取群聊被禁言用户   |   ✅   |           |
 | `get_mini_app_ark`             | 签名小程序卡片        |   ✅   |  如B站分享卡片   |
-| `get_ai_record`                | AI文字转语音         |   ✅    |         |
-| `get_ai_characters`            | 获取AI语音角色列表   |   ✅    |         |
-| `send_group_ai_record`         | 群聊发送AI语音      |   ✅    |         |
+| `get_ai_record`                | AI 文字转语音         |   ✅    |         |
+| `get_ai_characters`            | 获取 AI 语音角色列表   |   ✅    |         |
+| `send_group_ai_record`         | 群聊发送 AI 语音      |   ✅    |         |
 | `send_poke`                    | 群聊/私聊戳一戳      |   ✅    |         |

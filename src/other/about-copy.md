@@ -1,19 +1,19 @@
-# 涉及Copy原理部分分析
-自2024下半部年与某些人切割后，某些人仍然不遵守规范与守则，由某位提供的压缩包，本文对对隔壁框架开发关于PBHook抄袭部分认定
+# 涉及 Copy 原理部分分析
+自 2024 下半部年与某些人切割后，某些人仍然不遵守规范与守则，由某位提供的压缩包，本文对对隔壁框架开发关于 PBHook 抄袭部分认定
 
 文件来源：某群友(某框架群内转发)
 
 文件原始内容：https://share.weiyun.com/vqlePMqd
 
 ## 第一部分 确定程序开发栈
-首先我们对使用ida pro拖入 转到字符串视图 发现大量关于py的字样
+首先我们对使用 ida pro 拖入 转到字符串视图 发现大量关于 py 的字样
 
-我们推测其基于 python+nuikta/pyinstaller 构建的onefile 搜索pyinstaller关键词 确认是pyinstaller
+我们推测其基于 python+nuikta/pyinstaller 构建的 onefile 搜索 pyinstaller 关键词 确认是 pyinstaller
 
-## 第二部分 使用pyinstxtractor工具解压内部文件
+## 第二部分 使用 pyinstxtractor 工具解压内部文件
 使用 https://github.com/extremecoders-re/pyinstxtractor/blob/master/pyinstxtractor.py
 
-解压后文件包括js hook_server 两部分均被混淆 技术栈为frida+websockets
+解压后文件包括 js hook_server 两部分均被混淆 技术栈为 frida + websockets
 
 ## 第三步部分 对JS部分代码抄袭部分确认
 
@@ -97,7 +97,7 @@ main();
 ```
 样本下载: https://share.weiyun.com/n5yKimjk
 
-原始napcat方代码
+原始 napcat 方代码
 
 ```javascript
 let cmd = Memory.readPointer(args[1]).add(32);
@@ -113,18 +113,18 @@ let buffer_len = buffer_end - buffer_start;
 
 对比后发现 buffer_len 对应 _0x15862d = _0x2076b0 - _0x1691a1之类高度一致
 
-其Hook点与NapCat一致 一般来说函数有很多层 很多位置 但选择同样位置的情况很少
+其 Hook 点与 NapCat 一致 一般来说函数有很多层 很多位置 但选择同样位置的情况很少
 
-等等其余代码不再做对比 napcat最早提交时间与2024年10月
+等等其余代码不再做对比 napcat 最早提交时间与 2024 年 10 月
 
 ## 第四部分 补充
-以下是时间与代码证据 有必要该仓库可以public
+以下是时间与代码证据 有必要该仓库可以 public
 
 ![napcat](/data/QQ_1744604365564.png)
 ![napcat](/data/ef69a9b3-c406-43dd-a43f-4a8cc42896f9.png)
 
 ```
-napcat原始仓库 暂未public 但是你仍可以通过反编译moehoo获得napcat逻辑 napcat自3.6.0版本已内置native能力的Hook库 可通过x64dbg ida pro 自行验证 hook点与逻辑
+napcat 原始仓库 暂未 public 但是你仍可以通过反编译 moehoo 获得 napcat 逻辑 napcat 自 3.6.0 版本已内置 native 能力的 Hook 库 可通过 x64dbg ida pro 自行验证 hook 点与逻辑
 
 https://github.com/NapNeko/napcat.packet/blob/main/napcat.packet.old.py
 https://github.com/NapNeko/napcat.packet/blob/main/napcat.packet.py

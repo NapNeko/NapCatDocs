@@ -1,10 +1,10 @@
-# Linux系统设置开机自启动步骤
+# Linux 系统设置开机自启动步骤
 
-本步骤适用于Ubuntu系统，24.04版本测试通过。其它版本未测试。
+本步骤适用于 Ubuntu 系统，24.04 版本测试通过。其它版本未测试。
 
 ### 步骤1：创建服务文件
 
-打开终端，运行以下命令创建一个新的systemd服务文件：
+打开终端，运行以下命令创建一个新的 systemd 服务文件：
 
 ```bash
 sudo nano /etc/systemd/system/napcat.service
@@ -33,11 +33,11 @@ WantedBy=multi-user.target
 
 ### 步骤3：保存并关闭文件
 
-按下 `Ctrl + O`保存，`Ctrl + X`关闭nano编辑器。
+按下 `Ctrl + O` 保存，`Ctrl + X` 关闭 nano 编辑器。
 
-### 步骤4：重新加载systemd守护进程
+### 步骤4：重新加载 systemd 守护进程
 
-更新systemd，以使其识别新创建的服务文件：
+更新 systemd，以使其识别新创建的服务文件：
 
 ```bash
 sudo systemctl daemon-reload
@@ -67,17 +67,17 @@ sudo systemctl status napcat.service
 sudo systemctl start napcat.service
 ```
 
-然后，检查screen会话是否存在：
+然后，检查 screen 会话是否存在：
 
 ```bash
 screen -ls
 ```
 
-你应该会看到名为 `napcat`的会话。
+你应该会看到名为 `napcat` 的会话。
 
 ### 注意事项
 
 - **用户权限**：在服务文件中指定正确的 `User`，确保程序以正确的用户权限运行。
 - **绝对路径**：使用绝对路径（如 `/usr/bin/screen`）确保命令能正确执行。
-- **依赖关系**：如果命令依赖于特定的网络或其他服务，可能需要调整 `After`部分。
-- **日志检查**：如果服务没有按预期运行，可以查看日志：`journalctl -u napcat.service -b`，这里的 `-b`显示上次启动时的日志。
+- **依赖关系**：如果命令依赖于特定的网络或其他服务，可能需要调整 `After` 部分。
+- **日志检查**：如果服务没有按预期运行，可以查看日志：`journalctl -u napcat.service -b`，这里的 `-b` 显示上次启动时的日志。

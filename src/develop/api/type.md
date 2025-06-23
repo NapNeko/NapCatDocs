@@ -76,7 +76,7 @@
 { status: 10, extStatus: 1030, batteryStatus: 0 } 
 ```
 
-### 我crash了
+### 我 crash 了
 
 ```json5
 { status: 10, extStatus: 2019, batteryStatus: 0 } 
