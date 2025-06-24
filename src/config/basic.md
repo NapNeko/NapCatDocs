@@ -2,8 +2,8 @@
 
 <!-- NapCat 的目录保存了配置文件、日志和缓存等信息。 -->
 
-:::warning
-低于 4.4.7 请勿将注释内容写入配置文件, 否则会导致配置文件解析失败, 新版本不受限制.
+::: warning
+低于 v4.4.7 请勿将注释内容写入配置文件，否则会导致配置文件解析失败，新版本不受限制。
 :::
 
 ## 配置网络类型 <Badge type="danger" text="必备知识" />
@@ -17,19 +17,19 @@
 
 ## 通过 WebUI 配置 OneBot 服务  <Badge type="tip" text="Shell Vesion" />
 
-如果你已经启动了 NapCat, 并且有多于 1 个开放端口，则可以通过 WebUI 进行配置.
+如果你已经启动了 NapCat，并且有多于 1 个开放端口，则可以通过 WebUI 进行配置。
 
-默认地址为 `0.0.0.0`, 即监听所有地址. 当配置了不可用的地址时 WebUI 将被禁用.
+默认地址为 `0.0.0.0`，即监听所有地址。当配置了不可用的地址时 WebUI 将被禁用。
 
-默认端口为 `6099`.
+默认端口为 `6099`。
 
-当端口被设置为 `0` 时将禁用 WebUI.
+当端口被设置为 `0` 时将禁用 WebUI。
 
-当端口被占用时, 会自动对端口 +1, 直到找到可用端口 (最多尝试 100 次, 失败则会禁用 WebUI), 端口号会在启动日志中显示.
+当端口被占用时，会自动对端口 +1，直到找到可用端口（最多尝试 100 次，失败则会禁用 WebUI），端口号会在启动日志中显示。
 
-启动后可在启动日志中看到形如 `[WebUI] WebUI Local Panel Url: http://127.0.0.1:6099/webui?token=xxxx` 的 token 信息.
+启动后可在启动日志中看到形如 `[WebUI] WebUI Local Panel Url: http://127.0.0.1:6099/webui?token=xxxx` 的 token 信息。
 
-也可打开 `webui.json` 文件，在其中找到token。(使用 NapCat.Installer - Linux 一键脚本安装时, 该文件位于 `/opt/QQ/resources/app/app_launcher/napcat/config/webui.json`)
+也可打开 `webui.json` 文件，在其中找到token。(使用 NapCat.Installer - Linux 一键脚本安装时，该文件位于 `/opt/QQ/resources/app/app_launcher/napcat/config/webui.json`)
 ::: code-group
 ```json5 [webui.json]
 {
@@ -40,24 +40,24 @@
 }
 ```
 :::
-访问 `http://ip:port/webui/`，然后进行以下操作:
+访问 `http://ip:port/webui/`，然后进行以下操作：
 
-1. 进入 QQ 登录, 点击 `QRCode` 进行二维码登录.
+1. 进入 QQ 登录，点击 `QRCode` 进行二维码登录。
 
-2. 登录成功后, 即可进入网络配置, 点击 "新建" 创建对应的服务器或客户端.(如果是公网部署, 请**务必启用 Token**)
+2. 登录成功后，即可进入网络配置，点击 "新建" 创建对应的服务器或客户端。(如果是公网部署, 请**务必启用 Token**)
 
-3. 请在创建时勾选**保存时启用**, 或者创建完成后手动启用.
+3. 请在创建时勾选**保存时启用**，或者创建完成后手动启用。
 
-4. 访问 `http://ip:port` 检查端口是否正常. (此处的 `port` 指 2 中配置的端口, 请不要与 WebUI 端口混淆)
+4. 访问 `http://ip:port` 检查端口是否正常。(此处的 `port` 指 2 中配置的端口, 请不要与 WebUI 端口混淆)
 
 
-> 注：WebUI 自 v4.4 版本后不支持 `prefix` 配置.
+> 注：WebUI 自 v4.4 版本后不支持 `prefix` 配置。
 
 ## 通过 TUI-CLI 配置 OneBot 服务  <Badge type="tip" text="Shell Vesion" />
 
-<mark>**前置条件**，使用 Shell 安装时同意安装 **TUI-CLI** 或者使用 --cli y 参数详见[Shell 安装](/guide/boot/Shell#napcat-installer-linux一键使用脚本-支持ubuntu-20-debian-10-centos9) <Badge type="tip" text="recommend" />)</mark>   
+<mark>**前置条件**，使用 Shell 安装时同意安装 **TUI-CLI** 或者使用 --cli y 参数详见[Shell 安装](/guide/boot/Shell#napcat-installer-linux一键使用脚本-支持ubuntu-20-debian-10-centos9) <Badge type="tip" text="recommend" />。</mark>   
 
-只需要你在终端中输入 `sudo napcat` 即可进入 TUI-CLI 界面.
+只需要你在终端中输入 `sudo napcat` 即可进入 TUI-CLI 界面。
 
 ## 通过 文件 配置OneBot服务 <Badge type="tip" text="Any Vesion" />
 

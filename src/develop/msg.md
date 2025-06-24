@@ -2,7 +2,7 @@
 
 ## 消息列表
 
-支持使用 `CQ码` 发送
+支持使用 `CQ 码` 发送
 
 标有 `<JSON>` 的表示 收到的时候的消息类型是 `json`
 <!-- | `anonymous`        | 匿名发消息   |   ❌   |   ❌   |                       无法支持                       | -->
@@ -32,7 +32,7 @@
 | `forward`          | 转发消息     |   ✅   |   ✅   |                                                      |
 | `node`             | 转发消息节点 |   ✅   |   ✅   |                                                      |
 | `json`             | `json` 信息  |   ✅   |   ✅   |                                                      |
-| `mface`            | `qq` 表情包  |   ✅   |   ✅   |  以image消息段上报(子类型区分) 支持mface/image消息段发送 |
+| `mface`            | `qq` 表情包  |   ✅   |   ✅   |  以 image 消息段上报(子类型区分) 支持 mface/image 消息段发送 |
 | `file`             | 文件         |   ✅   |   ✅   |                                                      |
 | `markdown`         | `markdown`   |   ✅   |   ✅   |         发是在双层合并转发内 无法直接发送              |
 | `lightapp`\<JSON>  | `小程序卡片`  |   ✅   |   ✅   |         发是调用扩展接口`get_mini_app_ark`             |
@@ -46,7 +46,7 @@
 标有 **[选]** 发送可选
 
 ## 特性提醒
-<mark>自4.4.14开始 NapCat采用JSON5标准解析请求,支持在JSON中尾随逗号与注释使用,以调用ws/http</mark>
+<mark>自 v4.4.14 开始 NapCat 采用 JSON5 标准解析请求，支持在 JSON 中尾随逗号与注释使用，以调用 ws/http。</mark>
 
 ## text
 
@@ -185,7 +185,7 @@
   "data": {
     "type": "qq", // [发] 推荐好友
     "type": "group", // [发] 推荐群聊
-    "id": "10001" // [发] QQ号或群号
+    "id": "10001" // [发] QQ 号或群号
   }
 }
 ```
@@ -249,7 +249,7 @@
 
 ## node
 
-::: Tips
+::: tip
 `id` 和 `content` 二选一
 :::
 

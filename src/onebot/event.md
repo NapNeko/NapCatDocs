@@ -3,9 +3,9 @@
 > 本文档详细说明 OneBot 事件系统的架构、事件类型及其继承关系
 
 ## 开篇讲解
-NapCat迭代周期非常快,如果你需要准确靠谱的定义应当 [源代码](https://github.com/NapNeko/NapCatQQ/tree/main/src/onebot/event) 查看.
+NapCat 迭代周期非常快，如果你需要准确靠谱的定义应当 [源代码](https://github.com/NapNeko/NapCatQQ/tree/main/src/onebot/event) 查看.
 
-这部分并不复杂,如果你有ide 并初始化依赖,可以轻松理解这部分的字段和定义.
+这部分并不复杂，如果你有 IDE 并初始化依赖，可以轻松理解这部分的字段和定义。
 
 ## 目录
 
@@ -27,7 +27,7 @@ OneBot 事件系统包含多种不同类型的事件，所有事件都继承自 
 ```typescript
 abstract class OneBotEvent {
     time: number;         // 事件发生的时间戳
-    self_id: number;      // 机器人自身QQ号
+    self_id: number;      // 机器人自身 QQ 号
     abstract post_type: EventType; // 事件类型
 }
 ```
@@ -113,7 +113,7 @@ abstract class OB11BaseNoticeEvent extends OneBotEvent {
 ```typescript
 abstract class OB11GroupNoticeEvent extends OB11BaseNoticeEvent {
     group_id: number;  // 群号
-    user_id: number;   // 用户QQ号
+    user_id: number;   // 用户 QQ 号
 }
 ```
 
@@ -122,7 +122,7 @@ abstract class OB11GroupNoticeEvent extends OB11BaseNoticeEvent {
 ```typescript
 class OB11FriendAddNoticeEvent extends OB11BaseNoticeEvent {
     notice_type = 'friend_add';  // 好友添加通知
-    user_id: number;             // 新好友QQ号
+    user_id: number;             // 新好友 QQ 号
 }
 ```
 
@@ -131,8 +131,8 @@ class OB11FriendAddNoticeEvent extends OB11BaseNoticeEvent {
 ```typescript
 class OB11FriendRecallNoticeEvent extends OB11BaseNoticeEvent {
     notice_type = 'friend_recall';  // 好友消息撤回
-    user_id: number;                // 消息发送者QQ号
-    message_id: number;             // 被撤回的消息ID
+    user_id: number;                // 消息发送者 QQ 号
+    message_id: number;             // 被撤回的消息 ID
 }
 ```
 
@@ -141,8 +141,8 @@ class OB11FriendRecallNoticeEvent extends OB11BaseNoticeEvent {
 ```typescript
 class OB11GroupRecallNoticeEvent extends OB11GroupNoticeEvent {
     notice_type = 'group_recall';  // 群消息撤回
-    operator_id: number;           // 操作者QQ号
-    message_id: number;            // 被撤回的消息ID
+    operator_id: number;           // 操作者 QQ 号
+    message_id: number;            // 被撤回的消息 ID
 }
 ```
 
@@ -151,7 +151,7 @@ class OB11GroupRecallNoticeEvent extends OB11GroupNoticeEvent {
 ```typescript
 class OB11GroupIncreaseEvent extends OB11GroupNoticeEvent {
     notice_type = 'group_increase';  // 群成员增加
-    operator_id: number;             // 操作者QQ号
+    operator_id: number;             // 操作者 QQ 号
     sub_type: 'approve' | 'invite';  // 子类型：同意加群/邀请加群
 }
 ```
@@ -164,7 +164,7 @@ type GroupDecreaseSubType = 'leave' | 'kick' | 'kick_me' | 'disband';
 class OB11GroupDecreaseEvent extends OB11GroupNoticeEvent {
     notice_type = 'group_decrease';  // 群成员减少
     sub_type: GroupDecreaseSubType;  // 子类型：主动退群/被踢/我被踢/群解散
-    operator_id: number;             // 操作者QQ号
+    operator_id: number;             // 操作者 QQ 号
 }
 ```
 
@@ -182,7 +182,7 @@ class OB11GroupAdminNoticeEvent extends OB11GroupNoticeEvent {
 ```typescript
 class OB11GroupBanEvent extends OB11GroupNoticeEvent {
     notice_type = 'group_ban';             // 群禁言
-    operator_id: number;                   // 操作者QQ号
+    operator_id: number;                   // 操作者 QQ 号
     duration: number;                      // 禁言时长(秒)
     sub_type: 'ban' | 'lift_ban';          // 禁言/解除禁言
 }
@@ -192,10 +192,10 @@ class OB11GroupBanEvent extends OB11GroupNoticeEvent {
 
 ```typescript
 interface GroupUploadFile {
-    id: string,      // 文件ID
+    id: string,      // 文件 ID
     name: string,    // 文件名
     size: number,    // 文件大小(Byte)
-    busid: number,   // 文件总线ID
+    busid: number,   // 文件总线 ID
 }
 
 class OB11GroupUploadNoticeEvent extends OB11GroupNoticeEvent {
@@ -239,9 +239,9 @@ class OB11GroupTitleEvent extends OB11GroupNoticeEvent {
 ```typescript
 class OB11GroupEssenceEvent extends OB11GroupNoticeEvent {
     notice_type = 'essence';             // 精华消息
-    message_id: number;                  // 消息ID
-    sender_id: number;                   // 消息发送者QQ号
-    operator_id: number;                 // 操作者QQ号
+    message_id: number;                  // 消息 ID
+    sender_id: number;                   // 消息发送者 QQ 号
+    operator_id: number;                 // 操作者 QQ 号
     sub_type: 'add' | 'delete';          // 添加/删除精华
 }
 ```
@@ -250,13 +250,13 @@ class OB11GroupEssenceEvent extends OB11GroupNoticeEvent {
 
 ```typescript
 interface MsgEmojiLike {
-    emoji_id: string,   // 表情ID
+    emoji_id: string,   // 表情 ID
     count: number       // 回应数量
 }
 
 class OB11GroupMsgEmojiLikeEvent extends OB11GroupNoticeEvent {
     notice_type = 'group_msg_emoji_like';  // 表情回应
-    message_id: number;                    // 消息ID
+    message_id: number;                    // 消息 ID
     likes: MsgEmojiLike[];                 // 表情信息列表
 }
 ```
@@ -267,13 +267,13 @@ class OB11GroupMsgEmojiLikeEvent extends OB11GroupNoticeEvent {
 class OB11PokeEvent extends OB11BaseNoticeEvent {
     notice_type = 'notify';    // 通知
     sub_type = 'poke';         // 戳一戳
-    target_id: number;         // 被戳者QQ号
-    user_id: number;           // 戳者QQ号
+    target_id: number;         // 被戳者 QQ 号
+    user_id: number;           // 戳者 QQ 号
 }
 
 class OB11FriendPokeEvent extends OB11PokeEvent {
     raw_info: unknown;         // 原始信息
-    sender_id: number;         // 发送者QQ号
+    sender_id: number;         // 发送者 QQ 号
 }
 
 class OB11GroupPokeEvent extends OB11PokeEvent {
@@ -288,7 +288,7 @@ class OB11GroupPokeEvent extends OB11PokeEvent {
 class OB11ProfileLikeEvent extends OB11BaseNoticeEvent {
     notice_type = 'notify';        // 通知
     sub_type = 'profile_like';     // 资料点赞
-    operator_id: number;           // 操作者QQ号
+    operator_id: number;           // 操作者 QQ 号
     operator_nick: string;         // 操作者昵称
     times: number;                 // 点赞次数
     time: number;                  // 时间戳
@@ -303,7 +303,7 @@ class OB11InputStatusEvent extends OB11BaseNoticeEvent {
     sub_type = 'input_status';     // 输入状态
     status_text: string;           // 状态文本
     event_type: number;            // 事件类型
-    user_id: number;               // 用户QQ号
+    user_id: number;               // 用户 QQ 号
     group_id: number;              // 群号(如适用)
 }
 ```
@@ -313,7 +313,7 @@ class OB11InputStatusEvent extends OB11BaseNoticeEvent {
 ```typescript
 class BotOfflineEvent extends OB11BaseNoticeEvent {
     notice_type = 'bot_offline';   // 机器人离线
-    user_id: number;               // 机器人QQ号
+    user_id: number;               // 机器人 QQ 号
     tag: string;                   // 标签
     message: string;               // 离线消息
 }
@@ -329,7 +329,7 @@ class BotOfflineEvent extends OB11BaseNoticeEvent {
 class OB11FriendRequestEvent extends OB11BaseNoticeEvent {
     post_type = EventType.REQUEST;  // 请求事件
     request_type = 'friend';        // 好友请求
-    user_id: number;                // 请求者QQ号
+    user_id: number;                // 请求者 QQ 号
     comment: string;                // 验证信息
     flag: string;                   // 请求标识
 }
@@ -341,7 +341,7 @@ class OB11FriendRequestEvent extends OB11BaseNoticeEvent {
 class OB11GroupRequestEvent extends OB11GroupNoticeEvent {
     post_type = EventType.REQUEST;  // 请求事件
     request_type = 'group';         // 群请求
-    user_id: number;                // 请求者QQ号
+    user_id: number;                // 请求者 QQ 号
     comment: string;                // 验证信息
     flag: string;                   // 请求标识
     sub_type: string;               // 请求子类型
@@ -360,8 +360,8 @@ class OB11GroupRequestEvent extends OB11GroupNoticeEvent {
 abstract class OB11BaseMessageEvent extends OneBotEvent {
     post_type = EventType.MESSAGE;  // 消息事件
     // 具体消息类型在子类中定义
-    message_id: number;             // 消息ID
-    user_id: number;                // 发送者QQ号
+    message_id: number;             // 消息 ID
+    user_id: number;                // 发送者 QQ 号
     message: string | any[];        // 消息内容
     raw_message: string;            // 原始消息内容
 }
@@ -374,7 +374,7 @@ class OB11PrivateMessageEvent extends OB11BaseMessageEvent {
     message_type = 'private';                // 私聊消息
     sub_type: 'friend' | 'group' | 'other';  // 子类型
     sender: {                                // 发送者信息
-        user_id: number,                     // QQ号
+        user_id: number,                     // QQ 号
         nickname: string,                    // 昵称
         sex: 'male' | 'female' | 'unknown',  // 性别
         age: number                          // 年龄
@@ -390,7 +390,7 @@ class OB11GroupMessageEvent extends OB11BaseMessageEvent {
     group_id: number;                // 群号
     anonymous: any | null;           // 匿名信息
     sender: {                        // 发送者信息
-        user_id: number,             // 发送者QQ号
+        user_id: number,             // 发送者 QQ 号
         nickname: string,            // 昵称
         card: string,                // 群名片
         role: 'owner' | 'admin' | 'member', // 角色
@@ -406,7 +406,7 @@ class OB11GroupMessageEvent extends OB11BaseMessageEvent {
 class OB11MessageSentEvent extends OB11BaseMessageEvent {
     post_type = EventType.MESSAGE_SENT; // 消息发送事件
     message_type: 'private' | 'group';  // 消息类型
-    target_id: number;                  // 目标ID（好友QQ号或群号）
+    target_id: number;                  // 目标 ID（好友 QQ 号或群号）
     // 其他字段根据消息类型不同而变化
 }
 ```

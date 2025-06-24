@@ -11,7 +11,7 @@ WebUI 的安全性设计较为完善，具体特性如下：
 - 终端控制功能可通过删除 `./pty/` 目录完全禁用
 - 支持 SSL 加密，只需在 `./config/` 目录添加 `cert.pem` 与 `key.pem` 文件并重启即可生效
 
-:::warning
+::: warning
 NapCat WebUI 默认使用弱密码（密钥为 `napcat`），如果部署在公网环境中，请立即修改密码或关闭 WebUI。
 :::
 
