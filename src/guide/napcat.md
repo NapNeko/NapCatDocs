@@ -19,11 +19,11 @@ NapCatQQ V4 已启用全新风格标识和文档，欢迎回家！<mark>这里�
 
 ```mermaid
 graph TD
-    NTQQ客户端 -- JavaScript 交互 <--> NapCat
+    NTQQ客户端 -- JavaScript交互 <--> NapCat
     NapCat -- WS/HTTP <--> 插件框架
     NapCat -- WS/HTTP <--> 独立插件
-    插件框架 <--> 插件 1
-    插件框架 <--> 插件 2
+    插件框架 <--> 插件1
+    插件框架 <--> 插件2
 ```
 
 ## NapCat 与其它框架的本质不同？
