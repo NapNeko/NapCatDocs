@@ -19,11 +19,30 @@ NapCatQQ V4 已启用全新风格标识和文档，欢迎回家！<mark>这里�
 
 ```mermaid
 graph TD
-    NTQQ客户端 -- JavaScript交互 <--> NapCat
-    NapCat -- WS/HTTP <--> 插件框架
-    NapCat -- WS/HTTP <--> 独立插件
-    插件框架 <--> 插件1
-    插件框架 <--> 插件2
+    subgraph NTQQ生态
+        NTQQ客户端 -- JavaScript API调用 --> NapCat核心
+        NapCat核心 -- 事件注入 --> NTQQ客户端
+    end
+
+    subgraph NapCat系统
+        NapCat核心 -->|WebSocket/HTTP| 插件框架
+        NapCat核心 -->|WebSocket/HTTP| 独立插件1
+        NapCat核心 -->|WebSocket/HTTP| 独立插件2
+        
+        插件框架 --> 框架插件A
+        插件框架 --> 框架插件B
+    end
+
+    classDef client fill:#d4f1f9,stroke:#333;
+    classDef core fill:#d5e8d4,stroke:#333;
+    classDef framework fill:#f5d5cb,stroke:#333;
+    classDef plugin fill:#e1d5e7,stroke:#333;
+    
+    class NTQQ客户端 client;
+    class NapCat核心 core;
+    class 插件框架 framework;
+    class 独立插件1,独立插件2,框架插件A,框架插件B plugin;
+
 ```
 
 ## NapCat 与其它框架的本质不同？
