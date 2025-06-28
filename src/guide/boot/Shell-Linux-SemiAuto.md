@@ -7,7 +7,7 @@
 你需要安装 28060+ 版本的 QQ 和 xvfb，后者安装方法为
 
 - Debian 系（Debian、Ubuntu 等）： `sudo apt install xvfb`
-- Arch 系： `sudo pacman install xorg-server-xvfb`
+- Arch 系： `sudo pacman -S xorg-server-xvfb`
 
 其他发行版可以参考[这个页面](https://pkgs.org/search/?q=xvfb)自行选择合适的包安装，确保安装后 `xvfb-run` 命令存在
 
