@@ -71,9 +71,9 @@ NapCat v3.6.0 及以后的版本在 Linux 平台 (amd64, arm64)，MacOS平台(am
 
 | 平台版本                   | Native |
 |---------------------------|----------|
-| Windows Amd64 28418-34231 | ✅      |
-| Linux   Amd64 28498-34231 | ✅      |
-| Linux   Arm64 28498-34231 | ✅      |
+| Windows Amd64 28418-36580 | ✅      |
+| Linux   Amd64 28498-36580 | ✅      |
+| Linux   Arm64 28498-36580 | ✅      |
 | MacOS   Arm64 29456-29456 | ✅      |
 | MacOS   Amd64 29456-29456 | ✅      |
 
