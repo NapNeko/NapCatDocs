@@ -24,7 +24,7 @@ graph TD
         NapCat核心 -- 事件注入 --> NTQQ客户端
     end
 
-    subgraph NapCat系统
+    subgraph 插件系统
         NapCat核心 -->|WebSocket/HTTP| 插件框架
         NapCat核心 -->|WebSocket/HTTP| 独立插件1
         NapCat核心 -->|WebSocket/HTTP| 独立插件2
