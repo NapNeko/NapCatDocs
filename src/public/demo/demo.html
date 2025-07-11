@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NapCat · MockInstall</title>
+    <style>
+        :root {
+            --mist: #1e293b;
+            --terminal-bg: #111827;
+            --terminal-border: #334155;
+
+            --bg: linear-gradient(145deg, #ffffff 0%, #f7fafc 100%);
+            --text: #1e293b;
+            --sub: #64748b;
+
+            /* 冰蓝强调 */
+            --accent: #0ea5e9;
+            --accent-light: #38bdf8;
+
+            /* 毛玻璃卡片背景 */
+            --glass: rgba(255, 255, 255, 0.55);
+            --glass-border: rgba(255, 255, 255, 0.3);
+
+            /* 状态色 */
+            --success: #10b981;
+            --error: #f43f5e;
+            --warning: #f59e0b;
+            --progress: #8b5cf6;
+
+            /* 圆角统一 */
+            --radius: 16px;
+            --radius-btn: 999px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2.5rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: .05em;
+        }
+
+        nav a {
+            margin-left: 2rem;
+            color: var(--sub);
+            text-decoration: none;
+            font-size: .95rem;
+            transition: color .25s;
+        }
+
+        nav a:hover {
+            color: var(--accent)
+        }
+
+        .hero {
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 6vw, 3.2rem);
+            font-weight: 600;
+            letter-spacing: .02em;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--sub);
+            margin: .75rem 0 2.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: .9rem 2.4rem;
+            border-radius: var(--radius-btn);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all .3s cubic-bezier(.4, 0, .2, 1);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .btn:before {
+            /*  光晕  */
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1.5px;
+            background: linear-gradient(45deg, var(--accent), var(--accent-light));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity .3s;
+        }
+
+        .btn:hover:before {
+            opacity: 1
+        }
+
+        .btn:hover {
+            transform: translateY(-3px) scale(1.03)
+        }
+
+        .btn.primary {
+            background: var(--glass);
+            color: var(--accent);
+            border: 1px solid var(--glass-border);
+        }
+
+        .btn.secondary {
+            background: var(--glass);
+            color: var(--text);
+            margin-left: 1rem;
+            border: 1px solid var(--glass-border);
+        }
+
+        .btn.secondary:hover {
+            color: var(--accent)
+        }
+
+        #terminal {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin: 3rem 0;
+            font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: .95rem;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-break: break-all;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, .04);
+            min-height: 200px;
+            max-height: 60vh;
+            overflow-y: auto;
+            display: none;
+        }
+
+
+        .cmd {
+            color: var(--accent);
+        }
+
+        .output {
+            color: #9ca3af;
+        }
+
+        .success {
+            color: var(--success);
+        }
+
+        .error {
+            color: var(--error);
+        }
+
+        .warning {
+            color: var(--warning);
+        }
+
+        .progress-text {
+            color: var(--progress);
+        }
+
+        .cursor {
+            display: inline-block;
+            background: var(--accent);
+            width: 8px;
+            height: 16px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            50% {
+                opacity: 1;
+            }
+
+            51%,
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .terminal-line {
+            margin-bottom: 4px;
+            opacity: 0;
+            animation: fadeIn 0.3s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        #terminal::-webkit-scrollbar {
+            width: 6px
+        }
+
+        #terminal::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 3px
+        }
+
+
+        .platform-selector {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .platform-btn {
+            padding: .55rem 1.2rem;
+            border-radius: var(--radius-btn);
+            border: 1px solid var(--glass-border);
+            background: var(--glass);
+            color: var(--sub);
+            cursor: pointer;
+            transition: all .25s;
+            backdrop-filter: blur(8px);
+        }
+
+        .platform-btn:hover,
+        .platform-btn.active {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* 进度条样式 */
+        .progress-container {
+            width: 100%;
+            border-radius: 4px;
+            margin: 5px 0;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 6px;
+            background-color: var(--accent);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .progress-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--);
+            margin-top: 2px;
+        }
+
+        .progress-percent {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* 动态文本效果 */
+        .typing-text {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid var(--accent);
+            animation: typing 0.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: var(--accent);
+            }
+        }
+
+        /* 多行同时显示 */
+        .multi-line {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .multi-line .terminal-line {
+            animation-delay: calc(var(--line-index) * 0.1s);
+        }
+
+        .terminal-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 4rem;
+        }
+
+        .logo-art {
+            color: var(--accent);
+            font-family: monospace;
+            white-space: pre;
+            line-height: 1.2;
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        .timestamp {
+            color: var(--sub);
+            font-size: 0.85rem;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 2.5rem 0;
+            text-align: center;
+            font-size: .9rem;
+            color: var(--sub);
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none
+        }
+
+        footer a:hover {
+            text-decoration: underline
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="logo">NapCat</div>
+            <nav>
+                <a href="#features">特性</a>
+                <a href="https://napneko.github.io/" target="_blank">文档</a>
+                <a href="https://github.com/NapNeko/NapCatQQ/releases" target="_blank">发布</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1>基于 NTQQ Bot 框架</h1>
+            <p>零配置，跨平台，100 MB 常驻内存。</p>
+            <a class="btn" id="installBtn">选择平台安装体验</a>
+            <div class="platform-selector" id="platformSelector" style="display: none;">
+                <button class="platform-btn" data-platform="linux">Linux</button>
+                <button class="platform-btn" data-platform="windows">Windows</button>
+                <button class="platform-btn" data-platform="macos">macOS</button>
+            </div>
+        </section>
+
+        <section id="terminal">
+            <div id="terminal-content"></div>
+            <span class="cursor" id="cursor"></span>
+        </section>
+
+        <div class="terminal-controls" id="terminalControls" style="display: none;">
+            <button class="btn secondary" id="restartBtn">重新体验</button>
+            <button class="btn secondary" id="copyBtn">复制日志</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 NapCat · <a href="https://github.com/NapNeko/NapCatQQ" target="_blank">GitHub</a></p>
+    </footer>
+
+    <script>
+        const installBtn = document.getElementById('installBtn');
+        const platformSelector = document.getElementById('platformSelector');
+        const terminal = document.getElementById('terminal');
+        const terminalContent = document.getElementById('terminal-content');
+        const cursor = document.getElementById('cursor');
+        const terminalControls = document.getElementById('terminalControls');
+        const restartBtn = document.getElementById('restartBtn');
+        const copyBtn = document.getElementById('copyBtn');
+        let selectedPlatform = null;
+        let currentDate = new Date();
+        let isInstalling = false;
+
+        // 格式化日期为 YYYY-MM-DD
+        function formatDate(date) {
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        }
+
+        // 格式化时间为 HH:MM:SS
+        function formatTime(date) {
+            const hours = String(date.getHours()).padStart(2, '0');
+            const minutes = String(date.getMinutes()).padStart(2, '0');
+            const seconds = String(date.getSeconds()).padStart(2, '0');
+            return `${hours}:${minutes}:${seconds}`;
+        }
+
+        // 获取当前日期时间戳
+        function getTimestamp() {
+            return `[${formatDate(currentDate)} ${formatTime(new Date())}]`;
+        }
+
+        // 安装脚本配置
+        const installScripts = {
+            linux: [
+                { type: 'cmd', text: '$ curl -fsSL https://napneko.github.io/install.sh | bash', delay: 0 },
+                { type: 'output', text: '┌───────────────────────────────────────────────────────────────────────┐', delay: 100 },
+                { type: 'output', text: ' │                                                                       │', delay: 50 },
+                { type: 'output', text: ' │███╗   ██╗     █████╗     ██████╗      ██████╗     █████╗     ████████╗│', delay: 50 },
+                { type: 'output', text: ' │████╗  ██║    ██╔══██╗    ██╔══██╗    ██╔════╝    ██╔══██╗    ╚══██╔══╝│', delay: 50 },
+                { type: 'output', text: ' │██╔██╗ ██║    ███████║    ██████╔╝    ██║         ███████║       ██║   │', delay: 50 },
+                { type: 'output', text: ' │██║╚██╗██║    ██╔══██║    ██╔═══╝     ██║         ██╔══██║       ██║   │', delay: 50 },
+                { type: 'output', text: ' │██║ ╚████║    ██║  ██║    ██║         ╚██████╗    ██║  ██║       ██║   │', delay: 50 },
+                { type: 'output', text: ' │╚═╝  ╚═══╝    ╚═╝  ╚═╝    ╚═╝          ╚═════╝    ╚═╝  ╚═╝       ╚═╝   │', delay: 50 },
+                { type: 'output', text: ' └───────────────────────────────────────────────────────────────────────┘', delay: 100 },
+                { type: 'output', text: '                      Powered by NapCat-Installer', delay: 200 },
+                { type: 'output', text: `${getTimestamp()}: 脚本正在以 root 权限运行。`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 选择安装方式: Docker (容器化) 或 Shell (直接安装)?`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 输入 'y' 使用 Docker, 输入 'n' 使用 Shell。`, delay: 300 },
+                { type: 'output', text: '[y/N] (10秒后默认 N): n', delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 选择使用 Shell 安装。`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 是否安装 NapCat TUI-CLI (命令行工具)?`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 输入 'y' 安装, 输入 'n' 跳过。`, delay: 300 },
+                { type: 'output', text: '[y/N] (10秒后默认 N): n', delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 选择或超时默认为不安装 CLI。`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 开始 Shell 安装流程...`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 开始更新依赖...`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 当前高级包管理器: apt-get`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 当前基础包管理器: dpkg`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 更新软件包列表中...`, delay: 300 },
+                { type: 'success', text: `${getTimestamp()}: 更新软件包列表 (sudo apt-get update -y -qq)成功`, delay: 800 },
+                { type: 'output', text: `${getTimestamp()}: 安装zip unzip jq curl xvfb screen xauth procps中...`, delay: 300 },
+                {
+                    type: 'progress',
+                    text: '安装依赖进度',
+                    delay: 100,
+                    progress: {
+                        total: 54,
+                        current: 0,
+                        speed: 1.5,
+                        unit: '个包'
+                    }
+                },
+                { type: 'success', text: `${getTimestamp()}: 安装zip unzip jq curl xvfb screen xauth procps (sudo apt-get install -y -qq zip unzip jq curl xvfb screen xauth procps)成功`, delay: 1000 },
+                { type: 'output', text: `${getTimestamp()}: 更新依赖成功...`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 开始下载NapCat安装包,请稍等...`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 开始网络测试: Github...`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 命令行传入代理参数 (proxy_num_arg): '', 本次测试生效设置: '9'`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 手动指定代理: https://jiashu.1win.eu.org`, delay: 300 },
+                {
+                    type: 'progress',
+                    text: '下载 NapCat.Shell.zip',
+                    delay: 100,
+                    progress: {
+                        total: 100,
+                        current: 0,
+                        speed: 5,
+                        unit: '%'
+                    }
+                },
+                { type: 'success', text: `${getTimestamp()}: NapCat.Shell.zip 成功下载。`, delay: 500 },
+                { type: 'output', text: `${getTimestamp()}: 正在验证 NapCat.Shell.zip...`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 正在解压 NapCat.Shell.zip...`, delay: 300 },
+                {
+                    type: 'progress',
+                    text: '解压进度',
+                    delay: 100,
+                    progress: {
+                        total: 100,
+                        current: 0,
+                        speed: 3,
+                        unit: '%'
+                    }
+                },
+                { type: 'output', text: `${getTimestamp()}: 警告: LinuxQQ 的核心配置文件 (/opt/QQ/resources/app/package.json) 未找到。可能安装不完整或已损坏。`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 将触发 LinuxQQ 的安装/重装流程。`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 最低linuxQQ版本: 3.2.18-36580, 构建: 36580`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 强制重装模式...`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 警告: 未找到现有 Napcat 配置目录 (/opt/QQ/resources/app/app_launcher/napcat/config), 您之前的配置无法找到。`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 未检测到已安装的 LinuxQQ 或其核心文件, 将进行全新安装。`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 当前系统架构: amd64`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 安装LinuxQQ...`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: QQ下载链接: https://dldir1.qq.com/qqfile/qq/QQNT/a5fab4ff/linuxqq_3.2.18-36580_amd64.deb`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 如果无法下载请手动下载QQ安装包并重命名为QQ.deb或QQ.rpm(注意自己的系统架构)放到脚本同目录下`, delay: 300 },
+                {
+                    type: 'progress',
+                    text: '下载 QQ 安装包',
+                    delay: 100,
+                    progress: {
+                        total: 100,
+                        current: 0,
+                        speed: 2,
+                        unit: '%'
+                    }
+                },
+                { type: 'success', text: `${getTimestamp()}: 文件下载成功`, delay: 800 },
+                { type: 'output', text: `${getTimestamp()}: 安装QQ中...`, delay: 300 },
+                { type: 'output', text: 'Extracting templates from packages: 100%', delay: 300 },
+                { type: 'output', text: 'Selecting previously unselected package dbus-user-session.', delay: 200 },
+                { type: 'output', text: '(Reading database ... 59880 files and directories currently installed.)', delay: 200 },
+                { type: 'output', text: 'Preparing to unpack .../00-dbus-user-session_1.14.10-4ubuntu4.1_amd64.deb ...', delay: 200 },
+                { type: 'output', text: 'Unpacking dbus-user-session (1.14.10-4ubuntu4.1) ...', delay: 200 },
+                {
+                    type: 'progress',
+                    text: '安装 QQ 进度',
+                    delay: 100,
+                    progress: {
+                        total: 91,
+                        current: 0,
+                        speed: 1.2,
+                        unit: '个文件'
+                    }
+                },
+                { type: 'output', text: 'Setting up linuxqq (3.2.18-36580) ...', delay: 800 },
+                { type: 'output', text: '/var/lib/dpkg/info/linuxqq.postinst: line 10: update-desktop-database: command not found', delay: 300 },
+                { type: 'output', text: 'Processing triggers for libgdk-pixbuf-2.0-0:amd64 (2.42.10+dfsg-3ubuntu3.1) ...', delay: 300 },
+                { type: 'success', text: `${getTimestamp()}: 安装QQ (sudo apt-get install -f -y -qq ./QQ.deb)成功`, delay: 800 },
+                { type: 'output', text: `${getTimestamp()}: 安装libnss3中...`, delay: 300 },
+                { type: 'success', text: `${getTimestamp()}: 安装libnss3 (sudo apt-get install -y -qq libnss3)成功`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 安装libgbm1中...`, delay: 300 },
+                { type: 'success', text: `${getTimestamp()}: 安装libgbm1 (sudo apt-get install -y -qq libgbm1)成功`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 安装libasound2中...`, delay: 300 },
+                { type: 'error', text: 'E: Package \'libasound2\' has no installation candidate', delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 安装libasound2 失败`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 尝试安装libasound2t64中...`, delay: 300 },
+                { type: 'output', text: 'Selecting previously unselected package alsa-topology-conf.', delay: 300 },
+                { type: 'output', text: '(Reading database ... 75397 files and directories currently installed.)', delay: 300 },
+                { type: 'output', text: 'Preparing to unpack .../alsa-topology-conf_1.2.5.1-2_all.deb ...', delay: 300 },
+                { type: 'output', text: 'Unpacking alsa-topology-conf (1.2.5.1-2) ...', delay: 300 },
+                { type: 'output', text: 'Setting up libasound2t64:amd64 (1.2.11-1ubuntu0.1) ...', delay: 800 },
+                { type: 'output', text: 'Processing triggers for libc-bin (2.39-0ubuntu8.4) ...', delay: 300 },
+                { type: 'success', text: `${getTimestamp()}: 安装libasound2 成功`, delay: 500 },
+                { type: 'output', text: `${getTimestamp()}: 正在更新用户QQ配置...`, delay: 300 },
+                { type: 'success', text: `${getTimestamp()}: 更新用户QQ配置成功...`, delay: 400 },
+                { type: 'output', text: `${getTimestamp()}: 之前未创建备份, 无需恢复配置。`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 最新NapCatQQ版本: v4.8.93`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 强制重装模式...`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 正在移动文件...`, delay: 300 },
+                { type: 'success', text: `${getTimestamp()}: 移动文件成功`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 正在修补文件...`, delay: 300 },
+                { type: 'success', text: `${getTimestamp()}: 修补文件成功`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 正在修改QQ启动配置...`, delay: 300 },
+                { type: 'success', text: `${getTimestamp()}: 修改QQ启动配置成功...`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 跳过安装/更新 TUI-CLI (用户未选择或使用 --cli n)。`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}:`, delay: 300 },
+                { type: 'success', text: '---------------- Shell 安装完成 ----------------', delay: 300 },
+                { type: 'output', text: `${getTimestamp()}:`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 启动 Napcat (需要图形环境或 Xvfb):`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}:   sudo xvfb-run -a qq --no-sandbox`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}:`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 后台运行 Napcat (使用 screen)(请使用 root 账户):`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}:   启动: screen -dmS napcat bash -c "xvfb-run -a qq --no-sandbox"`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}:   带账号启动: screen -dmS napcat bash -c "xvfb-run -a qq --no-sandbox -q QQ号码"`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}:   附加到会话: screen -r napcat (按 Ctrl+A 然后按 D 分离)`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}:   停止会话: screen -S napcat -X quit`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}:`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: Napcat 相关信息:`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}:   安装位置: /opt/QQ/resources/app/app_launcher/napcat`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}:   WebUI Token: 查看 /opt/QQ/resources/app/app_launcher/napcat/config/webui.json 文件获取`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}:`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 未安装 TUI-CLI 工具。如需使用便捷命令管理, 请重新运行安装脚本并选择安装 TUI-CLI (--cli y)。`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: --------------------------------------------------`, delay: 300 },
+                { type: 'success', text: `${getTimestamp()}: Shell 安装流程完成。`, delay: 300 },
+                { type: 'cmd', text: '@MliKiowa ➜ /workspaces/NapCat-Installer (main) $ sudo xvfb-run -a qq --no-sandbox', delay: 0 },
+                { type: 'output', text: 'not mini app.', delay: 300 },
+                { type: 'output', text: '[preload] succeeded. /opt/QQ/resources/app/major.node', delay: 300 },
+                { type: 'output', text: '[preload] succeeded. /opt/QQ/resources/app/major.node', delay: 300 },
+                { type: 'error', text: '[40063:0711/132646.970298:ERROR:bus.cc(407)] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory', delay: 300 },
+                { type: 'output', text: 'resourcesPath: /opt/QQ/resources', delay: 300 },
+                { type: 'error', text: 'error: XDG_RUNTIME_DIR is invalid or not set in the environment.', delay: 300 },
+                { type: 'error', text: '[40063:0711/132647.328243:ERROR:bus.cc(407)] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory', delay: 300 },
+                { type: 'error', text: '[40063:0711/132647.328361:ERROR:bus.cc(407)] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory', delay: 300 },
+                { type: 'error', text: '[40063:0711/132647.332044:ERROR:bus.cc(407)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")', delay: 300 },
+                { type: 'error', text: '[40063:0711/132647.332132:ERROR:bus.cc(407)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")', delay: 300 },
+                { type: 'error', text: '[40063:0711/132647.332643:ERROR:bus.cc(407)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")', delay: 300 },
+                { type: 'error', text: '[40063:0711/132647.332662:ERROR:bus.cc(407)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")', delay: 300 },
+                { type: 'error', text: '[40063:0711/132647.332674:ERROR:object_proxy.cc(576)] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type:', delay: 300 },
+                { type: 'error', text: 'error: XDG_RUNTIME_DIR is invalid or not set in the environment.', delay: 300 },
+                { type: 'error', text: '[40116:0711/132647.695421:ERROR:viz_main_impl.cc(185)] Exiting GPU process due to errors during initialization', delay: 300 },
+                { type: 'output', text: 'NapCat Shell App Loading...', delay: 300 },
+                { type: 'output', text: `${getTimestamp()} [info] [NapCat] [Core] NapCat.Core Version: 4.8.93`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()} [info] [NapCat] [WebUi] WebUi Local Panel Url: http://127.0.0.1:6099/webui?token=napcat`, delay: 300 },
+                { type: 'error', text: 'error: XDG_RUNTIME_DIR is invalid or not set in the environment.', delay: 300 },
+                { type: 'error', text: '[40153:0711/132648.050113:ERROR:viz_main_impl.cc(185)] Exiting GPU process due to errors during initialization', delay: 300 },
+                { type: 'output', text: `${getTimestamp()} [info] 等待网络连接...`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()} [info] 网络已连接`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()} [info] 没有 -q 指令指定快速登录，将使用二维码登录方式`, delay: 300 },
+                { type: 'warning', text: `${getTimestamp()} [warn] 请扫描下面的二维码，然后在手Q上授权登录：`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()} [warn]`, delay: 300 },
+                { type: 'output', text: '▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄', delay: 100 },
+                { type: 'output', text: '█ ▄▄▄▄▄ █▄▄▄ ▀▄██  ▄ ▀▄▀█ █ ▄▄▄▄▄ █', delay: 100 },
+                { type: 'output', text: '█ █   █ ██▄▀ █ ▀▄▄█▄ █ ▄█▀█ █   █ █', delay: 100 },
+                { type: 'output', text: '█ █▄▄▄█ ██▀▄ ▄████ ▄▄▀▄▄ ██ █▄▄▄█ █', delay: 100 },
+                { type: 'output', text: '█▄▄▄▄▄▄▄█ ▀▄█ ▀ █ █ ▀▄█ █ █▄▄▄▄▄▄▄█', delay: 100 },
+                { type: 'output', text: '█▄ ▀▄▄▀▄▀█▄▀█▄██▀▀▀█▀▀▀▄█▄█▄▀▀█▀▀▄█', delay: 100 },
+                { type: 'output', text: '██▄██  ▄▀▀▄██▄█▄ █  █▄▄█▄▀▀  ▄▀▀▄▄█', delay: 100 },
+                { type: 'output', text: '█▀▀▀ ██▄█▄▄ █▀▀▄  ▄█ ██  █▀▄▄███▄▄█', delay: 100 },
+                { type: 'output', text: '██ ▄  ▀▄ ▄ ▄█▀▄▀ ▄▄█ ▀▄██ ▀▄█ █▀█▀█', delay: 100 },
+                { type: 'output', text: '█▄  ▄▄▀▄▄▄██ ▄▄  ▀▀▄█▀█▄██▄ ▀ ▄█  █', delay: 100 },
+                { type: 'output', text: '█▀▄▄▀▀▀▄▀▄▄▄▀▄   ███ ▀▄ ▄██▀█▄█▀▀ █', delay: 100 },
+                { type: 'output', text: '█▀██▀  ▄█ ▄█▄▀██▀▄██ █▄▀ ▀▄█▀▀▀█▀██', delay: 100 },
+                { type: 'output', text: '█ █▄▀▄█▄▄▀█▀ ▀█  ▄ ▄███▀▄▀ ▀ ▄█▀▄▄█', delay: 100 },
+                { type: 'output', text: '█▄▄▄▄▄█▄█ ▄▀▄▄▀▄ ▀ ▀ █▀▄█ ▄▄▄ ▀▀ ██', delay: 100 },
+                { type: 'output', text: '█ ▄▄▄▄▄ ██▀█ ▄█  █▄▄ ▀▄█  █▄█ ▀ █▀█', delay: 100 },
+                { type: 'output', text: '█ █   █ █ ▀█▀ ▄ ██ █▄▀█▄▄▄ ▄▄▄▀█▄▄█', delay: 100 },
+                { type: 'output', text: '█ █▄▄▄█ █▀  ▄█ ▄ ▀██ ▀▄▄▀█▀▀▄   ▀ █', delay: 100 },
+                { type: 'output', text: '█▄▄▄▄▄▄▄█▄██████▄▄▄█▄████▄▄█▄█▄████', delay: 100 },
+                { type: 'output', text: '二维码解码URL: https://txz.qq.com/p?k=xsAD4u95qB-paZQaRP-xFDXW7QKWgOwk&f=1600001615', delay: 300 },
+                { type: 'output', text: '如果控制台二维码无法扫码，可以复制解码url到二维码生成网站生成二维码再扫码，也可以打开下方的二维码路径图片进行扫码。', delay: 300 },
+                { type: 'warning', text: '${getTimestamp()} [warn] 二维码已保存到 /opt/QQ/resources/app/app_launcher/napcat/cache/qrcode.png', delay: 300 }
+            ],
+            windows: [
+                { type: 'cmd', text: 'C:\\napcat\\> ./NapCatInstaller.exe', delay: 0 },
+                { type: 'output', text: '===== NapCat 安装程序 =====', delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 检查QQ安装包...`, delay: 600 },
+                { type: 'output', text: `${getTimestamp()}: 开始下载QQ...`, delay: 800 },
+                { type: 'output', text: `${getTimestamp()}: HTTP状态码: 200`, delay: 400 },
+                { type: 'output', text: `${getTimestamp()}: 文件大小: 168 MB`, delay: 300 },
+                {
+                    type: 'progress',
+                    text: '下载进度',
+                    delay: 100,
+                    progress: {
+                        total: 168,
+                        current: 0,
+                        speed: 3,
+                        unit: 'MB'
+                    }
+                },
+                { type: 'success', text: `${getTimestamp()}: 文件下载完成: 168 MB`, delay: 500 },
+                { type: 'success', text: `${getTimestamp()}: QQ下载成功`, delay: 400 },
+                { type: 'output', text: `${getTimestamp()}: 开始解压QQ安装包...`, delay: 600 },
+                { type: 'output', text: `${getTimestamp()}: 执行命令: .\\7z.exe -oNapCat.34740.Shell x "QQ.exe" -y`, delay: 800 },
+                { type: 'output', text: '', delay: 300 },
+                { type: 'output', text: '7-Zip 19.00 (x64) : Copyright (c) 1999-2018 Igor Pavlov : 2019-02-21', delay: 200 },
+                { type: 'output', text: '', delay: 200 },
+                { type: 'output', text: 'Scanning the drive for archives:', delay: 100 },
+                { type: 'output', text: '1 file, 176416200 bytes (169 MiB)', delay: 100 },
+                { type: 'output', text: '', delay: 100 },
+                { type: 'output', text: 'Extracting archive: QQ.exe', delay: 100 },
+                { type: 'output', text: '--', delay: 100 },
+                { type: 'output', text: 'Path = QQ.exe', delay: 100 },
+                { type: 'output', text: 'Type = PE', delay: 100 },
+                { type: 'output', text: 'Physical Size = 176416200', delay: 100 },
+                { type: 'output', text: 'CPU = x86', delay: 50 },
+                { type: 'output', text: 'Characteristics = Executable 32-bit NoRelocs', delay: 50 },
+                { type: 'output', text: 'Created = 2025-04-28 02:15:45', delay: 50 },
+                { type: 'output', text: 'Headers Size = 1024', delay: 50 },
+                { type: 'output', text: 'Checksum = 176443195', delay: 50 },
+                { type: 'output', text: 'Image Size = 176427008', delay: 50 },
+                { type: 'output', text: 'File Alignment = 512', delay: 50 },
+                { type: 'output', text: 'Linker Version = 14.29', delay: 50 },
+                { type: 'output', text: 'OS Version = 6.0', delay: 50 },
+                { type: 'output', text: 'Subsystem = Windows GUI', delay: 50 },
+                { type: 'output', text: 'FileVersion: 9.9.19.34740', delay: 50 },
+                { type: 'output', text: 'ProductName: QQ', delay: 50 },
+                { type: 'output', text: 'CompanyName: Tencent', delay: 50 },
+                { type: 'output', text: '----', delay: 50 },
+                { type: 'output', text: 'Path = .rsrc\\2052\\MSI\\101', delay: 50 },
+                { type: 'output', text: 'Size = 167680028', delay: 50 },
+                { type: 'output', text: 'Type = 7z', delay: 50 },
+                { type: 'output', text: 'Method = LZMA:626m BCJ2', delay: 50 },
+                {
+                    type: 'progress',
+                    text: '解压进度',
+                    delay: 100,
+                    progress: {
+                        total: 100,
+                        current: 0,
+                        speed: 2,
+                        unit: '%'
+                    }
+                },
+                { type: 'success', text: `${getTimestamp()}: NapCat解压成功`, delay: 1000 },
+                { type: 'output', text: `${getTimestamp()}: 正在进行最后的配置...`, delay: 600 },
+                { type: 'output', text: `${getTimestamp()}: 准备修改package.json文件...`, delay: 500 },
+                { type: 'output', text: `${getTimestamp()}: 已创建package.json备份`, delay: 400 },
+                { type: 'success', text: `${getTimestamp()}: 已成功将启动脚本路径替换为 ./napcat/napcat.mjs`, delay: 600 },
+                { type: 'output', text: `${getTimestamp()}: 正在从 ./bootmain 复制文件到 NapCat.34740.Shell...`, delay: 500 },
+                { type: 'output', text: `${getTimestamp()}: 已复制: napcat.bat`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 已复制: napcat.kill.qq.bat`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 已复制: napcat.quick.bat`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 已复制: NapCatWinBootHook.dll`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 已复制: NapCatWinBootMain.exe`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: 已复制: ReadMe.txt`, delay: 300 },
+                { type: 'success', text: `${getTimestamp()}: 文件复制完成`, delay: 400 },
+                { type: 'output', text: '', delay: 300 },
+                { type: 'success', text: '===== 安装完成 =====', delay: 500 },
+                { type: 'success', text: '欢迎使用哦~~ 双击启动即可', delay: 600 },
+                { type: 'output', text: 'Press any key to continue . . .', delay: 800 },
+                { type: 'cmd', text: 'C:\\napcat\\NapCat.34740.Shell\\> napcat.bat', delay: 1500 },
+                { type: 'output', text: 'Active code page: 65001', delay: 400 },
+                { type: 'output', text: 'Usage: .\\NapCatWinBootMain.exe <quickLogin>', delay: 300 },
+                { type: 'output', text: 'Boot Command: "C:\\napcat\\NapCat.34740.Shell\\QQ.exe" --enable-logging', delay: 500 },
+                { type: 'output', text: `${getTimestamp()}: Main Process ID:27104`, delay: 400 },
+                { type: 'output', text: 'Creating pipe: \\\\.\\pipe\\NapCat_27104', delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: Process resumed`, delay: 400 },
+                { type: 'output', text: 'resourcesPath: C:\\napcat\\NapCat.34740.Shell\\versions\\9.9.19-34740\\resources', delay: 500 },
+                { type: 'output', text: 'NapCat Shell App Loading...', delay: 600 },
+                { type: 'output', text: `${getTimestamp()}: 已重定向到命名管道: \\.\\pipe\\NapCat_27104`, delay: 400 },
+                { type: 'success', text: `${getTimestamp()}: [Core] NapCat.Core Version: 4.8.93`, delay: 500 },
+                { type: 'output', text: `${getTimestamp()}: [Check] ffmpeg: E:\\APPD\\ffmpeg\\bin\\ffmpeg.exe`, delay: 300 },
+                { type: 'output', text: `${getTimestamp()}: [Check] ffprobe: E:\\APPD\\ffmpeg\\bin\\ffprobe.exe`, delay: 300 },
+                { type: 'success', text: `${getTimestamp()}: [WebUi] WebUi Local Panel Url: http://127.0.0.1:6099/webui?token=napcat`, delay: 600 },
+                { type: 'output', text: `${getTimestamp()}: 等待网络连接...`, delay: 400 },
+                { type: 'success', text: `${getTimestamp()}: 网络已连接`, delay: 500 },
+                { type: 'output', text: `${getTimestamp()}: 没有 -q 指令指定快速登录，将使用二维码登录方式`, delay: 600 },
+                { type: 'output', text: `${getTimestamp()}: 可用于快速登录的 QQ：`, delay: 400 },
+                { type: 'output', text: '1. 10001 Pony', delay: 200 },
+                { type: 'warning', text: `${getTimestamp()}: 请扫描下面的二维码，然后在手Q上授权登录：`, delay: 500 },
+                { type: 'output', text: `${getTimestamp()}:`, delay: 200 },
+                { type: 'output', text: '', delay: 100 },
+                { type: 'output', text: '▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄', delay: 200 },
+                { type: 'output', text: '█ ▄▄▄▄▄ █▄▄███▀▄█▀ █▄    ▀█ ▄▄▄▄▄ █', delay: 100 },
+                { type: 'output', text: '█ █   █ █ ▀█ ▄ █▀ ▀█ ▄█▄  █ █   █ █', delay: 100 },
+                { type: 'output', text: '█ █▄▄▄█ █▄ ▄▄▀▀█▄█▀▀▀▀█ ▄ █ █▄▄▄█ █', delay: 100 },
+                { type: 'output', text: '█▄▄▄▄▄▄▄█▄▀▄▀▄█ █ ▀ ▀ █ █▄█▄▄▄▄▄▄▄█', delay: 100 },
+                { type: 'output', text: '█▄   ▀█▄▀ ▀████▀▄█  █▀▄███▄▀█▄▄ ▀ █', delay: 100 },
+                { type: 'output', text: '██▀█ ▀█▄▀███▀▀▀▄▀██ ██▄▄▄ █ ▀▄█▄ ▄█', delay: 100 },
+                { type: 'output', text: '██▄▀▄▀▄▄▀ ▄▀ █▄█ ▀▄ █▄█▀█▀▄█▄▄ ▀▀██', delay: 100 },
+                { type: 'output', text: '█▀ █▀ ▄▄█▀▀▀█ ▄██ ██▄   ██▀  ▄█ ███', delay: 100 },
+                { type: 'output', text: '█▄█▀▀ ▄▄▄ █▀▄▀  ▀▀ ▄█▀▀  ▀      ▄ █', delay: 100 },
+                { type: 'output', text: '█ ▀▀█▄▄▄▀  ▀▄ █▀ ▄▀▀▀▀▄▄▀▀  ██ █▄▀█', delay: 100 },
+                { type: 'output', text: '█▀▄▄▄█▄▄▄ ▀▀▄ █▀  ▄▄▀▀ █  ▄▀▄█▀▄▀▀█', delay: 100 },
+                { type: 'output', text: '██▀▀███▄ ▀▀▀▄▄▀ ▀ █▀█▄██ ▄▄▀▀▄▀▄ ▄█', delay: 100 },
+                { type: 'output', text: '█▄███▄█▄█▀██▀ ▄█▄▀▄▄ ▀    ▄▄▄ ▄██▄█', delay: 100 },
+                { type: 'output', text: '█ ▄▄▄▄▄ ██▀  ██▄█▀█▄ ▄ ▄  █▄█ ▀▀███', delay: 100 },
+                { type: 'output', text: '█ █   █ █▀████  ▀█▀▄█▀▄▄  ▄▄▄▄█  ▄█', delay: 100 },
+                { type: 'output', text: '█ █▄▄▄█ █ ▄▀▀ █▀▄▀▀▀█▄█▄▄▀▄ ▄▀█▄▄▀█', delay: 100 },
+                { type: 'output', text: '█▄▄▄▄▄▄▄█▄▄▄█▄████▄▄▄▄▄███▄███▄▄███', delay: 100 },
+                { type: 'output', text: '', delay: 200 },
+                { type: 'output', text: '二维码解码URL: https://txz.qq.com/p?k=duCOv1o3LaZvus*juSKLxoo9Ms-mtgCK&f=1600001604', delay: 400 },
+                { type: 'output', text: '如果控制台二维码无法扫码，可以复制解码url到二维码生成网站生成二维码再扫码，也可以打开下方的二维码路径图片进行扫码。', delay: 600 },
+                { type: 'warning', text: `${getTimestamp()}: 二维码已保存到 C:\\napcat\\NapCat.34740.Shell\\versions\\9.9.19-34740\\resources\\app\\napcat\\cache\\qrcode.png`, delay: 800 },
+                { type: 'output', text: '', delay: 500 },
+                { type: 'success', text: '✓ NapCat 启动完成，等待扫码登录...', delay: 1000 }
+            ],
+            macos: [
+                { type: 'cmd', text: '$ brew install napcat', delay: 0 },
+                { type: 'output', text: '→ Updating Homebrew...', delay: 800 },
+                {
+                    type: 'progress',
+                    text: '更新进度',
+                    delay: 100,
+                    progress: {
+                        total: 100,
+                        current: 0,
+                        speed: 5,
+                        unit: '%'
+                    }
+                },
+                { type: 'success', text: '→ Homebrew updated', delay: 400 },
+                { type: 'output', text: '→ Downloading napcat-v4.8.90-darwin-x64.tar.gz', delay: 1000 },
+                {
+                    type: 'progress',
+                    text: '下载进度',
+                    delay: 100,
+                    progress: {
+                        total: 100,
+                        current: 0,
+                        speed: 4,
+                        unit: '%'
+                    }
+                },
+                { type: 'success', text: '→ Download complete', delay: 500 },
+                { type: 'output', text: '→ Installing dependencies...', delay: 600 },
+                {
+                    type: 'progress',
+                    text: '安装依赖',
+                    delay: 100,
+                    progress: {
+                        total: 100,
+                        current: 0,
+                        speed: 3,
+                        unit: '%'
+                    }
+                },
+                { type: 'output', text: '→ Linking binary...', delay: 400 },
+                { type: 'success', text: '→ NapCat installed 🎉', delay: 800 },
+                { type: 'cmd', text: '$ napcat --login qq=123456 token=hello', delay: 1200 },
+                { type: 'output', text: '→ Initializing NapCat...', delay: 600 },
+                { type: 'success', text: '✓ NapCat started on ws://127.0.0.1:3000', delay: 800 }
+            ]
+        };
+
+        // 添加终端行
+        function addTerminalLine(text, className, isTyping = false) {
+            const line = document.createElement('div');
+            line.className = `terminal-line ${className}`;
+
+            if (isTyping) {
+                line.innerHTML = `<span class="typing-text">${text}</span>`;
+            } else {
+                line.textContent = text;
+            }
+
+            terminalContent.appendChild(line);
+            terminal.scrollTop = terminal.scrollHeight;
+            return line;
+        }
+
+        // 创建动态进度条
+        function createAnimatedProgressBar(text, progressData) {
+            const line = addTerminalLine(text, 'progress');
+
+            const progressContainer = document.createElement('div');
+            progressContainer.className = 'progress-container';
+
+            const progressBar = document.createElement('div');
+            progressBar.className = 'progress-bar';
+            progressBar.style.width = '0%';
+
+            const progressText = document.createElement('div');
+            progressText.className = 'progress-info';
+            progressText.innerHTML = `
+                <span>${progressData.text}</span>
+                <span class="progress-percent">0${progressData.unit}</span>
+            `;
+
+            progressContainer.appendChild(progressBar);
+            progressContainer.appendChild(progressText);
+            line.appendChild(progressContainer);
+
+            return {
+                line,
+                update: (current) => {
+                    const percent = Math.min(100, Math.round((current / progressData.total) * 100));
+                    progressBar.style.width = `${percent}%`;
+                    progressText.querySelector('.progress-percent').textContent =
+                        `${current}${progressData.unit}`;
+                },
+                complete: () => {
+                    progressBar.style.width = '100%';
+                    progressText.querySelector('.progress-percent').textContent =
+                        `${progressData.total}${progressData.unit}`;
+                }
+            };
+        }
+
+        // 执行安装脚本
+        function runInstallScript() {
+            if (isInstalling) return;
+            isInstalling = true;
+
+            const script = installScripts[selectedPlatform];
+            let index = 0;
+            let activeProgressBar = null;
+
+            function executeNextLine() {
+                if (index >= script.length) {
+                    cursor.style.display = 'none';
+                    isInstalling = false;
+                    terminalControls.style.display = 'flex';
+                    return;
+                }
+
+                const line = script[index];
+                index++;
+
+                setTimeout(() => {
+                    if (line.progress) {
+                        // 处理进度条
+                        const progressBar = createAnimatedProgressBar('', {
+                            text: line.text,
+                            total: line.progress.total,
+                            unit: line.progress.unit
+                        });
+
+                        activeProgressBar = progressBar;
+                        let current = 0;
+                        const speed = line.progress.speed || 1;
+
+                        const progressInterval = setInterval(() => {
+                            current += speed;
+                            progressBar.update(current);
+
+                            if (current >= line.progress.total) {
+                                clearInterval(progressInterval);
+                                progressBar.complete();
+                                activeProgressBar = null;
+                                executeNextLine();
+                            }
+                        }, 50);
+                    } else {
+                        // 处理普通文本
+                        const isCmd = line.type === 'cmd';
+                        addTerminalLine(line.text, line.type, isCmd);
+
+                        // 如果是多行输出，可以同时显示
+                        if (line.multiLines) {
+                            const multiLineContainer = document.createElement('div');
+                            multiLineContainer.className = 'multi-line';
+
+                            line.multiLines.forEach((text, i) => {
+                                const lineElement = document.createElement('div');
+                                lineElement.className = `terminal-line output`;
+                                lineElement.style.setProperty('--line-index', i);
+                                lineElement.textContent = text;
+                                multiLineContainer.appendChild(lineElement);
+                            });
+
+                            terminalContent.appendChild(multiLineContainer);
+                            terminal.scrollTop = terminal.scrollHeight;
+                        }
+
+                        executeNextLine();
+                    }
+                }, line.delay);
+            }
+
+            executeNextLine();
+        }
+
+        // 重置终端
+        function resetTerminal() {
+            terminalContent.innerHTML = '';
+            cursor.style.display = 'inline-block';
+            terminalControls.style.display = 'none';
+            currentDate = new Date();
+        }
+
+        // 复制终端内容
+        function copyTerminalContent() {
+            const text = terminalContent.textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = copyBtn.textContent;
+                copyBtn.textContent = '已复制!';
+                setTimeout(() => {
+                    copyBtn.textContent = originalText;
+                }, 2000);
+            });
+        }
+
+        // 点击安装按钮
+        installBtn.addEventListener('click', () => {
+            if (!selectedPlatform) {
+                // 显示平台选择器
+                platformSelector.style.display = 'flex';
+                installBtn.textContent = '开始安装';
+                return;
+            }
+
+            terminal.style.display = 'block';
+            terminal.scrollIntoView({ behavior: 'smooth' });
+
+            // 重置终端
+            resetTerminal();
+
+            // 延迟开始执行，让用户看到滚动动画
+            setTimeout(() => {
+                runInstallScript();
+            }, 500);
+        });
+
+        // 平台选择按钮点击事件
+        document.querySelectorAll('.platform-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // 移除所有按钮的active类
+                document.querySelectorAll('.platform-btn').forEach(b => {
+                    b.classList.remove('active');
+                });
+
+                // 为当前按钮添加active类
+                btn.classList.add('active');
+
+                // 设置选中的平台
+                selectedPlatform = btn.dataset.platform;
+
+                // 更新安装按钮文本
+                installBtn.textContent = `安装 ${btn.textContent} 版本`;
+            });
+        });
+
+        // 重新体验按钮
+        restartBtn.addEventListener('click', () => {
+            resetTerminal();
+            runInstallScript();
+        });
+
+        // 复制日志按钮
+        copyBtn.addEventListener('click', copyTerminalContent);
+    </script>
+</body>
+
+</html>

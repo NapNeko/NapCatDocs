@@ -21,3 +21,6 @@ NapCat 有着众多启动方式，每种方式各有优点：
 ### Framework 启动/安装方式
 - 推荐教程：[方法 1 - 作为 LiteLoader 插件启动](./boot/Framework.md)
 - 原生使用 NapCatQQ 启动（由于启动方式变更，暂不提供教程）
+
+### 体验一下 一键安装 神秘教程？
+- [在线体验](/demo/demo.html)
