@@ -203,6 +203,12 @@ curl -o napcat.termux.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/aRUNRZ?referralCode=Ns2Kracy)
 
+## NapCat.Zeabur - Zeabur 部署 <Badge type="tip" text="community" />
+
+<mark>此为 社区作品 可能会遇到一些问题，欢迎反馈。</mark>
+
+[![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/JGR8CQ)
+
 ## NapCat.Nix - Nix 部署 <Badge type="tip" text="community" />
 
 <mark>此为 社区作品 可能会遇到一些问题，欢迎反馈。</mark>
