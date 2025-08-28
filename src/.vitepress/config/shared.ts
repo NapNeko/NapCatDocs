@@ -1,17 +1,17 @@
-import { defineConfig } from 'vitepress'
-import {
-  PageProperties,
-  PagePropertiesMarkdownSection
-} from '@nolebase/vitepress-plugin-page-properties/vite';
 import {
   GitChangelog,
   GitChangelogMarkdownSection,
-} from '@nolebase/vitepress-plugin-git-changelog/vite';
-import { InlineLinkPreviewElementTransform } from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it';
-import timeline from 'vitepress-markdown-timeline';
-import taskLists from "markdown-it-task-lists";
-import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons';
-import { transformerTwoslash } from '@shikijs/vitepress-twoslash';
+} from '@nolebase/vitepress-plugin-git-changelog/vite'
+import { InlineLinkPreviewElementTransform } from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it'
+import {
+  PageProperties,
+  PagePropertiesMarkdownSection,
+} from '@nolebase/vitepress-plugin-page-properties/vite'
+import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
+import taskLists from 'markdown-it-task-lists'
+import { defineConfig } from 'vitepress'
+import timeline from 'vitepress-markdown-timeline'
+import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 
 export const shared = defineConfig({
   title: 'NapCatQQ',
@@ -20,9 +20,7 @@ export const shared = defineConfig({
   metaChunk: true,
   vite: {
     ssr: {
-      noExternal: [
-        '@nolebase/*',
-      ],
+      noExternal: ['@nolebase/*'],
     },
     plugins: [
       GitChangelog({
@@ -40,9 +38,7 @@ export const shared = defineConfig({
       }) as any,
       PageProperties(),
       PagePropertiesMarkdownSection({
-        excludes: [
-          'index.md',
-        ],
+        excludes: ['index.md'],
       }),
       groupIconVitePlugin({
         customIcon: {
@@ -51,8 +47,8 @@ export const shared = defineConfig({
           md: 'logos:markdown', //markdown图标
           css: 'logos:css-3', //css图标
         },
-      })
-    ]
+      }),
+    ],
   },
   markdown: {
     math: true,
@@ -66,16 +62,16 @@ export const shared = defineConfig({
       // 代码组图标
       md.use(groupIconMdPlugin)
     },
-    codeTransformers: [
-      transformerTwoslash()
-    ]
+    codeTransformers: [transformerTwoslash() as any],
+    // Explicitly load these languages for types hightlighting
+    languages: ['js', 'jsx', 'ts', 'tsx'] as any,
   },
 
   sitemap: {
     hostname: 'https://napneko.github.io/',
     transformItems(items) {
       return items.filter((item) => !item.url.includes('migration'))
-    }
+    },
   },
 
   /* prettier-ignore */
@@ -99,8 +95,8 @@ export const shared = defineConfig({
     logo: { src: '/assets/newnewlogo.png', width: 24, height: 24 },
     //开启本地搜索
     search: {
-      provider: 'local'
+      provider: 'local',
     },
-    socialLinks: [{ icon: 'github', link: 'https://github.com/NapNeko/NapCatQQ' }]
-  }
+    socialLinks: [{ icon: 'github', link: 'https://github.com/NapNeko/NapCatQQ' }],
+  },
 })

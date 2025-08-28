@@ -15,8 +15,8 @@ hero:
       text: GitHub
       link: https://github.com/NapNeko/NapCatQQ
   image:
-      src: /assets/newnewlogo.png
-      alt: Logo
+    src: /assets/newnewlogo.png
+    alt: Logo
 
 features:
   - icon: 📝
@@ -29,5 +29,5 @@ features:
     title: 适配快速
     details: 采取 Core/Adapter 架构，支持多种 Bot 协议，快速迁移。
 ---
-<Confetti />
 
+<Confetti />
