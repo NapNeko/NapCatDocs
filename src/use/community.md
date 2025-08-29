@@ -9,7 +9,7 @@ Author: tianyisama
 ::: details Node 开发 SDK node-napcat-ts
 Author: huankong233
 
-[node-napcat-ts](https://github.com/huankong233/node-napcat-ts)
+[node-napcat-ts](https://github.com/HkTeamX/node-napcat-ts)
 :::
 
 ::: details OlivOS 青果核心交互栈
@@ -35,12 +35,9 @@ Author: ThriceCola
 ::: details Python 开发 SDK：NcatBot
 Author: 木子
 
+✨ 使用简单易上手的 python 开发属于你的 napcatqq 机器人，采用简单的代码就可以实现复杂的任务，支持直接发送图片 markdown。
 
-✨使用简单易上手的 python 开发属于你的 napcatqq 机器人，采用简单的代码就可以实现复杂的任务，支持直接发送图片 markdown。
-
-
-使用 NcatBot，让机器人🤖开发更简单。
-
+使用 NcatBot，让机器人 🤖 开发更简单。
 
 [NcatBot](https://github.com/liyihao1110/NcatBot)
 :::
