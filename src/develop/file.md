@@ -35,6 +35,7 @@ Stream API 提供了三种类型的接口，专门用于处理大文件传输和
 # Python 调用 upload_file_stream 示例
 # 详见：https://github.com/NapNeko/NapCatQQ/blob/main/src/onebot/action/stream/test_upload_stream.py
 ```
+[upload_file_stream](https://github.com/NapNeko/NapCatQQ/blob/main/src/onebot/action/stream/test_upload_stream.py)
 
 ### 响应格式
 
@@ -47,6 +48,11 @@ Stream API 使用特殊的响应格式来处理流式传输：
 | 传输中 | `stream` | 数据块传输 |
 | 传输完成 | `response`  | 流传输成功结束 |
 | 传输失败 | `error`  | 流传输异常结束 |
+
+| 状态 | stream 字段 | 描述 |
+|------|-----------|------|
+| 普通接口 | `normal-action` | 标准OneBot接口 |
+| 流式接口 | `stream-action`  | 新的流式传输接口 |
 
 #### 响应示例
 
@@ -102,12 +108,8 @@ Stream API 使用特殊的响应格式来处理流式传输：
 
 ### 优势与适用场景
 
-✅ **推荐使用场景：**
-- 🏢 **企业级部署**：大文件传输需求
-- 🐳 **Docker 容器化**：容器间文件共享
-- 🌐 **跨设备传输**：分布式环境文件同步  
-- 🔄 **分离部署**：前后端分离架构
-
+- **大文件传输**：适用于需要传输大于 100MB 的文件，避免内存溢出。
+- **跨设备部署**：适用于 NapCat 与 QQ 客户端不在同一台机器的场景。
 ---
 
 ## 旧文档
