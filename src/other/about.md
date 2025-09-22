@@ -4,6 +4,6 @@
 
 [NapCat #3](https://qm.qq.com/q/8zJMLjqy2Y)
 
-[NapCat #2](https://qm.qq.com/q/HaRcfrHpUk)
+[NapCat #2](https://qm.qq.com/q/uhRrZRqwEK)
 
 [NapCat #1](https://qm.qq.com/q/cnr2C9UifC)
