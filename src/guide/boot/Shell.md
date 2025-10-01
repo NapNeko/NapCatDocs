@@ -87,20 +87,20 @@ docker 安装卡住的请使用下方项目并自行换源
 curl -o \
 napcat.sh \
 https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh \
-&& sudo bash napcat.sh
+&& bash napcat.sh
 ```
 ```bash [可视化安装]
 curl -o \
 napcat.sh \
 https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh \
-&& sudo bash napcat.sh \
+&& bash napcat.sh \
 --tui
 ```
 ```bash [Docker 安装]
 curl -o \
 napcat.sh \
 https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh \
-&& sudo bash napcat.sh \
+&& bash napcat.sh \
 --docker y \
 --qq "123456789" \
 --mode ws \
@@ -112,7 +112,7 @@ https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh \
 curl -o \
 napcat.sh \
 https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh \
-&& sudo bash napcat.sh \
+&& bash napcat.sh \
 --docker n \
 --cli n \
 --proxy 0 \
@@ -123,7 +123,7 @@ https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh \
 curl -o \
 napcat.sh \
 https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh \
-&& sudo bash napcat.sh \
+&& bash napcat.sh \
 --docker n \
 --cli y 
 ```
@@ -158,11 +158,11 @@ https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh \
 5. 可重复运行
 
 ```bash
-curl -o napcat.sh https://github.moeyy.xyz/https://raw.githubusercontent.com/NapNeko/napcat-linux-installer/refs/heads/main/install.sh && sudo bash napcat.sh
+curl -o napcat.sh https://github.moeyy.xyz/https://raw.githubusercontent.com/NapNeko/napcat-linux-installer/refs/heads/main/install.sh && bash napcat.sh
 ```
 
 ```bash
-curl -o napcat.sh https://raw.githubusercontent.com/NapNeko/napcat-linux-installer/refs/heads/main/install.sh && sudo bash napcat.sh
+curl -o napcat.sh https://raw.githubusercontent.com/NapNeko/napcat-linux-installer/refs/heads/main/install.sh && bash napcat.sh
 ```
 
 [NapCat.Linux.Launcher](https://github.com/NapNeko/napcat-linux-installer)

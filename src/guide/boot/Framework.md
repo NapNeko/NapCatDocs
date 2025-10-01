@@ -39,7 +39,7 @@ Win 一键启动（内置 LiteLoader）
 ::: code-group
 
 ```bash [NapCat]
-curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.framework.sh && sudo bash napcat.sh
+curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.framework.sh && bash napcat.sh
 ```
 
 :::
