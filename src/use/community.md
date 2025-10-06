@@ -35,7 +35,7 @@ Author: ThriceCola
 ::: details Python 开发 SDK：NcatBot
 Author: 木子
 
-✨ 使用简单易上手的 python 开发属于你的 napcatqq 机器人，采用简单的代码就可以实现复杂的任务，支持直接发送图片 markdown。
+✨ 使用简单易上手的 Python 开发属于你的 NapCatQQ 机器人，采用简单的代码就可以实现复杂的任务。
 
 使用 NcatBot，让机器人 🤖 开发更简单。
 
