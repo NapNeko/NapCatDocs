@@ -167,6 +167,22 @@ curl -o napcat.sh https://raw.githubusercontent.com/NapNeko/napcat-linux-install
 
 [NapCat.Linux.Launcher](https://github.com/NapNeko/napcat-linux-installer)
 
+## NapCat.AppImage
+
+1. 不破坏 NT 自身文件
+2. 缓存与 NapCat 位于当前工作目录
+3. 简单方便
+4. 更新 QQ 不会干扰 NapCat 安装
+5. 可重复运行
+6. 依赖隔离
+7. 便携式
+
+Linux AppImage格式
+
+需要通过包管理安装xvfb和fuse 其余依赖一般不需要管理 自带napcat和NT
+
+前往 [NapCat.AppImage](https://github.com/NapNeko/NapCatAppImageBuild/releases)
+
 ## NapCat.Docker - Linux容器化部署 <Badge type="tip" text="recommend" />
 
 仓库地址: [NapCat.Docker](https://github.com/NapNeko/NapCat-Docker)
