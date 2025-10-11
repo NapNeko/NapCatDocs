@@ -10,7 +10,7 @@
 ### 🐾 传送门解锁方式
 
 盯着控制台里会发光的咒语看三秒 👇
-✨👉「[WebUI] WebUI Local Panel Url: http://127.0.0.1:6099/webui?token=喵喵の秘钥」
+✨👉「[WebUI] WebUI Local Panel Url: <http://127.0.0.1:6099/webui?token=喵喵の秘钥>」
 ( 用肉球戳一戳这个链接就能穿越啦~ )
 
 ### 🐾 喵喵问答: 什么是端口号？（歪头）
