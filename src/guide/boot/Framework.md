@@ -43,9 +43,3 @@ curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script
 ```
 
 :::
-## NapCat.Framework.Installer - Win平台一键安装工具  <Badge type="warning" text="dont use" />
-<mark>请注意使用此方法使用 等于或高于 9.9.15-29271 的 QQ</mark>
-
-此为 社区作品 可能会遇到一些问题，欢迎反馈
-
-仓库地址: [NapCat.Framework.installer](https://github.com/NapNeko/NapCat-Installer)

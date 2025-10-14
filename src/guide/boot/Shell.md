@@ -71,14 +71,6 @@ NapCatWinBootMain.exe 10001
 
 [NapCatQQ-Desktop](https://github.com/NapNeko/NapCatQQ-Desktop)
 
-## NapCat.Win.Installer - Win 下载与一键安装器 <Badge type="tip" text="normal" />
-
-<mark>如果有 bug 请使用上面方案</mark>
-
-[启动器下载地址](https://github.com/NapNeko/NapCat-Win-Installer/releases)
-
-安装成功后需要快速登录同 [NapCat.shell](#napcatshell---win手动启动教程) 方法一 一样
-
 ## NapCat.Installer - Linux 一键使用脚本(支持Ubuntu 20+/Debian 10+/Centos9)    <Badge type="tip" text="recommend" /> 
 docker 安装卡住的请使用下方项目并自行换源
 
