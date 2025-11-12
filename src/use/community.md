@@ -50,6 +50,10 @@ Author: stevesensei
 
 目前还在紧张的开发，但基础功能已经可用
 
-[NapPlana.NET](https://github.com/stevesensei/NapPlana.NET)
+- [仓库地址](https://github.com/napplana/NapPlana.NET)
+
+- [文档](https://napplana.net)
+
+- [API文档](https://ref.napplana.net)
 
 :::
