@@ -39,19 +39,31 @@
    ![koishi-onebot-setting](/assets/use/koishi-onebot-setting.png)
 
    配置完成后，在 NapCat 的配置中添加 WS 反向地址。Koishi OneBot 的 WS 反向地址为 `ws://127.0.0.1:5140/onebot`。添加完成后，点击保存即可。
+   >如果你是使用 Docker 部署的 Koishi ，则反向地址应为 `ws://Koishi的容器名:5140/onebot` 
+   
+   >例如 `ws://koishi:5140/onebot`
 
 ## [AstrBot](https://astrbot.app/)
 
 1. 配置 AstrBot
 
-   选择 配置 → 消息平台 → 消息平台适配器 → aiocqhttp(qq)，默认即可，可根据需要更改。
+   进入 AstrBot 仪表盘 选择 机器人 → 创建机器人 → 消息平台类别 → OneBot v11，启用适配器，其余默认即可，可根据需要更改(例如反向 Websocket Token)。
 
-   ![AstrBot-onebot-1](/assets/use/Astrbot-onebot-1.png)
+   <img width="500" height="600" alt="image" src="https://github.com/user-attachments/assets/eef8d332-b592-4533-a4bd-e4a7f5e2480d" />
+
+
 
 2. 配置 OneBot
 
    在 NapCat WebUI 页面选择 网络配置 → 新建 → WebSocket 客户端，URL 填入`ws://127.0.0.1:6199/ws`，添加完成后，点击保存即可。
-   ![AstrBot-onebot-2](/assets/use/Astrbot-onebot-2.png)
+   
+   <img width="500" height="600" alt="image" src="https://github.com/user-attachments/assets/c256d576-670c-4f0c-a7ce-ac7affb786b3" />
+
+   >如果你是用 Docker 部署的 AstrBot ，则 URL 应为 `ws://astrbot:6199/ws` 
+   
+   <img width="500" height="600" alt="image" src="https://github.com/user-attachments/assets/55c7ea6b-177d-4d25-a6ee-6240b23a3164" />
+
+
 
 ## OlivOS
 
