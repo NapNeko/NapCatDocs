@@ -69,6 +69,14 @@
 
 支持正向和反向 WS 以及 http 详见 [文档](https://doc.olivos.wiki/)
 
+## [NapLink](https://github.com/NapLink/NapLink)
+
+现代化的 NapCat WebSocket 客户端 SDK
+
+- 文档：https://naplink.github.io/
+- 代码：https://github.com/NapLink/NapLink
+- 实例项目：https://github.com/NapGram/NapGram
+
 ## [onebotv11_rs](https://github.com/canxin121/onebotv11_rs)
 
 支持正向和反向 WS 以及 http
