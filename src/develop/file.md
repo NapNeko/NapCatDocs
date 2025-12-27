@@ -37,7 +37,6 @@ Stream API 提供了三种类型的接口，专门用于处理大文件传输和
 ```
 [upload_file_stream](https://github.com/NapNeko/NapCatQQ/blob/main/packages/napcat-onebot/action/stream/test_upload_stream.py)
 
-
 ### 响应格式
 
 Stream API 使用特殊的响应格式来处理流式传输：
