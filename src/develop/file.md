@@ -33,9 +33,10 @@ Stream API 提供了三种类型的接口，专门用于处理大文件传输和
 #### 示例代码
 ```python
 # Python 调用 upload_file_stream 示例
-# 详见：https://github.com/NapNeko/NapCatQQ/blob/main/src/onebot/action/stream/test_upload_stream.py
+# 详见：https://github.com/NapNeko/NapCatQQ/blob/main/packages/napcat-onebot/action/stream/test_upload_stream.py
 ```
-[upload_file_stream](https://github.com/NapNeko/NapCatQQ/blob/main/src/onebot/action/stream/test_upload_stream.py)
+[upload_file_stream](https://github.com/NapNeko/NapCatQQ/blob/main/packages/napcat-onebot/action/stream/test_upload_stream.py)
+
 
 ### 响应格式
 
