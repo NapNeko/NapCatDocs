@@ -246,6 +246,21 @@ class OB11GroupEssenceEvent extends OB11GroupNoticeEvent {
 }
 ```
 
+### 群灰条消息通知
+
+```typescript
+export class OB11GroupGrayTipEvent extends OB11BaseNoticeEvent {
+  notice_type = 'notify'; // 通知
+  sub_type = 'gray_tip';  // 群灰条
+  group_id: number;       // 收取群号
+  user_id: number;        // 真实发送者QQ（如果是伪造的灰条，这就是攻击者）
+  message_id: number;     // 消息ID，可用于撤回
+  busi_id: string;        // 业务ID
+  content: string;        // 灰条内容（JSON字符串）
+  raw_info: unknown;      // 原始信息
+}
+```
+
 ### 表情回应通知
 
 ```typescript
