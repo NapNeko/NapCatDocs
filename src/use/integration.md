@@ -18,6 +18,8 @@
 
 ## [Koishi](https://koishi.chat)
 
+> 可以参考文档：[如何使用 NapCat 对接 adapter-onebot 使用教程](https://forum.itzdrli.cc/d/12-ru-he-shi-yong-napcat-dui-jie-adapter-onebot-shi-yong-jiao-cheng)
+
 1. 在 Koishi 插件市场搜索 `onebot` 并安装 `adapter-onebot`，如下图：
 
    ![koishi-install-onebot](/assets/use/koishi-install-onebot.png)
@@ -45,9 +47,11 @@
 
 ## [AstrBot](https://astrbot.app/)
 
+> 可以参考文档：[连接到 AstrBot](https://docs.astrbot.app/deploy/platform/aiocqhttp/napcat.html#%E8%BF%9E%E6%8E%A5%E5%88%B0-astrbot)
+
 1. 配置 AstrBot
 
-   进入 AstrBot 仪表盘 选择 机器人 → 创建机器人 → 消息平台类别 → OneBot v11，启用适配器，其余默认即可，可根据需要更改(例如反向 Websocket Token)。
+   进入 AstrBot 仪表盘 选择 机器人 → 创建机器人 → 消息平台类别 → `OneBot v11 (QQ 个人号等)`，启用适配器，其余默认即可，可根据需要更改(例如反向 Websocket Token)。
 
    <img width="500" height="600" alt="image" src="https://github.com/user-attachments/assets/eef8d332-b592-4533-a4bd-e4a7f5e2480d" />
 
