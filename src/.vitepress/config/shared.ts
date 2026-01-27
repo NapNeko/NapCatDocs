@@ -12,7 +12,50 @@ import taskLists from 'markdown-it-task-lists'
 import { defineConfig } from 'vitepress'
 import timeline from 'vitepress-markdown-timeline'
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
+import { useSidebar } from 'vitepress-openapi'
+import fs from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
+// 在 Node.js 配置环境中扫描 API 版本（构建时执行）
+function scanApiVersions() {
+  const apiDir = path.resolve(__dirname, '../../api')
+  const versions: { version: string; spec: any }[] = []
+  
+  if (fs.existsSync(apiDir)) {
+    const dirs = fs.readdirSync(apiDir, { withFileTypes: true })
+      .filter(dirent => dirent.isDirectory())
+      .map(dirent => dirent.name)
+      .filter(name => /^\d+\.\d+\.\d+$/.test(name))
+      .sort((a, b) => {
+        const aParts = a.split('.').map(Number)
+        const bParts = b.split('.').map(Number)
+        for (let i = 0; i < 3; i++) {
+          if (bParts[i] !== aParts[i]) return bParts[i] - aParts[i]
+        }
+        return 0
+      })
+    
+    for (const version of dirs) {
+      const specPath = path.join(apiDir, version, 'openapi.json')
+      if (fs.existsSync(specPath)) {
+        try {
+          const spec = JSON.parse(fs.readFileSync(specPath, 'utf-8'))
+          versions.push({ version, spec })
+        } catch (error) {
+          console.warn(`[API] Failed to parse OpenAPI spec for version ${version}:`, error)
+        }
+      }
+    }
+  }
+  
+  return versions
+}
+
+// API 版本配置（构建时扫描）
+export const apiVersions = scanApiVersions()
 export const shared = defineConfig({
   title: 'NapCatQQ',
   lastUpdated: true,

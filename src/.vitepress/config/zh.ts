@@ -55,7 +55,7 @@ function nav(): DefaultTheme.NavItem[] {
   ]
 }
 
-function sidebarGuide(): DefaultTheme.Sidebar {
+function sidebarGuide(): DefaultTheme.SidebarItem[] {
   return [
     {
       text: '快速开始',
@@ -113,6 +113,14 @@ function sidebarGuide(): DefaultTheme.Sidebar {
             { text: '类型', link: '/type' }
           ]
         }
+      ]
+    },
+    {
+      text: 'API 文档',
+      base: '/api',
+      collapsed: true,
+      items: [
+        { text: '版本选择', link: '/' }
       ]
     },
     {

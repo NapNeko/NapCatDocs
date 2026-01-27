@@ -1,5 +1,6 @@
 // .vitepress/theme/index.js
 import { useData, useRoute } from 'vitepress'
+import type { EnhanceAppContext } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { h, type Plugin } from 'vue'
 
@@ -20,6 +21,13 @@ import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client'
 import { Footer } from '@theojs/lumen' //不好看
 import codeblocksFold from 'vitepress-plugin-codeblocks-fold'
 import { Footer_Data } from '../data/footerData.ts'
+import { theme } from 'vitepress-openapi/client'
+
+// 使用 Vite glob import 动态导入所有 OpenAPI specs
+const openApiSpecs = import.meta.glob<{ default: any }>('../../api/*/openapi.json', { eager: true })
+
+// 导出 specs 供组件使用（不在这里调用 useOpenapi）
+export { openApiSpecs }
 
 import '@nolebase/vitepress-plugin-enhanced-mark/client/style.css'
 import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
@@ -29,10 +37,12 @@ import '@nolebase/vitepress-plugin-page-properties/client/style.css'
 import '@shikijs/vitepress-twoslash/style.css'
 import 'vitepress-markdown-timeline/dist/theme/index.css'
 import 'vitepress-plugin-codeblocks-fold/style/index.css'
+import 'vitepress-openapi/dist/style.css'
 import Confetti from './components/Confetti.vue'
 
 import Hero from '../theme/Layout.vue'
 import NCard from './components/NCard.vue'
+import ApiVersionSelector from './components/ApiVersionSelector.vue'
 
 import './custom.css'
 export default {
@@ -49,6 +59,7 @@ export default {
   },
   enhanceApp({ app }) {
     app.component('Confetti', Confetti) //注册全局组件
+    app.component('ApiVersionSelector', ApiVersionSelector)
     app.use(NolebaseEnhancedReadabilitiesPlugin, {
       spotlight: {
         disableHelp: true,
