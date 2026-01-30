@@ -57,7 +57,11 @@ export default {
       'layout-top': () => [h(NolebaseHighlightTargetedHeading)],
     })
   },
-  enhanceApp({ app }) {
+  enhanceApp(ctx: EnhanceAppContext) {
+    const { app } = ctx
+    // 注册 vitepress-openapi 组件（包括 OASpec）
+    theme.enhanceApp(ctx)
+    
     app.component('Confetti', Confetti) //注册全局组件
     app.component('ApiVersionSelector', ApiVersionSelector)
     app.use(NolebaseEnhancedReadabilitiesPlugin, {
