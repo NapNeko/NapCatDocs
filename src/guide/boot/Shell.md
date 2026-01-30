@@ -181,6 +181,25 @@ Linux AppImage格式
 
 除了常规的 docker run 样式的安装方法,此方法支持 compose 一键模板部署 astrbot, koishi, nonebot 详细参考 Readme 处 `一键模板化配置` 部分
 
+::: warning 群晖 DSM 用户注意
+在群晖 DSM 环境的 Docker（Container Manager）中部署 NapCat 时，可能会遇到权限问题导致 `permission denied` 错误，例如：
+
+```
+Error: EACCES: permission denied, open '/app/napcat/config/webui.json'
+Error: EACCES: permission denied, mkdir '/app/.config/QQ/NapCat/temp'
+```
+
+**原因**：群晖 DSM 在存储池的文件夹下设置了自己的 ACL（访问控制列表），即使文件夹权限为 777，也只允许在 File Station 中授权的用户访问。
+
+**解决方案**：
+1. 打开群晖的 **File Station**
+2. 找到 NapCat 挂载的数据目录
+3. 右键点击文件夹，选择 **属性** → **权限**
+4. 点击 **新增**，将 **Everyone** 设置为 **读取/写入** 权限
+5. 勾选 **应用到这个文件夹、子文件夹及文件**
+6. 点击 **保存** 后重新启动容器
+:::
+
 ## NapCat.MacOs - MacOs安装工具 <Badge type="tip" text="recommend" />
 
 [前往下载](https://github.com/NapNeko/NapCat-Mac-Installer/releases/)
