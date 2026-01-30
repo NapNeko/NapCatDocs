@@ -71,3 +71,42 @@
     }
 
 }
+
+/* 夜间模式下 mermaid 图表样式修复 */
+.dark .mermaid .label-container {
+    background-color: #1e1e1e !important;
+    fill: #1e1e1e !important;
+}
+
+.dark .mermaid .nodeLabel {
+    color: #e0e0e0 !important;
+}
+
+.dark .mermaid .edgeLabel {
+    background-color: #2d2d2d !important;
+    color: #e0e0e0 !important;
+}
+
+.dark .mermaid .cluster rect {
+    fill: #2d2d2d !important;
+    stroke: #555 !important;
+}
+
+.dark .mermaid .cluster-label .nodeLabel {
+    color: #e0e0e0 !important;
+}
+
+/* 针对使用 classDef 自定义浅色背景的节点，文字保持深色 */
+.dark .mermaid .node.client .nodeLabel,
+.dark .mermaid .node.core .nodeLabel,
+.dark .mermaid .node.framework .nodeLabel,
+.dark .mermaid .node.plugin .nodeLabel {
+    color: #1a1a1a !important;
+}
+
+.dark .mermaid .node.client .nodeLabel p,
+.dark .mermaid .node.core .nodeLabel p,
+.dark .mermaid .node.framework .nodeLabel p,
+.dark .mermaid .node.plugin .nodeLabel p {
+    color: #1a1a1a !important;
+}
