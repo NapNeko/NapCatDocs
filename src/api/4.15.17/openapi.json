@@ -19364,6 +19364,11 @@
     "responses": {},
     "securitySchemes": {}
   },
-  "servers": [],
-  "security": []
+  "security": [],
+  "servers": [
+    {
+      "description": "NapCat 本地服务",
+      "url": "http://localhost:3000"
+    }
+  ]
 }

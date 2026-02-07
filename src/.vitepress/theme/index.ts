@@ -23,12 +23,6 @@ import codeblocksFold from 'vitepress-plugin-codeblocks-fold'
 import { Footer_Data } from '../data/footerData.ts'
 import { theme } from 'vitepress-openapi/client'
 
-// 使用 Vite glob import 动态导入所有 OpenAPI specs
-const openApiSpecs = import.meta.glob<{ default: any }>('../../api/*/openapi.json', { eager: true })
-
-// 导出 specs 供组件使用（不在这里调用 useOpenapi）
-export { openApiSpecs }
-
 import '@nolebase/vitepress-plugin-enhanced-mark/client/style.css'
 import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
 import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
@@ -61,7 +55,7 @@ export default {
     const { app } = ctx
     // 注册 vitepress-openapi 组件（包括 OASpec）
     theme.enhanceApp(ctx)
-    
+
     app.component('Confetti', Confetti) //注册全局组件
     app.component('ApiVersionSelector', ApiVersionSelector)
     app.use(NolebaseEnhancedReadabilitiesPlugin, {
