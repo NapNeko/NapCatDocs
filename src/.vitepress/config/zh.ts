@@ -102,8 +102,29 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         { text: '请求接口', link: '/api' },
         { text: '上报事件', link: '/event' },
         { text: '消息类型', link: '/msg' },
-        { text: '本体开发', link: '/plugin' },
         { text: '处理文件', link: '/file' },
+        {
+          text: '插件开发',
+          base: '/develop/plugin',
+          collapsed: false,
+          items: [
+            { text: '插件机制原理', link: '/mechanism' },
+            { text: '快速开始', link: '/index' },
+            { text: '项目结构', link: '/structure' },
+            { text: '配置与 WebUI', link: '/start-webui' },
+            { text: '进阶功能', link: '/advanced' },
+            { text: '发布插件', link: '/publish' },
+            {
+              text: 'API 参考',
+              base: '/develop/plugin/api',
+              collapsed: false,
+              items: [
+                { text: 'API 文档', link: '/doc' },
+                { text: '类型定义', link: '/type' }
+              ]
+            }
+          ]
+        },
         {
           text: '完整接口定义',
           base: '/develop/api',
