@@ -100,7 +100,7 @@ napcatHmrPlugin({
 {
   "scripts": {
     "build": "vite build",
-    "deploy": "vite build",
+    "push": "vite build",
     "dev": "vite build --watch"
   }
 }
@@ -109,19 +109,23 @@ napcatHmrPlugin({
 | 脚本 | 说明 |
 |-----|------|
 | `build` | 仅构建（如调试服务在线则自动部署） |
-| `deploy` | 构建 + 自动部署到远程 + 重载插件 |
+| `push` | 构建 + 自动部署到远程 + 重载插件 |
 | `dev` | 持续构建 + 每次构建后自动部署 + 热重载 |
 
-> 因为 `napcatHmrPlugin` 已集成到 Vite 构建流程中，所以 `deploy` 和 `dev` 只需要 `vite build` / `vite build --watch` 即可，无需额外启动 CLI 进程。
+::: warning 不要使用 `deploy` 作为脚本名
+pnpm 有内置的 `pnpm deploy` 命令（用于 workspace 部署），会覆盖 `package.json` 中的同名脚本，导致 `ERR_PNPM_CANNOT_DEPLOY` 错误。请使用 `push` 或其他名称代替。
+:::
+
+> 因为 `napcatHmrPlugin` 已集成到 Vite 构建流程中，所以 `push` 和 `dev` 只需要 `vite build` / `vite build --watch` 即可，无需额外启动 CLI 进程。
 
 ## 开发流程
 
 ### 一、首次部署
 
-首次开发时，使用 `deploy` 命令将插件构建并部署到 NapCat：
+首次开发时，使用 `push` 命令将插件构建并部署到 NapCat：
 
 ```bash
-pnpm run deploy
+pnpm run push
 ```
 
 执行 `vite build` 时，Vite 插件 `napcatHmrPlugin` 会在构建完成的 `writeBundle` 钩子中自动执行部署流程：
