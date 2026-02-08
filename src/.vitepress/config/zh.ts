@@ -113,6 +113,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             { text: '项目结构', link: '/structure' },
             { text: '配置与 WebUI', link: '/start-webui' },
             { text: '进阶功能', link: '/advanced' },
+            { text: '热重载开发', link: '/hot-reload' },
             { text: '发布插件', link: '/publish' },
             {
               text: 'API 参考',

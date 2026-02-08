@@ -335,6 +335,7 @@ NapCat 插件模板内置了 GitHub Actions 工作流，可自动完成构建、
 
 ## 另请参阅
 
+- [热重载开发](./hot-reload.md) — 使用调试服务实现改代码即时生效，无需重启 NapCat
 - [NapCat 插件模板](https://github.com/NapNeko/napcat-plugin-template)
 - [NapCat 插件索引](https://github.com/NapNeko/napcat-plugin-index)
 

@@ -196,4 +196,5 @@ flowchart TD
 
 - [快速开始开发插件](./index.md)
 - [项目结构与最佳实践](./structure.md)
+- [热重载开发](./hot-reload.md) — 改代码即时生效，提升开发效率
 - [插件 API 参考](./api/doc.md)
