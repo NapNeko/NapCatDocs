@@ -72,9 +72,11 @@ flowchart LR
 
 | Secret 名称 | 说明 |
 |------------|------|
-| `INDEX_PAT` | GitHub Personal Access Token，需要 `public_repo` 权限，用于向索引仓库提交 PR |
+| `INDEX_PAT` | GitHub Personal Access Token，用于自动 fork 索引仓库并提交 PR |
 
 ::: details 如何创建 Personal Access Token (PAT)
+
+**推荐方式：Classic Token（简单快速）**
 
 1. 进入 GitHub **Settings > Developer settings > Personal access tokens > Tokens (classic)**
 2. 点击 **Generate new token (classic)**
@@ -84,6 +86,31 @@ flowchart LR
 6. 点击 **Generate token**，**立即复制并保存**，此 Token 只会显示一次
 7. 回到你的插件仓库，在 **Settings > Secrets and variables > Actions** 中添加名为 `INDEX_PAT` 的 Secret，值为上一步复制的 Token
 
+**备选方式：Fine-grained Token（更精确的权限控制）**
+
+1. 进入 GitHub **Settings > Developer settings > Personal access tokens > Fine-grained tokens**
+2. 点击 **Generate new token**
+3. 设置名称，例如 `napcat-plugin-index`
+4. **Resource owner** 选择你自己的账号
+5. **Repository access** 选择 **All repositories**（因为 CI 会自动 fork 索引仓库到你的账号下）
+6. 展开 **Repository permissions**，设置以下权限：
+   - **Contents**: `Read and write`（推送分支到 fork 仓库）
+   - **Pull requests**: `Read and write`（创建 PR）
+   - **Workflows**: `Read and write`（触发工作流）
+7. 设置合理的过期时间
+8. 点击 **Generate token**，**立即复制并保存**
+9. 回到你的插件仓库，添加名为 `INDEX_PAT` 的 Secret
+
+:::
+
+::: tip 无需手动 fork 索引仓库
+工作流会**自动完成**以下操作，你只需配置 `INDEX_PAT` 即可：
+
+1. 通过 PAT 获取你的 GitHub 用户名
+2. 自动 fork [napcat-plugin-index](https://github.com/NapNeko/napcat-plugin-index) 到你的账号下（如果尚未 fork）
+3. 同步 fork 到上游最新状态
+4. 将更新推送到你的 fork
+5. 从 fork 向官方仓库发起 PR
 :::
 
 ### 可选配置（AI Release Note）
@@ -178,8 +205,10 @@ Release 创建成功后，会通过 `workflow_dispatch` 自动触发 `update-ind
 flowchart LR
     A["读取 package.json\n元信息"] --> B["构造下载链接"]
     B --> C["验证资源可达"]
-    C --> D["更新\nplugins.v4.json"]
-    D --> E["向索引仓库\n提交 PR"]
+    C --> D["自动 fork\n索引仓库"]
+    D --> E["同步 fork\n到上游最新"]
+    E --> F["更新\nplugins.v4.json"]
+    F --> G["通过 fork\n提交 PR"]
 ```
 
 #### 核心步骤说明
@@ -204,14 +233,30 @@ CI 会从你的 `package.json` 中自动读取：
 
 CI 会 curl 检查下载链接是否可访问。如果第一次失败，会等待 30 秒后重试（因为 Release 资源上传可能有延迟）。两次都失败则跳过索引更新。
 
-**3. 提交 PR**
+**3. 自动 fork 与同步**
 
-CI 会 checkout 索引仓库 [napcat-plugin-index](https://github.com/NapNeko/napcat-plugin-index)，使用 Node.js 脚本更新 `plugins.v4.json` 文件：
+CI 会通过 GitHub API 自动完成以下操作：
+
+- 使用 `INDEX_PAT` 获取你的 GitHub 用户名
+- 检查你账号下是否已有 `napcat-plugin-index` 的 fork，如果没有则自动创建
+- 调用 `merge-upstream` API 将 fork 同步到官方索引仓库的最新状态
+
+**4. 提交 PR**
+
+CI 会 checkout 官方索引仓库，使用 Node.js 脚本更新 `plugins.v4.json` 文件：
 
 - 如果插件 ID 已存在 → 更新该条目
 - 如果是新插件 → 追加到列表
 
-然后通过 [peter-evans/create-pull-request](https://github.com/peter-evans/create-pull-request) Action 自动创建 PR。
+然后通过 [peter-evans/create-pull-request](https://github.com/peter-evans/create-pull-request) Action 的 `push-to-fork` 功能，将更新推送到你的 fork 仓库，并从 fork 向官方索引仓库发起 PR。
+
+::: info 为什么要通过 fork 提交？
+你的 PAT 没有官方索引仓库 [napcat-plugin-index](https://github.com/NapNeko/napcat-plugin-index) 的写入权限，这是正常的。工作流自动将你的 fork 作为中转，完整流程是：
+
+```
+自动 fork 索引仓库 → 同步到上游最新 → 推送更新到 fork → 从 fork 向官方仓库发起 PR
+```
+:::
 
 ## 索引仓库的自动审核
 
@@ -294,11 +339,20 @@ CI 会 checkout 索引仓库 [napcat-plugin-index](https://github.com/NapNeko/na
 
 重新生成一个新的 PAT，更新仓库 Secret 即可。建议设置较长的过期时间，或使用 Fine-grained Token。
 
+### Q: 提交 PR 到索引仓库时报 403 / Permission denied？
+
+请检查以下几点：
+
+1. **PAT 权限不足**：Classic Token 需要 `public_repo` 权限；Fine-grained Token 需要 `Contents: Read and write` + `Pull requests: Read and write` 权限，且 Repository access 需要选择 **All repositories**
+2. **PAT 已过期**：重新生成并更新 Secret
+3. **工作流版本过旧**：确保你使用的是最新版模板的 `update-index.yml`，新版工作流已内置自动 fork 功能，无需手动 fork 或修改工作流
+
 ### Q: Release 发布了但索引没更新？
 
 检查 Actions 页面中 `update-index.yml` 的运行日志。常见原因：
 
 - `INDEX_PAT` 未配置或已过期
+- PAT 权限不足（见上一条）
 - 下载链接验证失败（Release 资源尚未上传完成）
 - `package.json` 中缺少必要字段
 
