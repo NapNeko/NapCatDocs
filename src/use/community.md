@@ -57,3 +57,18 @@ Author: stevesensei
 - [API文档](https://ref.napplana.net)
 
 :::
+
+::: details Python 开发 SDK：NapCat-SDK
+Author: faithleysath
+
+一个主打 **全类型提示** 与 **零框架约束** 的现代化 Python SDK。
+
+拒绝猜测参数类型，拒绝臃肿的框架黑魔法。NapCat-SDK 通过自动化的协议代码生成 (Codegen) 机制，为你提供最稳定、最符合 Python 直觉的开发体验。
+
+支持正向/反向 WebSocket 连接，且完全兼容 NapCat/OneBot 11 协议标准。
+
+历经 270+ 次提交与 30 多次版本迭代，核心 API 已高度稳定，欢迎体验。
+
+- [GitHub 仓库](https://github.com/faithleysath/napcat-sdk)
+- [使用文档](https://faithleysath.github.io/napcat-sdk/)
+:::
