@@ -208,8 +208,28 @@ NapCat 插件模板中，配置更新通常通过 WebUI 触发。插件可以通
 
 ## 5. 定时任务 (Cron Job)
 
-如果你的插件需要定时执行任务（如每天早上发送早报），可以使用 `node-schedule` 或 `cron` 库。
+如果你的插件需要定时执行任务（如每天早上发送早报），可以使用 `node-schedule` 或 `cron` 库。  
+**注意**：NapCat 插件使用 ES Module 格式，而 `node-schedule` 和 `node-cron` 基于 CommonJS 编写，内部使用了
+  `__dirname` 变量。在构建时需要在 `vite.config.ts` 中添加以下配置：
 
+  ```typescript
+  export default defineConfig({
+      // ...其他配置
+      plugins: [
+          {
+              name: 'fix-dirname',
+              transform(code, id) {
+                  if (id.includes('node-cron')) {  // 或 'node-schedule'
+                      return code.replace(/__dirname/g, 'process.cwd()');
+                  }
+                  return code;
+              }
+          },
+          nodeResolve(),
+          copyAssetsPlugin(),
+          napcatHmrPlugin(),  // 构建完成后自动部署+重载
+      ],
+  });
 **注意**: 在插件卸载 (`plugin_cleanup`) 时，**务必取消**所有定时任务，否则会导致内存泄漏或重复执行。
 
 ```typescript
