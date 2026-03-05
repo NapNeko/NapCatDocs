@@ -35,11 +35,11 @@ Author: ThriceCola
 ::: details Python 开发 SDK：NcatBot
 Author: 木子
 
-✨ 使用简单易上手的 Python 开发属于你的 NapCatQQ 机器人，采用简单的代码就可以实现复杂的任务。
+✨ 使用简单易上手的 Python 开发属于你的 NapCatQQ 机器人。快速开发，轻松部署。
 
 使用 NcatBot，让机器人 🤖 开发更简单。
 
-[NcatBot](https://github.com/liyihao1110/NcatBot)
+[NcatBot](https://github.com/ncatbot/NcatBot)
 :::
 
 ::: details .Net 开发 SDK：NapPlana.NET
@@ -72,3 +72,4 @@ Author: faithleysath
 - [GitHub 仓库](https://github.com/faithleysath/napcat-sdk)
 - [使用文档](https://faithleysath.github.io/napcat-sdk/)
 :::
+
