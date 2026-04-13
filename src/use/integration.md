@@ -47,7 +47,7 @@
 
 ## [AstrBot](https://astrbot.app/)
 
-> 可以参考文档：[连接到 AstrBot](https://docs.astrbot.app/deploy/platform/aiocqhttp/napcat.html#%E8%BF%9E%E6%8E%A5%E5%88%B0-astrbot)
+> 可以参考文档：[连接到 AstrBot](https://docs.astrbot.app/platform/aiocqhttp.html#%E9%99%84%E5%BD%95-%E9%83%A8%E7%BD%B2-napcat)
 
 1. 配置 AstrBot
 
