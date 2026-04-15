@@ -15,7 +15,7 @@
 | WebSocket 服务端    | 通常指正向 WS 既能主动推送事件也能接收请求 的双工模型                |
 | WebSocket 客户端    | 通常指反向 WS 既能主动推送事件也能接收请求 的双工模型                |
 
-## 通过 WebUI 配置 OneBot 服务  <Badge type="tip" text="Shell Vesion" />
+## 通过 WebUI 配置 OneBot 服务  <Badge type="tip" text="Shell Version" />
 
 如果你已经启动了 NapCat，并且有多于 1 个开放端口，则可以通过 WebUI 进行配置。
 
@@ -57,13 +57,13 @@
 
 > 注：WebUI 自 v4.4 版本后不支持 `prefix` 配置。
 
-## 通过 TUI-CLI 配置 OneBot 服务  <Badge type="tip" text="Shell Vesion" />
+## 通过 TUI-CLI 配置 OneBot 服务  <Badge type="tip" text="Shell Version" />
 
 <mark>**前置条件**，使用 Shell 安装时同意安装 **TUI-CLI** 或者使用 --cli y 参数详见[Shell 安装](/guide/boot/Shell#napcat-installer-linux一键使用脚本-支持ubuntu-20-debian-10-centos9) <Badge type="tip" text="recommend" />。</mark>   
 
 只需要你在终端中输入 `sudo napcat` 即可进入 TUI-CLI 界面。
 
-## 通过 文件 配置OneBot服务 <Badge type="tip" text="Any Vesion" />
+## 通过 文件 配置OneBot服务 <Badge type="tip" text="Any Version" />
 
 **非常不推荐 除非你非常熟悉**
 

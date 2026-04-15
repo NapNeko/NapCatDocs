@@ -133,7 +133,6 @@ NapCatQQ 实现了 Onebot 的大部分 API，对于 API 的详细说明请自行
 | `get_group_info_ex`            | 获取群组额外信息     |   ✅   |         |
 | `get_group_ignore_add_request` | 获取群组忽略的通知   |   ✅   |         |
 | `_del_group_notice`            | 删除群聊公告         |   ✅   |         |
-| `get_profile_like`             | 获取用户点赞信息   |   ✅   |         |
 | `friend_poke`                  | 私聊戳一戳           |   ✅   |         |
 | `group_poke`                   | 群聊戳一戳           |   ✅   |         |
 | `nc_get_packet_status`         | 获取 PacketServer 状态 |   ✅   |         |
