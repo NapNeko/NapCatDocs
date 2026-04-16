@@ -167,12 +167,12 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           link: '/event'
         },
         {
-          text: '接口基础接口',
+          text: '基础接口',
           link: '/api'
         },
         {
           text: '消息元素定义',
-          link: '/sement'
+          link: '/segment'
         },
         {
           text: '差异实现说明',
@@ -187,7 +187,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       items: [
         {
           text: '喵喵',
-          link: '/napcat.md'
+          link: '/napcat'
         },
         {
           text: '安全',

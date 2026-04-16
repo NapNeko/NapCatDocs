@@ -1,7 +1,6 @@
 # 高级配置
 
 ## 配置 FFmpeg
-###
 <mark>自 v4.4.11 起无需配置 FFmpeg 可享受音视频处理，除了手动安装的 Linux 用户。</mark>
 ### FFmpeg 是什么？
 
