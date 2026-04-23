@@ -37,6 +37,7 @@ import Confetti from './components/Confetti.vue'
 import Hero from '../theme/Layout.vue'
 import NCard from './components/NCard.vue'
 import ApiVersionSelector from './components/ApiVersionSelector.vue'
+import ApiDocViewer from './components/ApiDocViewer.vue'
 
 import './custom.css'
 export default {
@@ -63,9 +64,12 @@ export default {
       collapsePaths: true,
       showPathsSummary: true,
     })
+    // 使用内置中文 locale，统一显示中文 UI
+    themeConfig.setI18nConfig({ locale: 'zh' })
 
     app.component('Confetti', Confetti) //注册全局组件
     app.component('ApiVersionSelector', ApiVersionSelector)
+    app.component('ApiDocViewer', ApiDocViewer)
     app.use(NolebaseEnhancedReadabilitiesPlugin, {
       spotlight: {
         disableHelp: true,
