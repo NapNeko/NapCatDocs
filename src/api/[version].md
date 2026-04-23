@@ -1,19 +1,30 @@
 ---
 layout: page
+title: API 文档
 ---
-# API 文档
-<script setup>
-import { useData } from 'vitepress'
-import { computed, ref, watchEffect } from 'vue'
-const { params } = useData()
 
-// 懒加载：仅加载当前版本的 spec，不再一次性全部加载
+<script setup>
+import { useRoute, useData } from 'vitepress'
+import { ref, computed, watchEffect } from 'vue'
+
+const { params } = useData()
+const route = useRoute()
+
+// 优先使用 VitePress 动态路由 params，备用从 URL 路径提取版本号
+const version = computed(() => {
+  if (params.value?.version) return params.value.version
+  const match = route.path.match(/\/api\/([^/]+)/)
+  return match?.[1] || ''
+})
+
 const specLoaders = import.meta.glob('./*/openapi.json', { import: 'default' })
 const spec = ref(null)
 const loading = ref(true)
 
 watchEffect(async () => {
-  const key = `./${params.value.version}/openapi.json`
+  const v = version.value
+  if (!v) return
+  const key = `./${v}/openapi.json`
   const loader = specLoaders[key]
   if (loader) {
     loading.value = true
@@ -29,26 +40,6 @@ watchEffect(async () => {
     loading.value = false
   }
 })
-
-
-//console.log(params.value.version);
 </script>
 
-<div v-if="loading" class="loading">
-  <p>加载中...</p>
-</div>
-<div v-else-if="spec">
-  <OASpec :spec="spec" />
-</div>
-<div v-else class="not-found">
-  <h1>API 版本未找到</h1>
-  <p>版本 {{ params.value.version }} 不存在</p>
-  <a href="/api/">返回版本列表</a>
-</div>
-
-<!-- <style scoped>
-.not-found {
-  text-align: center;
-  padding: 4rem 2rem;
-}
-</style> -->
+<ApiDocViewer :spec="spec" :version="version" :loading="loading" />

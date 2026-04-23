@@ -21,7 +21,7 @@ import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client'
 import { Footer } from '@theojs/lumen' //不好看
 import codeblocksFold from 'vitepress-plugin-codeblocks-fold'
 import { Footer_Data } from '../data/footerData.ts'
-import { theme } from 'vitepress-openapi/client'
+import { theme, useTheme } from 'vitepress-openapi/client'
 
 import '@nolebase/vitepress-plugin-enhanced-mark/client/style.css'
 import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
@@ -37,6 +37,7 @@ import Confetti from './components/Confetti.vue'
 import Hero from '../theme/Layout.vue'
 import NCard from './components/NCard.vue'
 import ApiVersionSelector from './components/ApiVersionSelector.vue'
+import ApiDocViewer from './components/ApiDocViewer.vue'
 
 import './custom.css'
 export default {
@@ -56,8 +57,19 @@ export default {
     // 注册 vitepress-openapi 组件（包括 OASpec）
     theme.enhanceApp(ctx)
 
+    // 启用懒渲染和路径折叠，防止一次性渲染所有 API 端点导致内存占用过高
+    const themeConfig = useTheme()
+    themeConfig.setSpecConfig({
+      lazyRendering: true,
+      collapsePaths: true,
+      showPathsSummary: true,
+    })
+    // 使用内置中文 locale，统一显示中文 UI
+    themeConfig.setI18nConfig({ locale: 'zh' })
+
     app.component('Confetti', Confetti) //注册全局组件
     app.component('ApiVersionSelector', ApiVersionSelector)
+    app.component('ApiDocViewer', ApiDocViewer)
     app.use(NolebaseEnhancedReadabilitiesPlugin, {
       spotlight: {
         disableHelp: true,

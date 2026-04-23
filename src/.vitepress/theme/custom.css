@@ -110,3 +110,18 @@
 .dark .mermaid .node.plugin .nodeLabel p {
     color: #1a1a1a !important;
 }
+
+/* ─── VitePress 动态路由参数注入块的残留标题（仅开发/SSR时可见，由 VitePress 处理后隐藏）─── */
+h2[id^="vp-params-start"] {
+    display: none !important;
+}
+
+/* 隐藏右侧 TOC 中对应的残留条目 */
+.VPDocOutlineItem:has(a[href^="#vp-params-start"]) {
+    display: none !important;
+}
+
+/* API 动态路由页面（有 params 注入 h2 标记）─ 隐藏空右侧导航 */
+body:has(h2[id^="vp-params-start"]) .VPDocAside {
+    display: none !important;
+}
