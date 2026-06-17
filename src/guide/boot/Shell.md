@@ -31,7 +31,7 @@ launcher-win10.bat 123456
 
 对应的 NapCat.Shell.Windows.OneKey.zip 启动后 自动化部署一键包(此包仅适用 Windows)
 
-<mark>如果需要快速启动 新建 Bat 文件写入如下例子</mark>
+<mark>如果需要快速启动 新建 Bat 文件写入如下例子 将10001替换为你的QQ号</mark>
 
 ::: code-group
 ```bash [quick.bat]
