@@ -73,3 +73,12 @@ Author: faithleysath
 - [使用文档](https://faithleysath.github.io/napcat-sdk/)
 :::
 
+
+::: details TypeScript 自托管 QQ ↔ AI 机器人骨架：qq-ai-bot
+Author: happysnaker
+
+基于 **OneBot 11** 与 **ACP** 的自托管 QQ ↔ AI 机器人骨架，支持 **NapCat / LLOneBot**、会话持久化、进度回传与 Docker 部署。
+
+- [GitHub 仓库](https://github.com/happysnaker/qq-ai-bot)
+- [项目页](https://happysnaker.github.io/qq-ai-bot/)
+:::
