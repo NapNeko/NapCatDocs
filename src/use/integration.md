@@ -68,57 +68,6 @@
    <img width="500" height="600" alt="image" src="https://github.com/user-attachments/assets/55c7ea6b-177d-4d25-a6ee-6240b23a3164" />
 
 
-
-## [qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)
-
-一个面向实际部署的 QQ ↔ AI 机器人脚手架，使用 OneBot 11 对接 NapCat，并通过 ACP 兼容 agent 提供 AI 能力。
-
-默认支持私聊 / 群聊独立会话、处理进度回传、`/status` 等运维命令，更适合想把 NapCat 接到本地 agent 或自定义 AI 工作流上的场景。
-
-1. 配置 qq-ai-bot
-
-   拉取仓库并准备配置：
-
-   ```bash
-   git clone https://github.com/happysnaker/qq-ai-bot.git
-   cd qq-ai-bot
-   npm install
-   cp .env.example .env
-   cp examples/group-rules.example.json examples/group-rules.local.json
-   ```
-
-   最少需要确认这些配置：
-
-   - `ONEBOT_MODE=reverse`
-   - `ONEBOT_ACCESS_TOKEN=你的 token`
-   - `ONEBOT_REVERSE_WS_HOST=0.0.0.0`
-   - `ONEBOT_REVERSE_WS_PORT=16700`
-   - `ONEBOT_REVERSE_WS_PATH=/onebot/v11/ws`
-   - `ACP_AGENT_COMMAND` / `ACP_AGENT_ARGS_JSON` / `ACP_AGENT_WORKDIR` 已按你的 agent 实际情况填写
-
-   然后启动 qq-ai-bot：
-
-   ```bash
-   npm run dev
-   ```
-
-2. 配置 NapCat
-
-   在 NapCat WebUI 页面选择 网络配置 → 新建 → WebSocket 客户端，URL 填入 `ws://127.0.0.1:16700/onebot/v11/ws`。
-
-   如果配置了 token，请和 `ONEBOT_ACCESS_TOKEN` 保持一致。
-
-   > 如果你是用 Docker 部署的 qq-ai-bot，则 URL 应为 `ws://qq-ai-bot:16700/onebot/v11/ws`
-
-3. 验证连接
-
-   连接成功后，可在 QQ 中给机器人发送 `/ping` 或 `/status` 测试链路是否打通。默认群聊场景需要 `@机器人` 才会触发。
-
-   如果你暂时还没有现成的 ACP agent，也可以先参考项目自带的 mock agent 或 Docker 演示栈把链路跑通。
-
-- 项目主页：https://happysnaker.github.io/qq-ai-bot/
-- 快速开始：https://github.com/happysnaker/qq-ai-bot/blob/main/docs/getting-started.md
-
 ## OlivOS
 
 支持正向和反向 WS 以及 http 详见 [文档](https://doc.olivos.wiki/)
@@ -192,6 +141,58 @@ Rust Onebot V11 插件框架。
 使用 Python 编程，对新手十分友好，对老手十分高效。
 
 已完全对接 NapCat，提供一键安装并配置 NapCat 功能（Windows、Linux）
+
+
+## [qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)
+
+一个面向实际部署的 QQ ↔ AI 机器人脚手架，使用 OneBot 11 对接 NapCat，并通过 ACP 兼容 agent 提供 AI 能力。
+
+默认支持私聊 / 群聊独立会话、处理进度回传、`/status` 等运维命令，更适合想把 NapCat 接到本地 agent 或自定义 AI 工作流上的场景。
+
+1. 配置 qq-ai-bot
+
+   拉取仓库并准备配置：
+
+   ```bash
+   git clone https://github.com/happysnaker/qq-ai-bot.git
+   cd qq-ai-bot
+   npm install
+   cp .env.example .env
+   cp examples/group-rules.example.json examples/group-rules.local.json
+   ```
+
+   最少需要确认这些配置：
+
+   - `ONEBOT_MODE=reverse`
+   - `ONEBOT_ACCESS_TOKEN=你的 token`
+   - `ONEBOT_REVERSE_WS_HOST=0.0.0.0`
+   - `ONEBOT_REVERSE_WS_PORT=16700`
+   - `ONEBOT_REVERSE_WS_PATH=/onebot/v11/ws`
+   - `ACP_AGENT_COMMAND` / `ACP_AGENT_ARGS_JSON` / `ACP_AGENT_WORKDIR` 已按你的 agent 实际情况填写
+
+   然后启动 qq-ai-bot：
+
+   ```bash
+   npm run dev
+   ```
+
+2. 配置 NapCat
+
+   在 NapCat WebUI 页面选择 网络配置 → 新建 → WebSocket 客户端，URL 填入 `ws://127.0.0.1:16700/onebot/v11/ws`。
+
+   如果配置了 token，请和 `ONEBOT_ACCESS_TOKEN` 保持一致。
+
+   > 如果你是用 Docker 部署的 qq-ai-bot，则 URL 应为 `ws://qq-ai-bot:16700/onebot/v11/ws`
+
+3. 验证连接
+
+   连接成功后，可在 QQ 中给机器人发送 `/ping` 或 `/status` 测试链路是否打通。默认群聊场景需要 `@机器人` 才会触发。
+
+   如果你暂时还没有现成的 ACP agent，也可以先参考项目自带的 mock agent 或 Docker 演示栈把链路跑通。
+
+- 项目主页：https://happysnaker.github.io/qq-ai-bot/
+- 快速开始：https://github.com/happysnaker/qq-ai-bot/blob/main/docs/getting-started.md
+
 
 项目发布至 PyPI，可通过 `pip install ncatbot5` 直接安装。
 
