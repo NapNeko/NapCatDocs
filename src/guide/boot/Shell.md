@@ -218,6 +218,12 @@ curl -o napcat.termux.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main
 ::: 
 仓库地址: [NapCat.installer](https://github.com/NapNeko/NapCat-Installer)
 
+## NapCat.Docker.Baota - 宝塔面板一键部署 <Badge type="tip" text="community" />
+
+<mark>此为 社区作品 可能会遇到一些问题，欢迎反馈。</mark>
+
+仓库地址: [NapCat.Docker.Baota](https://github.com/makotowu/NapCat-Docker.Baota)
+
 ## NapCat.1Panel - 1Panel插件部署 <Badge type="tip" text="community" />
 
 <mark>此为 社区作品 可能会遇到一些问题，欢迎反馈。</mark>
