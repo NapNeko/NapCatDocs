@@ -39,7 +39,7 @@ Win 一键启动（内置 LiteLoader）
 ::: code-group
 
 ```bash [NapCat]
-curl -o napcat.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.framework.sh && bash napcat.sh
+(curl -fsSL -o napcat.sh https://ghfast.top/https://raw.githubusercontent.com/NapNeko/NapCat-Installer/main/script/install.framework.sh || curl -fsSL -o napcat.sh https://ghproxy.net/https://raw.githubusercontent.com/NapNeko/NapCat-Installer/main/script/install.framework.sh || curl -fsSL -o napcat.sh https://raw.githubusercontent.com/NapNeko/NapCat-Installer/main/script/install.framework.sh) && bash napcat.sh
 ```
 
 :::

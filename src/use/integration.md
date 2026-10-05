@@ -18,8 +18,6 @@
 
 ## [Koishi](https://koishi.chat)
 
-> 可以参考文档：[如何使用 NapCat 对接 adapter-onebot 使用教程](https://forum.itzdrli.cc/d/12-ru-he-shi-yong-napcat-dui-jie-adapter-onebot-shi-yong-jiao-cheng)
-
 1. 在 Koishi 插件市场搜索 `onebot` 并安装 `adapter-onebot`，如下图：
 
    ![koishi-install-onebot](/assets/use/koishi-install-onebot.png)

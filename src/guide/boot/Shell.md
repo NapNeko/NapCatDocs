@@ -74,24 +74,26 @@ NapCatWinBootMain.exe 10001
 ## NapCat.Installer - Linux 一键使用脚本(支持Ubuntu 20+/Debian 10+/Centos9)    <Badge type="tip" text="recommend" /> 
 docker 安装卡住的请使用下方项目并自行换源
 
+脚本从 GitHub 下载，会依次尝试 ghfast.top、ghproxy.net 和直连。加速节点都连不上时，可以去 [github.akams.cn](https://github.akams.cn/) 换一个节点，替换命令里的 `https://ghfast.top/` 即可。
+
 ::: code-group
 ```bash [通用安装]
-curl -o \
-napcat.sh \
-https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh \
+curl -fsSL -o napcat.sh https://ghfast.top/https://raw.githubusercontent.com/NapNeko/NapCat-Installer/main/script/install.sh \
+|| curl -fsSL -o napcat.sh https://ghproxy.net/https://raw.githubusercontent.com/NapNeko/NapCat-Installer/main/script/install.sh \
+|| curl -fsSL -o napcat.sh https://raw.githubusercontent.com/NapNeko/NapCat-Installer/main/script/install.sh \
 && bash napcat.sh
 ```
 ```bash [可视化安装]
-curl -o \
-napcat.sh \
-https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh \
+curl -fsSL -o napcat.sh https://ghfast.top/https://raw.githubusercontent.com/NapNeko/NapCat-Installer/main/script/install.sh \
+|| curl -fsSL -o napcat.sh https://ghproxy.net/https://raw.githubusercontent.com/NapNeko/NapCat-Installer/main/script/install.sh \
+|| curl -fsSL -o napcat.sh https://raw.githubusercontent.com/NapNeko/NapCat-Installer/main/script/install.sh \
 && bash napcat.sh \
 --tui
 ```
 ```bash [Docker 安装]
-curl -o \
-napcat.sh \
-https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh \
+curl -fsSL -o napcat.sh https://ghfast.top/https://raw.githubusercontent.com/NapNeko/NapCat-Installer/main/script/install.sh \
+|| curl -fsSL -o napcat.sh https://ghproxy.net/https://raw.githubusercontent.com/NapNeko/NapCat-Installer/main/script/install.sh \
+|| curl -fsSL -o napcat.sh https://raw.githubusercontent.com/NapNeko/NapCat-Installer/main/script/install.sh \
 && bash napcat.sh \
 --docker y \
 --qq "123456789" \
@@ -101,9 +103,9 @@ https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh \
 ```
 
 ```bash [Shell 强制重装]
-curl -o \
-napcat.sh \
-https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh \
+curl -fsSL -o napcat.sh https://ghfast.top/https://raw.githubusercontent.com/NapNeko/NapCat-Installer/main/script/install.sh \
+|| curl -fsSL -o napcat.sh https://ghproxy.net/https://raw.githubusercontent.com/NapNeko/NapCat-Installer/main/script/install.sh \
+|| curl -fsSL -o napcat.sh https://raw.githubusercontent.com/NapNeko/NapCat-Installer/main/script/install.sh \
 && bash napcat.sh \
 --docker n \
 --cli n \
@@ -112,9 +114,9 @@ https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh \
 ```
 
 ```bash [TUI-CLI 安装]
-curl -o \
-napcat.sh \
-https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.sh \
+curl -fsSL -o napcat.sh https://ghfast.top/https://raw.githubusercontent.com/NapNeko/NapCat-Installer/main/script/install.sh \
+|| curl -fsSL -o napcat.sh https://ghproxy.net/https://raw.githubusercontent.com/NapNeko/NapCat-Installer/main/script/install.sh \
+|| curl -fsSL -o napcat.sh https://raw.githubusercontent.com/NapNeko/NapCat-Installer/main/script/install.sh \
 && bash napcat.sh \
 --docker n \
 --cli y 
@@ -212,7 +214,7 @@ Error: EACCES: permission denied, mkdir '/app/.config/QQ/NapCat/temp'
 ::: code-group
 
 ```bash [Termux]
-curl -o napcat.termux.sh https://nclatest.znin.net/NapNeko/NapCat-Installer/main/script/install.termux.sh && bash napcat.termux.sh
+(curl -fsSL -o napcat.termux.sh https://ghfast.top/https://raw.githubusercontent.com/NapNeko/NapCat-Installer/main/script/install.termux.sh || curl -fsSL -o napcat.termux.sh https://ghproxy.net/https://raw.githubusercontent.com/NapNeko/NapCat-Installer/main/script/install.termux.sh || curl -fsSL -o napcat.termux.sh https://raw.githubusercontent.com/NapNeko/NapCat-Installer/main/script/install.termux.sh) && bash napcat.termux.sh
 ```
 
 ::: 

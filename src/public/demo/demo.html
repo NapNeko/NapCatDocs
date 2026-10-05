@@ -560,7 +560,7 @@
         // 安装脚本配置
         const installScripts = {
             linux: [
-                { type: 'cmd', text: '$ curl -fsSL https://napneko.github.io/install.sh | bash', delay: 0 },
+                { type: 'cmd', text: '$ curl -o napcat.sh https://raw.githubusercontent.com/NapNeko/NapCat-Installer/main/script/install.sh && bash napcat.sh', delay: 0 },
                 { type: 'output', text: '┌───────────────────────────────────────────────────────────────────────┐', delay: 100 },
                 { type: 'output', text: ' │                                                                       │', delay: 50 },
                 { type: 'output', text: ' │███╗   ██╗     █████╗     ██████╗      ██████╗     █████╗     ████████╗│', delay: 50 },
