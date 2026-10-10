@@ -59,9 +59,7 @@
 
 ## 通过 TUI-CLI 配置 OneBot 服务  <Badge type="tip" text="Shell Version" />
 
-<mark>**前置条件**，使用 Shell 安装时同意安装 **TUI-CLI** 或者使用 --cli y 参数详见[Shell 安装](/guide/boot/Shell#napcat-installer-linux一键使用脚本-支持ubuntu-20-debian-10-centos9) <Badge type="tip" text="recommend" />。</mark>   
-
-只需要你在终端中输入 `sudo napcat` 即可进入 TUI-CLI 界面。
+[安装 Shell](../guide/boot/Shell.md#linux) 时添加 `--cli y`，随后使用安装 NapCat 的用户运行 `napcat`。
 
 ## 通过 文件 配置OneBot服务 <Badge type="tip" text="Any Version" />
 
