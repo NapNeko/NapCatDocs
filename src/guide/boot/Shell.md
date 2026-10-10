@@ -78,7 +78,7 @@ HTTP / SOCKS 代理和证书通过环境变量配置。按需 `export` 后再执
 
 | 用途 | 环境变量示例 |
 | --- | --- |
-| HTTP 代理 | `HTTPS_PROXY=http://127.0.0.1:7890`、`HTTP_PROXY=http://127.0.0.1:7890` |
+| HTTP 代理 | `https_proxy=http://127.0.0.1:7890`、`http_proxy=http://127.0.0.1:7890` |
 | SOCKS 代理及远端 DNS | `ALL_PROXY=socks5h://127.0.0.1:1080` |
 | 绕过代理 | `NO_PROXY=localhost,127.0.0.1,::1,.example.internal` |
 | 自定义 CA | `CURL_CA_BUNDLE=/path/to/ca.pem`、`SSL_CERT_FILE=/path/to/ca.pem` |
