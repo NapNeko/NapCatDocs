@@ -1,83 +1,64 @@
-# Linux 系统设置开机自启动步骤
+# Linux 开机启动
 
-本步骤适用于 Ubuntu 系统，24.04 版本测试通过。其它版本未测试。
+本页适用于使用 systemd 的 Linux。先以前台方式启动成功，再配置服务。Termux / PRoot 不运行 systemd，请使用 [Termux 启动方式](./Shell.md#termux)。
 
-### 步骤1：创建服务文件
+## 创建服务
 
-打开终端，运行以下命令创建一个新的 systemd 服务文件：
+以下示例假设安装用户为 `alice`，一键 Shell 安装位置为 `/home/alice/Napcat`。请替换成真实用户名和绝对路径，并确保该用户可以写入 NapCat 配置目录。
 
 ```bash
 sudo nano /etc/systemd/system/napcat.service
 ```
 
-### 步骤2：编辑服务文件
+写入：
 
-在文件中添加以下内容：
-
-```markdown
+```ini
 [Unit]
-Description=Napcat Service
-After=network.target
+Description=NapCat Shell
+Wants=network-online.target
+After=network-online.target
 
 [Service]
-User=root
-ExecStart=/usr/bin/screen -dmS napcat /usr/bin/bash -c "/usr/bin/xvfb-run -a qq --no-sandbox"
-RemainAfterExit=yes
-Type=oneshot
+Type=simple
+User=alice
+WorkingDirectory=/home/alice
+ExecStart=/usr/bin/xvfb-run -a /home/alice/Napcat/opt/QQ/qq --no-sandbox
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=20
+LimitCORE=0
 
 [Install]
 WantedBy=multi-user.target
 ```
 
-确保使用绝对路径来执行命令，以避免路径相关的问题。
+根据安装方式修改 `ExecStart`：
 
-### 步骤3：保存并关闭文件
+| 安装方式 | 前台启动命令示例 |
+| --- | --- |
+| 一键 Shell | `/usr/bin/xvfb-run -a /home/alice/Napcat/opt/QQ/qq --no-sandbox` |
+| 半自动修改系统 QQ | `/usr/bin/xvfb-run -a /opt/QQ/qq --no-sandbox` |
+| 非侵入式启动器 | `/usr/bin/bash /home/alice/napcat/launcher.sh` |
+| AppImage | `/home/alice/napcat/QQ-53644_NapCat-v4.18.37-amd64.AppImage` |
 
-按下 `Ctrl + O` 保存，`Ctrl + X` 关闭 nano 编辑器。
+路径包含空格时，分别用双引号包住对应参数。`ExecStart` 不经过交互式 Shell，不会展开 `~`、`$HOME`、重定向或 `&&`。AppImage 的数据位置取决于 `WorkingDirectory`，应保持固定。
 
-### 步骤4：重新加载 systemd 守护进程
+需要快速登录时，在启动命令末尾添加 `-q 123456789`。不要使用 `screen -dmS`、后台 `&` 或 `Type=oneshot`，让 systemd 跟踪实际运行的进程。
 
-更新 systemd，以使其识别新创建的服务文件：
+## 启用、停止与检查
 
 ```bash
 sudo systemctl daemon-reload
+sudo systemctl enable --now napcat.service
+systemctl status napcat.service
+journalctl -u napcat.service -b -f
 ```
 
-### 步骤5：启用服务
-
-将服务启用以便在启动时运行：
+`-b` 表示当前这次开机，`-f` 持续查看新日志。修改配置后重启或停止：
 
 ```bash
-sudo systemctl enable napcat.service
+sudo systemctl restart napcat.service
+sudo systemctl stop napcat.service
 ```
 
-### 步骤6：验证服务状态
-
-检查服务是否已正确启用：
-
-```bash
-sudo systemctl status napcat.service
-```
-
-### 可选步骤：立即启动服务（测试用）
-
-如果想在当前会话中测试服务，可以运行：
-
-```bash
-sudo systemctl start napcat.service
-```
-
-然后，检查 screen 会话是否存在：
-
-```bash
-screen -ls
-```
-
-你应该会看到名为 `napcat` 的会话。
-
-### 注意事项
-
-- **用户权限**：在服务文件中指定正确的 `User`，确保程序以正确的用户权限运行。
-- **绝对路径**：使用绝对路径（如 `/usr/bin/screen`）确保命令能正确执行。
-- **依赖关系**：如果命令依赖于特定的网络或其他服务，可能需要调整 `After` 部分。
-- **日志检查**：如果服务没有按预期运行，可以查看日志：`journalctl -u napcat.service -b`，这里的 `-b` 显示上次启动时的日志。
+服务不会继承登录终端的代理变量。确有代理需求时，用 `sudo systemctl edit napcat.service` 在 `[Service]` 段配置 `EnvironmentFile=/etc/napcat-network.env`，在该文件中填写 `HTTPS_PROXY=...`、`NO_PROXY=...` 等实际需要的变量，并限制文件读取权限。代理与证书配置见 [复杂网络环境](./Shell.md#复杂网络环境)。
